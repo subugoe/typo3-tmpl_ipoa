@@ -1,4 +1,6 @@
 config.absRefPrefix = /
+config.no_cache = 1
+config.doctype = html5
 
 config {
 	linkVars = L
@@ -13,6 +15,8 @@ page.config {
 	language = de
 	locale_all = de_DE.UTF-8
 }
+# enable srcset-option in f:image
+styles.content.imgtext.layoutKey = srcset
 
 [globalVar = GP:L = 1]
 	config {
