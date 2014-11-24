@@ -26,3 +26,7 @@ RTE.classes {
 #frames for columns
 TCEFORM.tt_content.section_frame {
 }
+
+mod.SHARED {
+	defaultLanguageFlag = dede
+}
