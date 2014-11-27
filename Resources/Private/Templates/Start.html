@@ -1,44 +1,46 @@
 {namespace ipoa=Subugoe\TmplIpoa\ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
 
 <ipoa:linkCSS file="http://subugoe.github.io/ipoa-html-template/css/start.css" />
+<!-- structure according to Tag 0.0.5 -->
 
 <div class="start">
 
-  <header class="enter" role="banner">
-  	<div class="enter__logo">
-      <picture>
-        <!--[if IE 9]><video style="display: none;"><![endif]-->
-        <!--<source srcset="img/logo_250.png, img/logo_500.png 2x">-->
-        <!--[if IE 9]></video><![endif]-->
-        <!--<img src="img/logo_250.png" srcset="img/logo_250.png, img/logo_500.png 2x" alt="">-->
-        <f:image alt=""
-                 src="EXT:tmpl_ipoa/Resources/Public/Images/logo_250.png"
-                 />
-      </picture>
-  	</div><!--
-  	--><div class="enter__title">
-  		<h1>Open Access</h1>
-  		Der freie Zugang zu<br>wissenschaftlicher Information
-  	</div>
-  </header><!--
-  --><main role="main">
-    <nav class="nav">
-      <!--
-      NOTE : set the actual accesskeys to the first character of the button name
-      -->
-      <button class="nav__button" tabindex="1" accesskey="a" role="link" autofocus>Allgemeine Informationen</button>
-      <button class="nav__button" tabindex="2" accesskey="w" role="link">Wissenswertes für...</button>
-  	  <button class="nav__button" tabindex="3" accesskey="o" role="link">OA in verschiedenen Fächern</button>
-    </nav>
-  </main>
-  <footer role="contentinfo">
-    <div class="info">
-    	<ul class="info__linklist">
-    		<li class="info__linklistitem"><a href="#" title="Über uns" class="info__link"><i class="fa fa-fw fa-lg fa-smile-o"></i> Über uns</a></li>
-    		<li class="info__linklistitem"><a href="#" title="Kontakt" class="info__link"><i class="fa fa-fw fa-lg fa-info"></i> Kontakt</a></li>
-        <li class="info__linklistitem"><a href="#" title="Impressum" class="info__link"><i class="fa fa-fw fa-lg fa-legal"></i> Impressum</a></li>
+	<header class="start__header" role="banner">
+		<div class="start__logo">
+			<picture class="">
+				<!--[if IE 9]>
+				<video style="display: none;"><![endif]-->
+				<!--<source srcset="img/logo_250.png, img/logo_500.png 2x">-->
+				<!--[if IE 9]></video><![endif]-->
+				<!--<img src="img/logo_250.png" srcset="img/logo_250.png, img/logo_500.png 2x" alt="">-->
+				<f:image alt=""
+				         src="EXT:tmpl_ipoa/Resources/Public/Images/logo_250.png"
+				         class="image"
+						/>
+			</picture>
+		</div>
+		<div class="start__title">
+			<h1>Open Access</h1>
+			Der freie Zugang zu<br />wissenschaftlicher Information
+		</div>
+	</header>
+	<!--
+	  -->
+	<main role="start__main" class="main">
+		<nav class="start__navigation">
+			<f:link.action pageUid="{STARTNAV_1P}"><button class="start__button" tabindex="1" accesskey="{STARTNAV_1A}" role="link" autofocus>{STARTNAV_1}</button></f:link.action>
+			<f:link.action pageUid="{STARTNAV_2P}"><button class="start__button" tabindex="2" accesskey="{STARTNAV_2A}" role="link">{STARTNAV_2}</button></f:link.action>
+			<f:link.action pageUid="{STARTNAV_3P}"><button class="start__button" tabindex="3" accesskey="{STARTNAV_3A}" role="link">{STARTNAV_3}</button></f:link.action>
+		</nav>
+	</main>
+	<footer role="contentinfo" class="start__footer">
+    <div class="start__footer-content">
+    	<ul class="start__list">
+    		<li><a href="#" title="Über uns" class="start__link"><!--{% include icon-smilie.html %}--> Über uns</a></li>
+    		<li><a href="#" title="Kontakt" class="start__link"><!--{% include icon-info.html %}--> Kontakt</a></li>
+        <li><a href="#" title="Impressum" class="start__link"><!--{% include icon-legal.html %}-->Impressum</a></li>
     	</ul>
     </div>
   </footer>
-<f:flashMessages/>
 </div>
