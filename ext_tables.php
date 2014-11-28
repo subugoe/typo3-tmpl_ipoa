@@ -27,5 +27,5 @@ if (TYPO3_MODE == 'BE' || TYPO3_MODE == 'FE' && isset($GLOBALS['BE_USER'])) {
 		unset($flagNames, $flagName, $flagIcons);
 }
 // Custom CSS include
-$TBE_STYLES['styleSheetFile_post'] = '../../typo3conf/ext/tmpl_ipoa/Resources/Public/Css/ipoa.css';
+$TBE_STYLES['styleSheetFile_post'] = $temp_ipoa . '/Resources/Public/Css/ipoa.css';
 ?>
