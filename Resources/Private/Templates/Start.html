@@ -1,15 +1,18 @@
 {namespace ipoa=Subugoe\TmplIpoa\ViewHelpers}
 
 <ipoa:linkCSS file="http://subugoe.github.io/ipoa-html-template/css/start.css" />
+<!-- structure according to Tag 0.0.5 -->
 
 <div class="start">
 
 	<header class="start__header" role="banner">
 		<div class="start__logo">
 			<picture class="">
-				<!--[if IE 9]><video style="display: none;"><![endif]-->
-				<!-- <source srcset="img/logo_250.png, img/logo_500.png 2x"> -->
+				<!--[if IE 9]>
+				<video style="display: none;"><![endif]-->
+				<!--<source srcset="img/logo_250.png, img/logo_500.png 2x">-->
 				<!--[if IE 9]></video><![endif]-->
+				<!--<img src="img/logo_250.png" srcset="img/logo_250.png, img/logo_500.png 2x" alt="">-->
 				<f:image alt=""
 				         src="EXT:tmpl_ipoa/Resources/Public/Images/logo_250.png"
 				         class="image"
@@ -26,10 +29,10 @@
 			<!--
 			NOTE : Set the actual accesskeys to the first character of the button name
 			-->
-			<button class="start__button" tabindex="1" accesskey="a" role="link" autofocus>Allgemeine Informationen</button>
-			<button class="start__button" tabindex="2" accesskey="w" role="link">Wissenswertes für...</button>
-			<button class="start__button" tabindex="3" accesskey="o" role="link">OA in verschiedenen Fächern</button>
-		</nav>
+			<f:link.action pageUid="{STARTNAV_1P}"><button class="start__button" tabindex="1" accesskey="{STARTNAV_1A}" role="link" autofocus>{STARTNAV_1}</button></f:link.action>
+			<f:link.action pageUid="{STARTNAV_2P}"><button class="start__button" tabindex="2" accesskey="{STARTNAV_2A}" role="link">{STARTNAV_2}</button></f:link.action>
+			<f:link.action pageUid="{STARTNAV_3P}"><button class="start__button" tabindex="3" accesskey="{STARTNAV_3A}" role="link">{STARTNAV_3}</button></f:link.action>
+			</nav>
 	</main>
 	<footer role="contentinfo" class="start__footer">
 		<div class="start__footer-content">
