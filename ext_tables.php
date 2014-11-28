@@ -10,7 +10,7 @@ if (!defined('TYPO3_MODE')) {
 
 if (TYPO3_MODE == 'BE' || TYPO3_MODE == 'FE' && isset($GLOBALS['BE_USER'])) {
 	// Setting the relative path to the extension in temp. variable:
-	$temp_ipoa = t3lib_extMgm::extRelPath($_EXTKEY);
+	$temp_ipoa = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY);
 
 	$flagNames = array(
 			'dede', 'deen', 'atde', 'aten', 'chde', 'chen', 'chfr'
