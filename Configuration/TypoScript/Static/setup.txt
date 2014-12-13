@@ -1,0 +1,2 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:tmpl_ipoa/Configuration/TypoScript/Elements/" extensions="ts">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:tmpl_ipoa/Configuration/TypoScript/Extensions/" extensions="ts">
