@@ -32,6 +32,10 @@ lib.contentpage = FLUIDTEMPLATE
 lib.contentpage {
 	file = EXT:tmpl_ipoa/Resources/Private/Templates/Content.html
 	variables < lib.subTemplateVars
+	variables {
+
+		MENU < lib.mainMenu
+	}
 }
 
 lib.startpage = FLUIDTEMPLATE
