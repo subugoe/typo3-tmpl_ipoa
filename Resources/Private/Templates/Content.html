@@ -2,10 +2,15 @@
 
 <ipoa:linkCSS  file="http://subugoe.github.io/ipoa-html-template/css/style.css" />
 
-	<f:render partial="Content.html" />
+<div class="footer-hide__helper" id="top">
+	<div class="footer-hide__helper" id="top">
 
-	<f:render partial="Search.html" />
+		<f:render partial="Content.html"/>
+		<f:comment><f:render partial="Search.html"/></f:comment>
 
-<div class="footer-hide">
+	</div>
 </div>
-<f:cObject typoscriptObjectPath="lib.sitemap" />
+
+<f:comment><f:render partial="Footer.html" /></f:comment>
+<f:render partial="Nav.html" arguments="{_all}" />
+
