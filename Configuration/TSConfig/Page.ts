@@ -1,3 +1,4 @@
+
 TCEFORM {
 	tt_content {
 	}
@@ -29,4 +30,8 @@ TCEFORM.tt_content.section_frame {
 
 mod.SHARED {
 	defaultLanguageFlag = dede
+}
+
+RTE.default {
+	removeComments = 1
 }
