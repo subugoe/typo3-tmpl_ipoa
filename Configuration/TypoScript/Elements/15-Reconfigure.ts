@@ -2,6 +2,14 @@
 # Clean up content
 
 
+# Add class to body-Tag
+page {
+	bodyTag >
+	bodyTagCObject = TEXT
+	bodyTagCObject.value = body content
+	bodyTagCObject.value.wrap = <body class="|">
+}
+
 # remove all comments in html
 config.disablePrefixComment = 1
 
@@ -13,11 +21,6 @@ lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines {
 tt_content.stdWrap.innerWrap >
 lib.stdheader.stdWrap.dataWrap >
 lib.stdheader.3.headerClass >
-
-tt_content.textpic.stdWrap >
-
-
-#page.includeJSFooter
 
 
 ##############
@@ -34,3 +37,14 @@ lib.stdheader.10.2.dataWrap = <h2 class="main__heading">|</h2>
 
 # wrap text-content in special div
 tt_content.text.20.stdWrap.dataWrap = <div class="main__textblock">|</div>
+
+# add wrap for table content element
+tt_content.table.20.stdWrap.wrap = <div class="main__table">|</div>
+# remove default classes of table
+# (the class contenttable cause the css breadcrumbs to change from html.js body.body.content to html body)
+tt_content.table.20.stdWrap.replacement {
+	10 {
+	    search = class="contenttable contenttable-0"
+	    replace =
+	  }
+}

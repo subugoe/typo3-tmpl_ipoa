@@ -90,12 +90,4 @@ page {
 	10 = FLUIDTEMPLATE
 	10 < lib.layoutTemplate
 
-	# Add class to body-Tag
-	bodyTag >
-	bodyTagCObject = TEXT
-	bodyTagCObject.value = body content
-	bodyTagCObject.value.wrap = <body class="|">
 }
-# Add class to html-Tag
-config.htmlTag_setParams = class=js
-
