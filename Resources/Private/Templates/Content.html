@@ -1,11 +1,10 @@
 {namespace ipoa=Subugoe\TmplIpoa\ViewHelpers}
 {namespace t3jquery=Tx_T3jquery_ViewHelpers}
 
-<ipoa:linkCSS  file="http://subugoe.github.io/ipoa-html-template/css/style.css" />
-
 <div class="footer-hide__helper" id="top">
 	<f:render partial="Header.html"/>
 	<div class="headroom__helper">
+		<f:render partial="Icons.html"/>
 		<f:render partial="Content.html"/>
 		<f:comment><f:render partial="Search.html"/></f:comment>
 		<f:comment><f:render partial="More.html"/></f:comment>
@@ -14,10 +13,3 @@
 </div>
 <f:comment><f:render partial="Footer-hide.html" /></f:comment>
 <f:render partial="Nav.html" arguments="{_all}" />
-
-<t3jquery:AddJQuery />
-<t3jquery:addJQueryAndScript jsfile="EXT:tmpl_ipoa/Resources/Public/Javascript/jquery.fittext.js" />
-<t3jquery:addJQueryAndScript jsfile="EXT:tmpl_ipoa/Resources/Public/Javascript/headroom.min.js" />
-<t3jquery:addJQueryAndScript jsfile="EXT:tmpl_ipoa/Resources/Public/Javascript/jQuery.headroom.min.js" />
-<t3jquery:addJQueryAndScript jsfile="EXT:tmpl_ipoa/Resources/Public/Javascript/ipoa.js" />
-
