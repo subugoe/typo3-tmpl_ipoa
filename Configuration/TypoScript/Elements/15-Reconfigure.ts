@@ -54,3 +54,10 @@ tt_content.table.20.stdWrap.replacement {
 		replace = a class="main__link" href
 	}
 }
+tt_content.text.20.replacement {
+	# wrap main__link around links in text
+	10 {
+		search = a href
+		replace = a class="main__link" href
+	}
+}
