@@ -3,7 +3,7 @@
 config {
 	# Add class to html-Tag
 	#htmlTag_setParams = lang="de" class="js"
-	htmlTag_setParams = lang="de" class="js" xmlns="http://www.w3.org/1999/xhtml"
+	htmlTag_setParams = lang="de" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 
 	#add doctype
 	doctype = html5
@@ -37,7 +37,7 @@ styles.content.imgtext.layoutKey = srcset
 		sys_language_mode = content_fallback
 		sys_language_overlay = 1
 		# change setting in html-tag
-		htmlTag_setParams = lang="en" class="js" xmlns="http://www.w3.org/1999/xhtml"
+		htmlTag_setParams = lang="en" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 	}
 [global]
 [globalVar = GP:L = 2]
@@ -49,7 +49,7 @@ styles.content.imgtext.layoutKey = srcset
 		sys_language_mode = content_fallback
 		sys_language_overlay = 1
 		# change setting in html-tag
-		htmlTag_setParams = lang="ch" class="js" xmlns="http://www.w3.org/1999/xhtml"
+		htmlTag_setParams = lang="ch" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 	}
 [global]
 [globalVar = GP:L = 3]
@@ -61,7 +61,7 @@ styles.content.imgtext.layoutKey = srcset
 		sys_language_fallBackOrder = 2,1,0
 		sys_language_overlay = 1
 		# change setting in html-tag
-		htmlTag_setParams = lang="en" class="js" xmlns="http://www.w3.org/1999/xhtml"
+		htmlTag_setParams = lang="en" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 	}
 [global]
 [globalVar = GP:L = 4]
@@ -73,7 +73,7 @@ styles.content.imgtext.layoutKey = srcset
 		sys_language_fallBackOrder = 3,2,1,0
 		sys_language_overlay = 1
 		# change setting in html-tag
-		htmlTag_setParams = lang="fr" class="js" xmlns="http://www.w3.org/1999/xhtml"
+		htmlTag_setParams = lang="fr" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 	}
 [global]
 [globalVar = GP:L = 5]
@@ -84,7 +84,7 @@ styles.content.imgtext.layoutKey = srcset
 		sys_language_mode = content_fallback
 		sys_language_overlay = 1
 		# change setting in html-tag
-		htmlTag_setParams = lang="de" class="js" xmlns="http://www.w3.org/1999/xhtml"
+		htmlTag_setParams = lang="de" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 	}
 [global]
 [globalVar = GP:L = 6]
@@ -96,7 +96,7 @@ styles.content.imgtext.layoutKey = srcset
 		sys_language_fallBackOrder = 5,1,0
 		sys_language_overlay = 1
 		# change setting in html-tag
-		htmlTag_setParams = lang="en" class="js" xmlns="http://www.w3.org/1999/xhtml"
+		htmlTag_setParams = lang="en" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 	}
 [global]
 
@@ -115,8 +115,5 @@ page.includeJS {
 }
 # include some javascript in footer
 page.includeJSFooter {
-	file100 = typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/jquery.fittext.js
-	file200 = typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/headroom.min.js
-	file300 = typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/jQuery.headroom.min.js
 	file400 = typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/ipoa.js
 }

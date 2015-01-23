@@ -48,7 +48,7 @@ lib.sitemap {
       1 = TMENU
       1 {
         expAll = 1
-        wrap = <ul>|</ul>
+        wrap = <div class="menu__column"><ul class="menu__list">|</ul></div>
         NO = 1
         NO {
             stdWrap {
