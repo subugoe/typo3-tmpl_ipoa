@@ -24,17 +24,34 @@ lib.startNavTitle {
 	3.pid.value = {$startNavTitle.3.pid}
 }
 
-lib.subTemplateVars {
+lib.ids {
+	10 = TEXT
+	10.value = {$ids.start}
+	20 = TEXT
+	20.value = {$ids.contact}
+	30 = TEXT
+	30.value = {$ids.sitemap}
+	40 = TEXT
+	40.value = {$ids.impressum}
+}
 
+lib.subTemplateVars {
 }
 
 lib.contentpage = FLUIDTEMPLATE
 lib.contentpage {
 	file = EXT:tmpl_ipoa/Resources/Private/Templates/Content.html
 	variables < lib.subTemplateVars
+	variables < lib.ids
 	variables {
 
 		MENU < lib.mainMenu
+
+
+		START < lib.ids.10
+		CONTACT < lib.ids.20
+		SITEMAP < lib.ids.30
+		IMPRESSUM < lib.ids.40
 	}
 }
 
