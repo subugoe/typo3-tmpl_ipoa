@@ -103,12 +103,18 @@ styles.content.imgtext.layoutKey = srcset
 [global]
 
 
+# add IE-switch in header
+[browser = msie && version = < IE 9]
+	page.includeJS {
+		file10 = typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/html5shiv.js
+	}
+[global]
+
 # include script in header-section
 page.jsInline {
 	# switch between html-class js or no-js
 	10 = TEXT
 	10.value = (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);
-
 }
 page.includeCSS {
 	file100 = http://subugoe.github.io/ipoa-html-template/css/style.css
