@@ -61,3 +61,6 @@ tt_content.text.20.replacement {
 		replace = a class="main__link" href
 	}
 }
+
+### Images
+styles.content.imgtext.layoutKey = srcset
