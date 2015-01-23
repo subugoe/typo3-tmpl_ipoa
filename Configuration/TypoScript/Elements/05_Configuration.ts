@@ -18,6 +18,8 @@ config {
 	language = de
 	htmlTag_langKey = de
 	locale_all = de_DE.UTF-8
+	# don't move head javascript into external file
+	removeDefaultJS = 0
 }
 
 
@@ -100,6 +102,14 @@ styles.content.imgtext.layoutKey = srcset
 	}
 [global]
 
+
+# include script in header-section
+page.jsInline {
+	# switch between html-class js or no-js
+	10 = TEXT
+	10.value = (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);
+
+}
 page.includeCSS {
 	file100 = http://subugoe.github.io/ipoa-html-template/css/style.css
 }
