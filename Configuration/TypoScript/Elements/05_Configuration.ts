@@ -1,8 +1,5 @@
-
-
 config {
 	# Add class to html-Tag
-	#htmlTag_setParams = lang="de" class="js"
 	htmlTag_setParams = lang="de" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 
 	#add doctype
@@ -15,8 +12,7 @@ config {
 config {
 	linkVars = L
 	sys_language_uid = 0
-	language = de
-	htmlTag_langKey = de
+	language =DE-DE
 	locale_all = de_DE.UTF-8
 	# don't move head javascript into external file
 	removeDefaultJS = 0
@@ -24,7 +20,7 @@ config {
 
 
 page.config {
-	language = de
+	language = DE-DE
 	locale_all = de_DE.UTF-8
 }
 # enable srcset-option in f:image
@@ -33,8 +29,7 @@ styles.content.imgtext.layoutKey = srcset
 [globalVar = GP:L = 1]
 	config {
 		sys_language_uid = 1
-		language = en
-		htmlTag_langKey = en
+		language = DE-EN
 		locale_all = en_US.utf8
 		sys_language_mode = content_fallback
 		sys_language_overlay = 1
@@ -45,8 +40,7 @@ styles.content.imgtext.layoutKey = srcset
 [globalVar = GP:L = 2]
 	config {
 		sys_language_uid = 2
-		language = ch
-		htmlTag_langKey = ch
+		language = CH-DE
 		locale_all = de_CH.utf8
 		sys_language_mode = content_fallback
 		sys_language_overlay = 1
@@ -57,7 +51,7 @@ styles.content.imgtext.layoutKey = srcset
 [globalVar = GP:L = 3]
 	config {
 		sys_language_uid = 3
-		language = en
+		language = CH-EN
 		locale_all = en_US.utf8
 		sys_language_mode = content_fallback; 2,1,0
 		sys_language_fallBackOrder = 2,1,0
@@ -69,7 +63,7 @@ styles.content.imgtext.layoutKey = srcset
 [globalVar = GP:L = 4]
 	config {
 		sys_language_uid = 4
-		language = fr
+		language = CH-FR
 		#locale_all =
 		sys_language_mode = content_fallback; 3,2,1,0
 		sys_language_fallBackOrder = 3,2,1,0
@@ -81,7 +75,7 @@ styles.content.imgtext.layoutKey = srcset
 [globalVar = GP:L = 5]
 	config {
 		sys_language_uid = 5
-		language = de
+		language = AT-DE
 		locale_all = de_AT.utf8
 		sys_language_mode = content_fallback
 		sys_language_overlay = 1
@@ -92,7 +86,7 @@ styles.content.imgtext.layoutKey = srcset
 [globalVar = GP:L = 6]
 	config {
 		sys_language_uid = 6
-		language = en
+		language = AT-EN
 		locale_all = en_US.utf8
 		sys_language_mode = content_fallback; 5,1,0
 		sys_language_fallBackOrder = 5,1,0
