@@ -30,6 +30,8 @@ TCEFORM.tt_content.section_frame {
 
 mod.SHARED {
 	defaultLanguageFlag = dede
+	defaultLanguageLabel = DE-DE
+
 }
 
 RTE.default {

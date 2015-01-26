@@ -1,6 +1,3 @@
-/**
- * let's start jQuery stuff
- */
 jQuery(document).ready(function () {
 
   windowWidth = jQuery(window).width();
@@ -64,7 +61,7 @@ jQuery(document).ready(function () {
    */
   if (windowWidth <= 767) {
 
-    // jQuery('.alt-menu').css({'display': 'none'})
+    // $('.alt-menu').css({'display': 'none'})
     jQuery(altMenu).css({'display': 'none'})
 
     // when menu button receives click the menu will overlay everything an show
@@ -72,6 +69,8 @@ jQuery(document).ready(function () {
     jQuery(altMenuToggleButton).click(function() {
 
       jQuery(altMenu).css({'display': 'block'});
+
+      jQuery('.head-nav').hide();
 
       jQuery('.footer-hide__helper').css({
         'margin-left': '100%',
@@ -117,19 +116,7 @@ jQuery(document).ready(function () {
         });
 
         // restablish content stuff to be used as normal again
-        jQuery('.footer-hide__helper').css({
-          'transform': 'translateX(0%)',
-          '-webkit-transform': 'translateX(0%)',
-          '-ms-transform': 'translateX(0%)',
-          'transition': '0.25s ease-in-out',
-          'position': 'relative',
-        });
-        jQuery('.footer-hide').css({
-          'transform': 'translateX(0%)',
-          '-webkit-transform': 'translateX(0%)',
-          '-ms-transform': 'translateX(0%)',
-          'transition': '0.25s ease-in-out',
-        })
+        jQuery('.footer-hide__helper').removeClass('footer-hide__helper--shifted');
 
       /*
        * what to do when menu button gets clicked and menu is not yet visible
@@ -156,19 +143,7 @@ jQuery(document).ready(function () {
 
         // move the regular content to the right (partly off canvas) and
         // prevent scrolling
-        jQuery('.footer-hide__helper').css({
-          'transform': 'translateX(30%)',
-          '-webkit-transform': 'translateX(30%)',
-          '-ms-transform': 'translateX(30%)',
-          'transition': '0.25s ease-in-out',
-          'position': 'fixed',
-        });
-        jQuery('.footer-hide').css({
-          'transform': 'translateX(30%)',
-          '-webkit-transform': 'translateX(30%)',
-          '-ms-transform': 'translateX(30%)',
-          'transition': '0.25s ease-in-out',
-        })
+        jQuery('.footer-hide__helper').addClass('footer-hide__helper--shifted');
 
       }
 

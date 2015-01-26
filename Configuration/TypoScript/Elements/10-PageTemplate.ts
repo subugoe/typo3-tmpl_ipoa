@@ -25,14 +25,16 @@ lib.startNavTitle {
 }
 
 lib.ids {
-	10 = TEXT
-	10.value = {$ids.start}
-	20 = TEXT
-	20.value = {$ids.contact}
-	30 = TEXT
-	30.value = {$ids.sitemap}
-	40 = TEXT
-	40.value = {$ids.impressum}
+	start = TEXT
+	start.value = {$ids.start}
+	contact = TEXT
+	contact.value = {$ids.contact}
+	sitemap = TEXT
+	sitemap.value = {$ids.sitemap}
+	impressum = TEXT
+	impressum.value = {$ids.impressum}
+	news = TEXT
+	news.value = {$ids.news}
 }
 
 lib.subTemplateVars {
@@ -47,11 +49,13 @@ lib.contentpage {
 
 		MENU < lib.mainMenu
 
+		START < lib.ids.start
+		CONTACT < lib.ids.contact
+		SITEMAP < lib.ids.sitemap
+		IMPRESSUM < lib.ids.impressum
+		NEWS < lib.ids.news
 
-		START < lib.ids.10
-		CONTACT < lib.ids.20
-		SITEMAP < lib.ids.30
-		IMPRESSUM < lib.ids.40
+		CUR_LANGUAGE < sys_language_uid
 	}
 }
 
