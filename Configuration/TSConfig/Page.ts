@@ -17,6 +17,12 @@ TCAdefaults {
 }
 # RTE configuration
 RTE.default {
+	removeComments = 1
+
+	buttons.formatblock.items.h3.label = h3
+	buttons.formatblock.items.h3.addClass = heading
+	buttons.formatblock.items.h4.label = h4
+	buttons.formatblock.items.h4.addClass = heading
 }
 
 RTE.config.tt_content.bodytext.proc.allowedClasses < RTE.default.proc.allowedClasses
@@ -32,8 +38,4 @@ mod.SHARED {
 	defaultLanguageFlag = dede
 	defaultLanguageLabel = DE-DE
 
-}
-
-RTE.default {
-	removeComments = 1
 }

@@ -20,12 +20,11 @@ lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines {
 # remove standard tagging of content and headers
 tt_content.stdWrap.innerWrap >
 lib.stdheader.stdWrap.dataWrap >
-lib.stdheader.3.headerClass >
+
 
 # add class to title of content element
 # that it is h2 instead of h1 is written in PageTs Constants right now (see above)
 lib.stdheader.10.2.dataWrap = <h2 class="main__heading">|</h2>
-
 
 # unfortunately I haven't found a way to change the defaulttag to h2 from inside the extension
 # the following line doesn't work
