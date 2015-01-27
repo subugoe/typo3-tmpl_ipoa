@@ -12,17 +12,17 @@ config {
 config {
 	linkVars = L
 	sys_language_uid = 0
-	language =DE-DE
+	language = DE-DE
 	locale_all = de_DE.UTF-8
 	# don't move head javascript into external file
 	removeDefaultJS = 0
 }
 
 
-page.config {
-	language = DE-DE
-	locale_all = de_DE.UTF-8
-}
+#page.config {
+#	language = DE-DE
+#	locale_all = de_DE.UTF-8
+#}
 # enable srcset-option in f:image
 styles.content.imgtext.layoutKey = srcset
 
@@ -68,7 +68,6 @@ styles.content.imgtext.layoutKey = srcset
 		sys_language_mode = content_fallback; 3,2,1,0
 		sys_language_fallBackOrder = 3,2,1,0
 		sys_language_overlay = 1
-		# change setting in html-tag
 		htmlTag_setParams = lang="fr" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 	}
 [global]
@@ -79,7 +78,6 @@ styles.content.imgtext.layoutKey = srcset
 		locale_all = de_AT.utf8
 		sys_language_mode = content_fallback
 		sys_language_overlay = 1
-		# change setting in html-tag
 		htmlTag_setParams = lang="de" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 	}
 [global]

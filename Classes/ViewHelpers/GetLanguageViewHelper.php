@@ -24,6 +24,7 @@ namespace Subugoe\TmplIpoa\ViewHelpers;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  ******************************************************************************/
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * View Helper
@@ -36,13 +37,12 @@ class GetLanguageViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractVie
 	     * Get the current language
 	     */
 	    protected function getLanguage() {
-	        if (TYPO3_MODE === 'FE') {
-	            if (isset($GLOBALS['TSFE']->config['config']['language'])) {
-	                //return $GLOBALS['TSFE']->config['config']['language'];
-		            return $GLOBALS['TSFE']->config["config"]["language"];
-	            }
-	        }
-	        return 'en'; //default
+		    if (isset($GLOBALS['TSFE']->config['config']['language'])) {
+			    return $GLOBALS['TSFE']->config['config']['language'];
+			    //DebuggerUtility::var_dump($GLOBALS['TSFE']->config['config']);
+
+		    }
+		    return 'en'; //default
 	    }
 
 	    /**
