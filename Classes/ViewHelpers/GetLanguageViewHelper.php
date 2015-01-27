@@ -24,35 +24,34 @@ namespace Subugoe\TmplIpoa\ViewHelpers;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  ******************************************************************************/
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * View Helper
  *
- * Usage examples are available in Private/Partials/Test.html.
  */
 
-class LinkJSViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+class GetLanguageViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
 
 	/**
-		 * Registers own arguments.
-		 * @return void
-		 */
-		public function initializeArguments() {
-			parent::initializeArguments();
-			$this->registerArgument('file', 'string', 'Path to the JS file', TRUE);
-		}
+	     * Get the current language
+	     */
+	    protected function getLanguage() {
+		    if (isset($GLOBALS['TSFE']->config['config']['language'])) {
+			    return $GLOBALS['TSFE']->config['config']['language'];
+			    //DebuggerUtility::var_dump($GLOBALS['TSFE']->config['config']);
 
+		    }
+		    return 'en'; //default
+	    }
 
-
-		/**
-		 * @return string
-		 */
-		public function render() {
-			$JSFileName = $GLOBALS['TSFE']->tmpl->getFileName($this->arguments['file']);
-			if ($JSFileName) {
-				$GLOBALS['TSFE']->getPageRenderer()->addJsFile($JSFileName);
-			}
-		}
+	    /**
+	     * Return current language
+	     * @return  string
+	     */
+	    public function render() {
+	        return $this->getLanguage();
+	    }
 
 }
 

@@ -24,17 +24,38 @@ lib.startNavTitle {
 	3.pid.value = {$startNavTitle.3.pid}
 }
 
-lib.subTemplateVars {
+lib.ids {
+	start = TEXT
+	start.value = {$ids.start}
+	contact = TEXT
+	contact.value = {$ids.contact}
+	sitemap = TEXT
+	sitemap.value = {$ids.sitemap}
+	impressum = TEXT
+	impressum.value = {$ids.impressum}
+	news = TEXT
+	news.value = {$ids.news}
+}
 
+lib.subTemplateVars {
 }
 
 lib.contentpage = FLUIDTEMPLATE
 lib.contentpage {
 	file = EXT:tmpl_ipoa/Resources/Private/Templates/Content.html
 	variables < lib.subTemplateVars
+	variables < lib.ids
 	variables {
 
 		MENU < lib.mainMenu
+
+		START < lib.ids.start
+		CONTACT < lib.ids.contact
+		SITEMAP < lib.ids.sitemap
+		IMPRESSUM < lib.ids.impressum
+		NEWS < lib.ids.news
+
+		CUR_LANGUAGE < sys_language_uid
 	}
 }
 
@@ -89,4 +110,5 @@ page {
 
 	10 = FLUIDTEMPLATE
 	10 < lib.layoutTemplate
+
 }
