@@ -3,32 +3,60 @@
 lib.mainMenu = HMENU
 lib.mainMenu {
 	expAll = 1
-	doNotLinkIt = 1
 	excludeUidList = {$ids.excludeFromMenu}
 	1 = TMENU
 	1 {
-		expAll = 1
+		# Normalzustand
 		NO = 1
 		NO {
-			doNotLinkIt = 1
-			wrap = <div class="menu__column ic-tablet-one-half ic-notebook-and-up-one-quarter">|</div>
-			allWrap = <div><strong>|</strong></div>
+			expAll = 1
+			wrapItemAndSub = <div class="menu__column ic-tablet-one-half ic-notebook-and-up-one-quarter"><ul class="menu__list"><li>|</li></ul></div>
+			ATagParams = title = "" class="menu__link"
+		}
+		# Current, active page
+		CUR < .NO
+		CUR {
+			expAll = 1
+			ATagParams = title = "" class="menu__link menu__link--active"
+		}
+		IFSUB < .NO
+		IFSUB {
+			expAll = 1
+			ATagParams = title = "" class="menu__link menu__link--has-children"
+		}
+		CURIFSUB < .CUR
+		CURIFSUB {
+			expAll = 1
+			ATagParams = title = "" class="menu__link menu__link--active menu__link--has-children"
 		}
 	}
 	2 = TMENU
 	2 {
-		wrap = <ul class="menu__list">|</ul>
 		NO = 1
 		NO {
-			linkWrap = <li>|</li>
-			ATagParams = title="" class="menu__link"
+			expAll = 1
+			wrapItemAndSub = <ul class="menu__list--indented"><li>|</li></ul>
+			ATagParams = title = "" class="menu__link"
 		}
-		CUR = 1
+		# Current, active page
+		CUR < .NO
 		CUR {
-			linkWrap = <li>|</li>
-			ATagParams = title="" class="menu__link menu__link--active"
+			expAll = 1
+			ATagParams = title = "" class="menu__link menu__link--active"
+		}
+		IFSUB < .NO
+		IFSUB {
+			expAll = 1
+			ATagParams = title = "" class="menu__link menu__link--has-children"
+		}
+		CURIFSUB < .CUR
+		CURIFSUB {
+			expAll = 1
+			ATagParams = title = "" class="menu__link menu__link--active menu__link--has-children"
 		}
 	}
+	3 < .2
+	4 < .3
 }
 
 ##### SITEMAP #####
