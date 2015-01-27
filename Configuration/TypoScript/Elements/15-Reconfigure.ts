@@ -50,6 +50,7 @@ tt_content {
 			#add wrap for table content element
 			stdWrap.wrap = <div class="main__table">|</div>
 
+
 			stdWrap.replacement {
 				#remove default classes of table
 				# (the class contenttable cause the css breadcrumbs to change from html.js body.body.content to html body)
@@ -61,6 +62,14 @@ tt_content {
 				30 {
 					search = a href
 					replace = a class="main__link" href
+				}
+				40 {
+					search = tr class="tr-odd
+					replace = tr class="uneven
+				}
+				50 {
+					search = tr class="tr-even
+					replace = tr class="
 				}
 			}
 		}
