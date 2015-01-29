@@ -3,6 +3,7 @@
 
 
 # Add class to body-Tag
+
 page {
 	bodyTag >
 	bodyTagCObject = TEXT
