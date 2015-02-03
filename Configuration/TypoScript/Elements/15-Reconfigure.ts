@@ -3,7 +3,6 @@
 
 
 # Add class to body-Tag
-
 page {
 	bodyTag >
 	bodyTagCObject = TEXT
@@ -14,29 +13,54 @@ page {
 # remove all comments in html
 config.disablePrefixComment = 1
 
-# remove standard tagging of RTE
-lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines {
-	addAttributes.P.class >
+lib.parseFunc_RTE.nonTypoTagStdWrap {
+	# remove <p></p>s
+	encapsLines >
+	# remove standard tagging of RTE
+    encapsLines.addAttributes.P.class >
 }
+
 # remove standard tagging of content and headers
 tt_content.stdWrap.innerWrap >
 lib.stdheader.stdWrap.dataWrap >
 
+# change class of ul-tag in RTE
+# doesn't work depending on colPos
+#lib.parseFunc_RTE.externalBlocks.ul.callRecursive.tagStdWrap.HTMLparser.tags.ul.fixAttrib.class.default = main__list
 
-# add class to title of content element
-# that it is h2 instead of h1 is written in PageTs Constants right now (see above)
-lib.stdheader.10.2.dataWrap = <h2 class="main__heading">|</h2>
 
-# unfortunately I haven't found a way to change the defaulttag to h2 from inside the extension
-# the following line doesn't work
-#content.defaultHeaderType = 2
+lib.stdheader.10.1.dataWrap.cObject = CASE
+lib.stdheader.10.1.dataWrap.cObject {
+	key.field = colPos
+	# Regulärer Text
+	0 = TEXT
+	0.value = <h2 class="main__heading">|</h2>
+	# Seitenende
+	default = TEXT
+	default.value = <h3 class="heading--gamma">|</h3>
+}
 
+# change classes of content
+# depending on Position in Layout
 tt_content {
 	text {
 		20 {
 			# wrap text-content in special div
-			stdWrap.dataWrap = <div class="main__textblock">|</div>
-
+			stdWrap.dataWrap.cObject = CASE
+			stdWrap.dataWrap.cObject {
+				key.field = colPos
+				# regulärer Text
+				0 = TEXT
+				0.value = <div class="main__textblock">|</div>
+				# Seitenende
+				1 = TEXT
+				1.value = <p class="paragraph">|</p>
+				2 < .1
+				3 < .1
+				4 < .1
+				5 < .1
+				5.value = <p>|</p>
+			}
 			replacement {
 				# wrap main__link around links in text
 				10 {
@@ -61,8 +85,8 @@ tt_content {
 				}
 				# wrap main__link around links in table
 				30 {
-					search = a href
-					replace = a class="main__link" href
+					#search = a href
+					#replace = a class="main__link" href
 				}
 				40 {
 					search = tr class="tr-odd
@@ -79,3 +103,4 @@ tt_content {
 
 ### Images
 styles.content.imgtext.layoutKey = srcset
+

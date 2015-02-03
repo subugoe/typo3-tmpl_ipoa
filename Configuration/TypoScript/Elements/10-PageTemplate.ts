@@ -56,6 +56,37 @@ lib.contentpage {
 		NEWS < lib.ids.news
 
 		CUR_LANGUAGE < sys_language_uid
+
+		# Definitionen für die Spalten am Seitenende
+		layout = TEXT
+		layout.data = levelfield:-2,backend_layout_next_level,slide
+
+		more1 < styles.content.get
+		more1.select.where = colPos = 1
+		more1.slide = -1
+		more2 < styles.content.get
+		more2.select.where = colPos = 2
+		more2.slide = -1
+		more3 < styles.content.get
+		more3.select.where = colPos = 3
+		more3.slide = -1
+		more4 < styles.content.get
+		more4.select.where = colPos = 4
+		more4.slide = -1
+
+		footer1 < styles.content.get
+		footer1.select.where = colPos = 5
+		footer1.slide = -1
+		footer2 < styles.content.get
+		footer2.select.where = colPos = 6
+		footer2.slide = -1
+		footer3 < styles.content.get
+		footer3.select.where = colPos = 7
+		footer3.slide = -1
+		footer4 < styles.content.get
+		footer4.select.where = colPos = 8
+		footer4.slide = -1
+
 	}
 }
 
@@ -100,8 +131,6 @@ lib.layoutTemplate {
 
 	}
 }
-
-
 
 page = PAGE
 page {

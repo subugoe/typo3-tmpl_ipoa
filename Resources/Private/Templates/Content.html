@@ -7,8 +7,8 @@
 		<f:render partial="Icons.html"/>
 		<f:render partial="Content.html"/>
 		<f:comment><f:render partial="Search.html"/></f:comment>
-		<f:comment><f:render partial="More.html"/></f:comment>
+		<f:render partial="More.html" arguments="{_all}"/>
 		<f:render partial="Last.html" arguments="{_all}" />
 	</div>
-</div><f:render partial="Footer-hide.html" />
+</div><f:render partial="Footer-hide.html"  arguments="{_all}" />
 <f:render partial="Nav.html" arguments="{_all}" />
