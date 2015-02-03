@@ -3,10 +3,6 @@ TCEFORM {
 	tt_content {
 	}
 	pages {
-		layout.disabled = 1
-		newUntil.disabled = 1
-		backend_layout.label = Layout für aktuelle Seite
-		backend_layout_next_level.disabled = 1
 	}
 }
 
@@ -32,10 +28,4 @@ RTE.classes {
 
 #frames for columns
 TCEFORM.tt_content.section_frame {
-}
-
-mod.SHARED {
-	defaultLanguageFlag = dede
-	defaultLanguageLabel = DE-DE
-
 }
