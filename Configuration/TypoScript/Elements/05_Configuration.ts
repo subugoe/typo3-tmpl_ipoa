@@ -109,7 +109,7 @@ page.jsInline {
 	10.value = (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);
 }
 page.includeCSS {
-	file100 = http://subugoe.github.io/ipoa-html-template/css/style.css
+	file100 = typo3conf/ext/tmpl_ipoa/Resources/Public/Css/ipoa.css
 }
 # include all necessary js-files at the end of the page, if possible
 page.javascriptLibs {
