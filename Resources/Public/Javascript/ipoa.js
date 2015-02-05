@@ -60,6 +60,11 @@ jQuery(document).ready(function () {
   jQuery('.alt-menu .menu__list--indented').hide();
 
   /**
+   * find all ULs with active link and parents (in that menu__column) and open them
+   */
+  jQuery('.alt-menu .menu__list--indented .menu__link--active').parentsUntil('.menu__column').show();
+
+  /**
    *
    */
   jQuery('.alt-menu').find('.menu__link--has-children').click(function(event) {
@@ -87,6 +92,13 @@ jQuery(document).ready(function () {
   });
 
 
+  jQuery('.on-demand__content').hide();
+  jQuery('.on-demand__link').click(function(event){
+    jQuery('.on-demand__link').hide();
+    jQuery('.on-demand__content').show();
+    event.preventDefault();
+  });
+
 
   /**
    *
@@ -99,7 +111,6 @@ jQuery(document).ready(function () {
    */
   if (windowWidth <= 767) {
 
-    // $('.alt-menu').css({'display': 'none'})
     jQuery(altMenu).css({'display': 'none'})
 
     // when menu button receives click the menu will overlay everything an show
@@ -157,10 +168,22 @@ jQuery(document).ready(function () {
         jQuery('.footer-hide__helper').removeClass('footer-hide__helper--shifted');
         jQuery('.footer-hide').show();
 
+
+
       /*
        * what to do when menu button gets clicked and menu is not yet visible
        */
       } else {
+
+        // $('.overlay').css({
+        //   'background-color': 'grey',
+        //   'position': 'absolute',
+        //   'bottom': 0,
+        //   'height': '100%',
+        //   'width': '100%',
+        //   'z-index': '999',
+        //   'opacity': '.5'
+        // });
 
         // add '--active' modifier to the menu button
         altMenuToggleButton.addClass('js-alt-menu-toggle-button--active');
@@ -172,6 +195,9 @@ jQuery(document).ready(function () {
           '-ms-transform': 'translateX(0%)',
           'transition': '0.25s ease-in-out',
         });
+
+
+
 
         // make the menu content fill the whole left side (top to bottom) and
         // let its content scroll

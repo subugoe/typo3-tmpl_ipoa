@@ -13,42 +13,47 @@ page {
 # remove all comments in html
 config.disablePrefixComment = 1
 
-# remove standard tagging of RTE
-lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines {
-	addAttributes.P.class >
-}
-# remove standard tagging of content and headers
+# remove standard div of content and headers
 tt_content.stdWrap.innerWrap >
-lib.stdheader.stdWrap.dataWrap >
+lib.stdheader.stdWrap >
 
+# change class of ul-tag in RTE
+# doesn't work depending on colPos
 
-# add class to title of content element
-# that it is h2 instead of h1 is written in PageTs Constants right now (see above)
-lib.stdheader.10.2.dataWrap = <h2 class="main__heading">|</h2>
+# remove class=bodytext from RTE paragraphs
+lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class =
 
-# unfortunately I haven't found a way to change the defaulttag to h2 from inside the extension
-# the following line doesn't work
-#content.defaultHeaderType = 2
+# Ändere Überschriften
+lib.stdheader.10.1.dataWrap.cObject = CASE
+lib.stdheader.10.1.dataWrap.cObject {
+	key.field = colPos
+	# Regulärer Text
+	0 = TEXT
+	0.value = <h2>|</h2>
+	# Seitenende
+	default = TEXT
+	default.value = <h3>|</h3>
+}
 
+# change classes of content
+# depending on Position in Layout
 tt_content {
 	text {
 		20 {
 			# wrap text-content in special div
-			stdWrap.dataWrap = <div class="main__textblock">|</div>
-
-			replacement {
-				# wrap main__link around links in text
-				10 {
-					search = a href
-					replace = a class="main__link" href
-				}
+			stdWrap.dataWrap.cObject = CASE
+			stdWrap.dataWrap.cObject {
+				key.field = colPos
+				# nur in der Hauptspalte werden divs hinzugefügt
+				0 = TEXT
+				0.value = <div>|</div>
 			}
 		}
 	}
 	table {
 		20 {
 			#add wrap for table content element
-			stdWrap.wrap = <div class="main__table">|</div>
+			stdWrap.wrap = <div>|</div>
 
 			stdWrap.replacement {
 				#remove default classes of table
@@ -57,15 +62,21 @@ tt_content {
 					search = class="contenttable contenttable-0"
 					replace =
 				}
-				# wrap main__link around links in table
-				30 {
-					search = a href
-					replace = a class="main__link" href
+				# add class "uneven" to uneven rows in tables
+				40 {
+					search = tr class="tr-odd
+					replace = tr class="uneven
 				}
 			}
+		}
+	}
+	textpic {
+		20 {
+			stdWrap.wrap = <div>|</div>
 		}
 	}
 }
 
 ### Images
 styles.content.imgtext.layoutKey = srcset
+
