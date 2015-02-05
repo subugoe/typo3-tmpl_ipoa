@@ -29,3 +29,4 @@ RTE.classes {
 #frames for columns
 TCEFORM.tt_content.section_frame {
 }
+RTE.default.init.removeTrailingBR = 1
