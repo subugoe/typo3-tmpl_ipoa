@@ -4,59 +4,39 @@ lib.mainMenu = HMENU
 lib.mainMenu {
 	expAll = 1
 	excludeUidList = {$ids.excludeFromMenu}
+	wrap = <div class="menu__column ic-tablet-one-half ic-notebook-and-up-one-quarter">|</div>
 	1 = TMENU
 	1 {
+		expAll = 1
+		wrap = <ul class="menu__list">|</ul>
 		# Normalzustand
 		NO = 1
 		NO {
-			expAll = 1
-			wrapItemAndSub = <div class="menu__column ic-tablet-one-half ic-notebook-and-up-one-quarter"><ul class="menu__list"><li>|</li></ul></div>
-			ATagParams = title = "" class="menu__link"
+			wrapItemAndSub = <li>|<li>
+			ATagParams = class="menu__link"
+			ATagTitle.field = title
 		}
 		# Current, active page
 		CUR < .NO
 		CUR {
-			expAll = 1
-			ATagParams = title = "" class="menu__link menu__link--active"
+			ATagParams =class="menu__link menu__link--active"
 		}
 		IFSUB < .NO
 		IFSUB {
-			expAll = 1
-			ATagParams = title = "" class="menu__link menu__link--has-children"
+			ATagParams = class="menu__link menu__link--has-children"
 		}
 		CURIFSUB < .CUR
 		CURIFSUB {
-			expAll = 1
-			ATagParams = title = "" class="menu__link menu__link--active menu__link--has-children"
+			ATagParams = class="menu__link menu__link--active menu__link--has-children"
 		}
 	}
-	2 = TMENU
+	2 < .1
 	2 {
-		NO = 1
-		NO {
-			expAll = 1
-			wrapItemAndSub = <ul class="menu__list--indented"><li>|</li></ul>
-			ATagParams = title = "" class="menu__link"
-		}
-		# Current, active page
-		CUR < .NO
-		CUR {
-			expAll = 1
-			ATagParams = title = "" class="menu__link menu__link--active"
-		}
-		IFSUB < .NO
-		IFSUB {
-			expAll = 1
-			ATagParams = title = "" class="menu__link menu__link--has-children"
-		}
-		CURIFSUB < .CUR
-		CURIFSUB {
-			expAll = 1
-			ATagParams = title = "" class="menu__link menu__link--active menu__link--has-children"
-		}
+		wrap = <ul class="menu__list--indented">|</ul>
 	}
 	3 < .2
 	4 < .3
+	5 < .3
 }
 
 ##### SITEMAP #####
