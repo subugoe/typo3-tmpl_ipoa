@@ -131,15 +131,10 @@ lib.startpage {
 	variables < lib.subTemplateVars
 	variables < lib.ids
 	variables {
-		STARTNAV_1 < lib.startNavTitle.1
-		STARTNAV_1A < lib.startNavTitle.1.abbr
-		STARTNAV_1P < lib.startNavTitle.1.pid
-		STARTNAV_2 < lib.startNavTitle.2
-		STARTNAV_2A < lib.startNavTitle.2.abbr
-		STARTNAV_2P < lib.startNavTitle.2.pid
-		STARTNAV_3 < lib.startNavTitle.3
-		STARTNAV_3A < lib.startNavTitle.3.abbr
-		STARTNAV_3P < lib.startNavTitle.3.pid
+	}
+
+	page.includeCSS {
+		file100 = typo3conf/ext/tmpl_ipoa/Resources/Public/Css/ipoa.css
 	}
 }
 
@@ -177,3 +172,4 @@ page {
 	10 < lib.layoutTemplate
 
 }
+
