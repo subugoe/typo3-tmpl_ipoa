@@ -1,6 +1,5 @@
 {namespace ipoa=Subugoe\TmplIpoa\ViewHelpers}
 
-<ipoa:linkCSS file="http://subugoe.github.io/ipoa-html-template/css/start.css" />
 <f:render partial="Icons.html" />
 <!-- structure according to Tag 0.0.7 -->
 
@@ -8,7 +7,7 @@
 
 	<header class="start__header" role="banner">
   	<div class="start__logo">
-	    <img src="http://subugoe.github.io/ipoa-html-template/img/oa.svg" class="image" alt="Logo"/>
+	    <img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/oa.svg" />' class="image"/>
   	</div><!--
   	--><div class="start__title">
   		<h1>Open Access</h1>
