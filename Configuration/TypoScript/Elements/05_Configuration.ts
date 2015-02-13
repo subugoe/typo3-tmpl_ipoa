@@ -108,20 +108,10 @@ page.jsInline {
 	10 = TEXT
 	10.value = (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);
 }
-page.includeCSS {
-	file100 = typo3conf/ext/tmpl_ipoa/Resources/Public/Css/ipoa.css
-}
+
 # include all necessary js-files at the end of the page, if possible
 page.javascriptLibs {
 	jQuery = 1
 	jQuery.version = latest
 	jQuery.source = local
-}
-# include some javascript in header
-page.includeJS {
-	file100 = typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/picturefill.min.js
-}
-# include some javascript in footer
-page.includeJSFooter {
-	file400 = typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/ipoa.js
 }

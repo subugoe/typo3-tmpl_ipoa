@@ -25,16 +25,54 @@ lib.startNavTitle {
 }
 
 lib.ids {
-	start = TEXT
-	start.value = {$ids.start}
-	contact = TEXT
-	contact.value = {$ids.contact}
-	sitemap = TEXT
-	sitemap.value = {$ids.sitemap}
-	impressum = TEXT
-	impressum.value = {$ids.impressum}
-	news = TEXT
-	news.value = {$ids.news}
+	START_UID = TEXT
+	START_UID.value = {$ids.start}
+	KONTAKT_UID = TEXT
+	KONTAKT_UID.value = {$ids.kontakt}
+	KONTAKT_TITLE = TEXT
+	KONTAKT_TITLE.data = DB:pages:{$ids.kontakt}:title
+	SITEMAP = TEXT
+	SITEMAP.value = {$ids.sitemap}
+	IMPRESSUM_UID = TEXT
+	IMPRESSUM_UID.value = {$ids.impressum}
+	IMPRESSUM_TITLE = TEXT
+	IMPRESSUM_TITLE.data = DB:pages:{$ids.impressum}:title
+	NEWS_UID = TEXT
+	NEWS_UID.value = {$ids.news}
+	UEBERUNS_UID = TEXT
+	UEBERUNS_UID.value = {$ids.ueberUns}
+	UEBERUNS_TITLE = TEXT
+	UEBERUNS_TITLE.data = DB:pages:{$ids.ueberUns}:title
+	STARTBUT_1_UID = TEXT
+	STARTBUT_1_UID.value = {$ids.startbutton_1}
+	STARTBUT_1_TITLE = TEXT
+	STARTBUT_1_TITLE.data = DB:pages:{$ids.startbutton_1}:title
+	STARTBUT_1_AC = TEXT
+	STARTBUT_1_AC {
+		data = DB:pages:{$ids.startbutton_1}:title
+		crop = 1
+		case = lower
+	}
+	STARTBUT_2_UID = TEXT
+	STARTBUT_2_UID.value = {$ids.startbutton_2}
+	STARTBUT_2_TITLE = TEXT
+	STARTBUT_2_TITLE.data = DB:pages:{$ids.startbutton_2}:title
+	STARTBUT_2_AC = TEXT
+	STARTBUT_2_AC {
+		data = DB:pages:{$ids.startbutton_2}:title
+		crop = 1
+		case = lower
+	}
+	STARTBUT_3_UID = TEXT
+	STARTBUT_3_UID.value = {$ids.startbutton_3}
+	STARTBUT_3_TITLE = TEXT
+	STARTBUT_3_TITLE.data = DB:pages:{$ids.startbutton_3}:title
+	STARTBUT_3_AC = TEXT
+	STARTBUT_3_AC {
+		data = DB:pages:{$ids.startbutton_3}:title
+		crop = 1
+		case = lower
+	}
 }
 
 lib.subTemplateVars {
@@ -49,13 +87,10 @@ lib.contentpage {
 
 		MENU < lib.mainMenu
 
-		START < lib.ids.start
-		CONTACT < lib.ids.contact
-		SITEMAP < lib.ids.sitemap
-		IMPRESSUM < lib.ids.impressum
-		NEWS < lib.ids.news
-
 		CUR_LANGUAGE < sys_language_uid
+
+		PAGETITLE = TEXT
+		PAGETITLE.data = page:title
 
 		# Definitionen für die Spalten am Seitenende
 		layout = TEXT
@@ -94,16 +129,12 @@ lib.startpage = FLUIDTEMPLATE
 lib.startpage {
 	file = EXT:tmpl_ipoa/Resources/Private/Templates/Start.html
 	variables < lib.subTemplateVars
+	variables < lib.ids
 	variables {
-		STARTNAV_1 < lib.startNavTitle.1
-		STARTNAV_1A < lib.startNavTitle.1.abbr
-		STARTNAV_1P < lib.startNavTitle.1.pid
-		STARTNAV_2 < lib.startNavTitle.2
-		STARTNAV_2A < lib.startNavTitle.2.abbr
-		STARTNAV_2P < lib.startNavTitle.2.pid
-		STARTNAV_3 < lib.startNavTitle.3
-		STARTNAV_3A < lib.startNavTitle.3.abbr
-		STARTNAV_3P < lib.startNavTitle.3.pid
+	}
+
+	page.includeCSS {
+		file100 = typo3conf/ext/tmpl_ipoa/Resources/Public/Css/ipoa.css
 	}
 }
 
@@ -141,3 +172,4 @@ page {
 	10 < lib.layoutTemplate
 
 }
+
