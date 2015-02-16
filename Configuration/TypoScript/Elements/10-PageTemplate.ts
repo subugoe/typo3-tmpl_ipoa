@@ -10,8 +10,8 @@ lib.ids {
 	KONTAKT_UID.value = {$ids.kontakt}
 	KONTAKT_TITLE = TEXT
 	KONTAKT_TITLE.data = DB:pages:{$ids.kontakt}:title
-	SITEMAP = TEXT
-	SITEMAP.value = {$ids.sitemap}
+	SITEMAP_UID = TEXT
+	SITEMAP_UID.value = {$ids.sitemap}
 	SITEMAP_TITLE = TEXT
 	SITEMAP_TITLE.data = DB:pages:{$ids.sitemap}:title
 	IMPRESSUM_UID = TEXT
