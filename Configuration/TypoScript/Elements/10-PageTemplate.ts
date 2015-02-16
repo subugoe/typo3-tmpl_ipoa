@@ -4,18 +4,24 @@ content < styles.content.get
 lib.ids {
 	START_UID = TEXT
 	START_UID.value = {$ids.start}
+	START_TITLE = TEXT
+	START_TITLE.data = DB:pages:{$ids.start}:title
 	KONTAKT_UID = TEXT
 	KONTAKT_UID.value = {$ids.kontakt}
 	KONTAKT_TITLE = TEXT
 	KONTAKT_TITLE.data = DB:pages:{$ids.kontakt}:title
 	SITEMAP = TEXT
 	SITEMAP.value = {$ids.sitemap}
+	SITEMAP_TITLE = TEXT
+	SITEMAP_TITLE.data = DB:pages:{$ids.sitemap}:title
 	IMPRESSUM_UID = TEXT
 	IMPRESSUM_UID.value = {$ids.impressum}
 	IMPRESSUM_TITLE = TEXT
 	IMPRESSUM_TITLE.data = DB:pages:{$ids.impressum}:title
 	NEWS_UID = TEXT
 	NEWS_UID.value = {$ids.news}
+	NEWS_TITLE = TEXT
+	NEWS_TITLE.data = DB:pages:{$ids.news}:title
 	UEBERUNS_UID = TEXT
 	UEBERUNS_UID.value = {$ids.ueberUns}
 	UEBERUNS_TITLE = TEXT
@@ -50,6 +56,8 @@ lib.ids {
 		crop = 1
 		case = lower
 	}
+	DEFLANG_LABEL = TEXT
+	DEFLANG_LABEL.value < mod.SHARED.defaultLanguageLabel
 }
 
 lib.subTemplateVars {

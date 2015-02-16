@@ -9,22 +9,22 @@
   --><div class="head__links">
     <ul class="head__list">
       <li>
-	      <f:link.page pageUid="{START_UID}" title="" class="head__link">
+	      <f:link.page pageUid="{START_UID}" title="Startseite" class="head__link">
           <svg class="fa-icon fa-icon-home fa-icon--s"><use xlink:href="#icon-home"></use></svg><span class="hidden-on-phone"> Startseite</span>
         </f:link.page>
       </li><!--
       --><li>
-	    <f:link.page pageUid="{KONTAKT_UID}" title="" class="head__link">
+	    <f:link.page pageUid="{KONTAKT_UID}" title="Kontakt" class="head__link">
           <svg class="fa-icon fa-icon-info fa-icon--s"><use xlink:href="#icon-info"></use></svg><span class="hidden-on-phone"> Kontakt</span>
         </f:link.page>
       </li>
       <li>
-	      <f:link.page pageUid="{NEWS_UID}" title="" class="head__link">
+	      <f:link.page pageUid="{NEWS_UID}" title="News" class="head__link">
           <svg class="fa-icon fa-icon-bolt fa-icon--s"><use xlink:href="#icon-bolt"></use></svg><span class="hidden-on-phone"> News</span>
         </f:link.page>
       </li>
       <li>
-	      <f:link.page pageUid="{SITEMAP_UID}" title="" class="head__link">
+	      <f:link.page pageUid="{SITEMAP_UID}" title="Sitemap" class="head__link">
           <svg class="fa-icon fa-icon-sitemap fa-icon--s"><use xlink:href="#icon-sitemap"></use></svg><span class="hidden-on-phone"> Sitemap</span>
         </f:link.page>
       </li>
@@ -39,35 +39,43 @@
         </a>
       </li>
     </ul>
-	<v:page.languageMenu
-	    defaultLanguageLabel="DE-DE"
-	    linkCurrent="0"
-	    classCurrent="'head__link--active'"
-	    hideNotTranslated="{true}" >
-		<div class="head__language-links js-head-language-links">
-		      <svg class="fa-icon fa-icon-globe fa-icon--s fa-icon-on-bright"><use xlink:href="#icon-globe"></use></svg>
-			<ul  class="head__list">
-	        <f:for each="{languageMenu}" as="langmenu" iteration="langiter">
-		        <f:if condition="{ipoa:getLanguage()}=={langmenu.label}">
-			        <f:then>
-			        <li><a href="{langmenu.url}" title="" class="head__link head__link--active">{langmenu.label}</a></li>
-				        </f:then>
-			        <f:else>
-				        <li><a href="{langmenu.url}" title="" class="head__link">{langmenu.label}</a></li>
-			        </f:else>
-		        </f:if>
-	       </f:for>
-	    </ul>
-		</div>
+		<v:page.languageMenu
+				defaultLanguageLabel="DE-DE"
+				linkCurrent="0"
+				classCurrent="'head__link--active'"
+				hideNotTranslated="{true}">
+			<div class="head__language-links js-head-language-links">
+				<svg class="fa-icon fa-icon-globe fa-icon--s fa-icon-on-bright">
+					<use xlink:href="#icon-globe"></use>
+				</svg>
+				<ul class="head__list">
+					<f:for each="{languageMenu}" as="langmenu" iteration="langiter">
+						<f:if condition="{ipoa:getLanguage()}=={langmenu.label}">
+							<f:then>
+								<li><a href="{langmenu.url}" title="" class="head__link head__link--active">{langmenu.label}</a>
+								</li>
+							</f:then>
+							<f:else>
+								<li><a href="{langmenu.url}" title="" class="head__link">{langmenu.label}</a></li>
+							</f:else>
+						</f:if>
+					</f:for>
+				</ul>
+			</div>
 	</div>
 	</v:page.languageMenu>
 </nav><!--
---><header class="head">
-<div class="head__logo">
-	<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/oa.svg" />' class="image" alt="Logo"/>
-</div><!--
---><div class="head__claim">
-  Der freie Zugang zu<br><span class="nobr">wissenschaftlicher Information</span>
-</div><!--
---><div class="head__pagetitle"><h1 class="heading heading--alpha">{PAGETITLE}</h1></div>
+-->
+<header class="head">
+	<div class="head__logo">
+		<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/oa.svg" />' class="image" alt="Logo"/>
+	</div>
+	<!--
+	-->
+	<div class="head__claim">
+		Der freie Zugang zu<br><span class="nobr">wissenschaftlicher Information</span>
+	</div>
+	<!--
+	-->
+	<div class="head__pagetitle"><h1 class="heading heading--alpha">{PAGETITLE}</h1></div>
 </header>
