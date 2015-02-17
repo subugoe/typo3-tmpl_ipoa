@@ -75,6 +75,52 @@ tt_content {
 			stdWrap.wrap = <div>|</div>
 		}
 	}
+	menu {
+		20 {
+			stdWrap.outerWrap = <div>|</div>
+			# "Menu of these pages"
+			default {
+				stdWrap.prepend.20.renderObj.wrap = <li>|</li>
+				stdWrap.outerWrap = <ul>|</ul>
+			}
+			# "Menu of subpages to these pages"
+			1.stdWrap.outerWrap = <ul>|</ul>
+			# "Sitemap - liststyle"
+			2 {
+				stdWrap < tt_content.menu.20.default.stdWrap
+				stdWrap.outerWrap =
+			}
+			# "Section index (pagecontent w/Index checked - liststyle)"
+			3 {
+				stdWrap.outerWrap = <ul>|</ul>
+				1.NO.wrapItemAndSub = <li>|</li>
+				1.NO.after.wrap = <li>|</li>
+			}
+			# "Menu of subpages to these pages (with abstract)"
+			4 {
+				stdWrap.prepend.20.renderObj.wrap = <li>|</li>
+				stdWrap.outerWrap = <ul>|</ul>
+				1.NO.linkWrap = <li>|</li>
+				1.NO.after.ifBlank =
+				1.NO.after.wrap = |
+			}
+			# "Recently updated pages"
+			5.stdWrap.outerWrap = <ul>|</ul>
+			# "Related pages (based on keywords)"
+			6.stdWrap.outerWrap = <ul>|</ul>
+			# "Menu of subpages to these pages + sections - liststyle"
+			7 {
+				stdWrap.outerWrap = <ul>|</ul>
+				2.NO.wrapItemAndSub = <li>|</li>
+			}
+			# "Sitemaps of selected pages - liststyle"
+
+			# Menu of categorized pages
+			categorized_pages < .default
+			categorized_pages.stdWrap.outerWrap = <ul>|</ul>
+			# Menu of categorized content elements, not available
+		}
+	}
 }
 
 ### Images
