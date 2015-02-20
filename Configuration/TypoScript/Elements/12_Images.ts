@@ -6,8 +6,7 @@ tt_content.image.20 {
 		# remove <div class="csc-textpic csc-textpic-responsive ...></div>
 		key.field = imageorient
 		default = TEXT
-		default.value =
-		default.override = ###IMAGES######TEXT###
+		default.value = ###IMAGES######TEXT###
 		1 < .default
 		2 < .default
 		8 < .default
@@ -74,7 +73,7 @@ tt_content.image.20 {
 	maxW >
 	maxWInText >
 	#maxWInText = 375
-	maxW = 480
+	#maxW = 480
 
 	1.sourceCollection >
 	1.sourceCollection {
@@ -121,3 +120,4 @@ tt_content.image.20 {
 		}
 	}
 }
+
