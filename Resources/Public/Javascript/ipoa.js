@@ -195,28 +195,21 @@ jQuery(document).ready(function () {
     });
   };
 
-  $(function(){
+  jQuery(function(){
     var lastScrollTop = 0, delta = 5;
-    $(window).scroll(function(event){
-      var st = $(this).scrollTop();
+    jQuery(window).scroll(function(event){
+      var st = jQuery(this).scrollTop();
       if(Math.abs(lastScrollTop - st) <= delta) {
         return;
       }
       // downscroll code
       if (st > lastScrollTop){
-        console.log('scroll down');
         jQuery('.js-head-language-links').hide();
         jQuery('.js-head-language-indicator').show();
         jQuery('.head-nav').addClass('head-nav--narrow');
         jQuery('.head').removeAttr('style');
       }
-      // upscroll code
-      // else {
-      //   console.log('scroll up');
-      //   console.log($('.head')[0].scrollHeight);
-      //   console.log($(this).scrollTop());
-      // }
-      if ($(this).scrollTop() < 10) {
+      if (jQuery(this).scrollTop() < 10) {
         jQuery('.head-nav').removeClass('head-nav--narrow');
       }
       lastScrollTop = st;
