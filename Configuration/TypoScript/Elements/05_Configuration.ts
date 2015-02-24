@@ -116,5 +116,3 @@ page.javascriptLibs {
 	jQuery.source = local
 }
 
-# Entferne unerwünschte Tabs im Link Wizard
-RTE.default.buttons.link.options.removeItems = folder/

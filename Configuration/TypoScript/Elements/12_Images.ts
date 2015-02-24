@@ -7,6 +7,7 @@ tt_content.image.20 {
 		key.field = imageorient
 		default = TEXT
 		default.value = ###IMAGES######TEXT###
+		default.override = ###IMAGES######TEXT###
 		1 < .default
 		2 < .default
 		8 < .default
@@ -119,5 +120,7 @@ tt_content.image.20 {
 			dataKey = gigantic
 		}
 	}
+	# change link wrap
+	1.imageLinkWrap.typolink.target = _self
 }
 
