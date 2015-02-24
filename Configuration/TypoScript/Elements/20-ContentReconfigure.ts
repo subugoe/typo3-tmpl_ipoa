@@ -25,14 +25,18 @@ lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class =
 
 # Ändere Überschriften
 lib.stdheader.10.1.dataWrap.cObject = CASE
-lib.stdheader.10.1.dataWrap.cObject {
-	key.field = colPos
-	# Regulärer Text
-	0 = TEXT
-	0.value = <h2>|</h2>
-	# Seitenende
-	default = TEXT
-	default.value = <h3>|</h3>
+lib.stdheader.10.1 {
+	# wrap only if header not empty
+	required = 1
+	dataWrap.cObject {
+		key.field = colPos
+		# Regulärer Text
+		0 = TEXT
+		0.value = <h2>|</h2>
+		# Seitenende
+		default = TEXT
+		default.value = <h3>|</h3>
+	}
 }
 
 # change classes of content
