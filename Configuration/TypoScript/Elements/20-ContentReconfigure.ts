@@ -122,7 +122,3 @@ tt_content {
 		}
 	}
 }
-
-### Images
-styles.content.imgtext.layoutKey = srcset
-
