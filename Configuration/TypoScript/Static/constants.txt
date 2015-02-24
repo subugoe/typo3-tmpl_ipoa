@@ -1,0 +1,3 @@
+# Change target for external links
+styles.content.links.extTarget = _self
+

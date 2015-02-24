@@ -115,3 +115,4 @@ page.javascriptLibs {
 	jQuery.version = latest
 	jQuery.source = local
 }
+
