@@ -125,6 +125,7 @@ lib.layoutTemplate {
 	file = EXT:tmpl_ipoa/Resources/Private/Templates/Default.html
 	partialRootPath = EXT:tmpl_ipoa/Resources/Private/Templates/Partials/
 	layoutRootPath = EXT:tmpl_ipoa/Resources/Private/Templates/Layouts/
+	languageRootPath = EXT:tmpl_ipoa/Resources/Private/Language/
 
 	shortcutIcon = EXT:tmpl_ipoa/Resources/Public/Images/favicon.ico
 

@@ -18,11 +18,6 @@ config {
 	removeDefaultJS = 0
 }
 
-
-#page.config {
-#	language = DE-DE
-#	locale_all = de_DE.UTF-8
-#}
 # enable srcset-option in f:image
 styles.content.imgtext.layoutKey = srcset
 
@@ -116,3 +111,9 @@ page.javascriptLibs {
 	jQuery.source = local
 }
 
+plugin.tx_news {
+	# change Pagination View Helper
+	view {
+		widget.Tx_News_ViewHelpers_Widget_PaginateViewHelper.templateRootPath = EXT:tmpl_ipoa/Resources/Private/News/Templates/
+	}
+}
