@@ -1,3 +1,10 @@
 # Change target for external links
 styles.content.links.extTarget = _self
 
+plugin.tx_news {
+
+	view {
+		partialRootPath = EXT:tmpl_ipoa/Resources/Private/News/Partials
+		templateRootPath = EXT:tmpl_ipoa/Resources/Private/News/Templates
+	}
+}
