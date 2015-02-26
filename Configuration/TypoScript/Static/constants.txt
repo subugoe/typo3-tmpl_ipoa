@@ -6,5 +6,6 @@ plugin.tx_news {
 	view {
 		partialRootPath = EXT:tmpl_ipoa/Resources/Private/News/Partials
 		templateRootPath = EXT:tmpl_ipoa/Resources/Private/News/Templates
+		layoutRootPath = EXT:tmpl_ipoa/Resources/Private/News/Layouts
 	}
 }
