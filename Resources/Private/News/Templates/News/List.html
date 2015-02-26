@@ -9,15 +9,16 @@
 	<f:if condition="{news}">
 		<f:then>
 			<div class="main__textblock">
-				<p>{f:translate(key:'readLatest', extensionName: 'tmpl_ipoa',
-					arguments:{0:'{settings.list.paginate.itemsPerPage}'})}</p>
-				<ul>
+
+
 					<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
 						<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+							<ul>
 						<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+								</ul>
 					</f:for>
 						</n:widget.paginate>
-				</ul>
+
 			</div>
 		</f:then>
 		<f:else>
