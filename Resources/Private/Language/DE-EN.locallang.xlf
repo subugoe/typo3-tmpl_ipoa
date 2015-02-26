@@ -7,7 +7,35 @@
 			<trans-unit id="readLatest" approved="yes" xml:space="preserve">
 				<source>Lesen Sie hier die letzten  %1$s News</source>
 				<target state="translated">Read here the latest  %1$s News</target>
-         </trans-unit>
+			</trans-unit>
+			<trans-unit id="commentContent" approved="yes" xml:space="preserve">
+				<source>Diese Inhalte kommentieren</source>
+				<target state="translated">Comment this content</target>
+			</trans-unit>
+			<trans-unit id="sendEmail" approved="yes" xml:space="preserve">
+				<source>Email versenden</source>
+				<target state="translated">Send Email</target>
+			</trans-unit>
+			<trans-unit id="startpage" approved="yes" xml:space="preserve">
+				<source>Startseite</source>
+				<target state="translated">Startpage</target>
+			</trans-unit>
+			<trans-unit id="contact" approved="yes" xml:space="preserve">
+				<source>Kontakt</source>
+				<target state="translated">Contact</target>
+			</trans-unit>
+			<trans-unit id="sitemap" approved="yes" xml:space="preserve">
+				<source>Sitemap</source>
+				<target state="translated">Sitemap</target>
+			</trans-unit>
+			<trans-unit id="impressum" approved="yes" xml:space="preserve">
+				<source>Impressum</source>
+				<target state="translated">Impressum</target>
+			</trans-unit>
+			<trans-unit id="toTop" approved="yes" xml:space="preserve">
+				<source>Zurück zum Seitenanfang</source>
+				<target state="translated">Back to top</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
