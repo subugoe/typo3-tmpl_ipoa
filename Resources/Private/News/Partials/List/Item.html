@@ -1,0 +1,8 @@
+{namespace n=Tx_News_ViewHelpers}
+
+	<li>
+		<n:link newsItem="{newsItem}" settings="{settings}">
+			{newsItem.title}
+		</n:link> - <n:format.date format="%d.%m.%Y">{newsItem.datetime}</n:format.date><br />
+		{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.raw()}
+	</li>

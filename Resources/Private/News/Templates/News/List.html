@@ -1,0 +1,29 @@
+{namespace n=Tx_News_ViewHelpers}
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<f:section name="content">
+	<f:if condition="{news}">
+		<f:then>
+			<div class="main__textblock">
+				<p>{f:translate(key:'readLatest', extensionName: 'tmpl_ipoa',
+					arguments:{0:'{settings.list.paginate.itemsPerPage}'})}</p>
+				<ul>
+					<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+						<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+						<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+					</f:for>
+						</n:widget.paginate>
+				</ul>
+			</div>
+		</f:then>
+		<f:else>
+			<div class="main__textblock">
+				<f:translate key="list_nonewsfound"/>
+			</div>
+		</f:else>
+	</f:if>
+</f:section>
