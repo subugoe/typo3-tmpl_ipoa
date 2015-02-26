@@ -36,6 +36,10 @@
 				<source>Zurück zum Seitenanfang</source>
 				<target state="translated">Back to top</target>
 			</trans-unit>
+			<trans-unit id="news" approved="yes" xml:space="preserve">
+				<source>News</source>
+				<target state="translated">News</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
