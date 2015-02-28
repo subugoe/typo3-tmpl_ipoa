@@ -9,8 +9,6 @@ TCEFORM {
 TCEMAIN {
 }
 
-TCAdefaults {
-}
 # RTE configuration
 RTE.default {
 	removeComments = 1
