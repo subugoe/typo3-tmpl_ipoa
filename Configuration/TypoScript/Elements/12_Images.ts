@@ -18,7 +18,6 @@ tt_content.image.20 {
 		25 < .default
 		26 < .default
 	}
-
 	# remove also csc-textpic-imagewrap, csc-textpic-center-outer and csc-textpic-center-inner
 	# remove default picture tag create new one to include caption into <picture>-tag
 	rendering {
@@ -28,16 +27,59 @@ tt_content.image.20 {
 			allStdWrap.dataWrap.override = |
 			allStdWrap.innerWrap.cObject.setCurrent.0.value =
 			allStdWrap.innerWrap.cObject.setCurrent.8.value =
-			singleStdWrap.wrap.override = <picture>|</picture>
 		}
 		noCaption {
 			# Multiple images and no caption at all
 			allStdWrap.dataWrap.override = |
-			singleStdWrap.wrap.override = --><picture>|</picture><!--
 			rowStdWrap.wrap.override = |
 			columnStdWrap.wrap.override = |
 			noRowsStdWrap.wrap.override = |
 			lastRowStdWrap.wrap.override = |
+		}
+		singleCaption {
+			# Just one image with a caption
+		}
+		splitCaption {
+			# Several images???
+			rowStdWrap.wrap.override = |
+			noRowsStdWrap.wrap.override = |
+			noColsStdWrap.wrap.override = |
+			lastRowStdWrap.wrap.override = |
+			columnStdWrap.wrap.override = |
+		}
+		globalCaption {
+			# Just one image without a caption
+			allStdWrap.dataWrap.override = |
+		}
+	}
+}
+
+
+// Now, there is a switch because images are wrapped differently,
+// depending on their colPos
+temp.tt_content.image < tt_content.image
+tt_content.image >
+tt_content.image = CASE
+tt_content.image {
+
+	key.field = colPos
+	0 < temp.tt_content.image
+	default < temp.tt_content.image
+
+}
+
+// Changes, depending on colPos
+// regular content
+tt_content.image.0.20 {
+	# change special wrappings for content
+	rendering {
+		singleNoCaption {
+			# Single image - No caption
+			singleStdWrap.wrap.override = <picture>|</picture>
+		}
+		noCaption {
+			# Multiple images and no caption at all
+			singleStdWrap.wrap.override = --><picture>|</picture><!--
 			allStdWrap.wrap.override = <div class="main__gallery"><!--|--></div>
 		}
 		singleCaption {
@@ -46,39 +88,28 @@ tt_content.image.20 {
 			caption.wrap.override = <div>|</div>
 		}
 		splitCaption {
-			# Several images???
+			# Several images
 			singleStdWrap.wrap.override = --><picture>|###CAPTION###</picture><!--
-			rowStdWrap.wrap.override = |
-			noRowsStdWrap.wrap.override = |
-			noColsStdWrap.wrap.override = |
-			lastRowStdWrap.wrap.override = |
-			columnStdWrap.wrap.override = |
 			caption.wrap.override = <div>|</div>
 			allStdWrap.wrap = <div class="main__gallery"><!--|--></div>
 		}
 		globalCaption {
 			# Just one image without a caption
-			allStdWrap.dataWrap.override = |
 			singleStdWrap.wrap.override = <picture>|</picture>
 		}
 	}
-
 	1.layoutKey >
 	1.layoutKey = picturefill
-
 	1.layout.picturefill {
 		element = <!--[if IE 9]><video style="display: none;"><![endif]-->###SOURCECOLLECTION###<img srcset="###SRC###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH### /><!--[if IE 9]></video><![endif]-->
 		source = <source srcset="###SRC###" media="###MEDIAQUERY###"></source>
 	}
-
 	maxW >
 	maxWInText >
 	#maxWInText = 375
 	#maxW = 480
-
 	1.sourceCollection >
 	1.sourceCollection {
-
 		mini {
 			width = 480
 			maxW = 480
@@ -86,7 +117,6 @@ tt_content.image.20 {
 			srcsetCandidate = 480w
 			dataKey = mini
 		}
-
 		small {
 			width = 768
 			maxW = 768
@@ -94,7 +124,6 @@ tt_content.image.20 {
 			srcsetCandidate = 768w
 			dataKey = small
 		}
-
 		regular {
 			width = 1024
 			maxW = 1024
@@ -103,7 +132,6 @@ tt_content.image.20 {
 			srcsetCandidate = 1024w 2x
 			dataKey = regular
 		}
-
 		wide {
 			width = 1200
 			maxW = 1200
@@ -111,7 +139,6 @@ tt_content.image.20 {
 			srcsetCandidate = 1200w
 			dataKey = wide
 		}
-
 		gigantic {
 			width =
 			maxW =
@@ -124,3 +151,36 @@ tt_content.image.20 {
 	1.imageLinkWrap.typolink.target = _self
 }
 
+
+// Changes, depending on colPos
+// columns
+tt_content.image.default.20 {
+
+	# change special wrappings for columns
+	rendering {
+		singleNoCaption {
+			# Single image - No caption
+			singleStdWrap.wrap.override = |
+		}
+		noCaption {
+			# Multiple images and no caption at all
+			singleStdWrap.wrap.override = -->|<!--
+			allStdWrap.wrap.override = <div class="logocarousel"><!--|--></div>
+		}
+		singleCaption {
+			# Just one image with a caption
+			singleStdWrap.wrap.override = |###CAPTION###
+			caption.wrap.override = <div>|</div>
+		}
+		splitCaption {
+			# Several images
+			singleStdWrap.wrap.override = <li>|</li>
+			caption.wrap.override = <div>|</div>
+			allStdWrap.wrap = <ul id="logocarousel">|</ul>
+		}
+		globalCaption {
+			# Just one image without a caption
+			singleStdWrap.wrap.override = |
+		}
+	}
+}
