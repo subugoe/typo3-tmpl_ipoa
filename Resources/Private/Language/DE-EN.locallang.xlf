@@ -56,6 +56,10 @@
 				<source>Nutzungserfassung ausschalten (Opt-Out)</source>
 				<target state="translated">Remove collection of data (Opt-Out)</target>
 			</trans-unit>
+			<trans-unit id="search" approved="yes" xml:space="preserve">
+				<source>Suche</source>
+				<target state="translated">Search</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

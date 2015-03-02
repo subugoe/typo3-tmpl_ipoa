@@ -42,6 +42,9 @@
 			<trans-unit id="optOut" approved="yes" xml:space="preserve">
 				<source>Nutzungserfassung ausschalten (Opt-Out)</source>
 			</trans-unit>
+			<trans-unit id="search" approved="yes" xml:space="preserve">
+				<source>Suche</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
