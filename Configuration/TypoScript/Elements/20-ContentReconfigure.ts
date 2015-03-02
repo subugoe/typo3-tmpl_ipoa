@@ -22,6 +22,7 @@ lib.stdheader.stdWrap >
 
 # remove class=bodytext from RTE paragraphs
 lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class =
+
 # Ändere Überschriften
 lib.stdheader.10.1.dataWrap.cObject = CASE
 lib.stdheader.10.1 {
