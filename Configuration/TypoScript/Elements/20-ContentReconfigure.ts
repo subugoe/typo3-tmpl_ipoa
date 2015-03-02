@@ -22,7 +22,7 @@ lib.stdheader.stdWrap >
 
 # remove class=bodytext from RTE paragraphs
 lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class =
-
+id="c{field:uid}">
 # Ändere Überschriften
 lib.stdheader.10.1.dataWrap.cObject = CASE
 lib.stdheader.10.1 {
@@ -32,10 +32,10 @@ lib.stdheader.10.1 {
 		key.field = colPos
 		# Regulärer Text
 		0 = TEXT
-		0.value = <h2>|</h2>
-		# Seitenende
+		0.value = <h2 id="c{field:uid}">|</h2>
+		# Seitenende und Footer
 		default = TEXT
-		default.value = <h3>|</h3>
+		default.value = <h3 id="c{field:uid}">|</h3>
 	}
 }
 
