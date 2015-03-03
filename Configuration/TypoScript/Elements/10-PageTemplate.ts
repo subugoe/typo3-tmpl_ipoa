@@ -26,6 +26,8 @@ lib.ids {
 	UEBERUNS_UID.value = {$ids.ueberUns}
 	UEBERUNS_TITLE = TEXT
 	UEBERUNS_TITLE.data = DB:pages:{$ids.ueberUns}:title
+	SEARCH_UID = TEXT
+	SEARCH_UID = {$ids.search}
 	STARTBUT_1_UID = TEXT
 	STARTBUT_1_UID.value = {$ids.startbutton_1}
 	STARTBUT_1_TITLE = TEXT
@@ -56,6 +58,8 @@ lib.ids {
 		crop = 1
 		case = lower
 	}
+	DEFLANG = TEXT
+	DEFLANG < mod.SHARED.defaultLanguage
 	DEFLANG_LABEL = TEXT
 	DEFLANG_LABEL.value < mod.SHARED.defaultLanguageLabel
 }
@@ -74,8 +78,10 @@ lib.contentpage {
 
 		CUR_LANGUAGE < sys_language_uid
 
-		PAGETITLE = TEXT
-		PAGETITLE.data = page:title
+		PAGE_TITLE = TEXT
+		PAGE_TITLE.data = page:title
+		PAGE_UID = TEXT
+		PAGE_UID.data = page:uid
 
 		# Definitionen für die Spalten am Seitenende
 		layout = TEXT
