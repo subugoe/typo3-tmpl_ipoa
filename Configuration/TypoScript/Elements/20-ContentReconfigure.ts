@@ -39,6 +39,8 @@ lib.stdheader.10.1 {
 	}
 }
 
+lib.stdheader.10.2.dataWrap = <h3 id="c{field:uid}">|</h3>
+
 # change classes of content
 # depending on Position in Layout
 tt_content {
@@ -48,9 +50,12 @@ tt_content {
 			stdWrap.dataWrap.cObject = CASE
 			stdWrap.dataWrap.cObject {
 				key.field = colPos
+				required = 1
 				# nur in der Hauptspalte werden divs hinzugefügt
 				0 = TEXT
 				0.value = <div>|</div>
+				9 = TEXT
+				9.value = <div class"main__textblock">|<div>
 			}
 		}
 	}
