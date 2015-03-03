@@ -46,7 +46,7 @@
 			</trans-unit>
 			<trans-unit id="freeAccess" approved="yes" xml:space="preserve">
 				<source>Der freie Zugang zu  %1$s wissenschaftlicher Information %2$s</source>
-				<target state="translated">Open Access to  %1$s Scientific Information %2$s</target>
+				<target state="translated">Free access to  %1$s scientific information %2$s</target>
 			</trans-unit>
 			<trans-unit id="optOutWithLink" approved="yes" xml:space="preserve">
 				<source>Diese Webseite erfasst anonymisierte Daten zur Nutzung. Sie können dies für die Dauer ihres Besuchs unterbinden, indem sie folgenden Link klicken:</source>
@@ -59,10 +59,6 @@
 			<trans-unit id="search" approved="yes" xml:space="preserve">
 				<source>Suche</source>
 				<target state="translated">Search</target>
-			</trans-unit>
-			<trans-unit id="usePageWideSearch" approved="yes" xml:space="preserve">
-				<source>Benutzen Sie die seitenweite Suche um weitere für Sie interessante Inhalte der Informationsplattform Open Access zu entdecken.</source>
-				<target state="translated">Use this pagewe wide search form to get more interesting content about open access.</target>
 			</trans-unit>
 		</body>
 	</file>

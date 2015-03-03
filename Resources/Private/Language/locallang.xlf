@@ -45,9 +45,6 @@
 			<trans-unit id="search" approved="yes" xml:space="preserve">
 				<source>Suche</source>
 			</trans-unit>
-			<trans-unit id="usePageWideSearch" approved="yes" xml:space="preserve">
-			Benutzen Sie die seitenweite Suche um weitere für Sie interessante Inhalte der Informationsplattform Open Access zu entdecken.
-			</trans-unit>
 		</body>
 	</file>
 </xliff>
