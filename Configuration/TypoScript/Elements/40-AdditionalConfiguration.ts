@@ -13,5 +13,14 @@ page.headerData.800.value (
 )
 page.headerData.900 = TEXT
 page.headerData.900.value (
-	 <script src="/typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/picturefill.min.js" type="text/javascript" async></script>
+	<script src="/typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/picturefill.min.js" type="text/javascript" async></script>
 )
+page.headerData.1000 = TEXT
+page.headerData.1000.value (
+	<link rel="alternate" type="application/rss+xml" title="RSS-Feed" href="http://dev2.open-access.net/rss/" />
+)
+[globalString = ENV:HTTPS=on]
+page.headerData.1000.value (
+	<link rel="alternate" type="application/rss+xml" title="RSS-Feed" href="https://dev2.open-access.net/rss/" />
+)
+[global]
