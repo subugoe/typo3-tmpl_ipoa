@@ -204,11 +204,18 @@ jQuery(document).ready(function () {
       }
       // downscroll code
       if (st > lastScrollTop){
+        console.log('scroll down');
         jQuery('.js-head-language-links').hide();
         jQuery('.js-head-language-indicator').show();
         jQuery('.head-nav').addClass('head-nav--narrow');
         jQuery('.head').removeAttr('style');
       }
+      // upscroll code
+      // else {
+      //   console.log('scroll up');
+      //   console.log(jQuery('.head')[0].scrollHeight);
+      //   console.log(jQuery(this).scrollTop());
+      // }
       if (jQuery(this).scrollTop() < 10) {
         jQuery('.head-nav').removeClass('head-nav--narrow');
       }
@@ -241,5 +248,12 @@ jQuery(document).ready(function () {
    */
   footerHideHeight = jQuery('.footer-hide__content').height();
   jQuery('.footer-hide').css({ 'height': footerHideHeight + 'px' });
+
+  jQuery('.main div a').click(function(event) {
+    event.preventDefault();
+    var scrollToId = this.hash;
+    var offsetTopOfTarget = jQuery(scrollToId).offset().top;
+    jQuery('html, body').scrollTop(offsetTopOfTarget - 65);
+  });
 
 });

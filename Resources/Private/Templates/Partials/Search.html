@@ -1,22 +1,27 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+
 <div class="search" id="search">
-  <h2 class="search-heading"><svg class="fa-icon fa-icon-search fa-icon--default"><use xlink:href="#icon-search"></use></svg> Suche</h2>
-	<div class="search-content">
-	<form action="" class="search-form" method="get">
-		<div class="search-field">
-		<input type="text" value="Solr Suche" name="tx_solr[q]" onfocus="this.value=''" class="search-field__field tx-solr-q ui-autocomplete-input menu-searchfields" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
-			</div>
-		<div class="search-button">
-			<input type="button" value="Suchen" class="search-button__button">
+	<div class="search__content">
+	<h2 class="search__heading">
+		<svg class="fa-icon fa-icon-search fa-icon--default">
+			<use xlink:href="#icon-search"></use>
+		</svg> {f:translate(key:'search', extensionName: 'tmpl_ipoa')}
+	</h2><!--
+	--><div class="search__enter"><!--
+		--><form action="/suche/" method="get" accept-charset="utf-8" class="search__form tx-solr-search-form-pi-results"><!--
+			--><div class="search__field tx-solr-search-form">
+					<script type="text/javascript">
+									var tx_solr_suggestUrl = '{PAGE_UID}';
+					</script>
+					<input type="text" class="search__input tx-solr-q" name="q" value="">
+					<input type="hidden" name="id" value="{SEARCH_UID}">
+					<input type="hidden" name="L" value="{v:page.language(pageUid: '{PAGE_UID}', normalWhenNoLanguage: 1)}">
+				</div><!--
+			--><div class="search__submit">
+					<input type="button" value="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}" class="search__button tx-solr-submit">
+				</div><!--
+		--></form><!--
+		--><p class="paragraph">{f:translate(key:'usePageWideSearch', extensionName: 'tmpl_ipoa')}</p>
 		</div>
-		<!--
-		<input type="hidden" value="ID-DER-SUCHSEITE" name="id">
-		<input type="hidden" value="SPRACHPARAMETER" name="L">
-		-->
-	</form>
-		<p class="paragraph search-text">Benutzen Sie die seitenweite Suche um die Inhalte der Informationsplattform Open Access zu durchsuchen.</p>
-  </div>
+	</div>
 </div>
-
-
-
-

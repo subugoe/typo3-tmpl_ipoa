@@ -10,21 +10,14 @@
 		<f:for each="{data.single}" key="year" as="months">
 			<h2>{year}</h2><div>
 				<ul>
-						<f:for each="{months}" key="month" as="count">
-							<f:if condition="{0:year, 1:month} == {0:overwriteDemand.year, 1:overwriteDemand.month}">
-								<f:then>
-									<li>
-								</f:then>
-								<f:else>
-									<li>
-								</f:else>
-							</f:if>
-								<f:link.action pageUid="{listPid}" arguments="{overwriteDemand:{year: year, month: month}}"><f:translate key="month.{month}" /> {year}</f:link.action>
-								| {count} {f:translate(key:'news', extensionName: 'tmpl_ipoa')}
-							</li>
-						</f:for>
-					</ul>
-				</div>
-			</f:for>
+					<f:for each="{months}" key="month" as="count">
+						<li>
+							<f:link.action pageUid="{listPid}" arguments="{overwriteDemand:{year: year, month: month}}"><f:translate key="month.{month}" /> {year}</f:link.action>
+							| {count} {f:translate(key:'news', extensionName: 'tmpl_ipoa')}
+						</li>
+					</f:for>
+				</ul>
+		</div>
+		</f:for>
 	</div>
 </f:section>

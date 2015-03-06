@@ -32,12 +32,14 @@ lib.stdheader.10.1 {
 		key.field = colPos
 		# Regulärer Text
 		0 = TEXT
-		0.value = <h2>|</h2>
-		# Seitenende
+		0.value = <h2 id="c{field:uid}">|</h2>
+		# Seitenende und Footer
 		default = TEXT
-		default.value = <h3>|</h3>
+		default.value = <h3 id="c{field:uid}">|</h3>
 	}
 }
+
+lib.stdheader.10.2.dataWrap = <h3 id="c{field:uid}">|</h3>
 
 # change classes of content
 # depending on Position in Layout
@@ -48,9 +50,12 @@ tt_content {
 			stdWrap.dataWrap.cObject = CASE
 			stdWrap.dataWrap.cObject {
 				key.field = colPos
+				required = 1
 				# nur in der Hauptspalte werden divs hinzugefügt
 				0 = TEXT
 				0.value = <div>|</div>
+				9 = TEXT
+				9.value = <div class"main__textblock">|<div>
 			}
 		}
 	}

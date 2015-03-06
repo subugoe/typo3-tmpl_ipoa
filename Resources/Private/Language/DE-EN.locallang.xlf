@@ -28,6 +28,10 @@
 				<source>Sitemap</source>
 				<target state="translated">Sitemap</target>
 			</trans-unit>
+			<trans-unit id="search" approved="yes" xml:space="preserve">
+				<source>Suche</source>
+				<target state="translated">Search</target>
+			</trans-unit>
 			<trans-unit id="impressum" approved="yes" xml:space="preserve">
 				<source>Impressum</source>
 				<target state="translated">Impressum</target>
@@ -39,6 +43,26 @@
 			<trans-unit id="news" approved="yes" xml:space="preserve">
 				<source>News</source>
 				<target state="translated">News</target>
+			</trans-unit>
+			<trans-unit id="freeAccess" approved="yes" xml:space="preserve">
+				<source>Der freie Zugang zu  %1$s wissenschaftlicher Information %2$s</source>
+				<target state="translated">Open Access to  %1$s Scientific Information %2$s</target>
+			</trans-unit>
+			<trans-unit id="optOutWithLink" approved="yes" xml:space="preserve">
+				<source>Diese Webseite erfasst anonymisierte Daten zur Nutzung. Sie können dies für die Dauer ihres Besuchs unterbinden, indem sie folgenden Link klicken:</source>
+				<target state="translated">This website collects anonymous data. You can opt out for the duration of your visit by clicking this link:</target>
+			</trans-unit>
+			<trans-unit id="optOut" approved="yes" xml:space="preserve">
+				<source>Nutzungserfassung ausschalten (Opt-Out)</source>
+				<target state="translated">Remove collection of data (Opt-Out)</target>
+			</trans-unit>
+			<trans-unit id="search" approved="yes" xml:space="preserve">
+				<source>Suche</source>
+				<target state="translated">Search</target>
+			</trans-unit>
+			<trans-unit id="usePageWideSearch" approved="yes" xml:space="preserve">
+				<source>Benutzen Sie die seitenweite Suche um weitere für Sie interessante Inhalte der Informationsplattform Open Access zu entdecken.</source>
+				<target state="translated">Use this pagewe wide search form to get more interesting content about open access.</target>
 			</trans-unit>
 		</body>
 	</file>

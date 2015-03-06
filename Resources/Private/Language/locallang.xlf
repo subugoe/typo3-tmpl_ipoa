@@ -21,6 +21,9 @@
 			<trans-unit id="sitemap" approved="yes" xml:space="preserve">
 				<source>Sitemap</source>
 			</trans-unit>
+			<trans-unit id="search" approved="yes" xml:space="preserve">
+				<source>Suche</source>
+			</trans-unit>
 			<trans-unit id="impressum" approved="yes" xml:space="preserve">
 				<source>Impressum</source>
 			</trans-unit>
@@ -29,6 +32,21 @@
 			</trans-unit>
 			<trans-unit id="news" approved="yes" xml:space="preserve">
 				<source>News</source>
+			</trans-unit>
+			<trans-unit id="freeAccess" approved="yes" xml:space="preserve">
+				<source>Der freie Zugang zu %1$s wissenschaftlicher Information %2$s</source>
+			</trans-unit>
+			<trans-unit id="optOutWithLink" approved="yes" xml:space="preserve">
+				<source>Diese Webseite erfasst anonymisierte Daten zur Nutzung. Sie können dies für die Dauer ihres Besuchs unterbinden, indem sie folgenden Link klicken:</source>
+			</trans-unit>
+			<trans-unit id="optOut" approved="yes" xml:space="preserve">
+				<source>Nutzungserfassung ausschalten (Opt-Out)</source>
+			</trans-unit>
+			<trans-unit id="search" approved="yes" xml:space="preserve">
+				<source>Suche</source>
+			</trans-unit>
+			<trans-unit id="usePageWideSearch" approved="yes" xml:space="preserve">
+			Benutzen Sie die seitenweite Suche um weitere für Sie interessante Inhalte der Informationsplattform Open Access zu entdecken.
 			</trans-unit>
 		</body>
 	</file>
