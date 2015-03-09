@@ -64,6 +64,38 @@ lib.ids {
 	DEFLANG_LABEL.value < mod.SHARED.defaultLanguageLabel
 }
 
+# definitions for the content, depending on colPos
+lib.relContent {
+	def < styles.content.get
+	def.select.where = colPos = 0
+	1 < styles.content.get
+	1.select.where = colPos = 1
+	1.slide = -1
+	2 < styles.content.get
+	2.select.where = colPos = 2
+	2.slide = -1
+	3 < styles.content.get
+	3.select.where = colPos = 3
+	3.slide = -1
+	4 < styles.content.get
+	4.select.where = colPos = 4
+	4.slide = -1
+	5 < styles.content.get
+	5.select.where = colPos = 5
+	5.slide = -1
+	6 < styles.content.get
+	6.select.where = colPos = 6
+	6.slide = -1
+	7 < styles.content.get
+	7.select.where = colPos = 7
+	7.slide = -1
+	8 < styles.content.get
+	8.select.where = colPos = 8
+	8.slide = -1
+	oaTage < styles.content.get
+	oaTage.select.where = colPos = 9
+}
+
 lib.subTemplateVars {
 }
 
@@ -87,38 +119,21 @@ lib.contentpage {
 		layout = TEXT
 		layout.data = levelfield:-2,backend_layout_next_level,slide
 
-		more1 < styles.content.get
-		more1.select.where = colPos = 1
-		more1.slide = -1
-		more2 < styles.content.get
-		more2.select.where = colPos = 2
-		more2.slide = -1
-		more3 < styles.content.get
-		more3.select.where = colPos = 3
-		more3.slide = -1
-		more4 < styles.content.get
-		more4.select.where = colPos = 4
-		more4.slide = -1
-
-		footer1 < styles.content.get
-		footer1.select.where = colPos = 5
-		footer1.slide = -1
-		footer2 < styles.content.get
-		footer2.select.where = colPos = 6
-		footer2.slide = -1
-		footer3 < styles.content.get
-		footer3.select.where = colPos = 7
-		footer3.slide = -1
-		footer4 < styles.content.get
-		footer4.select.where = colPos = 8
-		footer4.slide = -1
-
 	}
 }
 
 lib.startpage = FLUIDTEMPLATE
 lib.startpage {
 	file = EXT:tmpl_ipoa/Resources/Private/Templates/Start.html
+	variables < lib.subTemplateVars
+	variables < lib.ids
+	variables {
+	}
+}
+
+lib.oatage = FLUIDTEMPLATE
+lib.oatage {
+	file = EXT:tmpl_ipoa/Resources/Private/Templates/OAtage.html
 	variables < lib.subTemplateVars
 	variables < lib.ids
 	variables {
@@ -146,6 +161,7 @@ lib.layoutTemplate {
 			key.override.field = backend_layout
 			default < lib.contentpage
 			{$ids.backendLayout.startseite} < lib.startpage
+			{$ids.backendLayout.oatage} < lib.oatage
 		}
 	}
 }
