@@ -55,7 +55,7 @@ tt_content.text {
 	required = 1
 
 	0.20.stdWrap.dataWrap = <div>|</div>
-	9.20.stdWrap.dataWrap = <div class"main__textblock">|<div>
+	9.20.stdWrap.dataWrap = <div class="main__textblock">|<div>
 	default.20.stdWrap.dataWrap = |
 }
 
