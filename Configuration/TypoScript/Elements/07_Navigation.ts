@@ -12,21 +12,21 @@ lib.mainMenu {
 		NO = 1
 		NO {
 			wrapItemAndSub = <li>|<li>
-			ATagParams = class="menu__link"
+			ATagParams = class="menu__link" tabindex="99"
 			ATagTitle.field = title
 		}
 		# Current, active page
 		CUR < .NO
 		CUR {
-			ATagParams = class="menu__link menu__link--active"
+			ATagParams = class="menu__link menu__link--active" tabindex="99"
 		}
 		IFSUB < .NO
 		IFSUB {
-			ATagParams = class="menu__link menu__link--has-children"
+			ATagParams = class="menu__link menu__link--has-children" tabindex="99"
 		}
 		CURIFSUB < .CUR
 		CURIFSUB {
-			ATagParams = class="menu__link menu__link--active menu__link--has-children"
+			ATagParams = class="menu__link menu__link--active menu__link--has-children" tabindex="99"
 		}
 	}
 	2 < .1

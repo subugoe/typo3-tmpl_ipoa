@@ -24,41 +24,42 @@ lib.stdheader.stdWrap >
 lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class =
 
 # Ändere Überschriften
-lib.stdheader.10.1.dataWrap.cObject = CASE
-lib.stdheader.10.1 {
-	# wrap only if header not empty
-	required = 1
-	dataWrap.cObject {
-		key.field = colPos
-		# Regulärer Text
-		0 = TEXT
-		0.value = <h2 id="c{field:uid}">|</h2>
-		# Seitenende und Footer
-		default = TEXT
-		default.value = <h3 id="c{field:uid}">|</h3>
-	}
+temp.lib.stdheader < lib.stdheader
+lib.stdheader >
+lib.stdheader = CASE
+lib.stdheader {
+	key.field = colPos
+
+	0 < temp.lib.stdheader
+	9 < temp.lib.stdheader
+	default < temp.lib.stdheader
+
+	0.10.1.dataWrap = <h2 id="c{field:uid}">|</h2>
+	9.10.1.dataWrap = <h2 id="c{field:uid}">|</h2>
+	default.10.1.dataWrap = <h3 id="c{field:uid}">|</h3>
 }
 
 lib.stdheader.10.2.dataWrap = <h3 id="c{field:uid}">|</h3>
 
 # change classes of content
 # depending on Position in Layout
+temp.tt_content.text < tt_content.text
+tt_content.text >
+tt_content.text = CASE
+tt_content.text {
+	key.field = colPos
+
+	0 < temp.tt_content.text
+	9 < temp.tt_content.text
+	default < temp.tt_content.text
+	required = 1
+
+	0.20.stdWrap.dataWrap = <div>|</div>
+	9.20.stdWrap.dataWrap = <div class="main__textblock">|<div>
+	default.20.stdWrap.dataWrap = |
+}
+
 tt_content {
-	text {
-		20 {
-			# wrap text-content in special div
-			stdWrap.dataWrap.cObject = CASE
-			stdWrap.dataWrap.cObject {
-				key.field = colPos
-				required = 1
-				# nur in der Hauptspalte werden divs hinzugefügt
-				0 = TEXT
-				0.value = <div>|</div>
-				9 = TEXT
-				9.value = <div class"main__textblock">|<div>
-			}
-		}
-	}
 	table {
 		20 {
 			#add wrap for table content element
