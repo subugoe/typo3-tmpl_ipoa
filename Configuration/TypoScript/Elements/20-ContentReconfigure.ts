@@ -39,6 +39,7 @@ lib.stdheader {
 	default.10.1.dataWrap = <h3 id="c{field:uid}">|</h3>
 }
 
+lib.stdheader.10.2.required = 1
 lib.stdheader.10.2.dataWrap = <h3 id="c{field:uid}">|</h3>
 
 # change classes of content
