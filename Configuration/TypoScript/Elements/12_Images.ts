@@ -155,7 +155,14 @@ tt_content.image.0.20 {
 // Changes, depending on colPos
 // columns
 tt_content.image.default.20 {
-
+	# remove width and height attributes again
+	1 {
+		layoutKey >
+		layoutKey = default
+		layout.default {
+			element = <img src="###SRC###" ###PARAMS######ALTPARAMS######BORDER######SELFCLOSINGTAGSLASH###>
+		}
+	}
 	# change special wrappings for columns
 	rendering {
 		singleNoCaption {
@@ -165,7 +172,7 @@ tt_content.image.default.20 {
 		noCaption {
 			# Multiple images and no caption at all
 			singleStdWrap.wrap.override = -->|<!--
-			allStdWrap.wrap.override = <div class="logocarousel"><!--|--></div>
+			allStdWrap.wrap.override = <div class="logocarousel js-logocarousel"><!--|--></div>
 		}
 		singleCaption {
 			# Just one image with a caption
@@ -176,7 +183,8 @@ tt_content.image.default.20 {
 			# Several images
 			singleStdWrap.wrap.override = <li>|</li>
 			caption.wrap.override = <div>|</div>
-			allStdWrap.wrap = <ul id="logocarousel">|</ul>
+			allStdWrap.wrap = |</ul>
+			allStdWrap.wrap.dataWrap = <ul class="logocarousel js-logocarousel" id=c{field:uid}>|
 		}
 		globalCaption {
 			# Just one image without a caption
