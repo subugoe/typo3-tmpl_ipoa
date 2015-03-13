@@ -171,8 +171,10 @@ tt_content.image.default.20 {
 		}
 		noCaption {
 			# Multiple images and no caption at all
-			singleStdWrap.wrap.override = -->|<!--
-			allStdWrap.wrap.override = <div class="logocarousel js-logocarousel"><!--|--></div>
+			singleStdWrap.wrap.override = <li>|</li>
+			caption.wrap.override = <div>|</div>
+			allStdWrap.wrap = |</ul>
+			allStdWrap.wrap.dataWrap = <ul class="logocarousel js-logocarousel" id=l{field:uid}>|
 		}
 		singleCaption {
 			# Just one image with a caption
@@ -184,7 +186,7 @@ tt_content.image.default.20 {
 			singleStdWrap.wrap.override = <li>|</li>
 			caption.wrap.override = <div>|</div>
 			allStdWrap.wrap = |</ul>
-			allStdWrap.wrap.dataWrap = <ul class="logocarousel js-logocarousel" id=c{field:uid}>|
+			allStdWrap.wrap.dataWrap = <ul class="logocarousel js-logocarousel" id=l{field:uid}>|
 		}
 		globalCaption {
 			# Just one image without a caption
