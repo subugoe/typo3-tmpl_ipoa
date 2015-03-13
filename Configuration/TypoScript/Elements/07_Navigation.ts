@@ -3,15 +3,14 @@ lib.mainMenu = HMENU
 lib.mainMenu {
 	expAll = 1
 	excludeUidList = {$ids.excludeFromMenu}
-	wrap = <div class="menu__column ic-tablet-one-half ic-notebook-and-up-one-quarter">|</div>
+	wrap = |
 	1 = TMENU
 	1 {
 		expAll = 1
-		wrap = <ul class="menu__list">|</ul>
 		# Normalzustand
 		NO = 1
 		NO {
-			wrapItemAndSub = <li>|<li>
+			wrapItemAndSub = <div class="menu__column ic-tablet-one-half ic-notebook-and-up-one-quarter"><ul class="menu__list"><li>|</li></ul></div>
 			ATagParams = class="menu__link" tabindex="99"
 			ATagTitle.field = title
 		}
@@ -31,6 +30,10 @@ lib.mainMenu {
 	}
 	2 < .1
 	2 {
+		NO.wrapItemAndSub =
+		CUR.wrapItemAndSub =
+		IFSUB.wrapItemAndSub =
+		CURIFSUB.wrapItemAndSub =
 		wrap = <ul class="menu__list--indented">|</ul>
 	}
 	3 < .2
