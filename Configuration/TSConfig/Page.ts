@@ -40,3 +40,10 @@ RTE.classesAnchor {
 		titleText = LLL:EXT:rtehtmlarea/res/accessibilityicons/locallang.xlf:internal_link_titleText
 	}
 }
+
+tx_news {
+
+	templateLayouts {
+		10 = Nur Titel anzeigen
+	}
+}
