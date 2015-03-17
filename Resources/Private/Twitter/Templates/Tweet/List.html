@@ -9,12 +9,11 @@
 				<f:then>
 					<main role="main" class="main twitter">
 						<h2>{f:translate(key:'oaAtTwitter', extensionName: 'tmpl_ipoa')}</h2>
-
 						<div class="main__textblock">
 							<f:for each="{tweets}" as="orig_tweet">
 								<f:alias map="{tweet: '{f:if(condition:orig_tweet.retweeted_status,then:orig_tweet.retweeted_status,else:orig_tweet)}'}">
-									<div><img src="{tweet.user.profile_image_url}" alt="{tweet.user.name}"/>
-										{tweet.user.name}
+									<div><a href="https://twitter.com/{tweet.user.screen_name}"><img src="{tweet.user.profile_image_url}" alt="{tweet.user.name}"/>
+										{tweet.user.name}</a>
 										(<tw:link.tweet class="cwtw-TweetMeta-timestamp" tweet="{tweet}">
 											<f:format.date format="H:m - d.m.Y">{tweet.created_at}</f:format.date>
 										</tw:link.tweet>)
