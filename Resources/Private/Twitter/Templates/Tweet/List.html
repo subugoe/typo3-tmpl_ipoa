@@ -7,41 +7,48 @@
 		<f:then>
 			<f:if condition="{contentObjectData.colPos} == 0"><!-- Hauptspalte -->
 				<f:then>
-					<main role="main" class="main twitter">
-						<h2>{f:translate(key:'oaAtTwitter', extensionName: 'tmpl_ipoa')}</h2>
-						<div class="main__textblock">
-							<f:for each="{tweets}" as="orig_tweet">
-								<f:alias map="{tweet: '{f:if(condition:orig_tweet.retweeted_status,then:orig_tweet.retweeted_status,else:orig_tweet)}'}">
-									<div><a href="https://twitter.com/{tweet.user.screen_name}"><img src="{tweet.user.profile_image_url}" alt="{tweet.user.name}"/>
+					<div class="main twitter">
+						<f:for each="{tweets}" as="orig_tweet">
+							<f:alias map="{tweet: '{f:if(condition:orig_tweet.retweeted_status,then:orig_tweet.retweeted_status,else:orig_tweet)}'}">
+								<div class="main__textblock">
+									<a href="https://twitter.com/{tweet.user.screen_name}"><img src="{tweet.user.profile_image_url}" alt="{tweet.user.name}"/>
 										{tweet.user.name}</a>
-										(<tw:link.tweet class="cwtw-TweetMeta-timestamp" tweet="{tweet}">
-											<f:format.date format="H:m - d.m.Y">{tweet.created_at}</f:format.date>
-										</tw:link.tweet>)
-										<blockquote>
-											<tw:format.tweet>{tweet}</tw:format.tweet>
-											<f:if condition="{orig_tweet.retweeted_status}">
-												<img src="//si0.twimg.com/images/dev/cms/intents/icons/retweet.png" alt="Retweet"/>
-												<f:translate key="tweetlist.retweeted_by"/>
-												<a href="https://twitter.com/{orig_tweet.user.screen_name}">{orig_tweet.user.name}</a>
-											</f:if>
-										</blockquote>
-									</div>
-								</f:alias>
-							</f:for>
-						</div>
-					</main>
+									(
+									<tw:link.tweet class="cwtw-TweetMeta-timestamp" tweet="{tweet}">
+										<f:format.date format="H:m - d.m.Y">{tweet.created_at}</f:format.date>
+									</tw:link.tweet>
+									)
+									<blockquote>
+										<tw:format.tweet>{tweet}</tw:format.tweet>
+										<f:if condition="{orig_tweet.retweeted_status}">
+											<img src="//si0.twimg.com/images/dev/cms/intents/icons/retweet.png" alt="Retweet"/>
+											<f:translate key="tweetlist.retweeted_by"/>
+											<a href="https://twitter.com/{orig_tweet.user.screen_name}">{orig_tweet.user.name}</a>
+										</f:if>
+									</blockquote>
+								</div>
+							</f:alias>
+						</f:for>
+					</div>
+					</div>
 				</f:then>
 				<f:else><!-- Seitenende oder Footer (oder Open-Access-Tage) -->
-					<h3>{f:translate(key:'oaAtTwitter', extensionName: 'tmpl_ipoa')}</h3>
-
 					<div class="main__textblock">
 						<f:for each="{tweets}" as="orig_tweet" iteration="iterator">
 							<f:alias map="{tweet: '{f:if(condition:orig_tweet.retweeted_status,then:orig_tweet.retweeted_status,else:orig_tweet)}'}">
 								<f:if condition="{iterator.index} < {settings.limit}">
 									<f:then>
-										<p><span class="text--small">{tweet.user.name}:<tw:link.tweet class="cwtw-TweetMeta-timestamp" tweet="{tweet}">
-											<f:format.date format="H:m - d.m.Y">{tweet.created_at}</f:format.date>
-										</tw:link.tweet></span><br/>
+										<p><span class="text--small">
+											<a href="https://twitter.com/{tweet.user.screen_name}">
+												<img src="{tweet.user.profile_image_url}" alt="{tweet.user.name}"/></a>
+
+											<a href="https://twitter.com/{tweet.user.screen_name}">{tweet.user.name}
+											</a>
+											<tw:link.tweet class="cwtw-TweetMeta-timestamp" tweet="{tweet}">
+												<f:format.date format="H:m - d.m.Y">{tweet.created_at}</f:format.date>
+											</tw:link.tweet>
+										</span>
+											<br/>
 											<tw:format.tweet>{tweet}</tw:format.tweet>
 										</p>
 									</f:then>
@@ -55,15 +62,11 @@
 		<f:else>
 			<f:if condition="{contentObjectData.colPos} == 0"><!-- Hauptspalte -->
 				<f:then>
-					<h2>{f:translate(key:'oaAtTwitter', extensionName: 'tmpl_ipoa')}</h2>
-
 					<div class="main__textblock">
 						<f:translate key="tweetlist.empty"/>
 					</div>
 				</f:then>
 				<f:else>
-					<h3>{f:translate(key:'oaAtTwitter', extensionName: 'tmpl_ipoa')}</h3>
-
 					<div class="main__textblock">
 						<f:translate key="tweetlist.empty"/>
 					</div>
