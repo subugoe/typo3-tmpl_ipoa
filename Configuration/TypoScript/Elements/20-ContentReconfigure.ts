@@ -132,8 +132,4 @@ tt_content {
 			# Menu of categorized content elements, not available
 		}
 	}
-	list {
-		# Plugins don't show their title
-		10 >
-	}
 }
