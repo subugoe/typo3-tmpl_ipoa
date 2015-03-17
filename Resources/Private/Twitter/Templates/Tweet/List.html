@@ -37,11 +37,11 @@
 					<div class="main__textblock">
 						<f:for each="{tweets}" as="orig_tweet" iteration="iterator">
 							<f:alias map="{tweet: '{f:if(condition:orig_tweet.retweeted_status,then:orig_tweet.retweeted_status,else:orig_tweet)}'}">
-								<f:if condition="{iterator.index} < 2">
+								<f:if condition="{iterator.index} < {settings.limit}">
 									<f:then>
-										<p><span class="text--small">{tweet.user.name}: (<tw:link.tweet class="cwtw-TweetMeta-timestamp" tweet="{tweet}">
+										<p><span class="text--small">{tweet.user.name}:<tw:link.tweet class="cwtw-TweetMeta-timestamp" tweet="{tweet}">
 											<f:format.date format="H:m - d.m.Y">{tweet.created_at}</f:format.date>
-										</tw:link.tweet>)</span><br/>
+										</tw:link.tweet></span><br/>
 											<tw:format.tweet>{tweet}</tw:format.tweet>
 										</p>
 									</f:then>
