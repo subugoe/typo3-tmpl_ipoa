@@ -9,3 +9,12 @@ plugin.tx_news {
 		layoutRootPath = EXT:tmpl_ipoa/Resources/Private/News/Layouts
 	}
 }
+
+plugin.tx_cwtwitter {
+
+	view {
+		partialRootPath = EXT:tmpl_ipoa/Resources/Private/Twitter/Partials
+		templateRootPath = EXT:tmpl_ipoa/Resources/Private/Twitter/Templates
+		layoutRootPath = EXT:tmpl_ipoa/Resources/Private/Twitter/Layouts
+	}
+}
