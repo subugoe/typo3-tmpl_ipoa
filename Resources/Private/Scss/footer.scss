@@ -14,6 +14,8 @@
 	@extend %ic-layout__item;
 	@extend .ic-tablet-one-half;
 	@extend .ic-notebook-and-up-one-quarter;
+	@extend .ic-pt+;
+	@extend .ic-pb+;
 }
 
 .footer h3 {
