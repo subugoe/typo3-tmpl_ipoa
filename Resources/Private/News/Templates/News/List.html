@@ -1,5 +1,5 @@
 {namespace n=Tx_News_ViewHelpers}
-<f:layout name="General" />
+<f:layout name="General"/>
 <!--
 	=====================
 		Templates/News/List.html
@@ -8,18 +8,30 @@
 <f:section name="content">
 	<f:if condition="{news}">
 		<f:then>
-			<div class="main__textblock">
-
-
-					<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
-						<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+			<f:if condition="{settings.templateLayout} == 10">
+				<f:then>
+					<!-- Listenansicht in Spalten -->
+					<div class="main__textblock">
+						<f:for each="{news}" as="newsItem">
 							<ul>
-						<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+								<f:render partial="List/Item-title" arguments="{newsItem: newsItem, settings:settings}"/>
+							</ul>
+						</f:for>
+					</div>
+				</f:then>
+				<f:else>
+					<!-- Normale Listenansicht -->
+					<div class="main__textblock">
+						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+							<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+								<ul>
+									<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
 								</ul>
-					</f:for>
+							</f:for>
 						</n:widget.paginate>
-
-			</div>
+					</div>
+				</f:else>
+			</f:if>
 		</f:then>
 		<f:else>
 			<div class="main__textblock">

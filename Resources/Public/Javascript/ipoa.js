@@ -245,7 +245,7 @@ jQuery(document).ready(function() {
 	jQuery('.footer-hide').css({'height': footerHideHeight + 'px'});
 
 	jQuery('.main div a').click(function(event) {
-		event.preventDefault();
+		//event.preventDefault();
 		var scrollToId = this.hash;
 		var offsetTopOfTarget = jQuery(scrollToId).offset().top;
 		jQuery('html, body').scrollTop(offsetTopOfTarget - 65);

@@ -1,0 +1,9 @@
+<f:if condition="{error}">
+	<f:then>
+		<f:translate key="error.request"/>
+		{error.message}
+	</f:then>
+	<f:else>
+		<f:render section="main"/>
+	</f:else>
+</f:if>
