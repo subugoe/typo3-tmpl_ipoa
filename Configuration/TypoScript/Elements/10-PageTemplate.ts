@@ -137,6 +137,8 @@ lib.oatage {
 	variables < lib.subTemplateVars
 	variables < lib.ids
 	variables {
+
+		MENU < lib.mainMenu
 	}
 }
 
