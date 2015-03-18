@@ -13,15 +13,11 @@
 								<div class="main__textblock">
 									<a href="https://twitter.com/{tweet.user.screen_name}"><img src="{tweet.user.profile_image_url}" alt="{tweet.user.name}"/>
 										{tweet.user.name}</a>
-									(
-									<tw:link.tweet class="cwtw-TweetMeta-timestamp" tweet="{tweet}">
-										<f:format.date format="H:m - d.m.Y">{tweet.created_at}</f:format.date>
-									</tw:link.tweet>
-									)
+									(<tw:link.tweet tweet="{tweet}"><f:format.date format="H:m - d.m.Y">{tweet.created_at}</f:format.date></tw:link.tweet>)
 									<blockquote>
 										<tw:format.tweet>{tweet}</tw:format.tweet>
 										<f:if condition="{orig_tweet.retweeted_status}">
-											<img src="//si0.twimg.com/images/dev/cms/intents/icons/retweet.png" alt="Retweet"/>
+											<br /><img src="//si0.twimg.com/images/dev/cms/intents/icons/retweet.png" alt="Retweet"/>
 											<f:translate key="tweetlist.retweeted_by"/>
 											<a href="https://twitter.com/{orig_tweet.user.screen_name}">{orig_tweet.user.name}</a>
 										</f:if>
@@ -36,7 +32,7 @@
 					<div class="main__textblock">
 						<f:for each="{tweets}" as="orig_tweet" iteration="iterator">
 							<f:alias map="{tweet: '{f:if(condition:orig_tweet.retweeted_status,then:orig_tweet.retweeted_status,else:orig_tweet)}'}">
-								<f:if condition="{iterator.index} < {settings.limit}">
+								<f:if condition="{iterator.index} < 2">
 									<f:then>
 										<p><span class="text--small">
 											<a href="https://twitter.com/{tweet.user.screen_name}">
