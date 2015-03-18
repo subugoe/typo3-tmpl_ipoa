@@ -49,3 +49,10 @@
 	&:hover,
 	&:focus { @extend %link--on-bright; }
 }
+.last {
+
+	img {
+		max-width: 100%;
+	}
+	// @extend %picture;
+}
