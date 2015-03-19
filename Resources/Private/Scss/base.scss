@@ -27,6 +27,8 @@
 blockquote {
 	// font-style: italic;
 	margin-left: $content-padding--phone * 2;
+	margin-top: $content-padding--phone * 2;
+	margin-bottom: $content-padding--phone * 4;
 
 	@include media-query('tablet') { margin-left: $content-padding--tablet; }
 
@@ -36,15 +38,16 @@ blockquote {
 
 	@include media-query('huge') { margin-left: $content-padding--desk / 4; }
 
+
 	&:before {
-		content: '„';
+		//content: '„';
 		font-weight: bold;
 		margin-left: -10px;
 		margin-right: 2px;
 	}
 
 	&:after {
-		content: '“';
+		//content: '“';
 		font-weight: bold;
 		margin-left: 2px;
 		margin-right: -8px;

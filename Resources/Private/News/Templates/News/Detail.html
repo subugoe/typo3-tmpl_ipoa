@@ -10,12 +10,12 @@
 <f:section name="content">
 	<f:if condition="{newsItem}">
 		<f:then>
-			<h2>
-				<n:format.date format="%d.%m.%Y">{newsItem.datetime}</n:format.date>
-			</h2>
 			<div class="main__textblock">
-				<f:format.html>{newsItem.bodytext}</f:format.html>
-			</div>
+				<h3 class="heading">
+					<n:format.date format="%d.%m.%Y">{newsItem.datetime}</n:format.date>
+				</h3>
+					<f:format.html>{newsItem.bodytext}</f:format.html>
+				</div>
 		</f:then>
 	</f:if>
 </f:section>

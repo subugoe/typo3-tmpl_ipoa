@@ -69,3 +69,12 @@
 		@extend %link--on-bright;
 	}
 }
+
+.footer {
+
+	img {
+		max-width: 100%;
+	}
+
+	word-wrap: break-word;
+}
