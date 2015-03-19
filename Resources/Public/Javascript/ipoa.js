@@ -83,7 +83,7 @@ jQuery(document).ready(function() {
 	jQuery('.on-demand__content').hide();
 
 	jQuery('.on-demand__link').click(function(event) {
-		jQuery(this).parent().next(".on-demand__content").toggle("slow");
+		jQuery(this).parent().nextAll(".on-demand__content").first().toggle("slow");
 	});
 
 
