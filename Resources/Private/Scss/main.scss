@@ -86,6 +86,13 @@
 	@include media-query('desk-and-up') { text-align: right; }
 }
 
+.oadays .on-demand__link {
+	@extend %link--default;
+	@extend %link--on-bright;
+	@extend %link--underline;
+	@extend %link--underline-on-bright;
+}
+
 .search {
 	.sort--active {
 		background-color: #eee;
