@@ -29,7 +29,7 @@
 					</div>
 				</f:then>
 				<f:else><!-- Seitenende oder Footer (oder Open-Access-Tage) -->
-					<div class="main__textblock">
+					<div class="main__textblock twitter">
 						<f:for each="{tweets}" as="orig_tweet" iteration="iterator">
 							<f:alias map="{tweet: '{f:if(condition:orig_tweet.retweeted_status,then:orig_tweet.retweeted_status,else:orig_tweet)}'}">
 								<f:if condition="{iterator.index} < 2">
