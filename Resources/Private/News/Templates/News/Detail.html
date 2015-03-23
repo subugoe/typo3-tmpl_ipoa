@@ -11,9 +11,10 @@
 	<f:if condition="{newsItem}">
 		<f:then>
 			<div class="main__textblock">
-				<h3 class="heading">
+				<h3 class="heading">{newsItem.title}</h3>
+				<h4 class="heading">
 					<n:format.date format="%d.%m.%Y">{newsItem.datetime}</n:format.date>
-				</h3>
+				</h4>
 					<f:format.html>{newsItem.bodytext}</f:format.html>
 				</div>
 		</f:then>
