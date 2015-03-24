@@ -1,13 +1,6 @@
 {
   "name": "ipoa",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "contributors": [
-    {
-      "name": "Foo Bar",
-      "email": "foo.bar@example.com"
-    }
   ],
   "dependencies": {
     "gulp": "^3.8.11",
