@@ -34,14 +34,13 @@
 							<f:alias map="{tweet: '{f:if(condition:orig_tweet.retweeted_status,then:orig_tweet.retweeted_status,else:orig_tweet)}'}">
 								<f:if condition="{iterator.index} < 2">
 									<f:then>
-										<p><span class="text--small">
+										<p>
 											<a href="https://twitter.com/{tweet.user.screen_name}">
 												<img src="{tweet.user.profile_image_url}" alt="{tweet.user.name}"/></a>
 											<a href="https://twitter.com/{tweet.user.screen_name}">{tweet.user.name}</a>
-											(<tw:link.tweet class="cwtw-TweetMeta-timestamp" tweet="{tweet}">
+											<span class="text--small">(<tw:link.tweet class="cwtw-TweetMeta-timestamp" tweet="{tweet}">
 												<f:format.date format="H:m - d.m.Y">{tweet.created_at}</f:format.date>
-											</tw:link.tweet>)
-										</span>
+											</tw:link.tweet>)</span>
 											<br/>
 											<tw:format.tweet>{tweet}</tw:format.tweet>
 										</p>
