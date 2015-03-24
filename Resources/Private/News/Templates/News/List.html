@@ -8,19 +8,8 @@
 <f:section name="content">
 	<f:if condition="{news}">
 		<f:then>
-			<f:if condition="{settings.templateLayout} == 10">
+			<f:if condition="{contentObjectData.colPos} == 0"><!-- Hauptspalte -->
 				<f:then>
-					<!-- Listenansicht in Spalten -->
-					<div class="main__textblock">
-						<f:for each="{news}" as="newsItem">
-							<ul>
-								<f:render partial="List/Item-title" arguments="{newsItem: newsItem, settings:settings}"/>
-							</ul>
-						</f:for>
-					</div>
-				</f:then>
-				<f:else>
-					<!-- Normale Listenansicht -->
 					<div class="main__textblock">
 						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
 							<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
@@ -29,6 +18,16 @@
 								</ul>
 							</f:for>
 						</n:widget.paginate>
+					</div>
+				</f:then>
+				<f:else>
+					<!-- Listenansicht in Spalten -->
+					<div class="column__textblock">
+						<f:for each="{news}" as="newsItem">
+							<ul>
+								<f:render partial="List/Item-title" arguments="{newsItem: newsItem, settings:settings}"/>
+							</ul>
+						</f:for>
 					</div>
 				</f:else>
 			</f:if>
