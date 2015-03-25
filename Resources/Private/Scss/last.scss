@@ -45,6 +45,7 @@
 .last__link {
 	@extend %link--default;
 	@extend %link__button-on-bright;
+	margin: 2px 3px 0;
 
 	&:hover,
 	&:focus { @extend %link--on-bright; }
