@@ -35,12 +35,12 @@
       </li>
       <li>
         <a href="#" class="head__link js-head-language-indicator" title="Click this to see a list of available languages">
-          <svg class="fa-icon fa-icon-globe fa-icon--s"><use xlink:href="#icon-globe"></use></svg><span class="hidden-sub-notebook"> <ipoa:getLanguage /></span>
+          <svg class="fa-icon fa-icon-globe fa-icon--s"><use xlink:href="#icon-globe"></use></svg><span class="hidden-sub-notebook"> <ipoa:getDefaultLanguage /></span>
         </a>
       </li>
     </ul>
 		<v:page.languageMenu
-				defaultLanguageLabel="DE-DE"
+				defaultLanguageLabel="<ipoa:getDefaultLanguage />"
 				linkCurrent="0"
 				classCurrent="'head__link--active'"
 				hideNotTranslated="{true}">
