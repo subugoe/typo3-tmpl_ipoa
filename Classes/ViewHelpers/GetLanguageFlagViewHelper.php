@@ -31,16 +31,17 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
  *
  */
 
-class GetLanguageViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+class GetLanguageFlagViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
 
 	/**
-	 * Get the current language
+	 * Get the current language flag
 	 */
-	protected function getLanguage() {
-		if (isset($GLOBALS['TSFE']->config['config']['language'])) {
-			return $GLOBALS['TSFE']->config['config']['language'];
+	protected function getLanguageFlag() {
+		//DebuggerUtility::var_dump($GLOBALS['TSFE']->config);
+		if (isset($GLOBALS['TSFE']->config['config']['flag'])) {
+			return $GLOBALS['TSFE']->config['config']['flag'];
 		}
-		return 'en'; //default
+		return 'dede'; //default
 	}
 
 	/**
@@ -48,7 +49,7 @@ class GetLanguageViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractVie
 	 * @return  string
 	 */
 	public function render() {
-		return $this->getLanguage();
+		return $this->getLanguageFlag();
 	}
 
 }

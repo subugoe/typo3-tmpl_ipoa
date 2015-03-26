@@ -235,13 +235,19 @@ jQuery(document).ready(function() {
 		carousel(jQuery(this).attr("id"));
 	});
 
-	/**
-	 * TODO : add documentation
-	 *
-	 * footerHide
-	 */
-	footerHideHeight = jQuery('.footer-hide__content').height();
-	jQuery('.footer-hide').css({'height': footerHideHeight + 'px'});
+  /**
+   * TODO : add documentation
+   *
+   * footerHide
+   */
+  footerHideHeight = jQuery('.footer-hide__content').height();
+  jQuery('.footer-hide').css({ 'height': footerHideHeight + 'px' });
+
+  // recalculate (and set the new) footer height with every window resize
+  jQuery(window).resize(function() {
+    footerHideHeight = jQuery('.footer-hide__content').height();
+    jQuery('.footer-hide').css({ 'height': footerHideHeight + 'px' });
+  });
 
 	jQuery('.main div a').click(function(event) {
 		//event.preventDefault();

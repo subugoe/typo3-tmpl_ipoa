@@ -3,8 +3,8 @@ namespace Subugoe\TmplIpoa\ViewHelpers;
 /*******************************************************************************
  * Copyright notice
  *
- * Copyright 2013 Sven-S. Porst, Göttingen State and University Library
- *                <porst@sub.uni-goettingen.de>
+ * Copyright 2013 Ali Reza Sajedi, Göttingen State and University Library
+ *                <sajedi@sub.uni-goettingen.de>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,16 +31,22 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
  *
  */
 
-class GetLanguageViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+class GetDefaultLanguageViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+
+	const defaultLanguage = 'Deutsch';
 
 	/**
-	 * Get the current language
+	 * Get the default language
 	 */
-	protected function getLanguage() {
-		if (isset($GLOBALS['TSFE']->config['config']['language'])) {
-			return $GLOBALS['TSFE']->config['config']['language'];
+	protected function getDefaultLanguage() {
+		$defaultLanguage = self::defaultLanguage;
+		$modShared = $GLOBALS['TSFE']->rootLine[0]['TSconfig'];
+		if (!empty($modShared)) {
+			$modShared = explode('=', $modShared);
+			$defaultLanguage = trim(str_replace('}', '', $modShared[2]));
+			return $defaultLanguage;
 		}
-		return 'en'; //default
+		return $defaultLanguage;
 	}
 
 	/**
@@ -48,7 +54,7 @@ class GetLanguageViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractVie
 	 * @return  string
 	 */
 	public function render() {
-		return $this->getLanguage();
+		return $this->getDefaultLanguage();
 	}
 
 }

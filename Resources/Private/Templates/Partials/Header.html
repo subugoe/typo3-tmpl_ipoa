@@ -35,13 +35,20 @@
       </li>
       <li>
         <a href="#" class="head__link js-head-language-indicator" title="Click this to see a list of available languages">
-          <svg class="fa-icon fa-icon-globe fa-icon--s"><use xlink:href="#icon-globe"></use></svg><span class="hidden-sub-notebook"> <ipoa:getLanguage /></span>
+          <svg class="fa-icon fa-icon-globe fa-icon--s">
+	          <use xlink:href="#icon-globe"></use>
+          </svg>
+	        <span class="hidden-sub-notebook">
+		        <img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{ipoa:getLanguageFlag()}.png" />'>
+		        <ipoa:getLanguage />
+	        </span>
         </a>
       </li>
     </ul>
 		<v:page.languageMenu
-				defaultLanguageLabel="DE-DE"
+				defaultLanguageLabel="<ipoa:getDefaultLanguage />"
 				linkCurrent="0"
+				defaultIsoFlag="dede"
 				classCurrent="'head__link--active'"
 				hideNotTranslated="{true}">
 			<div class="head__language-links js-head-language-links">
@@ -52,11 +59,11 @@
 					<f:for each="{languageMenu}" as="langmenu" iteration="langiter">
 						<f:if condition="{ipoa:getLanguage()}=={langmenu.label}">
 							<f:then>
-								<li><a href="{langmenu.url}" title="" class="head__link head__link--active">{langmenu.label}</a>
+								<li><a href="{langmenu.url}" title="" class="head__link head__link--active"><img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt=""> {langmenu.label}</a>
 								</li>
 							</f:then>
 							<f:else>
-								<li><a href="{langmenu.url}" title="" class="head__link">{langmenu.label}</a></li>
+								<li><a href="{langmenu.url}" title="" class="head__link"><img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt=""> {langmenu.label}</a></li>
 							</f:else>
 						</f:if>
 					</f:for>
