@@ -25,6 +25,7 @@ styles.content.imgtext.layoutKey = srcset
 	config {
 		sys_language_uid = 1
 		language = DE-EN
+		flag = dede
 		locale_all = en_US.utf8
 		sys_language_mode = content_fallback
 		sys_language_overlay = 1
@@ -36,6 +37,7 @@ styles.content.imgtext.layoutKey = srcset
 	config {
 		sys_language_uid = 2
 		language = CH-DE
+		flag = chde
 		locale_all = de_CH.utf8
 		sys_language_mode = content_fallback
 		sys_language_overlay = 1
@@ -47,6 +49,7 @@ styles.content.imgtext.layoutKey = srcset
 	config {
 		sys_language_uid = 3
 		language = CH-EN
+		flag = chen
 		locale_all = en_US.utf8
 		sys_language_mode = content_fallback; 2,1,0
 		sys_language_fallBackOrder = 2,1,0
@@ -59,6 +62,7 @@ styles.content.imgtext.layoutKey = srcset
 	config {
 		sys_language_uid = 4
 		language = CH-FR
+		flag = chfr
 		#locale_all =
 		sys_language_mode = content_fallback; 3,2,1,0
 		sys_language_fallBackOrder = 3,2,1,0
@@ -70,6 +74,7 @@ styles.content.imgtext.layoutKey = srcset
 	config {
 		sys_language_uid = 5
 		language = AT-DE
+		flag = atde
 		locale_all = de_AT.utf8
 		sys_language_mode = content_fallback
 		sys_language_overlay = 1
@@ -80,6 +85,7 @@ styles.content.imgtext.layoutKey = srcset
 	config {
 		sys_language_uid = 6
 		language = AT-EN
+		flag = aten
 		locale_all = en_US.utf8
 		sys_language_mode = content_fallback; 5,1,0
 		sys_language_fallBackOrder = 5,1,0
