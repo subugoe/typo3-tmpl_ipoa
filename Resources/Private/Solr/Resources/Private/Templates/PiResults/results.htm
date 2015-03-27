@@ -1,71 +1,29 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Template for the search results view for EXT:solr</title>
-</head>
-<body>
+{namespace v=Tx_Vhs_ViewHelpers}
 
 <!-- ###SOLR_SEARCH### begin -->
 
-<div id="tx-solr-search">
-	<!-- ###SOLR_SEARCH_FORM### begin -->
-	<!-- removed -->
-	<!-- ###SOLR_SEARCH_FORM### end -->
-
-
-
-	<!-- ###SOLR_SEARCH_FORM_ADVANCED### begin -->
-
-	<!-- ###SOLR_SEARCH_FORM_ADVANCED### end -->
-
-
-
-	<!-- ###SOLR_SEARCH_ERRORS### begin -->
-
-	<div class="tx-solr-search-form-errors">
-		###LLL:error_errors###
-		<!-- ###LOOP:ERRORS### begin -->
-		<ul class="tx-solr-search-form-error-list">
-		<!-- ###LOOP_CONTENT### -->
-			<li>
-			###ERROR.MESSAGE###
-			</li>
-		<!-- ###LOOP_CONTENT### -->
-		</ul>
-		<!-- ###LOOP:ERRORS### end -->
-	</div>
-
-	<!-- ###SOLR_SEARCH_ERRORS### end -->
-
-
-
-	<!-- ###SOLR_SEARCH_RESULTS### begin -->
-
-	###RESULTS.SEARCHED_FOR###
-	###RESULTS.FOUND###
-	###RESULTS.RANGE###
-
-	<div id="tx-solr-pagination">
-		<!-- ###SOLR_SEARCH_RESULTSPERPAGESWITCH### begin -->
-		<div id="tx-solr-pagination-results-per-page">
-		<form action="###FORM.ACTION###" method="post">
-			###LLL:results_per_page###<select onchange="this.form.submit()" name="###TX_SOLR.PREFIX###[resultsPerPage]">
-				<!-- ###LOOP:OPTIONS### begin -->
-				<!-- ###LOOP_CONTENT### -->
-				<option value="###OPTION.VALUE###" ###OPTION.SELECTED###>###OPTION.VALUE###</option>
-				<!-- ###LOOP_CONTENT### -->
-				<!-- ###LOOP:OPTIONS### end -->
-			</select>
-		</form>
+	<form action="/suche/" method="get" accept-charset="utf-8" class="search__form tx-solr-search-form-pi-results">
+		<div class="search__field tx-solr-search-form">
+			<script type="text/javascript">
+				var tx_solr_suggestUrl = '{PAGE_UID}';
+			</script>
+			<input type="text" class="search__input tx-solr-q" name="q" value="">
+			<input type="hidden" name="id" value="{SEARCH_UID}">
+			<input type="hidden" name="L" value="{v:page.language(pageUid: '{PAGE_UID}', normalWhenNoLanguage: 1)}">
 		</div>
-		<!-- ###SOLR_SEARCH_RESULTSPERPAGESWITCH### end -->
+		<div class="search__submit">
+			<input type="submit" value="###LLL:submit###" class="search__button tx-solr-submit">
+		</div>
+	</form>
 
-		###RESULTS.PAGEBROWSER###
-	</div>
+<div class="main__textblock">
+	<!-- ###SOLR_SEARCH_RESULTS### begin -->
+	<p>
+	###RESULTS.SEARCHED_FOR###. ###RESULTS.FOUND###. ###RESULTS.RANGE###.###SUBMIT###
+	<!--###RESULTS.SORT###-->
+	</p>
 
-	<ol start="###RESULTS.OFFSET###" class="results-list">
+	<ul start="###RESULTS.OFFSET###">
 		<!-- ###LOOP:RESULT_DOCUMENTS### begin -->
 		<!-- ###LOOP_CONTENT### -->
 		<li class="results-entry###IF:###RESULT_DOCUMENT.isElevated###|==|1|class### results-elevated###IF:###RESULT_DOCUMENT.isElevated###|==|1|class###">
@@ -73,34 +31,15 @@
 			Score: ###RESULT_DOCUMENT.SCORE###
 			Document ID:  ###RESULT_DOCUMENT.ID###
 			-->
-			<!-- ###IF:###RESULT_DOCUMENT.isElevated###|==|1|label### begin -->
-			<div class="results-elevated-label">###LLL:sponsored###</div>
-			<!-- ###IF:###RESULT_DOCUMENT.isElevated###|==|1|label### end -->
-			<h5 class="results-topic"><a href="###RESULT_DOCUMENT.URL###">###RESULT_DOCUMENT.TITLE###</a></h5>
+			<a href="###RESULT_DOCUMENT.URL###">###RESULT_DOCUMENT.TITLE###</a>
 			<div class="results-teaser">
-				<div class="relevance">
-					<div class="relevance-label">###LLL:relevance###: </div>
-					<div class="relevance-bar">###RELEVANCE_BAR:###RESULT_DOCUMENT######</div>
-					<div class="relevance-percent">###RELEVANCE:###RESULT_DOCUMENT######%</div>
-				</div>
-
-				<p class="result-content">###RESULT_DOCUMENT.CONTENT###</p>
-
-				<!-- ###IF:###RESULT_DOCUMENT.TYPE###|==|tx_solr_file### begin -->
-				<p>
-					###LLL:file_mimetype###: ###RESULT_DOCUMENT.fileMimeType###<br />
-					###LLL:file_referenced###: ###LINK:###RESULT_DOCUMENT.fileReferenceTitle###|###RESULT_DOCUMENT.fileReferenceUrl######
-				</p>
-				<!-- ###IF:###RESULT_DOCUMENT.TYPE###|==|tx_solr_file### end -->
-
-				###RESULT_DOCUMENT.SCORE_ANALYSIS###
-			</div>
+				<br />
+				###CROP:###RESULT_DOCUMENT.CONTENT###|300###</p>
 		</li>
 		<!-- ###LOOP_CONTENT### -->
 		<!-- ###LOOP:RESULT_DOCUMENTS### end -->
-	</ol>
+	</ul>
 
-	###RESULTS.PAGEBROWSER###
 
 	<!-- ###SOLR_SEARCH_RESULTS### end -->
 
@@ -233,6 +172,3 @@
 <!-- ###SOLR_SEARCH_ERROR### begin -->
 	###LLL:searchFailed###
 <!-- ###SOLR_SEARCH_ERROR### end -->
-
-</body>
-</html>

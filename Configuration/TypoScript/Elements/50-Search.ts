@@ -22,3 +22,18 @@ plugin.tx_solr {
 		ui          = EXT:solr/Resources/Css/JQueryUi/jquery-ui.custom.css
 	}
 }
+plugin.tx_solr {
+	_LOCAL_LANG {
+		DE-DE {
+			results_found = Es wurden @resultsTotal Treffer gefunden
+			results_searched_for = Sie haben nach dem Begriff "@searchWord" gesucht
+			results_range = Die ersten @resultsTo werden angezeigt
+			submit = Suchen
+
+		}
+		en {
+			results_found = Found @resultsTotal results.
+			results_searched_for = Results for @searchWord
+		}
+	}
+}
