@@ -61,8 +61,8 @@
 				<target state="translated">Search</target>
 			</trans-unit>
 			<trans-unit id="usePageWideSearch" approved="yes" xml:space="preserve">
-				<source>Benutzen Sie die seitenweite Suche um weitere für Sie interessante Inhalte der Informationsplattform Open Access zu entdecken.</source>
-				<target state="translated">Use this page wide search form to get more interesting content about open access.</target>
+				<source>Benutzen Sie die Suche, um weitere interessante Inhalte der Informationsplattform open-acess.net zu finden.</source>
+				<target state="translated">Use the search box to find other interesting content on the information platform open-access.net.</target>
 			</trans-unit>
 			<trans-unit id="oaAtTwitter" approved="yes" xml:space="preserve">
 				<source>#openaccess bei Twitter</source>
