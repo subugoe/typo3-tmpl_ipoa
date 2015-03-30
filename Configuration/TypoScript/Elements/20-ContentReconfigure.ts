@@ -3,12 +3,21 @@
 
 
 # Add class to body-Tag
-page {
-	bodyTag >
-	bodyTagCObject = TEXT
-	bodyTagCObject.value = body content
-	bodyTagCObject.value.wrap = <body class="|">
-}
+[PIDinRootline = {$ids.start}]
+	page {
+		bodyTag >
+		bodyTagCObject = TEXT
+		bodyTagCObject.value = body Start-1
+		bodyTagCObject.value.wrap = <body class="|">
+	}
+[else]
+	page {
+		bodyTag >
+		bodyTagCObject = TEXT
+		bodyTagCObject.value = body content
+		bodyTagCObject.value.wrap = <body class="|">
+	}
+[end]
 
 # remove all comments in html
 config.disablePrefixComment = 1
