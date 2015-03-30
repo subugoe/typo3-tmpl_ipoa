@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+	<file source-language="de" target-language="DE-EN" datatype="plaintext" original="messages"
+	      product-name="tmpl_ipoa">
+		<header/>
+		<body>
+			<trans-unit id="readLatest" approved="yes" xml:space="preserve">
+				<source>Lesen Sie hier die letzten  %1$s News</source>
+				<target state="translated">Read here the latest  %1$s News</target>
+			</trans-unit>
+			<trans-unit id="commentContent" approved="yes" xml:space="preserve">
+				<source>Diese Inhalte kommentieren</source>
+				<target state="translated">Comment this content</target>
+			</trans-unit>
+			<trans-unit id="sendEmail" approved="yes" xml:space="preserve">
+				<source>Email versenden</source>
+				<target state="translated">Send Email</target>
+			</trans-unit>
+			<trans-unit id="startpage" approved="yes" xml:space="preserve">
+				<source>Startseite</source>
+				<target state="translated">Startpage</target>
+			</trans-unit>
+			<trans-unit id="contact" approved="yes" xml:space="preserve">
+				<source>Kontakt</source>
+				<target state="translated">Contact</target>
+			</trans-unit>
+			<trans-unit id="sitemap" approved="yes" xml:space="preserve">
+				<source>Sitemap</source>
+				<target state="translated">Sitemap</target>
+			</trans-unit>
+			<trans-unit id="search" approved="yes" xml:space="preserve">
+				<source>Suche</source>
+				<target state="translated">Search</target>
+			</trans-unit>
+			<trans-unit id="impressum" approved="yes" xml:space="preserve">
+				<source>Impressum</source>
+				<target state="translated">Impressum</target>
+			</trans-unit>
+			<trans-unit id="toTop" approved="yes" xml:space="preserve">
+				<source>Zurück zum Seitenanfang</source>
+				<target state="translated">Back to top</target>
+			</trans-unit>
+			<trans-unit id="news" approved="yes" xml:space="preserve">
+				<source>News</source>
+				<target state="translated">News</target>
+			</trans-unit>
+			<trans-unit id="freeAccess" approved="yes" xml:space="preserve">
+				<source>Der freie Zugang zu  %1$s wissenschaftlicher Information %2$s</source>
+				<target state="translated">Open Access to  %1$s Scientific Information %2$s</target>
+			</trans-unit>
+			<trans-unit id="optOutWithLink" approved="yes" xml:space="preserve">
+				<source>Diese Webseite erfasst anonymisierte Daten zur Nutzung. Sie können dies für die Dauer ihres Besuchs unterbinden, indem sie folgenden Link klicken:</source>
+				<target state="translated">This website collects anonymous data. You can opt out for the duration of your visit by clicking this link:</target>
+			</trans-unit>
+			<trans-unit id="optOut" approved="yes" xml:space="preserve">
+				<source>Nutzungserfassung ausschalten (Opt-Out)</source>
+				<target state="translated">Remove collection of data (Opt-Out)</target>
+			</trans-unit>
+			<trans-unit id="search" approved="yes" xml:space="preserve">
+				<source>Suche</source>
+				<target state="translated">Search</target>
+			</trans-unit>
+			<trans-unit id="usePageWideSearch" approved="yes" xml:space="preserve">
+				<source>Benutzen Sie die Suche, um weitere interessante Inhalte der Informationsplattform open-acess.net zu finden.</source>
+				<target state="translated">Use the search box to find other interesting content on the information platform open-access.net.</target>
+			</trans-unit>
+			<trans-unit id="oaAtTwitter" approved="yes" xml:space="preserve">
+				<source>#openaccess bei Twitter</source>
+				<target state="translated">#openaccess at Twitter</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
