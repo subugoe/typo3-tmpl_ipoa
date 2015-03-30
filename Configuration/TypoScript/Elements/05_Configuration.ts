@@ -24,7 +24,7 @@ styles.content.imgtext.layoutKey = srcset
 [globalVar = GP:L = 1]
 	config {
 		sys_language_uid = 1
-		language = DE-EN
+		language = De
 		flag = dede
 		locale_all = en_US.utf8
 		sys_language_mode = content_fallback

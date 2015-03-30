@@ -160,7 +160,7 @@ tt_content.image.default.20 {
 		layoutKey >
 		layoutKey = default
 		layout.default {
-			element = <img src="###SRC###" ###PARAMS######ALTPARAMS######BORDER######SELFCLOSINGTAGSLASH###>
+			element = <picture><img src="###SRC###" ###PARAMS######ALTPARAMS######BORDER######SELFCLOSINGTAGSLASH###></picture>
 		}
 	}
 	# change special wrappings for columns
