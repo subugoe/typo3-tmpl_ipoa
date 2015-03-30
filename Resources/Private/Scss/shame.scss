@@ -15,6 +15,10 @@
 	}
 }
 
+.main h2+div h3:first-child {
+	margin-top: 8px;
+}
+
 @media print {
 	.head-nav,
 	.more,
