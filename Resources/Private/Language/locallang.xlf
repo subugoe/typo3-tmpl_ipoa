@@ -21,6 +21,9 @@
 			<trans-unit id="sitemap" approved="yes" xml:space="preserve">
 				<source>Sitemap</source>
 			</trans-unit>
+			<trans-unit id="aboutUs" approved="yes" xml:space="preserve">
+				<source>Über uns</source>
+			</trans-unit>
 			<trans-unit id="search" approved="yes" xml:space="preserve">
 				<source>Suche</source>
 			</trans-unit>
