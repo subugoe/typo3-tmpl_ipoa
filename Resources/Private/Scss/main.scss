@@ -91,6 +91,7 @@
 	@extend %link--on-bright;
 	@extend %link--underline;
 	@extend %link--underline-on-bright;
+	cursor: pointer;
 }
 
 .search {
