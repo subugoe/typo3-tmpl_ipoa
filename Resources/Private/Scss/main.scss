@@ -37,7 +37,8 @@
 	@extend %link--underline-on-bright;
 }
 
-.main picture a {
+.main picture a,
+.more picture a {
 	border-bottom-color: transparent;
 	padding: 0;
 	border-width: 0;
