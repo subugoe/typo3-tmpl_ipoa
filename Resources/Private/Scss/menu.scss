@@ -144,6 +144,8 @@
 	width: 30%;
 	padding: 0;
 	transform: translateX(-100%);
+	-webkit-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
 }
 
 .alt-menu .head__list {
