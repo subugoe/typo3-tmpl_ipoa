@@ -51,6 +51,42 @@
 			<trans-unit id="oaAtTwitter" approved="yes" xml:space="preserve">
 				<source>#openaccess bei Twitter</source>
 			</trans-unit>
+			<trans-unit id="month.01" approved="yes" xml:space="preserve">
+				<source>Januar</source>
+			</trans-unit>
+			<trans-unit id="month.02" approved="yes" xml:space="preserve">
+				<source>Februar</source>
+			</trans-unit>
+			<trans-unit id="month.03" approved="yes" xml:space="preserve">
+				<source>März</source>
+			</trans-unit>
+			<trans-unit id="month.04" approved="yes" xml:space="preserve">
+				<source>April</source>
+			</trans-unit>
+			<trans-unit id="month.05" approved="yes" xml:space="preserve">
+				<source>Mai</source>
+			</trans-unit>
+			<trans-unit id="month.06" approved="yes" xml:space="preserve">
+				<source>Juni</source>
+			</trans-unit>
+			<trans-unit id="month.07" approved="yes" xml:space="preserve">
+				<source>Juli</source>
+			</trans-unit>
+			<trans-unit id="month.08" approved="yes" xml:space="preserve">
+				<source>Augugst</source>
+			</trans-unit>
+			<trans-unit id="month.09" approved="yes" xml:space="preserve">
+				<source>September</source>
+			</trans-unit>
+			<trans-unit id="month.10" approved="yes" xml:space="preserve">
+				<source>Oktober</source>
+			</trans-unit>
+			<trans-unit id="month.11" approved="yes" xml:space="preserve">
+				<source>November</source>
+			</trans-unit>
+			<trans-unit id="month.12" approved="yes" xml:space="preserve">
+				<source>Dezember</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
