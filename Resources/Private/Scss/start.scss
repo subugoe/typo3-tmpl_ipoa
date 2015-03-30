@@ -63,6 +63,63 @@
 .start__navigation { @extend %ic-layout--center; }
 
 /**
+ * .head__links
+ */
+.start__links {
+	@extend %ic-layout__item;
+	@extend .ic-smaller-than-tablet-two-thirds;
+	@extend .ic-tablet-and-up-three-quarters;
+	@extend .ic-mt--;
+	text-align: right;
+
+	@include media-query('tablet-and-up') { text-align: left; }
+}
+
+/**
+ * .head__link
+ * 1. give the icon a little bit more space to top
+ * 2. these links are not allowed to break into a new line
+ */
+.start__link {
+	@extend %link--default;
+	@extend %start__link--on-bright;
+	@extend %nobr; // 2.
+	padding: 7px 5px 5px; // 1.
+	&:hover,
+	&:focus {
+		@extend %link--on-bright;
+
+		svg {
+			color: $color--brightest;
+			fill: currentColor;
+		}
+
+	}
+
+	&:active svg { color: $color--darkest; }
+}
+
+/**
+ * .start__link--active
+ */
+.start__link--active {
+	background-color: $color--darkest;
+	color: $color--brightest;
+}
+
+/**
+ * .start__list
+ * 1. LIs are inline
+ * 2. UL is inline
+ */
+.start__list {
+	@extend %ic-list-bare;
+	@extend %ic-list-inline; // 1.
+	display: inline; // 2.
+}
+
+
+/**
  * .start__button
  */
 .start__button {

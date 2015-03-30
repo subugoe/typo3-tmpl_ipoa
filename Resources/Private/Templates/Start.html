@@ -1,3 +1,4 @@
+{namespace v=Tx_Vhs_ViewHelpers}
 {namespace ipoa=Subugoe\TmplIpoa\ViewHelpers}
 
 <f:render partial="Icons.html" />
@@ -17,7 +18,7 @@
 
 	<main role="start__main" class="main">
 		<nav class="start__navigation">
-			<f:link.page pageUid="{STARTBUT_1_UID}" tabindex="-1"><button class="start__button" tabindex="1" accesskey="{STARTBUT_1_AC}" role="link" autofocus>{STARTBUT_1_TITLE}</button></f:link.page>
+			<f:link.page pageUid="{STARTBUT_1_UID}" tabindex="-1"><button class="start__button" tabindex="1" accesskey="{STARTBUT_1_AC}" role="link" >{STARTBUT_1_TITLE}</button></f:link.page>
 			<f:link.page pageUid="{STARTBUT_2_UID}" tabindex="-1"><button class="start__button" tabindex="2" accesskey="{STARTBUT_2_AC}" role="link">{STARTBUT_2_TITLE}</button></f:link.page>
 			<f:link.page pageUid="{STARTBUT_3_UID}" tabindex="-1"><button class="start__button" tabindex="3" accesskey="{STARTBUT_3_AC}" role="link">{STARTBUT_3_TITLE}</button></f:link.page>
 		</nav>
@@ -25,21 +26,60 @@
 	<footer role="contentinfo" class="start__footer">
 		<div class="start__footer-content">
 			<ul class="start__list">
+				<li></li>
 				<li>
-					<f:link.page pageUid="{UEBERUNS_UID}" title="{UEBERUNS_TITLE}" class="start__link">
-						<svg class="fa-icon fa-icon-smile-o fa-icon--s fa-icon-on-bright"><use xlink:href="#icon-smile-o"></use></svg>  {UEBERUNS_TITLE}
+					<f:link.page pageUid="{UEBERUNS_UID}" title="{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}" class="start__link">
+						<svg class="fa-icon fa-icon-smile-o fa-icon--s fa-icon-on-bright"><use xlink:href="#icon-smile-o"></use></svg> {f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}
 					</f:link.page>
 				</li>
 				<li>
-					<f:link.page pageUid="{KONTAKT_UID}" title="{KONTAKT_TITLE}" class="start__link">
-						<svg class="fa-icon fa-icon-envelope fa-icon--s fa-icon-on-bright"><use xlink:href="#icon-envelope"></use></svg> {KONTAKT_TITLE}
+					<f:link.page pageUid="{KONTAKT_UID}" title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}" class="start__link">
+						<svg class="fa-icon fa-icon-envelope fa-icon--s fa-icon-on-bright"><use xlink:href="#icon-info"></use></svg> {f:translate(key:'contact', extensionName: 'tmpl_ipoa')}
 					</f:link.page>
 				</li>
 				<li>
-					<f:link.page pageUid="{IMPRESSUM_UID}" title="{IMPRESSUM_TITLE}" class="start__link">
-						<svg class="fa-icon fa-icon-gavel fa-icon--s fa-icon-on-bright"><use xlink:href="#icon-gavel"></use></svg> {IMPRESSUM_TITLE}
+					<f:link.page pageUid="{IMPRESSUM_UID}" title="{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}" class="start__link">
+						<svg class="fa-icon fa-icon-gavel fa-icon--s fa-icon-on-bright"><use xlink:href="#icon-gavel"></use></svg> {f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}
 					</f:link.page>
 				</li>
+				<li>
+					<a href="#" title="Click this to see a list of available languages" class="start__link js-start-language-indicator">
+						<svg class="fa-icon fa-icon-globe fa-icon--s"><use xlink:href="#icon-globe"></use></svg>
+						<span class="hidden-sub-notebook">
+							<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{ipoa:getLanguageFlag()}.png" />'>
+							<ipoa:getLanguage />
+						</span>
+					</a>
+				</li>
+			</ul>
+			<v:page.languageMenu
+					defaultLanguageLabel="<ipoa:getDefaultLanguage />"
+					linkCurrent="0"
+					defaultIsoFlag="dede"
+					classCurrent="'start__link--active'"
+					hideNotTranslated="{true}">
+				<div class="start__language-links js-start-language-links">
+					<svg class="fa-icon fa-icon-gavel fa-icon--s fa-icon-on-bright">
+						<use xlink:href="#icon-globe"></use>
+					</svg>
+					<ul class="start__navlist">
+						<f:for each="{languageMenu}" as="langmenu" iteration="langiter">
+							<f:if condition="{ipoa:getLanguage()}=={langmenu.label}">
+								<f:then>
+									<li>
+										<a href="{langmenu.url}" title="" class="start__link start__link--active">
+											<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt=""> {langmenu.label}
+										</a>
+									</li>
+								</f:then>
+								<f:else>
+									<li><a href="{langmenu.url}" title="" class="start__link"><img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt=""> {langmenu.label}</a></li>
+								</f:else>
+							</f:if>
+						</f:for>
+					</ul>
+				</div>
+			</v:page.languageMenu>
 			</ul>
 		</div>
 	</footer>
