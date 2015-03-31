@@ -4,34 +4,22 @@ content < styles.content.get
 lib.ids {
 	START_UID = TEXT
 	START_UID.value = {$ids.start}
-	START_TITLE = TEXT
-	START_TITLE.data = DB:pages:{$ids.start}:title
 	KONTAKT_UID = TEXT
 	KONTAKT_UID.value = {$ids.kontakt}
-	KONTAKT_TITLE = TEXT
-	KONTAKT_TITLE.data = DB:pages:{$ids.kontakt}:title
 	SITEMAP_UID = TEXT
 	SITEMAP_UID.value = {$ids.sitemap}
-	SITEMAP_TITLE = TEXT
-	SITEMAP_TITLE.data = DB:pages:{$ids.sitemap}:title
 	IMPRESSUM_UID = TEXT
 	IMPRESSUM_UID.value = {$ids.impressum}
-	IMPRESSUM_TITLE = TEXT
-	IMPRESSUM_TITLE.data = DB:pages:{$ids.impressum}:title
 	NEWS_UID = TEXT
 	NEWS_UID.value = {$ids.news}
-	NEWS_TITLE = TEXT
-	NEWS_TITLE.data = DB:pages:{$ids.news}:title
 	UEBERUNS_UID = TEXT
 	UEBERUNS_UID.value = {$ids.ueberUns}
-	UEBERUNS_TITLE = TEXT
-	UEBERUNS_TITLE.data = DB:pages:{$ids.ueberUns}:title
 	SEARCH_UID = TEXT
 	SEARCH_UID.value = {$ids.search}
 	STARTBUT_1_UID = TEXT
 	STARTBUT_1_UID.value = {$ids.startbutton_1}
 	STARTBUT_1_TITLE = TEXT
-	STARTBUT_1_TITLE.data = DB:pages:{$ids.startbutton_1}:title
+	STARTBUT_1_TITLE.value = {$ids.startbutton_1.title}
 	STARTBUT_1_AC = TEXT
 	STARTBUT_1_AC {
 		data = DB:pages:{$ids.startbutton_1}:title
@@ -41,7 +29,7 @@ lib.ids {
 	STARTBUT_2_UID = TEXT
 	STARTBUT_2_UID.value = {$ids.startbutton_2}
 	STARTBUT_2_TITLE = TEXT
-	STARTBUT_2_TITLE.data = DB:pages:{$ids.startbutton_2}:title
+	STARTBUT_2_TITLE.value = {$ids.startbutton_2.title}
 	STARTBUT_2_AC = TEXT
 	STARTBUT_2_AC {
 		data = DB:pages:{$ids.startbutton_2}:title
@@ -51,7 +39,7 @@ lib.ids {
 	STARTBUT_3_UID = TEXT
 	STARTBUT_3_UID.value = {$ids.startbutton_3}
 	STARTBUT_3_TITLE = TEXT
-	STARTBUT_3_TITLE.data = DB:pages:{$ids.startbutton_3}:title
+	STARTBUT_3_TITLE.value = {$ids.startbutton_3.title}
 	STARTBUT_3_AC = TEXT
 	STARTBUT_3_AC {
 		data = DB:pages:{$ids.startbutton_3}:title
@@ -128,6 +116,8 @@ lib.startpage {
 	variables < lib.subTemplateVars
 	variables < lib.ids
 	variables {
+
+		CUR_LANGUAGE < sys_language_uid
 	}
 }
 
