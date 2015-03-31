@@ -21,6 +21,16 @@ jQuery(document).ready(function() {
 		jsHeadLanguageIndicator.hide();
 	});
 
+
+	jQuery('.js-start-language-links').hide();
+	jsStartLanguageIndicator = jQuery('.js-start-language-indicator');
+	jsStartLanguageIndicator.click(function() {
+		jQuery('.js-start-language-links').show();
+		var startHeight = jQuery('.start__links').height();
+		jQuery('.start').css({'padding-top': startHeight});
+		jsStartLanguageIndicator.hide();
+	});
+
 	/**
 	 * TODO : add documentation
 	 */

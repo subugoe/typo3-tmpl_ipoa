@@ -34,7 +34,11 @@
 			</trans-unit>
 			<trans-unit id="impressum" approved="yes" xml:space="preserve">
 				<source>Impressum</source>
-				<target state="translated">Impressum</target>
+				<target state="translated">Legal Notice</target>
+			</trans-unit>
+			<trans-unit id="aboutUs" approved="yes" xml:space="preserve">
+				<source>Über uns</source>
+				<target state="translated">About</target>
 			</trans-unit>
 			<trans-unit id="toTop" approved="yes" xml:space="preserve">
 				<source>Zurück zum Seitenanfang</source>
