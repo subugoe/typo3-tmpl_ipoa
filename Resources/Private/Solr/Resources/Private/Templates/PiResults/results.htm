@@ -1,4 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Template for the search results view for EXT:solr</title>
+</head>
+<body>
+
 <!-- ###SOLR_SEARCH### begin -->
+
+
+
+<div class="main__textblock">
+	<!-- ###SOLR_SEARCH_RESULTS### begin -->
 
 	<form action="/suche/" method="get" accept-charset="utf-8" class="search__form tx-solr-search-form-pi-results">
 		<div class="search__field tx-solr-search-form">
@@ -14,12 +28,25 @@
 		</div>
 	</form>
 
-<div class="main__textblock">
-	<!-- ###SOLR_SEARCH_RESULTS### begin -->
 	<p>
-	###RESULTS.SEARCHED_FOR###. ###RESULTS.FOUND###. ###RESULTS.RANGE###.###SUBMIT###
-	<!--###RESULTS.SORT###-->
+		###RESULTS.SEARCHED_FOR###. ###RESULTS.FOUND###. <br />
+		###RESULTS.RANGE###.
+		<!-- ###RESULTS.SORT### -->
 	</p>
+
+		<!-- ###SOLR_SEARCH_RESULTSPERPAGESWITCH### begin -->
+			<form action="###FORM.ACTION###" method="post">
+				###LLL:results_per_page### <select onchange="this.form.submit()" name="###TX_SOLR.PREFIX###[resultsPerPage]">
+				<!-- ###LOOP:OPTIONS### begin -->
+				<!-- ###LOOP_CONTENT### -->
+				<option value="###OPTION.VALUE###" ###OPTION.SELECTED###>###OPTION.VALUE###</option>
+				<!-- ###LOOP_CONTENT### -->
+				<!-- ###LOOP:OPTIONS### end -->
+			</select>
+			</form>
+		<!-- ###SOLR_SEARCH_RESULTSPERPAGESWITCH### end -->
+		###RESULTS.PAGEBROWSER###
+
 
 	<ul start="###RESULTS.OFFSET###">
 		<!-- ###LOOP:RESULT_DOCUMENTS### begin -->
