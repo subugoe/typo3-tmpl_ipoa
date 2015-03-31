@@ -63,7 +63,7 @@
 .start__navigation { @extend %ic-layout--center; }
 
 /**
- * .head__links
+ * .start__links
  */
 .start__links {
 	@extend %ic-layout__item;
@@ -76,7 +76,7 @@
 }
 
 /**
- * .head__link
+ * .start__link
  * 1. give the icon a little bit more space to top
  * 2. these links are not allowed to break into a new line
  */
@@ -118,6 +118,10 @@
 	display: inline; // 2.
 }
 
+.start__footer-content {
+	text-align: center;
+}
+
 
 /**
  * .start__button
@@ -155,20 +159,14 @@
 }
 
 /**
- * .start__footer-content
- */
-.start__footer-content {
-	width: 100vw;
-	padding: 5vh 0 0;
-}
-
-/**
  * .start__list
+ * 1. LIs are inline
+ * 2. UL is inline
  */
 .start__list {
-	@extend %ic-layout--center;
 	@extend %ic-list-bare;
-	@extend %ic-list-inline;
+	@extend %ic-list-inline; // 1.
+	display: inline; // 2.
 }
 
 /**
