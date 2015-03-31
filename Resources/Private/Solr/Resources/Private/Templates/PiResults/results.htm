@@ -1,15 +1,13 @@
-{namespace v=Tx_Vhs_ViewHelpers}
-
 <!-- ###SOLR_SEARCH### begin -->
 
 	<form action="/suche/" method="get" accept-charset="utf-8" class="search__form tx-solr-search-form-pi-results">
 		<div class="search__field tx-solr-search-form">
 			<script type="text/javascript">
-				var tx_solr_suggestUrl = '{PAGE_UID}';
+				var tx_solr_suggestUrl = '###TS:lib.contentpage.variables.PAGE_UID###';
 			</script>
 			<input type="text" class="search__input tx-solr-q" name="q" value="">
-			<input type="hidden" name="id" value="{SEARCH_UID}">
-			<input type="hidden" name="L" value="{v:page.language(pageUid: '{PAGE_UID}', normalWhenNoLanguage: 1)}">
+			<input type="hidden" name="id" value="###TS:lib.ids.SEARCH_UID###">
+			<input type="hidden" name="L" value="###TS:config.sys_language_uid###">
 		</div>
 		<div class="search__submit">
 			<input type="submit" value="###LLL:submit###" class="search__button tx-solr-submit">
@@ -35,15 +33,13 @@
 			<div class="results-teaser">
 				<br />
 				###CROP:###RESULT_DOCUMENT.CONTENT###|300###</p>
+			</div>
 		</li>
 		<!-- ###LOOP_CONTENT### -->
 		<!-- ###LOOP:RESULT_DOCUMENTS### end -->
 	</ul>
 
-
 	<!-- ###SOLR_SEARCH_RESULTS### end -->
-
-
 
 	<!-- ###SOLR_SEARCH_NO_RESULTS### begin -->
 	<h2></h2><div>
@@ -72,7 +68,6 @@
 	</div>
 
 	<!-- ###SOLR_SEARCH_SORTING### end -->
-
 
 	<!-- ###SOLR_SEARCH_FACETING### begin -->
 	<div id="tx-solr-faceting">
@@ -126,7 +121,6 @@
 	</div>
 	<!-- ###SOLR_SEARCH_FACETING### end -->
 
-
 	<!-- ###SOLR_SEARCH_LASTSEARCHES### end -->
 	<div id="tx-solr-lastsearches" class="secondaryContentSection">
 		<div class="csc-header">
@@ -162,8 +156,6 @@
 </div>
 
 <!-- ###SOLR_SEARCH### end -->
-
-
 
 <!-- ###SOLR_SEARCH_UNAVAILABLE### begin -->
 	###LLL:searchUnavailable###

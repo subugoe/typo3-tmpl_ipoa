@@ -27,7 +27,7 @@ lib.ids {
 	UEBERUNS_TITLE = TEXT
 	UEBERUNS_TITLE.data = DB:pages:{$ids.ueberUns}:title
 	SEARCH_UID = TEXT
-	SEARCH_UID = {$ids.search}
+	SEARCH_UID.value = {$ids.search}
 	STARTBUT_1_UID = TEXT
 	STARTBUT_1_UID.value = {$ids.startbutton_1}
 	STARTBUT_1_TITLE = TEXT
