@@ -1,14 +1,4 @@
 plugin.tx_solr {
-
-	templateFiles {
-		frequentSearches = EXT:tmpl_ipoa/Resources/Private/Solr/Resources/Private/Templates/PiFrequentSearches/frequentsearches.htm
-		pagebrowser = EXT:tmpl_ipoa/Resources/Private/Solr/Resources/Private/Templates/PiResults/pagebrowser.htm
-		results = EXT:tmpl_ipoa/Resources/Private/Solr/Resources/Private/Templates/PiResults/results.htm
-		search = EXT:tmpl_ipoa/Resources/Private/Solr/Resources/Private/Templates/PiSearch/search.htm
-	}
-}
-
-plugin.tx_solr {
 	templateFiles {
 		frequentSearches = EXT:tmpl_ipoa/Resources/Private/Solr/Resources/Private/Templates/PiFrequentSearches/frequentsearches.htm
 		pagebrowser = EXT:tmpl_ipoa/Resources/Private/Solr/Resources/Private/Templates/PiResults/pagebrowser.htm

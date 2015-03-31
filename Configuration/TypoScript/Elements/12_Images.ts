@@ -167,7 +167,7 @@ tt_content.image.default.20 {
 	rendering {
 		singleNoCaption {
 			# Single image - No caption
-			singleStdWrap.wrap.override = |
+			singleStdWrap.wrap.override = <picture>|</picture>
 		}
 		noCaption {
 			# Multiple images and no caption at all
