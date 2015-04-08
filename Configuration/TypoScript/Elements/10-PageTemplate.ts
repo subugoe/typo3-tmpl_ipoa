@@ -129,6 +129,13 @@ lib.oatage {
 	variables {
 
 		MENU < lib.mainMenu
+
+		CUR_LANGUAGE < sys_language_uid
+
+		PAGE_TITLE = TEXT
+		PAGE_TITLE.data = page:title
+		PAGE_UID = TEXT
+		PAGE_UID.data = page:uid
 	}
 }
 
