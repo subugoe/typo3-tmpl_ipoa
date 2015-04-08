@@ -212,6 +212,7 @@
 	@extend %ic-layout;
 	@extend .ic-layout--flush;
 	@include responsive-content-padding();
+	padding-top: 10px;
 	position: fixed;
 	width: 100%;
 	top: 0;
