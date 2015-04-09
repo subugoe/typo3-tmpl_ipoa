@@ -232,6 +232,22 @@ jQuery(document).ready(function() {
     jQuery('.footer-hide').css({ 'height': footerHideHeight + 'px' });
   });
 
+  /**
+   * Prevent the logocarousel to change it's height
+   * Find the logocarousel, get it's ID, get the max height of the images
+   * and set the height of the logocarousel accordingly
+   */
+  logoIds = jQuery(".logocarousel");
+  logoIds.each(function() {
+    logoHeight = 0;
+    jQuery(this).find("img").each(function() {
+      if (this.height > logoHeight) {
+        logoHeight = this.height;
+      }
+    });
+    jQuery(this).css("height",logoHeight);
+  });
+
 
   /**
    * this part allows for in-page anchor clicks that move the scroll position
