@@ -142,10 +142,6 @@ jQuery(document).ready(function() {
           '-webkit-transform': 'translateX(-100%)',
           '-ms-transform': 'translateX(-100%)',
           });
-        /* restablish content stuff to be used as normal again */
-        jQuery('.footer-hide__helper')
-          .removeClass('footer-hide__helper--shifted');
-        jQuery('.footer-hide').show();
         /* what to do when menu button gets clicked and menu is not yet
            visible */
       } else {
@@ -161,12 +157,9 @@ jQuery(document).ready(function() {
            let its content scroll */
         jQuery('.alt-menu__content').css({
           'overflow': 'scroll',
-          'height': '100%'
+          'height': '100%',
+          'min-height': '100%'
           });
-        /* move the regular content to the right (partly off canvas) and prevent
-           scrolling */
-        jQuery('.footer-hide__helper').addClass('footer-hide__helper--shifted');
-        jQuery('.footer-hide').hide();
         /* set keyboard focus to first link in menu */
         jQuery('.alt-menu a:first').focus();
       }
