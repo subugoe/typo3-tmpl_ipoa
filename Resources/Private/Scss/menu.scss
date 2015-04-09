@@ -127,6 +127,7 @@
 	@extend .ic-layout__item;
 	@extend .ic-pt;
 	@extend .ic-pb;
+	background-color: #fff;
 
 	@include responsive-content-padding();
 
