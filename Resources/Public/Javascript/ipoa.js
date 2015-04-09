@@ -22,6 +22,9 @@ jQuery(document).ready(function() {
           'transform': 'translateX(-100%)',
           '-webkit-transform': 'translateX(-100%)',
           '-ms-transform': 'translateX(-100%)',
+          'transition': 'all .25s ease-in-out',
+          '-webkit-transition': 'all .25s ease-in-out',
+          '-ms-transition': 'all .25s ease-in-out'
           });
       }
       event.preventDefault();
@@ -166,6 +169,9 @@ jQuery(document).ready(function() {
           'transform': 'translateX(-100%)',
           '-webkit-transform': 'translateX(-100%)',
           '-ms-transform': 'translateX(-100%)',
+          'transition': 'all .25s ease-in-out',
+          '-webkit-transition': 'all .25s ease-in-out',
+          '-ms-transition': 'all .25s ease-in-out'
           });
         /* what to do when menu button gets clicked and menu is not yet
            visible */
@@ -177,6 +183,9 @@ jQuery(document).ready(function() {
           'transform': 'translateX(0%)',
           '-webkit-transform': 'translateX(0%)',
           '-ms-transform': 'translateX(0%)',
+          'transition': 'all .25s ease-in-out',
+          '-webkit-transition': 'all .25s ease-in-out',
+          '-ms-transition': 'all .25s ease-in-out'
           });
         /* make the menu content fill the whole left side (top to bottom) and
            let its content scroll */
