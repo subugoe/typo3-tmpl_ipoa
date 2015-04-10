@@ -125,7 +125,7 @@
  */
 .alt-menu {
 	@extend .ic-layout__item;
-	@extend .ic-pt;
+	padding-top: 12px !important;
 	@extend .ic-pb;
 	background-color: #fff;
 
@@ -161,4 +161,41 @@
 
 .alt-menu .head__language-links .head__list {
 	text-align: left;
+}
+
+.alt-menu__close-button-wrap {
+	@include media-query('notebook-and-up') {
+		text-align: right;
+	}
+
+	padding-right: 24px;
+	padding-bottom: 10px;
+	padding-top: 2px;
+}
+
+.alt-menu__close-button {
+	padding: 5px;
+	border-radius: $border-radius--default;
+	background: transparent;
+	border: 1px solid transparent;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		background-color: $color-ipoa-green;
+		color: $color--brightest;
+
+		svg {
+			color: $color--brightest;
+			fill: currentColor;
+		}
+	}
+
+	&:active {
+		background-color: $color-ipoa-yellow;
+		color: $color--darkest;
+
+		svg { color: $color--darkest; }
+	}
+
 }
