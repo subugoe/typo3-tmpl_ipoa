@@ -28,18 +28,3 @@
 		display: none;
 	}
 }
-
-.main h2 {
-	// https://kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/
-	/* Warning: Needed for oldIE support, but words are broken up letter-by-letter */
- -ms-word-break: unset;
-     word-break: unset;
-
-     /* Non standard for webkit */
-     word-break: break-word;
-
--webkit-hyphens: auto;
-   -moz-hyphens: auto;
-    -ms-hyphens: auto;
-        hyphens: auto;
-}
