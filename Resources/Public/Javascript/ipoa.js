@@ -44,6 +44,7 @@ jQuery(document).ready(function() {
   /**
    * TODO : add documentation
    */
+  jQuery('.js-head-language-links').hide();
   jsHeadLanguageIndicator = jQuery('.js-head-language-indicator');
   jsHeadLanguageIndicator.click(function() {
     jQuery('.js-head-language-links').show();
