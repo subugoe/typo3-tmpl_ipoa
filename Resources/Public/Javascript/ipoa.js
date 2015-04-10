@@ -141,6 +141,9 @@ jQuery(document).ready(function() {
           'transform': 'translateX(-100%)',
           '-webkit-transform': 'translateX(-100%)',
           '-ms-transform': 'translateX(-100%)',
+          'transition': 'all .25s ease-in-out',
+          '-webkit-transition': 'all .25s ease-in-out',
+          '-ms-transition': 'all .25s ease-in-out'
           });
         /* what to do when menu button gets clicked and menu is not yet
            visible */
@@ -152,6 +155,9 @@ jQuery(document).ready(function() {
           'transform': 'translateX(0%)',
           '-webkit-transform': 'translateX(0%)',
           '-ms-transform': 'translateX(0%)',
+          'transition': 'all .25s ease-in-out',
+          '-webkit-transition': 'all .25s ease-in-out',
+          '-ms-transition': 'all .25s ease-in-out'
           });
         /* make the menu content fill the whole left side (top to bottom) and
            let its content scroll */
@@ -160,8 +166,8 @@ jQuery(document).ready(function() {
           'height': '100%',
           'min-height': '100%'
           });
-        /* set keyboard focus to first link in menu */
-        jQuery('.alt-menu a:first').focus();
+        /* set keyboard focus to second link in menu */
+        jQuery('.alt-menu a:nth-child(2)').focus();
       }
     });
   };
@@ -261,5 +267,32 @@ jQuery(document).ready(function() {
     jQuery('html, body').scrollTop(offsetTopOfTarget - 65); /* 1. */
   });
 
+
+  jQuery('.alt-menu__content').prepend('<div class="alt-menu__close-button-wrap"><a href="#" title="Menü schliessen" class="alt-menu__close-button"><svg class="fa-icon fa-icon-close fa-icon-on-bright"><use xlink:href="#icon-close"></use></svg> Close</a></div>');
+
+  jQuery('.alt-menu__close-button').click(function(event) {
+    altMenuToggleButton.removeClass('js-alt-menu-toggle-button--active');
+    if (windowWidth <= 767) {
+      console.log('hide menu');
+      jQuery('.head-nav').show();
+      jQuery('.footer-hide__helper').css({
+        'margin-left': '0%',
+        'position': 'relative'
+        });
+      jQuery('.footer-hide').css({
+        'margin-left': '0%',
+        'position': 'relative'
+        });
+    } else {
+      jQuery('.alt-menu').css({
+        'transform': 'translateX(-100%)',
+        '-webkit-transform': 'translateX(-100%)',
+        '-ms-transform': 'translateX(-100%)',
+        'transition': 'all .25s ease-in-out',
+        '-webkit-transition': 'all .25s ease-in-out',
+        '-ms-transition': 'all .25s ease-in-out'
+        });
+    }
+  });
 
 });
