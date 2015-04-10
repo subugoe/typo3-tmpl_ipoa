@@ -22,12 +22,15 @@
 	@extend .ic-tablet-and-up-one-half;
 	@extend .ic-layout--center;
 
-	margin: 10vh 0 0;
+	margin: 20vh 0 0;
 
-	@include media-query('tablet-and-up') { text-align: right; }
+	@include media-query('tablet-and-up') {
+		text-align: right;
+		padding-right: 4vh;
+	}
 
 	.image {
-		max-width: 250px;
+		max-width: 300px;
 	}
 }
 
@@ -38,13 +41,13 @@
 	@extend %ic-layout__item;
 	@extend .ic-tablet-and-up-one-half;
 	@extend .ic-layout--center;
-	@extend %text--large;
+	font-size: 1.8em;
 	display: none;
 
 	@include media-query('tablet-and-up') {
 		display: inline-block;
 		text-align: left;
-		padding: 10vh 0 0 3vh;
+		padding: 23vh 0 0 3vh;
 	}
 }
 
