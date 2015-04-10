@@ -3,6 +3,34 @@ jQuery(document).ready(function() {
 
   windowWidth = jQuery(window).width();
 
+  function menuIsActive() {
+    if (jQuery('.menu__button').hasClass('js-active')) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  jQuery('.footer-hide__helper').click(function(event){
+    if (menuIsActive()) {
+      classNameOfClickedElement = jQuery(event.target).attr('class')
+                                    .split(' ')[0];
+      if (classNameOfClickedElement != 'menu__button') {
+        jQuery('.menu__button')
+          .removeClass('js-active js-alt-menu-toggle-button--active');
+        jQuery('.alt-menu').css({
+          'transform': 'translateX(-100%)',
+          '-webkit-transform': 'translateX(-100%)',
+          '-ms-transform': 'translateX(-100%)',
+          'transition': 'all .25s ease-in-out',
+          '-webkit-transition': 'all .25s ease-in-out',
+          '-ms-transition': 'all .25s ease-in-out'
+          });
+      }
+      event.preventDefault();
+    }
+  });
+
 
   /**
    * scroll to anchor, but make it slow
@@ -266,7 +294,6 @@ jQuery(document).ready(function() {
     var offsetTopOfTarget = jQuery(scrollToId).offset().top;
     jQuery('html, body').scrollTop(offsetTopOfTarget - 65); /* 1. */
   });
-
 
   jQuery('.alt-menu__content').prepend('<div class="alt-menu__close-button-wrap"><a href="#" title="Menü schliessen" class="alt-menu__close-button"><svg class="fa-icon fa-icon-close fa-icon-on-bright"><use xlink:href="#icon-close"></use></svg> Close</a></div>');
 
