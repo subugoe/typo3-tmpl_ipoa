@@ -10,7 +10,7 @@
 			</trans-unit>
 			<trans-unit id="commentContent" approved="yes" xml:space="preserve">
 				<source>Diese Inhalte kommentieren</source>
-				<target state="translated">Comment this content</target>
+				<target state="translated">Comment on this content</target>
 			</trans-unit>
 			<trans-unit id="sendEmail" approved="yes" xml:space="preserve">
 				<source>Email versenden</source>
