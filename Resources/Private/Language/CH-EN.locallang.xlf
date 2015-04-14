@@ -18,7 +18,7 @@
 			</trans-unit>
 			<trans-unit id="startpage" approved="yes" xml:space="preserve">
 				<source>Startseite</source>
-				<target state="translated">Startpage</target>
+				<target state="translated">Start</target>
 			</trans-unit>
 			<trans-unit id="contact" approved="yes" xml:space="preserve">
 				<source>Kontakt</source>
