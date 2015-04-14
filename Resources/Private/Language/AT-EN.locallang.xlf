@@ -10,7 +10,7 @@
 			</trans-unit>
 			<trans-unit id="commentContent" approved="yes" xml:space="preserve">
 				<source>Diese Inhalte kommentieren</source>
-				<target state="translated">Comment this content</target>
+				<target state="translated">Comment on this content</target>
 			</trans-unit>
 			<trans-unit id="sendEmail" approved="yes" xml:space="preserve">
 				<source>Email versenden</source>
@@ -18,7 +18,7 @@
 			</trans-unit>
 			<trans-unit id="startpage" approved="yes" xml:space="preserve">
 				<source>Startseite</source>
-				<target state="translated">Startpage</target>
+				<target state="translated">Start</target>
 			</trans-unit>
 			<trans-unit id="contact" approved="yes" xml:space="preserve">
 				<source>Kontakt</source>
@@ -65,7 +65,7 @@
 				<target state="translated">Search</target>
 			</trans-unit>
 			<trans-unit id="usePageWideSearch" approved="yes" xml:space="preserve">
-				<source>Benutzen Sie die Suche, um weitere interessante Inhalte der Informationsplattform open-acess.net zu finden.</source>
+				<source>Benutzen Sie die Suche, um weitere interessante Inhalte der Informationsplattform open-access.net zu finden.</source>
 				<target state="translated">Use the search box to find other interesting content on the information platform open-access.net.</target>
 			</trans-unit>
 			<trans-unit id="oaAtTwitter" approved="yes" xml:space="preserve">
