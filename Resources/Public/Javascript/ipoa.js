@@ -298,10 +298,15 @@ jQuery(document).ready(function() {
 
   jQuery('.alt-menu__content').prepend('<div class="alt-menu__close-button-wrap"><a href="#" title="Menü schliessen" class="alt-menu__close-button"><svg class="fa-icon fa-icon-close fa-icon-on-bright"><use xlink:href="#icon-close"></use></svg> Close</a></div>');
 
-  jQuery('.alt-menu__close-button').click(function(event) {
+  /*
+   * The close-function of the menu
+   * It is not only tied to the "close"-Button, but also to the search-button of
+   * the special button for very small viewports which resides in the nav-partial.
+   * Because in case of search, there is no new pageload
+   */
+  jQuery('.alt-menu__close-button').add('.js-nav-search-button').click(function(event) {
     altMenuToggleButton.removeClass('js-alt-menu-toggle-button--active');
     if (windowWidth <= 767) {
-      console.log('hide menu');
       jQuery('.head-nav').show();
       jQuery('.footer-hide__helper').css({
         'margin-left': '0%',
