@@ -154,9 +154,8 @@
 	&:before {
 		content: '';
 		display: inline-block;
-		height: 1em;
-		width: 1em;
-		width: 6px;
+		height: 16;
+		width: 16px;
 		background-image: url('../Images/angle-double-right.svg') !important;
 		-webkit-transform:rotate(180deg);
 		-o-transform:rotate(180deg);
@@ -192,9 +191,8 @@
 	&:after {
 		content: '';
 		display: inline-block;
-		height: 1em;
-		width: 1em;
-		width: 6px;
+		height: 16px;
+		width: 16px;
 		background-image: url('../Images/angle-double-right.svg') !important;
 		background-size: contain;
 		background-repeat: no-repeat;
