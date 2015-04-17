@@ -38,30 +38,10 @@ class GetLanguageFlagViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abstrac
 	 */
 	protected function getLanguageFlag() {
 		//DebuggerUtility::var_dump($GLOBALS['TSFE']->config);
-		/*
 		if (isset($GLOBALS['TSFE']->config['config']['flag'])) {
 			return $GLOBALS['TSFE']->config['config']['flag'];
 		}
-		*/
-		if (isset($GLOBALS['TSFE']->config['config']['flag'])) {
-			$flag = $GLOBALS['TSFE']->config['config']['flag'];
-
-			switch ($flag) {
-				case "dede":
-					return deen;
-				case "deen":
-					return dede;
-				case "chde":
-					return chen;
-				case "chen":
-					return chde;
-				case "atde":
-					return aten;
-				case "aten":
-					return atde;
-			}
-		}
-		return 'deen'; //default
+		return 'dede'; //default
 	}
 
 	/**

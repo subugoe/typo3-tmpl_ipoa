@@ -39,8 +39,8 @@
 	          <use xlink:href="#icon-globe"></use>
           </svg>
 	        <span class="hidden-sub-notebook">
-		        <img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{ipoa:getLanguageFlag()}.png" />'>
-		        <ipoa:getLanguage />
+		        <img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{ipoa:getAlternativeLanguageFlag()}.png" />'>
+		        <ipoa:getAlternativeLanguage />
 	        </span>
         </a>
       </li>
@@ -57,7 +57,7 @@
 				</svg>
 				<ul class="head__list">
 					<f:for each="{languageMenu}" as="langmenu" iteration="langiter">
-						<f:if condition="{ipoa:getLanguage()}=={langmenu.label}">
+						<f:if condition="{ipoa:getLanguageFlag()}=={langmenu.flag}">
 							<f:then>
 								<li><a href="{langmenu.url}" title="" class="head__link head__link--active"><img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt=""> {langmenu.label}</a>
 								</li>
