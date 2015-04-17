@@ -30,10 +30,10 @@ lib.mainMenu {
 	}
 	2 < .1
 	2 {
-		NO.wrapItemAndSub =
-		CUR.wrapItemAndSub =
-		IFSUB.wrapItemAndSub =
-		CURIFSUB.wrapItemAndSub =
+		NO.wrapItemAndSub = <li>|</li>
+		CUR.wrapItemAndSub = <li>|</li>
+		IFSUB.wrapItemAndSub =<li>|</li>
+		CURIFSUB.wrapItemAndSub =<li>|</li>
 		wrap = <ul class="menu__list--indented">|</ul>
 	}
 	3 < .2
