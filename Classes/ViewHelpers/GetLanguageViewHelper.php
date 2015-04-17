@@ -38,9 +38,24 @@ class GetLanguageViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractVie
 	 */
 	protected function getLanguage() {
 		if (isset($GLOBALS['TSFE']->config['config']['language'])) {
-			return $GLOBALS['TSFE']->config['config']['language'];
+			$language = $GLOBALS['TSFE']->config['config']['language'];
+
+			switch ($language) {
+					case "DE-DE":
+						return "DE-EN";
+					case "DE-EN":
+						return "DE-DE";
+					case "CH-DE":
+						return "CH-EN";
+					case "CH-EN":
+						return "CH-DE";
+					case "AT-DE":
+						return "AT-EN";
+					case "AT-EN":
+						return "AT-DE";
+				}
 		}
-		return 'en'; //default
+		return 'DE-EN'; //default
 	}
 
 	/**
