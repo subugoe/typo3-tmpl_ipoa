@@ -18,10 +18,12 @@ lib.mainMenu {
 		CUR < .NO
 		CUR {
 			ATagParams = class="menu__link menu__link--active" tabindex="99"
+			linkWrap = <span><svg class="fa-icon fa-icon-angle-double-down"><use xlink:href="#icon-angle-double-down"></use></svg></span>
 		}
 		IFSUB < .NO
 		IFSUB {
 			ATagParams = class="menu__link menu__link--has-children" tabindex="99"
+			linkWrap = <span><svg class="fa-icon fa-icon-angle-double-right"><use xlink:href="#icon-angle-double-right"></use></svg></span>
 		}
 		CURIFSUB < .CUR
 		CURIFSUB {
