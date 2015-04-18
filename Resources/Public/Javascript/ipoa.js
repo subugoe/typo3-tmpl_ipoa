@@ -196,7 +196,7 @@ jQuery(document).ready(function() {
           'min-height': '100%'
           });
         /* set keyboard focus to second link in menu */
-        jQuery('.alt-menu a:nth-child(2)').focus();
+        // jQuery('.alt-menu__close-button').focus();
       }
     });
   };
