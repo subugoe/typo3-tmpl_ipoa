@@ -218,7 +218,6 @@ jQuery(document).ready(function() {
       }
       // downscroll code
       if (st > lastScrollTop) {
-        //console.log('scroll down');
         jQuery('.js-head-language-links').hide();
         jQuery('.js-head-language-indicator').show();
         jQuery('.head-nav').addClass('head-nav--narrow');
@@ -311,6 +310,7 @@ jQuery(document).ready(function() {
   jQuery('.alt-menu__close-button').add('.js-nav-search-button').click(function(event) {
     altMenuToggleButton.removeClass('js-alt-menu-toggle-button--active');
     if (windowWidth <= 767) {
+      jQuery(altMenu).css({'display': 'none'});
       jQuery('.head-nav').show();
       jQuery('.footer-hide__helper').css({
         'margin-left': '0%',
@@ -321,7 +321,7 @@ jQuery(document).ready(function() {
         'position': 'relative'
         });
     } else {
-     hideMenu();
+      hideMenu();
     }
   });
 
