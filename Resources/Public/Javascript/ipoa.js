@@ -13,36 +13,35 @@ jQuery(document).ready(function() {
 
 
 
-	var showMenu = function() {
+  var showMenu = function() {
     /* move the menu from off canvas into viewport */
-        jQuery('.alt-menu').css({
-          'transform': 'translateX(0%)',
-          '-webkit-transform': 'translateX(0%)',
-          '-ms-transform': 'translateX(0%)',
-          'transition': 'all .25s ease-in-out',
-          '-webkit-transition': 'all .25s ease-in-out',
-          '-ms-transition': 'all .25s ease-in-out'
-          });
-	}
+    jQuery('.alt-menu').css({
+      'transform': 'translateX(0%)',
+      '-webkit-transform': 'translateX(0%)',
+      '-ms-transform': 'translateX(0%)',
+      'transition': 'all .25s ease-in-out',
+      '-webkit-transition': 'all .25s ease-in-out',
+      '-ms-transition': 'all .25s ease-in-out'
+    });
+  }
 
-	var hideMenu = function() {
-	 /* move the menu off canvas */
-        jQuery('.alt-menu').css({
-          'transform': 'translateX(-100%)',
-          '-webkit-transform': 'translateX(-100%)',
-          '-ms-transform': 'translateX(-100%)',
-          'transition': 'all .25s ease-in-out',
-          '-webkit-transition': 'all .25s ease-in-out',
-          '-ms-transition': 'all .25s ease-in-out'
-          });
+  var hideMenu = function() {
+    /* move the menu off canvas */
+    jQuery('.alt-menu').css({
+      'transform': 'translateX(-100%)',
+      '-webkit-transform': 'translateX(-100%)',
+      '-ms-transform': 'translateX(-100%)',
+      'transition': 'all .25s ease-in-out',
+      '-webkit-transition': 'all .25s ease-in-out',
+      '-ms-transition': 'all .25s ease-in-out'
+    });
+  }
 
-	}
-
-	/**
-	 * handle show and hide of menu
-	 *
-	 * remove classes
-	 */
+  /**
+   * handle show and hide of menu
+   *
+   * remove classes
+   */
   jQuery('.footer-hide__helper').click(function(event){
     if (menuIsActive()) {
       classNameOfClickedElement = jQuery(event.target).attr('class').split(' ')[0];
@@ -64,20 +63,20 @@ jQuery(document).ready(function() {
   jQuery('.alt-menu .menu__list--indented').hide();
   jQuery(".fa-icon-angle-double-down").parent("span").siblings(".menu__list--indented").show();
 
-	/**
-	 * every arrow-icon in the menu gets to toggle the respective submenu
-	 */
+  /**
+   * every arrow-icon in the menu gets to toggle the respective submenu
+   */
   jQuery(".toggle-menu").click(function() {
-	  jQuery(this).siblings(".menu__list--indented").toggle();
-	  if (jQuery(this).find("svg").attr('class') == 'fa-icon fa-icon-angle-double-down') {
-		  console.log("down")
-		  jQuery(this).find("svg").attr('class','fa-icon fa-icon-angle-double-right');
-		  jQuery(this).find("svg").html('<use xlink:href="#icon-angle-double-right"></use>');
-	  } else {
-		  console.log("right")
-		  jQuery(this).find("svg").attr('class','fa-icon fa-icon-angle-double-down');
-		  jQuery(this).find("svg").html('<use xlink:href="#icon-angle-double-down"></use>');
-	  }
+    jQuery(this).siblings(".menu__list--indented").toggle();
+    if (jQuery(this).find("svg").attr('class') == 'fa-icon fa-icon-angle-double-down') {
+      console.log("down")
+      jQuery(this).find("svg").attr('class','fa-icon fa-icon-angle-double-right');
+      jQuery(this).find("svg").html('<use xlink:href="#icon-angle-double-right"></use>');
+    } else {
+      console.log("right")
+      jQuery(this).find("svg").attr('class','fa-icon fa-icon-angle-double-down');
+      jQuery(this).find("svg").html('<use xlink:href="#icon-angle-double-down"></use>');
+    }
   })
 
   /**
@@ -101,15 +100,15 @@ jQuery(document).ready(function() {
 
 
   /*
-	  Language menu
-	  at first, it is hidden,
-	  but when the "language-indicator" is clicked, it is shown and the "language-indicator" is hidden
-	  This menu exists twice:
-	    - once in the header of content pages
-	    - once on the start screen
-	*/
-	var languageMenuShow = function(place) {
-	// language indicator in head of content pages
+    Language menu
+    at first, it is hidden,
+    but when the "language-indicator" is clicked, it is shown and the "language-indicator" is hidden
+    This menu exists twice:
+      - once in the header of content pages
+      - once on the start screen
+  */
+  var languageMenuShow = function(place) {
+  // language indicator in head of content pages
   jQuery('.js-'+place+'-language-links').hide();
   jsLanguageIndicator = jQuery('.js-'+place+'-language-indicator');
   jsLanguageIndicator.click(function() {
@@ -171,22 +170,22 @@ jQuery(document).ready(function() {
       if (altMenuToggleButton.hasClass('js-alt-menu-toggle-button--active')) {
         /* remove the '--active' modifier from the menu button */
         altMenuToggleButton.removeClass('js-alt-menu-toggle-button--active');
-       hideMenu();
+        hideMenu();
         /* what to do when menu button gets clicked and menu is not yet
            visible */
       } else {
         /* add '--active' modifier to the menu button */
         altMenuToggleButton.addClass('js-alt-menu-toggle-button--active');
-       showMenu();
+        showMenu();
         /* make the menu content fill the whole left side (top to bottom) and
            let its content scroll */
         jQuery('.alt-menu__content').css({
           'overflow': 'scroll',
           'height': '100%',
           'min-height': '100%'
-          });
+        });
         /* set keyboard focus to second link in menu */
-	    // jQuery('.alt-menu__close-button').focus();
+        // jQuery('.alt-menu__close-button').focus();
       }
     });
   };
