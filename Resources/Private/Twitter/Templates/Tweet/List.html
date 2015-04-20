@@ -18,7 +18,20 @@
 						<f:for each="{tweets}" as="orig_tweet">
 							<f:alias map="{tweet: '{f:if(condition:orig_tweet.retweeted_status,then:orig_tweet.retweeted_status,else:orig_tweet)}'}">
 								<div class="main__textblock">
-									<a href="//twitter.com/{tweet.user.screen_name}"><img src="{tweet.user.profile_image_url}" alt="{tweet.user.name}"/>
+									<a href="//twitter.com/{tweet.user.screen_name}">
+										<f:comment>
+											The twitter extension provides two variables to load the images with:
+											{tweet.user.profile_image_url} or {tweet.user.profile_image_url_https}
+											therefore it has to be checked
+										</f:comment>
+										<f:if condition='{v:if.string.contains(then:"https:", else:"http:", haystack:"{v:site.url()}", needle:"https:")} == https'>
+										<f:then>
+											<img src="{tweet.user.profile_image_url_https}" alt="{tweet.user.name}"/> {tweet.user.name}</a>
+											</f:then>
+										<f:else>
+											<img src="{tweet.user.profile_image_url_http}" alt="{tweet.user.name}"/> {tweet.user.name}</a>
+											</f:else>
+										</f:if>
 										{tweet.user.name}</a>
 									(<tw:link.tweet tweet="{tweet}"><f:format.date format="H:m - d.m.Y">{tweet.created_at}</f:format.date></tw:link.tweet>)
 									<blockquote>
@@ -50,10 +63,10 @@
 												</f:comment>
 												<f:if condition='{v:if.string.contains(then:"https:", else:"http:", haystack:"{v:site.url()}", needle:"https:")} == https'>
 												<f:then>
-													<img src="{tweet.user.profile_image_url}" alt="{tweet.user.name}"/> {tweet.user.name}</a>
+													<img src="{tweet.user.profile_image_url_https}" alt="{tweet.user.name}"/> {tweet.user.name}</a>
 													</f:then>
 												<f:else>
-													<img src="{tweet.user.profile_image_url_https}" alt="{tweet.user.name}"/> {tweet.user.name}</a>
+													<img src="{tweet.user.profile_image_url_http}" alt="{tweet.user.name}"/> {tweet.user.name}</a>
 													</f:else>
 												</f:if>
 											<br />
