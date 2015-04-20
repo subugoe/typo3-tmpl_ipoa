@@ -61,22 +61,25 @@ jQuery(document).ready(function() {
    * close them
    */
   jQuery('.alt-menu .menu__list--indented').hide();
-  jQuery(".fa-icon-angle-double-down").parent("span").siblings(".menu__list--indented").show();
+  jQuery('.fa-icon-angle-double-down').parent('span').siblings('.menu__list--indented').show();
+
+
+  function menuToggleChildren(item) {
+    jQuery(item).siblings('.menu__list--indented').toggle();
+    if (jQuery(item).find('svg').attr('class') == 'fa-icon fa-icon-angle-double-down') {
+      jQuery(item).find('svg').attr('class', 'fa-icon fa-icon-angle-double-right');
+      jQuery(item).find('svg').html('<use xlink:href="#icon-angle-double-right"></use>');
+    } else {
+      jQuery(item).find('svg').attr('class', 'fa-icon fa-icon-angle-double-down');
+      jQuery(item).find('svg').html('<use xlink:href="#icon-angle-double-down"></use>');
+    }
+  }
 
   /**
    * every arrow-icon in the menu gets to toggle the respective submenu
    */
-  jQuery(".toggle-menu").click(function() {
-    jQuery(this).siblings(".menu__list--indented").toggle();
-    if (jQuery(this).find("svg").attr('class') == 'fa-icon fa-icon-angle-double-down') {
-      console.log("down")
-      jQuery(this).find("svg").attr('class','fa-icon fa-icon-angle-double-right');
-      jQuery(this).find("svg").html('<use xlink:href="#icon-angle-double-right"></use>');
-    } else {
-      console.log("right")
-      jQuery(this).find("svg").attr('class','fa-icon fa-icon-angle-double-down');
-      jQuery(this).find("svg").html('<use xlink:href="#icon-angle-double-down"></use>');
-    }
+  jQuery('.toggle-menu').click(function(event) {
+    menuToggleChildren(this);
   })
 
   /**
@@ -186,12 +189,22 @@ jQuery(document).ready(function() {
         });
         /* set keyboard focus to second link in menu */
         jQuery('.alt-menu__close-button').focus();
-        /* set tabindex of menu item to be able to navigate them via keyboard */
+        /* set tabindex of menu items to be able to navigate them via keyboard */
         jQuery('.alt-menu').find('a').attr('tabindex', '99');
+        jQuery('.alt-menu').find('.toggle-menu').attr('tabindex', '99');
       }
     });
   };
 
+  /**
+   * detect keyboard /clicks/ on menu toggle buttons (those tiny double arrows/
+   * angles in front of menu items)
+   */
+  jQuery('.toggle-menu').focus().keydown(function(event){
+    if (event.keyCode == 13) {
+      menuToggleChildren(this);
+    };
+  });
 
   /**
    * change the top menu bar according to scroll status
