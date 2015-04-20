@@ -113,11 +113,42 @@
 	background: $color-ipoa-yellow;
 }
 
+.menu__list span {
+	float: left;
+	width: 20px;
+	margin-right: .2em;
+	margin-left: -10px;
+	padding: 3px;
+	border-radius: 3px;
+	text-align: center;
+
+	&:hover,
+	&:focus {
+		color: $color--brightest;
+		background: $color-ipoa-green;
+	}
+
+	&:active {
+		color: $color--darkest;
+		background: $color-ipoa-yellow;
+	}
+
+	svg {
+		margin-bottom: -3px;
+	}
+}
+
 /**
  * .menu__link--has-children
  */
 .menu__link--has-children {
-	&:before { background-image: url('../Images/angle-double-right.svg'); }
+	display: inline-block;
+	margin-left: .1em;
+	&:before {
+		margin-left: 0;
+		background-image: none;
+		width: 0;
+	}
 }
 
 /**
@@ -198,4 +229,8 @@
 		svg { color: $color--darkest; }
 	}
 
+}
+
+.toggle-menu {
+	cursor: pointer;
 }

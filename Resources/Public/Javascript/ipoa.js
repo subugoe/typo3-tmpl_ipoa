@@ -11,21 +11,44 @@ jQuery(document).ready(function() {
     }
   }
 
+
+
+  var showMenu = function() {
+    /* move the menu from off canvas into viewport */
+    jQuery('.alt-menu').css({
+      'transform': 'translateX(0%)',
+      '-webkit-transform': 'translateX(0%)',
+      '-ms-transform': 'translateX(0%)',
+      'transition': 'all .25s ease-in-out',
+      '-webkit-transition': 'all .25s ease-in-out',
+      '-ms-transition': 'all .25s ease-in-out'
+    });
+  }
+
+  var hideMenu = function() {
+    /* move the menu off canvas */
+    jQuery('.alt-menu').css({
+      'transform': 'translateX(-100%)',
+      '-webkit-transform': 'translateX(-100%)',
+      '-ms-transform': 'translateX(-100%)',
+      'transition': 'all .25s ease-in-out',
+      '-webkit-transition': 'all .25s ease-in-out',
+      '-ms-transition': 'all .25s ease-in-out'
+    });
+  }
+
+  /**
+   * handle show and hide of menu
+   *
+   * remove classes
+   */
   jQuery('.footer-hide__helper').click(function(event){
     if (menuIsActive()) {
-      classNameOfClickedElement = jQuery(event.target).attr('class')
-                                    .split(' ')[0];
+      classNameOfClickedElement = jQuery(event.target).attr('class').split(' ')[0];
       if (classNameOfClickedElement != 'menu__button') {
         jQuery('.menu__button')
           .removeClass('js-active js-alt-menu-toggle-button--active');
-        jQuery('.alt-menu').css({
-          'transform': 'translateX(-100%)',
-          '-webkit-transform': 'translateX(-100%)',
-          '-ms-transform': 'translateX(-100%)',
-          'transition': 'all .25s ease-in-out',
-          '-webkit-transition': 'all .25s ease-in-out',
-          '-ms-transition': 'all .25s ease-in-out'
-          });
+        hideMenu();
       }
       event.preventDefault();
     }
@@ -33,88 +56,73 @@ jQuery(document).ready(function() {
 
 
   /**
-   * scroll to anchor, but make it slow
-   */
-  function scrollToAnchor(aid) {
-    var aTag = jQuery("a[name='" + aid + "']");
-    jQuery('html,body').animate({scrollTop: aTag.offset().top}, 'slow');
-  }
-
-
-  /**
-   * TODO : add documentation
-   */
-  jQuery('.js-head-language-links').hide();
-  jsHeadLanguageIndicator = jQuery('.js-head-language-indicator');
-  jsHeadLanguageIndicator.click(function() {
-    jQuery('.js-head-language-links').show();
-    var headHeight = jQuery('.head__links').height();
-    jQuery('.head').css({'padding-top': headHeight});
-    jsHeadLanguageIndicator.hide();
-  });
-
-  /**
-   * TODO : add documentation
-   */
-  jQuery('.js-start-language-links').hide();
-  jsStartLanguageIndicator = jQuery('.js-start-language-indicator');
-  jsStartLanguageIndicator.click(function() {
-    jQuery('.js-start-language-links').show();
-    var startHeight = jQuery('.start__links').height();
-    jQuery('.start').css({'padding-top': startHeight});
-    jsStartLanguageIndicator.hide();
-  });
-
-
-  /**
-   * TODO : add documentation
-   */
-  menu = jQuery('.js-menu');
-  menuToggleButton = jQuery('.js-menu-toggle-button');
-  menuToggleButtonIcon = jQuery('.js-menu-button-icon');
-  jQuery(menuToggleButton).click(function(event) {
-    if (menuToggleButton.hasClass('js-active')) {
-      jQuery('html,body').animate({'scrollTop': 0}, 500);
-      jQuery(menuToggleButton).removeClass('js-active');
-      jQuery(menu).slideUp();
-    } else {
-      jQuery('html,body').animate({'scrollTop': 0}, 500);
-      jQuery(menuToggleButton).addClass('js-active');
-      jQuery(menu).slideDown();
-    }
-    event.preventDefault();
-  });
-
-
-  /**
-   * hide all submenulists
+   * hide all sub menu lists except for the current one
    * for no-js fallback cases they are open by default, so we have to explicitly
    * close them
    */
   jQuery('.alt-menu .menu__list--indented').hide();
+  jQuery('.fa-icon-angle-double-down').parent('span').siblings('.menu__list--indented').show();
 
-  /* find all ULs with active link and parents (in that menu__column) and open
-     them */
-  jQuery('.alt-menu .menu__list--indented .menu__link--active')
-    .parentsUntil('.menu__column').show();
+
+  function menuToggleChildren(item) {
+    jQuery(item).siblings('.menu__list--indented').toggle();
+    if (jQuery(item).find('svg').attr('class') == 'fa-icon fa-icon-angle-double-down') {
+      jQuery(item).find('svg').attr('class', 'fa-icon fa-icon-angle-double-right');
+      jQuery(item).find('svg').html('<use xlink:href="#icon-angle-double-right"></use>');
+    } else {
+      jQuery(item).find('svg').attr('class', 'fa-icon fa-icon-angle-double-down');
+      jQuery(item).find('svg').html('<use xlink:href="#icon-angle-double-down"></use>');
+    }
+  }
 
   /**
-   *
+   * every arrow-icon in the menu gets to toggle the respective submenu
    */
-  jQuery('.alt-menu').find('.menu__link--has-children').click(function(event) {
-    /* open link if child ULs are open already */
-    if (jQuery(this).hasClass('menu__link--open')) {
-      /* we could to fancy stuff if a link is clicked to follow the href */
-      /* open UL */
-    } else {
-      /* prevent following the link, because we want to open the UL */
-      event.preventDefault();
-      /* add CSS class "menu__link--open" to clicked link */
-      jQuery(this).addClass('menu__link--open');
-      /* open child */
-      jQuery(this).next('.menu__list--indented').show();
-    }
+  jQuery('.toggle-menu').click(function(event) {
+    menuToggleChildren(this);
+  })
+
+  /**
+   * TODO : add documentation
+   */
+ menu = jQuery('.js-menu');
+ menuToggleButton = jQuery('.js-menu-toggle-button');
+ menuToggleButtonIcon = jQuery('.js-menu-button-icon');
+ jQuery(menuToggleButton).click(function(event) {
+   if (menuToggleButton.hasClass('js-active')) {
+     jQuery('html,body').animate({'scrollTop': 0}, 500);
+     jQuery(menuToggleButton).removeClass('js-active');
+     jQuery(menu).slideUp();
+   } else {
+     jQuery('html,body').animate({'scrollTop': 0}, 500);
+     jQuery(menuToggleButton).addClass('js-active');
+     jQuery(menu).slideDown();
+   }
+   event.preventDefault();
+ });
+
+
+  /*
+    Language menu
+    at first, it is hidden,
+    but when the "language-indicator" is clicked, it is shown and the "language-indicator" is hidden
+    This menu exists twice:
+      - once in the header of content pages
+      - once on the start screen
+  */
+  var languageMenuShow = function(place) {
+  // language indicator in head of content pages
+  jQuery('.js-'+place+'-language-links').hide();
+  jsLanguageIndicator = jQuery('.js-'+place+'-language-indicator');
+  jsLanguageIndicator.click(function() {
+    jQuery('.js-'+place+'-language-links').show();
+    var langHeight = jQuery('.'+place+'__links').height();
+    jQuery('.'+place).css({'padding-top': langHeight});
+    jsLanguageIndicator.hide();
   });
+  }
+  languageMenuShow('head');
+  languageMenuShow('start');
 
 
   /**
@@ -165,42 +173,38 @@ jQuery(document).ready(function() {
       if (altMenuToggleButton.hasClass('js-alt-menu-toggle-button--active')) {
         /* remove the '--active' modifier from the menu button */
         altMenuToggleButton.removeClass('js-alt-menu-toggle-button--active');
-        /* move the menu off canvas */
-        jQuery('.alt-menu').css({
-          'transform': 'translateX(-100%)',
-          '-webkit-transform': 'translateX(-100%)',
-          '-ms-transform': 'translateX(-100%)',
-          'transition': 'all .25s ease-in-out',
-          '-webkit-transition': 'all .25s ease-in-out',
-          '-ms-transition': 'all .25s ease-in-out'
-          });
+        hideMenu();
         /* what to do when menu button gets clicked and menu is not yet
            visible */
       } else {
         /* add '--active' modifier to the menu button */
         altMenuToggleButton.addClass('js-alt-menu-toggle-button--active');
-        /* move the menu from off canvas into viewport */
-        jQuery('.alt-menu').css({
-          'transform': 'translateX(0%)',
-          '-webkit-transform': 'translateX(0%)',
-          '-ms-transform': 'translateX(0%)',
-          'transition': 'all .25s ease-in-out',
-          '-webkit-transition': 'all .25s ease-in-out',
-          '-ms-transition': 'all .25s ease-in-out'
-          });
+        showMenu();
         /* make the menu content fill the whole left side (top to bottom) and
            let its content scroll */
         jQuery('.alt-menu__content').css({
           'overflow': 'scroll',
           'height': '100%',
           'min-height': '100%'
-          });
+        });
         /* set keyboard focus to second link in menu */
-        jQuery('.alt-menu a:nth-child(2)').focus();
+        jQuery('.alt-menu__close-button').focus();
+        /* set tabindex of menu items to be able to navigate them via keyboard */
+        jQuery('.alt-menu').find('a').attr('tabindex', '99');
+        jQuery('.alt-menu').find('.toggle-menu').attr('tabindex', '99');
       }
     });
   };
 
+  /**
+   * detect keyboard /clicks/ on menu toggle buttons (those tiny double arrows/
+   * angles in front of menu items)
+   */
+  jQuery('.toggle-menu').focus().keydown(function(event){
+    if (event.keyCode == 13) {
+      menuToggleChildren(this);
+    };
+  });
 
   /**
    * change the top menu bar according to scroll status
@@ -214,7 +218,6 @@ jQuery(document).ready(function() {
       }
       // downscroll code
       if (st > lastScrollTop) {
-        //console.log('scroll down');
         jQuery('.js-head-language-links').hide();
         jQuery('.js-head-language-indicator').show();
         jQuery('.head-nav').addClass('head-nav--narrow');
@@ -307,6 +310,7 @@ jQuery(document).ready(function() {
   jQuery('.alt-menu__close-button').add('.js-nav-search-button').click(function(event) {
     altMenuToggleButton.removeClass('js-alt-menu-toggle-button--active');
     if (windowWidth <= 767) {
+      jQuery(altMenu).css({'display': 'none'});
       jQuery('.head-nav').show();
       jQuery('.footer-hide__helper').css({
         'margin-left': '0%',
@@ -317,14 +321,7 @@ jQuery(document).ready(function() {
         'position': 'relative'
         });
     } else {
-      jQuery('.alt-menu').css({
-        'transform': 'translateX(-100%)',
-        '-webkit-transform': 'translateX(-100%)',
-        '-ms-transform': 'translateX(-100%)',
-        'transition': 'all .25s ease-in-out',
-        '-webkit-transition': 'all .25s ease-in-out',
-        '-ms-transition': 'all .25s ease-in-out'
-        });
+      hideMenu();
     }
   });
 
