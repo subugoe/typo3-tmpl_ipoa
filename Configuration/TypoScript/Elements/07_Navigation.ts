@@ -11,30 +11,30 @@ lib.mainMenu {
 		NO = 1
 		NO {
 			wrapItemAndSub = <div class="menu__column ic-tablet-one-half ic-notebook-and-up-one-quarter"><ul class="menu__list menu__list--inactive"><li>|</li></ul></div>
-			ATagParams = class="menu__link" tabindex="99"
+			ATagParams = class="menu__link" tabindex="-1"
 			ATagTitle.field = title
 		}
 		IFSUB < .NO
 		IFSUB {
-			ATagParams = class="menu__link menu__link--has-children" tabindex="99"
+			ATagParams = class="menu__link menu__link--has-children" tabindex="-1"
 			before = <span class="toggle-menu"><svg class="fa-icon fa-icon-angle-double-right"><use xlink:href="#icon-angle-double-right"></use></svg></span>
 		}
 		# Current, active page
 		ACT < .NO
 		ACT {
-			ATagParams = class="menu__link menu__link--active" tabindex="99"
+			ATagParams = class="menu__link menu__link--active" tabindex="-1"
 
 			#before = <span><svg class="fa-icon fa-icon-angle-double-down"><use xlink:href="#icon-angle-double-down"></use></svg></span>
 		}
 		ACTIFSUB < .ACT
 		ACTIFSUB {
 			wrapItemAndSub = <div class="menu__column ic-tablet-one-half ic-notebook-and-up-one-quarter"><ul class="menu__list menu__list--active"><li>|</li></ul></div>
-			ATagParams = class="menu__link menu__link--has-children" tabindex="99"
+			ATagParams = class="menu__link menu__link--has-children" tabindex="-1"
 			before = <span class="toggle-menu"><svg class="fa-icon fa-icon-angle-double-down"><use xlink:href="#icon-angle-double-down"></use></svg></span>
 		}
 		CURIFSUB < .ACTIFSUB
 		CURIFSUB {
-			ATagParams = class="menu__link menu__link--active menu__link--has-children" tabindex="99"
+			ATagParams = class="menu__link menu__link--active menu__link--has-children" tabindex="-1"
 			before = <span class="toggle-menu"><svg class="fa-icon fa-icon-angle-double-down"><use xlink:href="#icon-angle-double-down"></use></svg></span>
 		}
 	}
