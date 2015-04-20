@@ -185,7 +185,9 @@ jQuery(document).ready(function() {
           'min-height': '100%'
         });
         /* set keyboard focus to second link in menu */
-        // jQuery('.alt-menu__close-button').focus();
+        jQuery('.alt-menu__close-button').focus();
+        /* set tabindex of menu item to be able to navigate them via keyboard */
+        jQuery('.alt-menu').find('a').attr('tabindex', '99');
       }
     });
   };
