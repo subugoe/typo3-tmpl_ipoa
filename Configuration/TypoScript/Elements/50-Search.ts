@@ -33,22 +33,22 @@ plugin.tx_solr.search.results.pagebrowser {
 			text_last = Letzte Seite
 		}
 		DE-EN {
-			text_first = First Page
+			text_first = First page
 			text_next = Next
 			text_prev = Previous
-			text_last = Last Page
+			text_last = Last page
 		}
 		AT-EN {
-			text_first = First Page
+			text_first = First page
 			text_next = Next
 			text_prev = Previous
-			text_last = Last Page
+			text_last = Last page
 		}
 		CH-EN {
-			text_first = First Page
+			text_first = First page
 			text_next = Next
 			text_prev = Previous
-			text_last = Last Page
+			text_last = Last page
 		}
 	}
 }
