@@ -12,6 +12,46 @@ plugin.tx_solr {
 		ui          = EXT:solr/Resources/Css/JQueryUi/jquery-ui.custom.css
 	}
 }
+plugin.tx_solr.search.results.pagebrowser {
+	_LOCAL_LANG {
+		DE-DE {
+			text_first = Erste Seite
+			text_next = Nächste
+			text_prev = Vorherige
+			text_last = Letzte Seite
+		}
+		AT-DE {
+			text_first = Erste Seite
+			text_next = Nächste
+			text_prev = Vorherige
+			text_last = Letzte Seite
+		}
+		CH-DE {
+			text_first = Erste Seite
+			text_next = Nächste
+			text_prev = Vorherige
+			text_last = Letzte Seite
+		}
+		DE-EN {
+			text_first = First page
+			text_next = Next
+			text_prev = Previous
+			text_last = Last page
+		}
+		AT-EN {
+			text_first = First page
+			text_next = Next
+			text_prev = Previous
+			text_last = Last page
+		}
+		CH-EN {
+			text_first = First page
+			text_next = Next
+			text_prev = Previous
+			text_last = Last page
+		}
+	}
+}
 plugin.tx_solr {
 	_LOCAL_LANG {
 		DE-DE {
