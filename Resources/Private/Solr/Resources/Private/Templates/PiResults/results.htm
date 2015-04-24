@@ -11,9 +11,27 @@
 
 
 
+<!-- ###SOLR_SEARCH_FORM### begin -->
+<div class="main__textblock"><!--
+		--><form action="/suche/" method="get" accept-charset="utf-8" class="search__form tx-solr-search-form-pi-results">
+				<div class="search__field tx-solr-search-form">
+					<script type="text/javascript">
+						var tx_solr_suggestUrl = '###TS:lib.contentpage.variables.PAGE_UID###';
+					</script>
+					<input type="text" class="search__input tx-solr-q" name="q" value="">
+					<input type="hidden" name="id" value="###TS:lib.ids.SEARCH_UID###">
+					<input type="hidden" name="L" value="###TS:config.sys_language_uid###">
+				</div>
+				<div class="search__submit">
+					<input type="submit" value="###LLL:submit###" class="search__button tx-solr-submit">
+				</div>
+			</form>
+		</div>
+	<!-- ###SOLR_SEARCH_FORM### end -->
+
+
 <div class="main__textblock">
 	<!-- ###SOLR_SEARCH_RESULTS### begin -->
-
 	<form action="/suche/" method="get" accept-charset="utf-8" class="search__form tx-solr-search-form-pi-results">
 		<div class="search__field tx-solr-search-form">
 			<script type="text/javascript">
