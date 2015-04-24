@@ -59,7 +59,7 @@ plugin.tx_solr {
 			results_searched_for = Sie haben nach dem Begriff "@searchWord" gesucht
 			results_range = Die Treffer von @resultsFrom bis @resultsTo werden angezeigt
 			submit = Suchen
-			no_results_nothing_found = Keine Treffer für "@searchWord" gefunden
+			no_results_nothing_found = Keine Treffer für "@searchWord" gefunden.
 			results_per_page = Treffer pro Seite
 		}
 		AT-DE {
@@ -67,7 +67,7 @@ plugin.tx_solr {
 			results_searched_for = Sie haben nach dem Begriff "@searchWord" gesucht
 			results_range = Die Treffer von @resultsFrom bis @resultsTo werden angezeigt
 			submit = Suchen
-			no_results_nothing_found = Keine Treffer für "@searchWord" gefunden
+			no_results_nothing_found = Keine Treffer für "@searchWord" gefunden.
 			results_per_page = Treffer pro Seite
 		}
 		CH-DE {
@@ -75,7 +75,7 @@ plugin.tx_solr {
 			results_searched_for = Sie haben nach dem Begriff "@searchWord" gesucht
 			results_range = Die Treffer von @resultsFrom bis @resultsTo werden angezeigt
 			submit = Suchen
-			no_results_nothing_found = Keine Treffer für "@searchWord" gefunden
+			no_results_nothing_found = Keine Treffer für "@searchWord" gefunden.
 			results_per_page = Treffer pro Seite
 		}
 		DE-EN {
@@ -83,7 +83,7 @@ plugin.tx_solr {
 			results_searched_for = Results for "@searchWord"
 			results_range = Displaying results @resultsFrom to @resultsTo of @resultsTotal
 			submit = Search
-			no_results_nothing_found = Nothing found for "@searchWord"
+			no_results_nothing_found = Nothing found for "@searchWord".
 			results_per_page = Results per page
 		}
 		AT-EN {
@@ -91,7 +91,7 @@ plugin.tx_solr {
 			results_searched_for = Results for "@searchWord"
 			results_range = Displaying results @resultsFrom to @resultsTo of @resultsTotal
 			submit = Search
-			no_results_nothing_found = Nothing found for "@searchWord"
+			no_results_nothing_found = Nothing found for "@searchWord".
 			results_per_page = Results per page
 		}
 		CH-EN {
@@ -99,7 +99,7 @@ plugin.tx_solr {
 			results_searched_for = Results for "@searchWord"
 			results_range = Displaying results @resultsFrom to @resultsTo of @resultsTotal
 			submit = Search
-			no_results_nothing_found = Nothing found for "@searchWord"
+			no_results_nothing_found = Nothing found for "@searchWord".
 			results_per_page = Results per page
 		}
 	}
