@@ -104,3 +104,10 @@ plugin.tx_solr {
 		}
 	}
 }
+
+plugin.tx_solr.search.spellchecking.wrap = |<div class="spelling-suggestions">Meinten Sie |?</div>|
+[globalVar = GP:L = 0,GP:L = 2, GP:L = 5]
+        plugin.tx_solr.search.spellchecking.wrap = |<div class="spelling-suggestions">Meinten Sie |?</div>|
+[globalVar = GP:L = 1, GP:L = 3, GP:L = 6]
+        plugin.tx_solr.search.spellchecking.wrap = |<div class="spelling-suggestions">Did you mean |?</div>|
+[global]
