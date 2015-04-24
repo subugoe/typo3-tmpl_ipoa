@@ -5,7 +5,7 @@
 	<h2 class="search__heading">
 		<svg class="fa-icon fa-icon-search fa-icon--default">
 			<use xlink:href="#icon-search"></use>
-		</svg> {f:translate(key:'search', extensionName: 'tmpl_ipoa')}
+		</svg> {f:translate(key:'solrSearch', extensionName: 'tmpl_ipoa')}
 	</h2><!--
 	--><div class="search__enter"><!--
 		--><form action="/suche/" method="get" accept-charset="utf-8" class="search__form tx-solr-search-form-pi-results"><!--
@@ -18,7 +18,7 @@
 					<input type="hidden" name="L" value="{v:page.language(pageUid: '{PAGE_UID}', normalWhenNoLanguage: 1)}">
 				</div><!--
 			--><div class="search__submit">
-					<input type="submit" value="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}" class="search__button tx-solr-submit">
+					<input type="submit" value="{f:translate(key:'solrSearch', extensionName: 'tmpl_ipoa')}" class="search__button tx-solr-submit">
 				</div><!--
 		--></form><!--
 		--><p class="paragraph">{f:translate(key:'usePageWideSearch', extensionName: 'tmpl_ipoa')}</p>
