@@ -1,69 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<title>Template for the search results view for EXT:solr</title>
-</head>
-<body>
-
 <!-- ###SOLR_SEARCH### begin -->
-
-
-
 <!-- ###SOLR_SEARCH_FORM### begin -->
-<div class="main__textblock"><!--
-		--><form action="/suche/" method="get" accept-charset="utf-8" class="search__form tx-solr-search-form-pi-results">
-				<div class="search__field tx-solr-search-form">
-					<script type="text/javascript">
-						var tx_solr_suggestUrl = '###TS:lib.contentpage.variables.PAGE_UID###';
-					</script>
-					<input type="text" class="search__input tx-solr-q" name="q" value="">
-					<input type="hidden" name="id" value="###TS:lib.ids.SEARCH_UID###">
-					<input type="hidden" name="L" value="###TS:config.sys_language_uid###">
-				</div>
-				<div class="search__submit">
-					<input type="submit" value="###LLL:submit###" class="search__button tx-solr-submit">
-				</div>
-			</form>
-		</div>
-	<!-- ###SOLR_SEARCH_FORM### end -->
+<!-- ###SOLR_SEARCH_FORM### end -->
 
-
-<div class="main__textblock">
-	<!-- ###SOLR_SEARCH_RESULTS### begin -->
-	<form action="/suche/" method="get" accept-charset="utf-8" class="search__form tx-solr-search-form-pi-results">
-		<div class="search__field tx-solr-search-form">
-			<script type="text/javascript">
-				var tx_solr_suggestUrl = '###TS:lib.contentpage.variables.PAGE_UID###';
-			</script>
-			<input type="text" class="search__input tx-solr-q" name="q" value="">
-			<input type="hidden" name="id" value="###TS:lib.ids.SEARCH_UID###">
-			<input type="hidden" name="L" value="###TS:config.sys_language_uid###">
-		</div>
-		<div class="search__submit">
-			<input type="submit" value="###LLL:submit###" class="search__button tx-solr-submit">
-		</div>
-	</form>
-
+<div>
+<!-- ###SOLR_SEARCH_RESULTS### begin -->
 	<p>
-		###RESULTS.SEARCHED_FOR###. ###RESULTS.FOUND###. <br />
+		###RESULTS.SEARCHED_FOR###. ###RESULTS.FOUND###. <br/>
 		###RESULTS.RANGE###.
 		<!-- ###RESULTS.SORT### -->
 	</p>
 
-		<!-- ###SOLR_SEARCH_RESULTSPERPAGESWITCH### begin -->
-			<form action="###FORM.ACTION###" method="post">
-				###LLL:results_per_page### <select onchange="this.form.submit()" name="###TX_SOLR.PREFIX###[resultsPerPage]">
-				<!-- ###LOOP:OPTIONS### begin -->
-				<!-- ###LOOP_CONTENT### -->
-				<option value="###OPTION.VALUE###" ###OPTION.SELECTED###>###OPTION.VALUE###</option>
-				<!-- ###LOOP_CONTENT### -->
-				<!-- ###LOOP:OPTIONS### end -->
-			</select>
-			</form>
-		<!-- ###SOLR_SEARCH_RESULTSPERPAGESWITCH### end -->
-		###RESULTS.PAGEBROWSER###
+	<!-- ###SOLR_SEARCH_RESULTSPERPAGESWITCH### begin -->
+	<form action="###FORM.ACTION###" method="post">
+		###LLL:results_per_page### <select onchange="this.form.submit()" name="###TX_SOLR.PREFIX###[resultsPerPage]">
+		<!-- ###LOOP:OPTIONS### begin -->
+		<!-- ###LOOP_CONTENT### -->
+		<option value="###OPTION.VALUE###" ###OPTION.SELECTED###>###OPTION.VALUE###</option>
+		<!-- ###LOOP_CONTENT### -->
+		<!-- ###LOOP:OPTIONS### end -->
+	</select>
+	</form>
+	<!-- ###SOLR_SEARCH_RESULTSPERPAGESWITCH### end -->
+	###RESULTS.PAGEBROWSER###
 
 
 	<ul start="###RESULTS.OFFSET###">
@@ -75,8 +33,9 @@
 			Document ID:  ###RESULT_DOCUMENT.ID###
 			-->
 			<a href="###RESULT_DOCUMENT.URL###">###RESULT_DOCUMENT.TITLE###</a>
+
 			<div class="results-teaser">
-				<br />
+				<br/>
 				###CROP:###RESULT_DOCUMENT.CONTENT###|300###</p>
 			</div>
 		</li>
@@ -87,7 +46,7 @@
 	<!-- ###SOLR_SEARCH_RESULTS### end -->
 
 	<!-- ###SOLR_SEARCH_NO_RESULTS### begin -->
-	<h2></h2><div>
+	<div>
 		###NO_RESULTS.NOTHING_FOUND###
 		###NO_RESULTS.SUGGESTION###
 	</div>
@@ -191,7 +150,9 @@
 		<ul>
 			<!-- ###LOOP:FREQUENTSEARCHES### begin -->
 			<!-- ###LOOP_CONTENT### -->
-			<li class="###TERM.CLASS###">###LINK:###TERM.TERM###|###TERM.PID###|###TERM.PARAMETERS###|0|rel="nofollow"###</li>
+			<li class="###TERM.CLASS###">
+				###LINK:###TERM.TERM###|###TERM.PID###|###TERM.PARAMETERS###|0|rel="nofollow"###
+			</li>
 			<!-- ###LOOP_CONTENT### -->
 			<!-- ###LOOP:FREQUENTSEARCHES### end -->
 		</ul>
@@ -203,9 +164,9 @@
 <!-- ###SOLR_SEARCH### end -->
 
 <!-- ###SOLR_SEARCH_UNAVAILABLE### begin -->
-	###LLL:searchUnavailable###
+###LLL:searchUnavailable###
 <!-- ###SOLR_SEARCH_UNAVAILABLE### end -->
 
 <!-- ###SOLR_SEARCH_ERROR### begin -->
-	###LLL:searchFailed###
+###LLL:searchFailed###
 <!-- ###SOLR_SEARCH_ERROR### end -->
