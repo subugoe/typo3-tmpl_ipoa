@@ -12,6 +12,9 @@
 			<trans-unit id="sendEmail" approved="yes" xml:space="preserve">
 				<source>Email versenden</source>
 			</trans-unit>
+			<trans-unit id="menu" approved="yes" xml:space="preserve">
+				<source>Menü</source>
+			</trans-unit>
 			<trans-unit id="startpage" approved="yes" xml:space="preserve">
 				<source>Startseite</source>
 			</trans-unit>
