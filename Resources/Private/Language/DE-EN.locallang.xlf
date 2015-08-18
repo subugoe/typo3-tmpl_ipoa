@@ -16,6 +16,10 @@
 				<source>Email versenden</source>
 				<target state="translated">Send Email</target>
 			</trans-unit>
+			<trans-unit id="menu" approved="yes" xml:space="preserve">
+				<source>Menü</source>
+				<target state="translated">Menu</target>
+			</trans-unit>
 			<trans-unit id="startpage" approved="yes" xml:space="preserve">
 				<source>Startseite</source>
 				<target state="translated">Start</target>
