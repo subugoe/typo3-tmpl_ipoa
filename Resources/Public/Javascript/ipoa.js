@@ -1,6 +1,5 @@
 jQuery(document).ready(function() {
 
-
   windowWidth = jQuery(window).width();
 
   function menuIsActive() {
@@ -10,8 +9,6 @@ jQuery(document).ready(function() {
       return false;
     }
   }
-
-
 
   var showMenu = function() {
     /* move the menu from off canvas into viewport */
@@ -53,7 +50,6 @@ jQuery(document).ready(function() {
       event.preventDefault();
     }
   });
-
 
   /**
    * hide all sub menu lists except for the current one
@@ -101,7 +97,6 @@ jQuery(document).ready(function() {
    event.preventDefault();
  });
 
-
   /*
     Language menu
     at first, it is hidden,
@@ -124,7 +119,6 @@ jQuery(document).ready(function() {
   languageMenuShow('head');
   languageMenuShow('start');
 
-
   /**
    * handle on demand content on pages like those for the oa days
    */
@@ -132,7 +126,6 @@ jQuery(document).ready(function() {
   jQuery('.on-demand__link').click(function(event) {
     jQuery(this).parent().nextAll(".on-demand__content").first().toggle("slow");
   });
-
 
   /**
    *
@@ -230,7 +223,6 @@ jQuery(document).ready(function() {
     });
   });
 
-
   /**
    * carousel related code
    */
@@ -254,13 +246,11 @@ jQuery(document).ready(function() {
     carousel(jQuery(this).attr("id"));
   });
 
-
   /**
    * footerHide
    */
   footerHideHeight = jQuery('.footer-hide__content').height();
   jQuery('.footer-hide').css({ 'height': footerHideHeight + 'px' });
-
 
   /**
    * recalculate (and set the new) footer height with every window resize
@@ -286,7 +276,6 @@ jQuery(document).ready(function() {
     jQuery(this).css("height",logoHeight);
   });
 
-
   /**
    * this part allows for in-page anchor clicks that move the scroll position
    * without wrongly covering the content by the top nav bar.
@@ -298,8 +287,6 @@ jQuery(document).ready(function() {
     var offsetTopOfTarget = jQuery(scrollToId).offset().top;
     jQuery('html, body').scrollTop(offsetTopOfTarget - 65); /* 1. */
   });
-
-  jQuery('.alt-menu__content').prepend('<div class="alt-menu__close-button-wrap"><a href="#" title="Menü schliessen" class="alt-menu__close-button"><svg class="fa-icon fa-icon-close fa-icon-on-bright"><use xlink:href="#icon-close"></use></svg> Close</a></div>');
 
   /*
    * The close-function of the menu

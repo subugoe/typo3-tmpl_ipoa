@@ -93,6 +93,9 @@
 			<trans-unit id="month.12" approved="yes" xml:space="preserve">
 				<source>Dezember</source>
 			</trans-unit>
+			<trans-unit id="close" approved="yes" xml:space="preserve">
+				<source>Schließen</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
