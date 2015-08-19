@@ -124,6 +124,10 @@
 				<source>Dezember</source>
 				<target>December</target>
 			</trans-unit>
+			<trans-unit id="close" approved="yes" xml:space="preserve">
+				<source>Schließen</source>
+				<target>Close</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
