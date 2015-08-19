@@ -128,6 +128,14 @@
 				<source>Schließen</source>
 				<target>Close</target>
 			</trans-unit>
+			<trans-unit id="clickToClose" approved="yes" xml:space="preserve">
+				<source>Klicken Sie hier, um eine Liste der verfügbaren Sprachen zu sehen</source>
+				<target>Click this to see a list of available languages</target>
+			</trans-unit>
+			<trans-unit id="closeMenu" approved="yes" xml:space="preserve">
+				<source>Menü schliessen</source>
+				<target>Close menu</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
