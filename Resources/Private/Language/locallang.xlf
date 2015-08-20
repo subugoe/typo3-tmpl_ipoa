@@ -102,6 +102,9 @@
 			<trans-unit id="closeMenu" approved="yes" xml:space="preserve">
 				<source>Menü schliessen</source>
 			</trans-unit>
+			<trans-unit id="newsArchive" approved="yes" xml:space="preserve">
+				<source>News Archiv</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
