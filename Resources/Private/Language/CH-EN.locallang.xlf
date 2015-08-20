@@ -136,6 +136,10 @@
 				<source>Menü schliessen</source>
 				<target>Close menu</target>
 			</trans-unit>
+			<trans-unit id="newsArchive" approved="yes" xml:space="preserve">
+				<source>News Archiv</source>
+				<target>News Archive</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
