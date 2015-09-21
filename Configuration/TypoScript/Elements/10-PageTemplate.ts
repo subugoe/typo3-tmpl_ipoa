@@ -16,8 +16,12 @@ lib.ids {
 	UEBERUNS_UID.value = {$ids.ueberUns}
 	SEARCH_UID = TEXT
 	SEARCH_UID.value = {$ids.search}
+
 	STARTBUT_1_UID = TEXT
-	STARTBUT_1_UID.value = {$ids.startbutton_1}
+	STARTBUT_1_UID {
+		if.isTrue = {$ids.startbutton_1}
+		value = {$ids.startbutton_1}
+	}
 	STARTBUT_1_TITLE = TEXT
 	STARTBUT_1_TITLE.value = {$ids.startbutton_1.title}
 	STARTBUT_1_AC = TEXT
@@ -26,8 +30,12 @@ lib.ids {
 		crop = 1
 		case = lower
 	}
+
 	STARTBUT_2_UID = TEXT
-	STARTBUT_2_UID.value = {$ids.startbutton_2}
+	STARTBUT_2_UID {
+		if.isTrue = {$ids.startbutton_2}
+		value = {$ids.startbutton_2}
+	}
 	STARTBUT_2_TITLE = TEXT
 	STARTBUT_2_TITLE.value = {$ids.startbutton_2.title}
 	STARTBUT_2_AC = TEXT
@@ -36,8 +44,12 @@ lib.ids {
 		crop = 1
 		case = lower
 	}
+
 	STARTBUT_3_UID = TEXT
-	STARTBUT_3_UID.value = {$ids.startbutton_3}
+	STARTBUT_3_UID {
+		if.isTrue = {$ids.startbutton_3}
+		value = {$ids.startbutton_3}
+	}
 	STARTBUT_3_TITLE = TEXT
 	STARTBUT_3_TITLE.value = {$ids.startbutton_3.title}
 	STARTBUT_3_AC = TEXT
@@ -46,6 +58,7 @@ lib.ids {
 		crop = 1
 		case = lower
 	}
+
 	DEFLANG = TEXT
 	DEFLANG < mod.SHARED.defaultLanguage
 	DEFLANG_LABEL = TEXT
