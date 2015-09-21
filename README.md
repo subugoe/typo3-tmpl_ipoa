@@ -18,17 +18,14 @@ IPOA Template
 			<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tmpl_ipoa/Configuration/TypoScript/Static/setup.txt">
 	```
 	* Template for start page:
+	** You can display up to three buttons on the start page. Therefore you have to define their pids as well as their text.
+	If you empty one buttons uid, it will not be displayed.
 	```
-		* Constants:
-			startNavTitle {
-			1 = Allgemeine Informationen
-			1.abbr = a
-			1.pid = 12
-			2 = Wissenswertes für ...
-			2.abbr = w
-			2.pid = 10
-			3 = OA in verschiedenen Gebieten
-			3.abbr = o
-			3.pid = 11
-			}
+	ids {
+		startbutton_1 = 210
+		startbutton_1.title = Some information
+		startbutton_2 = 116
+		startbutton_2.title = More information
+		startbutton_3 >
+	}
 	```

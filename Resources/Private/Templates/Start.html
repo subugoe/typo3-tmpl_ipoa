@@ -1,4 +1,4 @@
-{namespace v=Tx_Vhs_ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
 {namespace ipoa=Subugoe\TmplIpoa\ViewHelpers}
 
 <f:render partial="Icons.html" />
@@ -17,10 +17,35 @@
   </header>
 
 	<main role="start__main" class="main">
+
 		<nav class="start__navigation">
-			<f:link.page pageUid="{STARTBUT_1_UID}" tabindex="-1"><button class="start__button" tabindex="1" accesskey="{STARTBUT_1_AC}" role="link" >{STARTBUT_1_TITLE}</button></f:link.page>
-			<f:link.page pageUid="{STARTBUT_2_UID}" tabindex="-1"><button class="start__button" tabindex="2" accesskey="{STARTBUT_2_AC}" role="link">{STARTBUT_2_TITLE}</button></f:link.page>
-			<f:link.page pageUid="{STARTBUT_3_UID}" tabindex="-1"><button class="start__button" tabindex="3" accesskey="{STARTBUT_3_AC}" role="link">{STARTBUT_3_TITLE}</button></f:link.page>
+			<v:condition.string.isNumeric value="{STARTBUT_1_UID}">
+				<f:then>
+					<f:link.page pageUid="{STARTBUT_1_UID}" tabindex="-1">
+						<button class="start__button" tabindex="1" accesskey="{STARTBUT_1_AC}" role="link" >
+							{STARTBUT_1_TITLE}
+						</button>
+					</f:link.page>
+				</f:then>
+			</v:condition.string.isNumeric>
+			<v:condition.string.isNumeric value="{STARTBUT_2_UID}">
+				<f:then>
+					<f:link.page pageUid="{STARTBUT_2_UID}" tabindex="-1">
+						<button class="start__button" tabindex="2" accesskey="{STARTBUT_2_AC}" role="link">
+							{STARTBUT_2_TITLE}
+						</button>
+					</f:link.page>
+				</f:then>
+			</v:condition.string.isNumeric>
+			<v:condition.string.isNumeric value="{STARTBUT_3_UID}">
+				<f:then>
+					<f:link.page pageUid="{STARTBUT_3_UID}" tabindex="-1">
+						<button class="start__button" tabindex="3" accesskey="{STARTBUT_3_AC}" role="link">
+							{STARTBUT_3_TITLE}
+						</button>
+					</f:link.page>
+				</f:then>
+			</v:condition.string.isNumeric>
 		</nav>
 	</main>
 	<footer role="contentinfo" class="start__footer">
