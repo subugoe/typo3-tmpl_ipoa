@@ -1,4 +1,4 @@
-{namespace v=Tx_Vhs_ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
 {namespace ipoa=Subugoe\TmplIpoa\ViewHelpers}
 
 <nav class="head-nav">
@@ -75,10 +75,14 @@
 -->
 <header class="head">
 	<div class="head__logo">
-		<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/oa.svg" />' class="image" alt="Logo"/>
+		<v:condition.string.contains haystack="{HEADER_IMAGE}" needle="$">
+			<f:else>
+				<img src='<f:format.raw value="{HEADER_IMAGE}" />' class="image" alt="Logo"/>
+			</f:else>
+		</v:condition.string.contains>
 	</div><!--
 	--><div class="head__claim">
-	{f:translate(key:'freeAccess', extensionName: 'tmpl_ipoa', arguments:{0:'<br /><span class="nobr">', 1:'</span>'})}
+		<f:format.raw value="{HEADER_CLAIM}" />
 	</div><!--
 	--><div class="head__pagetitle"><h1 class="heading heading--alpha">{PAGE_TITLE}</h1></div>
 </header>

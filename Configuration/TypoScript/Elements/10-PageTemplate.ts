@@ -2,6 +2,13 @@
 content < styles.content.get
 
 lib.ids {
+	HEADER_TITLE = TEXT
+	HEADER_TITLE.value = {$ids.header_title}
+	HEADER_CLAIM = TEXT
+	HEADER_CLAIM.value = {$ids.header_claim}
+	HEADER_IMAGE = TEXT
+	HEADER_IMAGE.value = {$ids.header_image}
+
 	START_UID = TEXT
 	START_UID.value = {$ids.start}
 	KONTAKT_UID = TEXT
@@ -97,13 +104,9 @@ lib.relContent {
 	oaTage.select.where = colPos = 9
 }
 
-lib.subTemplateVars {
-}
-
 lib.contentpage = FLUIDTEMPLATE
 lib.contentpage {
 	file = EXT:tmpl_ipoa/Resources/Private/Templates/Content.html
-	variables < lib.subTemplateVars
 	variables < lib.ids
 	variables {
 
@@ -126,7 +129,6 @@ lib.contentpage {
 lib.startpage = FLUIDTEMPLATE
 lib.startpage {
 	file = EXT:tmpl_ipoa/Resources/Private/Templates/Start.html
-	variables < lib.subTemplateVars
 	variables < lib.ids
 	variables {
 
@@ -137,7 +139,6 @@ lib.startpage {
 lib.oatage = FLUIDTEMPLATE
 lib.oatage {
 	file = EXT:tmpl_ipoa/Resources/Private/Templates/OAtage.html
-	variables < lib.subTemplateVars
 	variables < lib.ids
 	variables {
 
