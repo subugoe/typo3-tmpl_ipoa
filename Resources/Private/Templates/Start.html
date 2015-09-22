@@ -7,14 +7,18 @@
 <div class="start">
 
 	<header class="start__header" role="banner">
-  	<div class="start__logo">
-	    <img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/oa.svg" />' class="image"/>
-  	</div><!--
-  	--><div class="start__title">
-  		<h1>Open Access</h1>
-		{f:translate(key:'freeAccess', extensionName: 'tmpl_ipoa', arguments:{0:'<br />',1:''})}
-  	</div>
-  </header>
+		<div class="start__logo">
+			<v:condition.string.contains haystack="{HEADER_IMAGE}" needle="$">
+				<f:else>
+					<img src='<f:format.raw value="{HEADER_IMAGE}" />' class="image" alt="Logo"/>
+				</f:else>
+			</v:condition.string.contains>
+		</div><!--
+		--><div class="start__title">
+			<h1><f:format.raw value="{HEADER_TITLE}" /></h1>
+			<f:format.raw value="{HEADER_CLAIM}" />
+		</div>
+	</header>
 
 	<main role="start__main" class="main">
 
