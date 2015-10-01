@@ -11,16 +11,28 @@ lib.ids {
 
 	START_UID = TEXT
 	START_UID.value = {$ids.start}
+
 	KONTAKT_UID = TEXT
 	KONTAKT_UID.value = {$ids.kontakt}
+	KONTAKT_TITLE = TEXT
+	KONTAKT_TITLE.value = {$ids.kontakt.title}
+
 	SITEMAP_UID = TEXT
 	SITEMAP_UID.value = {$ids.sitemap}
+
 	IMPRESSUM_UID = TEXT
 	IMPRESSUM_UID.value = {$ids.impressum}
+	IMPRESSUM_TITLE = TEXT
+	IMPRESSUM_TITLE.value = {$ids.impressum.title}
+
 	NEWS_UID = TEXT
 	NEWS_UID.value = {$ids.news}
+
 	UEBERUNS_UID = TEXT
 	UEBERUNS_UID.value = {$ids.ueberUns}
+	UEBERUNS_TITLE = TEXT
+	UEBERUNS_TITLE.value = {$ids.ueberUns.title}
+
 	SEARCH_UID = TEXT
 	SEARCH_UID.value = {$ids.search}
 
