@@ -82,6 +82,9 @@ lib.ids {
 	DEFLANG < mod.SHARED.defaultLanguage
 	DEFLANG_LABEL = TEXT
 	DEFLANG_LABEL.value < mod.SHARED.defaultLanguageLabel
+
+	LANGMENU = TEXT
+	LANGMENU.value = {$ids.langMenu}
 }
 
 # definitions for the content, depending on colPos
