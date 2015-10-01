@@ -52,27 +52,89 @@
 			</v:condition.string.isNumeric>
 		</nav>
 	</main>
+	
+	<f:comment>
+		There are some links to special pages in the footer.
+		If they are not defined in the page typoscript they are not shown.
+		The link title is set by default but can be changed by page typoscript.
+	</f:comment>
 	<footer role="contentinfo" class="start__footer">
 		<div class="start__footer-content">
 			<ul class="start__list">
-				<li></li>
+				<v:condition.string.isNumeric value="{UEBERUNS_UID}">
+					<f:then>
+						<li>
+							<v:condition.string.contains haystack='{UEBERUNS_TITLE}' needle='ids.ueberUns'>
+								<f:then>
+									<f:link.page pageUid="{UEBERUNS_UID}" title="{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}" class="start__link">
+										<svg class="fa-icon fa-icon-smile-o fa-icon--s fa-icon-on-bright">
+											<use xlink:href="#icon-smile-o"></use>
+										</svg>
+										{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}
+									</f:link.page>
+								</f:then>
+								<f:else>
+									<f:link.page pageUid="{UEBERUNS_UID}" title="{UEBERUNS_TITLE}" class="start__link">
+										<svg class="fa-icon fa-icon-smile-o fa-icon--s fa-icon-on-bright">
+											<use xlink:href="#icon-smile-o"></use>
+										</svg>
+										{UEBERUNS_TITLE}
+									</f:link.page>
+								</f:else>
+							</v:condition.string.contains>
+						</li>
+					</f:then>
+				</v:condition.string.isNumeric>
+				<v:condition.string.isNumeric value="{KONTAKT_UID}">
+					<f:then>
+						<li>
+							<v:condition.string.contains haystack='{KONTAKT_TITLE}' needle='ids.kontakt'>
+								<f:then>
+									<f:link.page pageUid="{KONTAKT_UID}" title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}" class="start__link">
+										<svg class="fa-icon fa-icon-envelope fa-icon--s fa-icon-on-bright">
+											<use xlink:href="#icon-envelope"></use>
+										</svg>
+										{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}
+									</f:link.page>
+								</f:then>
+								<f:else>
+									<f:link.page pageUid="{KONTAKT_UID}" title="{KONTAKT_TITLE}" class="start__link">
+										<svg class="fa-icon fa-icon-envelope fa-icon--s fa-icon-on-bright">
+											<use xlink:href="#icon-envelope"></use>
+										</svg>
+										{KONTAKT_TITLE}
+									</f:link.page>
+								</f:else>
+							</v:condition.string.contains>
+						</li>
+					</f:then>
+				</v:condition.string.isNumeric>
+				<v:condition.string.isNumeric value="{IMPRESSUM_UID}">
+					<f:then>
+						<li>
+							<v:condition.string.contains haystack='{IMPRESSUM_TITLE}' needle='ids.impressum'>
+								<f:then>
+									<f:link.page pageUid="{IMPRESSUM_UID}" title="{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}" class="start__link">
+										<svg class="fa-icon fa-icon-gavel fa-icon--s fa-icon-on-bright">
+											<use xlink:href="#icon-gavel"></use>
+										</svg>
+										{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}
+									</f:link.page>
+								</f:then>
+								<f:else>
+									<f:link.page pageUid="{IMPRESSUM_UID}" title="{IMPRESSUM_TITLE}" class="start__link">
+										<svg class="fa-icon fa-icon-gavel fa-icon--s fa-icon-on-bright">
+											<use xlink:href="#icon-gavel"></use>
+										</svg>
+										{IMPRESSUM_TITLE}
+									</f:link.page>
+								</f:else>
+							</v:condition.string.contains>
+						</li>
+					</f:then>
+				</v:condition.string.isNumeric>
 				<li>
-					<f:link.page pageUid="{UEBERUNS_UID}" title="{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}" class="start__link">
-						<svg class="fa-icon fa-icon-smile-o fa-icon--s fa-icon-on-bright"><use xlink:href="#icon-smile-o"></use></svg> {f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}
-					</f:link.page>
-				</li>
-				<li>
-					<f:link.page pageUid="{KONTAKT_UID}" title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}" class="start__link">
-						<svg class="fa-icon fa-icon-envelope fa-icon--s fa-icon-on-bright"><use xlink:href="#icon-envelope"></use></svg> {f:translate(key:'contact', extensionName: 'tmpl_ipoa')}
-					</f:link.page>
-				</li>
-				<li>
-					<f:link.page pageUid="{IMPRESSUM_UID}" title="{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}" class="start__link">
-						<svg class="fa-icon fa-icon-gavel fa-icon--s fa-icon-on-bright"><use xlink:href="#icon-gavel"></use></svg> {f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}
-					</f:link.page>
-				</li>
-				<li>
-					<a href="#" title="Click this to see a list of available languages" class="start__link js-start-language-indicator">
+					<a href="#" title="{f:translate(key:'clickToOpen', extensionName: 'tmpl_ipoa')}" class="start__link js-start-language-indicator">
 						<svg class="fa-icon fa-icon-globe fa-icon--s"><use xlink:href="#icon-globe"></use></svg>
 						<span class="hidden-sub-notebook">
 							<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{ipoa:getAlternativeLanguageFlag()}.png" />'>
