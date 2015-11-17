@@ -7,6 +7,18 @@ page.headerData.111.value (
   <meta content="width=device-width, initial-scale=1" name="viewport" />
 )
 
+
+page.headerData.112 = TEXT
+[globalString = ENV:HTTPS=on]
+page.headerData.112.value (
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+)
+[else]
+page.headerData.112.value (
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+)
+[global]
+
 page.headerData.800 = TEXT
 page.headerData.800.value (
 	<link rel="shortcut icon" href="typo3conf/ext/tmpl_ipoa/Resources/Public/Images/favicon.png" type="image/x-icon" />
