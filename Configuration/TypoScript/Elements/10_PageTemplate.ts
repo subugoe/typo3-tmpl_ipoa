@@ -2,6 +2,10 @@
 content < styles.content.get
 
 lib.ids {
+
+  UNKNOWNURL = TEXT
+	UNKNOWNURL.value = {$ids.unknownURL}
+
 	HEADER_TITLE = TEXT
 	HEADER_TITLE.value = {$ids.header_title}
 	HEADER_CLAIM = TEXT
