@@ -77,7 +77,7 @@ tt_content {
 		prepend.dataWrap = <span id="c{field:_LOCALIZED_UID}"></span>
 		prepend.if.isTrue.field = _LOCALIZED_UID
 	}
-	
+
 	table {
 		20 {
 			#add wrap for table content element
