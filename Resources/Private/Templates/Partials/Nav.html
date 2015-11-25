@@ -1,4 +1,4 @@
-{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
 {namespace ipoa=Subugoe\TmplIpoa\ViewHelpers}
 
 <nav class="alt-menu js-alt-menu" id="menu">
@@ -66,21 +66,10 @@
 		</div>
 </div>
 </v:page.languageMenu>
-<f:comment>
-  If a page for 404 requests is defined, there should be no menu.
-  Otherwise the page is to slow and facilitates DOS attacks
-</f:comment>
-	<v:condition.string.isNumeric value="{UNKNOWNURL}">
-		<f:then>
-		</f:then>
-		<f:else>
-		  <div class="alt-menu__content">
-			  <div class="alt-menu__close-button-wrap"><a href="#" title="{f:translate(key:'closeMenu', extensionName: 'tmpl_ipoa')}" class="alt-menu__close-button"><svg class="fa-icon fa-icon-close fa-icon-on-bright"><use xlink:href="#icon-close"></use></svg> {f:translate(key:'close', extensionName: 'tmpl_ipoa')}</a></div>
-			    {MENU -> f:format.raw()}
-		  </div>
-	  </f:else>
-	</v:condition.string.isNumeric>
 
-
+  <div class="alt-menu__content">
+	  <div class="alt-menu__close-button-wrap"><a href="#" title="{f:translate(key:'closeMenu', extensionName: 'tmpl_ipoa')}" class="alt-menu__close-button"><svg class="fa-icon fa-icon-close fa-icon-on-bright"><use xlink:href="#icon-close"></use></svg> {f:translate(key:'close', extensionName: 'tmpl_ipoa')}</a></div>
+	  {MENU -> f:format.raw()}
+  </div>
 
 </nav>
