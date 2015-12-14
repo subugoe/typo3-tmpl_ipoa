@@ -32,6 +32,9 @@ lib.stdheader.stdWrap >
 # remove class=bodytext from RTE paragraphs
 lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class =
 
+# allow special chars in content title (for example &shy;)
+lib.stdheader.10.setCurrent.htmlSpecialChars = 0
+
 # Ändere Überschriften
 temp.lib.stdheader < lib.stdheader
 lib.stdheader >
