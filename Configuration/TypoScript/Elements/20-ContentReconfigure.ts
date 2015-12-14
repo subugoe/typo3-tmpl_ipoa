@@ -34,6 +34,20 @@ lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class =
 
 # allow special chars in content title (for example &shy;)
 lib.stdheader.10.setCurrent.htmlSpecialChars = 0
+# Allow only certain chars
+lib.stdheader.10.setCurrent.parseFunc {
+  allowTags = &shy;
+  # deny all others
+  denyTags = *
+  constants=1
+  nonTypoTagStdWrap.HTMLparser = 1
+  nonTypoTagStdWrap.HTMLparser {
+    keepNonMatchedTags=1
+    htmlSpecialChars = 2
+    allowTags = &shy;
+    removeTags = *
+  }
+}
 
 # Ändere Überschriften
 temp.lib.stdheader < lib.stdheader
