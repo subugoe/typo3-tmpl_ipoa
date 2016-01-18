@@ -144,6 +144,7 @@
 .menu__link--has-children {
 	display: inline-block;
 	margin-left: .1em;
+        max-width: 90%;
 	&:before {
 		margin-left: 0;
 		background-image: none;
