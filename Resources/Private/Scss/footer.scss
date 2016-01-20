@@ -1,80 +1,60 @@
-// scss-lint:disable NameFormat
-/**
- * .footer__content
- */
 .footer__content {
-	@extend %ic-layout;
-	@include responsive-content-padding();
+  @extend %ic-layout;
+  @include responsive-content-padding();
 }
 
-/**
- * .footer__column
- */
 .footer__column {
-	@extend %ic-layout__item;
-	@extend .ic-tablet-one-half;
-	@extend .ic-notebook-and-up-one-quarter;
-	@extend .ic-pt+;
-	@extend .ic-pb+;
-}
-
-.footer h3 {
-	@extend %heading--gamma;
-}
-
-/**
- * .footer__tracking
- */
-.footer__tracking {
-	@extend %ic-layout__item;
-	@extend %text--tiny;
-
-	@include media-query('notebook-and-up') { text-align: right; }
-}
-
-/**
- * .footer__list
- */
-// .footer__list { @extend %ic-list-bare; }
-.footer ul { @extend %ic-list-bare; }
-
-/**
- * .footer__link
- */
-// .footer__link {
-.footer a {
-	@extend %link--default;
-	@extend %link--on-bright;
-	@extend %link--underline;
-	@extend %link--underline-on-bright;
-}
-
-/**
- * .footer__link--in-list
- * 1. move the chevron a tad lower
- */
-// .footer__link--in-list {
-.footer ul a {
-	@extend %link--default;
-	@extend %link--in-linklist;
-	@extend %link--block;
-	@extend %link--block-on-bright;
-
-	&:before {
-		margin-bottom: $shift-chevron-before-content; // 1.
-	}
-
-	&:hover,
-	&:focus {
-		@extend %link--on-bright;
-	}
+  @extend %ic-layout__item;
+  @extend .ic-tablet-one-half;
+  @extend .ic-notebook-and-up-one-quarter;
+  @extend .ic-pt+;
+  @extend .ic-pb+;
 }
 
 .footer {
+  word-wrap: break-word;
 
-	img {
-		max-width: 100%;
-	}
+  h3 {
+    @extend %heading--gamma;
+  }
 
-	word-wrap: break-word;
+  a {
+    @extend %link--default;
+    @extend %link--on-bright;
+    @extend %link--underline;
+    @extend %link--underline-on-bright;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  ul {
+    @extend %ic-list-bare;
+
+    a {
+      @extend %link--default;
+      @extend %link--in-linklist;
+      @extend %link--block;
+      @extend %link--block-on-bright;
+
+      &:before {
+        margin-bottom: $shift-chevron-before-content;
+      }
+
+      &:hover,
+      &:focus {
+        @extend %link--on-bright;
+      }
+    }
+  }
+}
+
+.footer__tracking {
+  @extend %ic-layout__item;
+  @extend %text--tiny;
+
+  @include media-query("notebook-and-up") {
+    text-align: right;
+  }
 }

@@ -1,361 +1,280 @@
-// scss-lint:disable SelectorFormat
-/**
- * class($name)
- */
 @mixin class($name) {
-	.#{$name},
-	%#{$name} { @content }
+  .#{$name},
+  %#{$name} {
+    @content
+  }
 }
 
-/**
- * class('hidden-on-phone')
- */
-@include class('hidden-on-phone') {
-	@include media-query('smaller-than-tablet') { display: none !important; }
+@include class("hidden-on-phone") {
+  @include media-query("smaller-than-tablet") {
+    display: none !important;
+  }
 }
 
-@include class('hidden-sub-notebook') {
-	@include media-query('smaller-than-notebook') { display: none !important; }
+@include class("hidden-sub-notebook") {
+  @include media-query("smaller-than-notebook") {
+    display: none !important;
+  }
 }
 
-/**
- * class('nobr')
- * what it does: prevents the browser to add a break / new line if there is not
- * enough space to dislay things like long words
- */
-@include class('nobr') { white-space: nowrap; }
-
-/**
- * class('m--default')
- */
-@include class('m--default') { margin: 0 0 round($inuit-base-line-height / 2); }
-
-/**
- * class('picture')
- */
-@include class('picture') { @extend %m--default; }
-
-/**
- * class('caption')
- */
-@include class('caption') {
-	@extend %m--default;
-	@extend %text--small;
+// what it does: prevents the browser to add a break / new line if there is not
+// enough space to dislay things like long words
+@include class("nobr") {
+  white-space: nowrap;
 }
 
-/**
- * class('form')
- */
-@include class('form') { @extend %m--default; }
+@include class("m--default") {
+  margin: 0 0 round($inuit-base-line-height / 2);
+}
 
-/**
- * class('paragraph')
- */
-@include class('paragraph') { @extend %m--default; }
+@include class("picture") {
+  @extend %m--default;
+}
 
-/**
- * @mixin responsive-content-padding()
- */
+@include class("caption") {
+  @extend %m--default;
+  @extend %text--small;
+}
+
+@include class("form") {
+  @extend %m--default;
+}
+
+@include class("paragraph") {
+  @extend %m--default;
+}
+
 @mixin responsive-content-padding() {
-	padding-left: $content-padding--phone;
-	padding-right: $content-padding--phone;
+  padding-left: $content-padding--phone;
+  padding-right: $content-padding--phone;
 
-	@include media-query('tablet') {
-		padding-left: $content-padding--tablet;
-		padding-right: $content-padding--tablet;
-	}
+  @include media-query("tablet") {
+    padding-left: $content-padding--tablet;
+    padding-right: $content-padding--tablet;
+  }
 
-	@include media-query('notebook') {
-		padding-left: $content-padding--notebook;
-		padding-right: $content-padding--notebook;
-	}
+  @include media-query("notebook") {
+    padding-left: $content-padding--notebook;
+    padding-right: $content-padding--notebook;
+  }
 
-	@include media-query('desk') {
-		padding-left: $content-padding--desk;
-		padding-right: $content-padding--desk;
-	}
+  @include media-query("desk") {
+    padding-left: $content-padding--desk;
+    padding-right: $content-padding--desk;
+  }
 
-	@include media-query('huge') {
-		padding-left: $content-padding--huge;
-		padding-right: $content-padding--huge;
-	}
+  @include media-query("huge") {
+    padding-left: $content-padding--huge;
+    padding-right: $content-padding--huge;
+  }
 }
 
-/**
- * class('heading')
- */
-@include class('heading') { margin: 0; }
-
-/**
- * class('heading--alpha')
- */
-@include class('heading--alpha') {
-	@extend %heading;
-	margin: ($inuit-base-line-height / 2) 0;
-
-	@include media-query('tablet-and-up') { margin: $inuit-base-line-height 0; }
+@include class("heading") {
+  margin: 0;
 }
 
-/**
- * class('heading--beta')
- */
-@include class('heading--beta') {
-	@extend %heading;
-	margin: $inuit-base-line-height 0 ($inuit-base-line-height / 2);
+@include class("heading--alpha") {
+  @extend %heading;
+  margin: ($inuit-base-line-height / 2) 0;
 
-	@include media-query('desk-and-up') { margin: 0; }
+  @include media-query("tablet-and-up") {
+    margin: $inuit-base-line-height 0;
+  }
 }
 
-/**
- * class('heading--gamma')
- */
-@include class('heading--gamma') {
-	@extend %heading;
-	margin: ($inuit-base-line-height / 2) 0;
+@include class("heading--beta") {
+  @extend %heading;
+  margin: $inuit-base-line-height 0 ($inuit-base-line-height / 2);
+
+  @include media-query("desk-and-up") {
+    margin: 0;
+  }
 }
 
-/**
- * .fa-twitter
- */
+@include class("heading--gamma") {
+  @extend %heading;
+  margin: ($inuit-base-line-height / 2) 0;
+}
+
 .fa-twitter {
-	&:before { color: $color-twitter; }
+  &:before {
+    color: $color-twitter;
+  }
 }
 
-/**
- * .fa-facebook
- */
 .fa-facebook {
-	&:before { color: $color-facebook; }
+  &:before {
+    color: $color-facebook;
+  }
 }
 
-/**
- * %ul--reset
- */
 %ul--reset {
-	margin: 0;
-	padding-left: 15px;
+  margin: 0;
+  padding-left: 15px;
 }
 
-/**
- * %text--huge
- */
 %text--huge {
-	font-size: ($inuit-base-font-size / 16px) * $factor-text--huge;
+  font-size: ($inuit-base-font-size / 16px) * $factor-text--huge;
 }
 
-/**
- * %text--large
- */
 %text--large {
-	font-size: ($inuit-base-font-size / 16px) * $factor-text--large;
+  font-size: ($inuit-base-font-size / 16px) * $factor-text--large;
 }
 
-/**
- * %text--small
- */
-@include class('text--small') { font-size: ($inuit-base-font-size / 16px) * $factor-text--small; }
-// %text--small {
-// 	font-size: ($inuit-base-font-size / 16px) * $factor-text--small;
-// }
+@include class("text--small") {
+  font-size: ($inuit-base-font-size / 16px) * $factor-text--small;
+}
 
-/**
- * %text--tiny
- */
-@include class('text--tiny') { font-size: ($inuit-base-font-size / 16px) * $factor-text--tiny; }
-// %text--tiny {
-// 	font-size: ($inuit-base-font-size / 16px) * $factor-text--tiny;
-// }
+@include class("text--tiny") {
+  font-size: ($inuit-base-font-size / 16px) * $factor-text--tiny;
+}
 
-/**
- * %text--bold
- */
 %text--bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 
-/**
- * %text--very-bright
- */
 %text--very-bright {
-	color: $color--brightest;
+  color: $color--brightest;
 }
 
-/**
- * %border--big
- */
 %border--big {
-	border-width: $border-width--big;
+  border-width: $border-width--big;
 }
 
-/**
- * %link--default
- */
 %link--default {
-	border-radius: $link-border-radius--default;
-	border-color: transparent;
-	border-style: solid;
-	border-width: 1px;
-	text-decoration: none;
-	transition: all $transition-time--default ease;
-	//padding: 2px 3px 0;
+  border-color: transparent;
+  border-radius: $link-border-radius--default;
+  border-style: solid;
+  border-width: 1px;
+  // padding: 2px 3px 0;
+  text-decoration: none;
+  transition: all $transition-time--default ease;
 }
 
-/**
- * %link--underline
- * defines the style that is used to display the border-bottom
- */
 %link--underline {
-	border-bottom-style: $link-border-bottom-style;
+  border-bottom-style: $link-border-bottom-style;
 }
 
-/**
- * %link--underline-on-bright
- */
 %link--underline-on-bright {
-	border-bottom-color: color-ipoa-green;
+  border-bottom-color: color-ipoa-green;
 }
 
-/**
- * %link-in-linklist
- */
 %link-in-linklist {
-	transition: all $transition-time--default ease;
-	border-radius: $link-border-radius--default;
-	text-decoration: none;
-	padding: $link-padding--small;
-	margin: 0 0 .3em .7em;
+  border-radius: $link-border-radius--default;
+  margin: 0 0 .3em .7em;
+  padding: $link-padding--small;
+  text-decoration: none;
+  transition: all $transition-time--default ease;
 
-	&:before {
-		content: '';
-		display: inline-block;
-		height: 1em;
-		width: 1em;
-		background-image: url('../Images/angle-right.svg');
-		background-size: contain;
-		background-repeat: no-repeat;
-		margin-left: -15px;
-	}
+  &:before {
+    background-image: url("../Images/angle-right.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    height: 1em;
+    margin-left: -15px;
+    width: 1em;
+  }
 }
 
-/**
- * %link--in-linklist
- */
 %link--in-linklist {
-	margin: 0 0 .3em .7em;
+  margin: 0 0 .3em .7em;
 
-	&:before {
-		content: '';
-		display: inline-block;
-		height: 1em;
-		width: 1em;
-		background-image: url('../Images/angle-right.svg');
-		background-size: contain;
-		background-repeat: no-repeat;
-		margin-left: -15px;
-	}
+  &:before {
+    background-image: url("../Images/angle-right.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: inline-block;
+    height: 1em;
+    margin-left: -15px;
+    width: 1em;
+  }
 }
 
-/**
- * %link--block
- */
 %link--block {
-	display: block;
-	padding: $link-block-padding;
+  display: block;
+  padding: $link-block-padding;
 }
 
-/**
- * %link--block-on-bright
- */
 %link--block-on-bright {
-	background-color: $color-block-background--on-bright;
+  background-color: $color-block-background--on-bright;
 }
 
-/**
- * %link--on-bright
- */
 %link--on-bright {
-	color: $color--darkest;
-	border-bottom-color: $color-ipoa-green;
+  border-bottom-color: $color-ipoa-green;
+  color: $color--darkest;
 
-	&:hover,
-	&:focus {
-		border-color: $color-ipoa-green;
-		background-color: $color-ipoa-green;
-		color: $color--brightest;
-	}
+  &:hover,
+  &:focus {
+    background-color: $color-ipoa-green;
+    border-color: $color-ipoa-green;
+    color: $color--brightest;
+  }
 
-	&:active {
-		border-color: $color-ipoa-yellow;
-		background-color: $color-ipoa-yellow;
-		color: $color--darkest;
-	}
+  &:active {
+    background-color: $color-ipoa-yellow;
+    border-color: $color-ipoa-yellow;
+    color: $color--darkest;
+  }
 }
 
-/**
- * .link__button-on-bright
- */
 %link__button-on-bright {
-	background-color: $color-block-background--on-bright;
-	padding: $link-block-padding;
+  background-color: $color-block-background--on-bright;
+  padding: $link-block-padding;
 }
 
-/**
- * %headlink-on-bright
- */
 %head__link--on-bright {
-	@extend %link--on-bright;
-	border-color: #fff;
-	background-color: #fff;
+  @extend %link--on-bright;
+  background-color: $color--brightest;
+  border-color: $color--brightest;
 }
 
-/**
- * %link-on-dark
- */
 %link-on-dark {
-	color: $color--brightest;
+  color: $color--brightest;
 
-	&:hover,
-	&:focus {
-		background-color: $color--brightest;
-		color: $color--darkest;
-		border: 1px solid $color--darkest;
-	}
+  &:hover,
+  &:focus {
+    background-color: $color--brightest;
+    border: 1px solid $color--darkest;
+    color: $color--darkest;
+  }
 
-	&:active {
-		background-color: $color-ipoa-yellow;
-		color: $color--darkest;
-	}
+  &:active {
+    background-color: $color-ipoa-yellow;
+    color: $color--darkest;
+  }
 }
 
-/**
- * %link--with-icon-on-dark
- */
 %link--with-icon-on-dark {
-	.fa-icon { @extend .fa-icon-on-dark; }
+  .fa-icon {
+    @extend .fa-icon-on-dark;
+  }
 
-	&:hover,
-	&:active,
-	&:focus {
-		.fa-icon { @extend .fa-icon-on-bright; }
-	}
+  &:hover,
+  &:active,
+  &:focus {
+    .fa-icon {
+      @extend .fa-icon-on-bright;
+    }
+  }
 }
 
-/**
- * %link--with-icon-on-bright
- */
 %link--with-icon-on-bright {
-	.fa-icon { @extend .fa-icon-on-bright; }
+  .fa-icon {
+    @extend .fa-icon-on-bright;
+  }
 
-	&:hover,
-	&:active,
-	&:focus {
-		.fa-icon { @extend .fa-icon-on-dark; }
-	}
+  &:hover,
+  &:active,
+  &:focus {
+    .fa-icon {
+      @extend .fa-icon-on-dark;
+    }
+  }
 }
 
-/**
- * .no-js .on-demand__link
- */
 .no-js .on-demand__link {
-	display: none;
+  display: none;
 }

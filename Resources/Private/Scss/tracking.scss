@@ -1,40 +1,34 @@
-// scss-lint:disable NameFormat
-/**
- * .tracking
- */
 .tracking {
-	@extend %ic-layout;
-	@include responsive-content-padding();
+  @extend %ic-layout;
+  @include responsive-content-padding();
 }
 
-/**
- * .tracking__content
- */
 .tracking__content {
-	@extend %ic-layout__item;
-	@extend %text--tiny;
+  @extend %ic-layout__item;
+  @extend %text--tiny;
 
-	@include media-query('notebook-and-up') { text-align: right; }
+  @include media-query("notebook-and-up") {
+    text-align: right;
+  }
 }
 
-/**
- * .tracking__link
- */
 .tracking__link {
-	@extend %link--default;
-	@extend %link__button-on-bright;
-	@extend %nobr;
-	padding: 3px 3px 3px 0;
+  @extend %link--default;
+  @extend %link__button-on-bright;
+  @extend %nobr;
+  padding: 3px 3px 3px 0;
 
-	&:hover,
-	&:focus {
-		@extend %link--on-bright;
+  &:hover,
+  &:focus {
+    @extend %link--on-bright;
 
-		svg {
-			color: $color--brightest;
-			fill: currentColor;
-		}
-	}
+    svg {
+      color: $color--brightest;
+      fill: currentColor;
+    }
+  }
 
-	&:active svg { color: $color--darkest; }
+  &:active svg {
+    color: $color--darkest;
+  }
 }

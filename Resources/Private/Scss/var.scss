@@ -1,78 +1,53 @@
+$border-radius--default:            3px;
+$border-radius--large:              5px;
 
-/**
- *
- */
+// Colors
+$color--darkest:                    #262626;
+$color--brightest:                  #fff;
+$color-ipoa-yellow:                 #fc0;
+$color-ipoa-green:                  #360;
+$color-twitter:                     #4ba3eb;
+$color-facebook:                    #334f8d;
+$color-text-background--default:    $color--brightest;
+$color-link-main--default:          $color--darkest;
+$color-block-background--on-bright: #eee;
 
-$border-radius--default:          3px;
-$border-radius--large:            5px;
+// Transition
+$transition-time--default:          250ms;
+$transition-time--fast:             100ms;
 
-/**
- * Colors
- */
+// Link
+$link-border-radius--default:       $border-radius--default;
+$link-padding--default:             3px;
+$link-padding--small:               1px;
+$link-lighten-color-factor:         50%;
+$link-color--default:               #333;
+$link-background-color--default:    #5c5c5c;
+$link-border-bottom-style:          dotted;
+$link-block-padding:                3px 5px;
 
-$color--darkest:                  #262626;
-$color--brightest:                #fff;
-$color-ipoa-yellow:               #fc0;
-$color-ipoa-green:                #360;
-$color-twitter:                   #4ba3eb;
-$color-facebook:                  #334f8d;
-$color-text-background--default:  $color--brightest;
-$color-link-main--default:        $color--darkest;
-$color-block-background--on-bright:#eee;
+// Text Factor
+$factor-text--small:                .8em;
+$factor-text--tiny:                 .65em;
+$factor-text--large:                1.2em;
+$factor-text--huge:                 2em;
 
-/**
- * Transition
- */
-$transition-time--default:        250ms;
-$transition-time--fast:           100ms;
+// Letter Spacing
+$letter-spacing--large:             .05em;
+$letter-spacing--larger:            .1em;
 
-/**
- * Link
- */
-$link-border-radius--default:     $border-radius--default;
-$link-padding--default:           3px;
-$link-padding--small:             1px;
-$link-lighten-color-factor:       50%;
-$link-color--default:             #333;
-$link-background-color--default:  #5c5c5c;
-$link-border-bottom-style:        dotted;
-$link-block-padding:              3px 5px;
-/**
- * Text Factor
- */
-$factor-text--small:              .8em;
-$factor-text--tiny:               .65em;
-$factor-text--large:              1.2em;
-$factor-text--huge:               2em;
+// Border
+$border-width--default:             1px;
+$border-width--big:                 2px;
 
-/**
- * Letter Spacing
- */
-$letter-spacing--large:          .05em;
-$letter-spacing--larger:          .1em;
+$table-cell-padding:                5px;
+$table-uneven-background-color:     lighten($color--darkest, 80%);
 
-/**
- * Border
- */
-$border-width--default:           1px;
-$border-width--big:               2px;
+// Content Padding
+$content-padding--phone:            5px;
+$content-padding--tablet:           25px;
+$content-padding--notebook:         75px;
+$content-padding--desk:             150px;
+$content-padding--huge:             200px;
 
-/**
- *
- */
-$table-cell-padding:              5px;
-$table-uneven-background-color:   lighten($color--darkest, 80%);
-
-/**
- * Content Padding
- */
-$content-padding--phone:          5px;
-$content-padding--tablet:         25px;
-$content-padding--notebook:       75px;
-$content-padding--desk:           150px;
-$content-padding--huge:           200px;
-
-/**
- *
- */
-$shift-chevron-before-content:    -2px;
+$shift-chevron-before-content:      -2px;
