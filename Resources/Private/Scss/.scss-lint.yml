@@ -12,10 +12,18 @@ linters:
   DeclarationOrder:
     enabled: false
 
+  Indentation:
+    enabled: true
+    character: space
+    width: 2
+
   LeadingZero:
     enabled: false
 
   PropertySortOrder:
+    enabled: false
+
+  PlaceholderInExtend:
     enabled: false
 
   QualifyingElement:
