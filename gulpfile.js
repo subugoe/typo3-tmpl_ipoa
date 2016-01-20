@@ -35,6 +35,9 @@ gulp.task("sass", function() {
 		    outputStyle: "compressed",
 		    onError: function(error) {errorHandler("Sass", error)}
 		}))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions']
+        }))
 		.pipe(gulp.dest("./Resources/Public/Css/"));
 });
 
