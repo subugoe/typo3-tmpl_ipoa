@@ -132,7 +132,7 @@
 }
 
 .alt-menu {
-  @extend .ic-layout__item;
+  @extend %ic-layout__item;
   @extend .ic-pb;
   padding-top: 12px !important;
   background-color: $color--brightest;

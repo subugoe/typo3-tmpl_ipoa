@@ -20,7 +20,7 @@
 .start__logo {
   @extend %ic-layout__item;
   @extend .ic-tablet-and-up-one-half;
-  @extend .ic-layout--center;
+  @extend %ic-layout--center;
 
   margin: 20vh 0 0;
 
@@ -37,7 +37,7 @@
 .start__title {
   @extend %ic-layout__item;
   @extend .ic-tablet-and-up-one-half;
-  @extend .ic-layout--center;
+  @extend %ic-layout--center;
   display: none;
   font-size: 1.8em;
 

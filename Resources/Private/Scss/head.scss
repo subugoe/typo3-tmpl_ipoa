@@ -1,6 +1,6 @@
 .head {
   @extend %ic-layout;
-  @extend .ic-layout--flush;
+  @extend %ic-layout--flush;
   @include responsive-content-padding();
   padding-top: 40px;
 
@@ -178,7 +178,7 @@
 
 .head-nav {
   @extend %ic-layout;
-  @extend .ic-layout--flush;
+  @extend %ic-layout--flush;
   @include responsive-content-padding();
   height: 50px;
   left: 0;
