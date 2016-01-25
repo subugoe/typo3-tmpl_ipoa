@@ -10,7 +10,8 @@
     "gulp-sass": "^2.1.1",
     "gulp-uglify": "^1.5.1",
     "jshint": "^2.9.1",
-    "bower": "^1.7.2"
+    "bower": "^1.7.2",
+    "gulp-scss-lint": "^0.3.9"
   },
   "private": true
 }
