@@ -22,11 +22,26 @@
   }
 }
 
-.head-nav .head__links {
-  @include media-query("phone") {
-    display: none;
+.head-nav {
+  @extend %ic-layout;
+  @extend %ic-layout--flush;
+  @include responsive-content-padding();
+  height: 50px;
+  left: 0;
+  padding-top: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
+  .head__links {
+    @include media-query("phone") {
+      display: none;
+    }
   }
 }
+
+
 
 // 1. give the icon a little bit more space to top
 // 2. these links are not allowed to break into a new line
@@ -174,19 +189,6 @@
     position: relative;
     transform: translateX(25%);
   }
-}
-
-.head-nav {
-  @extend %ic-layout;
-  @extend %ic-layout--flush;
-  @include responsive-content-padding();
-  height: 50px;
-  left: 0;
-  padding-top: 10px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
 }
 
 .no-js .head-nav {

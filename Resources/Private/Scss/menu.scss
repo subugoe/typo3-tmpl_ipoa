@@ -57,6 +57,31 @@
 // formats menu__list to be a list without list-style-type
 .menu__list {
   @extend %ic-list-bare;
+
+  span {
+    border-radius: 3px;
+    float: left;
+    margin-left: -10px;
+    margin-right: .2em;
+    padding: 3px;
+    text-align: center;
+    width: 20px;
+
+    &:hover,
+    &:focus {
+      background: $color-ipoa-green;
+      color: $color--brightest;
+    }
+
+    &:active {
+      background: $color-ipoa-yellow;
+      color: $color--darkest;
+    }
+
+    svg {
+      margin-bottom: -3px;
+    }
+  }
 }
 
 .menu__list--indented {
@@ -94,31 +119,6 @@
   color: $color--darkest;
 }
 
-.menu__list span {
-  border-radius: 3px;
-  float: left;
-  margin-left: -10px;
-  margin-right: .2em;
-  padding: 3px;
-  text-align: center;
-  width: 20px;
-
-  &:hover,
-  &:focus {
-    background: $color-ipoa-green;
-    color: $color--brightest;
-  }
-
-  &:active {
-    background: $color-ipoa-yellow;
-    color: $color--darkest;
-  }
-
-  svg {
-    margin-bottom: -3px;
-  }
-}
-
 .menu__link--has-children {
   display: inline-block;
   margin-left: .1em;
@@ -140,6 +140,20 @@
   @include responsive-content-padding();
 
   z-index: 99;
+
+  .head__list {
+    @extend .ic-mb;
+    display: block;
+    text-align: center;
+
+    @include media-query("phone-and-up") {
+      display: none;
+    }
+  }
+
+  .head__language-links .head__list {
+    text-align: left;
+  }
 }
 
 // a modifier that moves the alt-menu off canvas
@@ -150,20 +164,6 @@
   top: 0;
   transform: translateX(-100%);
   width: 30%;
-}
-
-.alt-menu .head__list {
-  @extend .ic-mb;
-  display: block;
-  text-align: center;
-
-  @include media-query("phone-and-up") {
-    display: none;
-  }
-}
-
-.alt-menu .head__language-links .head__list {
-  text-align: left;
 }
 
 .alt-menu__close-button-wrap {

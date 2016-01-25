@@ -73,8 +73,12 @@
 .start__link {
   @extend %link--default;
   @extend %start__link--on-bright;
+  @extend %link--with-icon-on-bright;
+  @extend %link--on-bright;
   @extend %nobr; // 2.
-  padding: 7px 5px 5px; // 1.
+  border: none;
+  padding: 7px;
+
   &:hover,
   &:focus {
     @extend %link--on-bright;
@@ -89,14 +93,6 @@
   &:active svg {
     color: $color--darkest;
   }
-}
-
-.start__link {
-  @extend %link--default;
-  @extend %link--with-icon-on-bright;
-  @extend %link--on-bright;
-  border: none;
-  padding: 7px;
 }
 
 .start__link--active {

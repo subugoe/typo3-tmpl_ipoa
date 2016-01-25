@@ -38,14 +38,12 @@ blockquote {
   }
 
   &:before {
-    //content: '„';
     font-weight: bold;
     margin-left: -10px;
     margin-right: 2px;
   }
 
   &:after {
-    //content: '“';
     font-weight: bold;
     margin-left: 2px;
     margin-right: -8px;

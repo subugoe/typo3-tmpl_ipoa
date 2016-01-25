@@ -37,15 +37,15 @@
       @extend %link--in-linklist;
       @extend %link--block;
       @extend %link--block-on-bright;
+    }
 
-      &:before {
-        margin-bottom: $shift-chevron-before-content;
-      }
+    a:before {
+      margin-bottom: $shift-chevron-before-content;
+    }
 
-      &:hover,
-      &:focus {
-        @extend %link--on-bright;
-      }
+    a:hover,
+    a:focus {
+      @extend %link--on-bright;
     }
   }
 }

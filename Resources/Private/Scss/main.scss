@@ -27,115 +27,17 @@
     @extend %link--underline-on-bright;
   }
 
-  ul a {
-    @extend %link--default;
-    @extend %link--on-bright;
-    @extend %link--underline;
-    @extend %link--underline-on-bright;
-  }
-
-  > h2 {
-    @extend %ic-layout__item;
-    @extend .ic-desk-and-up-three-twelfths;
-    @extend %heading;
-    @extend %heading--beta;
-    line-height: round($inuit-base-line-height / .65);
-
-    @include media-query("desk-and-up") { text-align: right; }
-  }
-
-}
-
-.main picture a,
-.more picture a {
-  border-bottom-color: transparent;
-  border-width: 0;
-  padding: 0;
-
-  &:hover {
-    background-color: transparent;
-    border: transparent;
-  }
-
-  img {
-    border: 2px solid $color-ipoa-green;
-    border-radius: 2px;
-  }
-}
-
-.oadays {
-  > h3 {
-    @extend %ic-layout__item;
-    @extend .ic-desk-and-up-three-twelfths;
-    @extend %heading;
-    @extend %heading--beta;
-    line-height: round($inuit-base-line-height / .65);
-
-    @include media-query("desk-and-up") {
-      text-align: right;
-    }
-  }
-
-  h4 {
-    margin-bottom: 5px;
-  }
-
-  .on-demand__link {
-    @extend %link--default;
-    @extend %link--on-bright;
-    @extend %link--underline;
-    @extend %link--underline-on-bright;
-    cursor: pointer;
-  }
-
-  .oadays__image {
-    border-radius: 50%;
-    clip-path: circle(25px at center);
-    margin-bottom: -10px;
-    width: 50px;
-  }
-}
-
-
-.search {
-  .sort--active {
-    background-color: $color-block-background--on-bright;
-    font-weight: 400;
-  }
-
-  .highlight {
-    // background-color: $color-block-background--on-bright;
-    // color: $color--darkest;
-    // border-radius: 3px;
-    // padding: 3px;
-    font-weight: 400;
-  }
-
-  ul li > a {
-    font-weight: 400;
-  }
-
-  li {
-    margin-bottom: 10px;
-  }
-}
-
-.main > ul {
-  @extend %m--default;
-}
-
-.main ul {
-  @extend %ic-list-bare;
-  @extend %m--default;
-  padding-left: $inuit-base-line-height;
-
-  @include media-query("phone") { padding-left: $inuit-base-line-height / 2; }
-
   ul {
-    margin-bottom: 0 !important;
+    @extend %ic-list-bare;
+    @extend %m--default;
+    padding-left: $inuit-base-line-height;
 
-    li {
-      &:before {
+    @include media-query("phone") { padding-left: $inuit-base-line-height / 2; }
+
+    ul {
+      margin-bottom: 0 !important;
+
+      li:before {
         background-image: url("../Images/angle-right.svg");
         background-repeat: no-repeat;
         background-size: contain;
@@ -148,21 +50,86 @@
         width: 12px;
       }
     }
+
+    a {
+      @extend %link--default;
+      @extend %link--on-bright;
+      @extend %link--underline;
+      @extend %link--underline-on-bright;
+    }
   }
-}
 
-.main h2 > div > ul {
-  padding-left: 0;
-}
+  > h2 {
+    @extend %ic-layout__item;
+    @extend .ic-desk-and-up-three-twelfths;
+    @extend %heading;
+    @extend %heading--beta;
+    line-height: round($inuit-base-line-height / .65);
 
-.main h2 + div,
-.oadays h3 + div {
-  @extend %ic-layout__item;
-  @extend .ic-desk-and-up-nine-twelfths;
-  @extend %paragraph;
+    @include media-query("desk-and-up") { text-align: right; }
 
-  p {
+    > div > ul {
+      padding-left: 0;
+    }
+  }
+
+  h2 + div {
+    @extend %ic-layout__item;
+    @extend .ic-desk-and-up-nine-twelfths;
+    @extend %paragraph;
+
+    p {
+      @extend %m--default;
+    }
+  }
+
+  table {
     @extend %m--default;
+
+    table-layout: fixed;
+    width: 100%;
+    word-break: break-word;
+
+    caption {
+      @extend %m--default;
+      text-align: left;
+    }
+
+    thead {
+      border-bottom: 1px solid $color--darkest;
+    }
+
+    td {
+      padding: $table-cell-padding;
+    }
+
+    .uneven {
+      background-color: $table-uneven-background-color;
+    }
+  }
+
+  > ul {
+    @extend %m--default;
+  }
+
+  picture a {
+    border-bottom-color: transparent;
+    border-width: 0;
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+      border: transparent;
+    }
+
+    img {
+      border: 2px solid $color-ipoa-green;
+      border-radius: 2px;
+    }
+  }
+
+  h2+div h3:first-child {
+    margin-top: 8px;
   }
 }
 
@@ -173,48 +140,6 @@
 
   main h2 + div ul:first-child {
     margin-top: 9px;
-  }
-
-  .oadays h2 + div p:first-child {
-    margin-top: 10px;
-  }
-
-  .main h3 + div p:first-child {
-    margin-top: 7px;
-  }
-}
-
-.twitter {
-  img {
-    border-radius: 50%;
-    clip-path: circle(25px at center);
-    margin-bottom: -5px;
-    width: 20px !important;
-  }
-}
-
-.main table {
-  @extend %m--default;
-
-  table-layout: fixed;
-  width: 100%;
-  word-break: break-word;
-
-  caption {
-    @extend %m--default;
-    text-align: left;
-  }
-
-  thead {
-    border-bottom: 1px solid $color--darkest;
-  }
-
-  td {
-    padding: $table-cell-padding;
-  }
-
-  .uneven {
-    background-color: $table-uneven-background-color;
   }
 }
 

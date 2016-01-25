@@ -2,6 +2,27 @@
 //    the fixed head menu bar
 //    http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-B
 .search {
+  .sort--active {
+    background-color: $color-block-background--on-bright;
+    font-weight: 400;
+  }
+
+  .highlight {
+    // background-color: $color-block-background--on-bright;
+    // color: $color--darkest;
+    // border-radius: 3px;
+    // padding: 3px;
+    font-weight: 400;
+  }
+
+  ul li > a {
+    font-weight: 400;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
   &:before { // 1.
     content: "";
     display: block;
