@@ -1,15 +1,50 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
 <div class="last">
 	<div class="last__block1">
 		<ul class="last__list">
-			<li><f:link.page pageUid="{START_UID}" title="{f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}" class="last__link"><i class="fa fa-fw fa-lg fa-home"></i> {f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}</f:link.page></li>
-			<li><f:link.page pageUid="{KONTAKT_UID}" title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}" class="last__link"><i class="fa fa-fw fa-lg fa-info"></i> {f:translate(key:'contact', extensionName: 'tmpl_ipoa')}</f:link.page></li>
-			<li><f:link.page pageUid="{SITEMAP_UID}" title="{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}" class="last__link"><i class="fa fa-fw fa-lg fa-sitemap"></i> {f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}</f:link.page></li>
-			<li><f:link.page pageUid="{IMPRESSUM_UID}" title="{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}" class="last__link"><i class="fa fa-fw fa-lg fa-sitemap"></i> {f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}</f:link.page></li>
+			<li>
+				<f:link.page pageUid="{START_UID}" title="{f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}" class="last__link">
+					<i class="fa fa-fw fa-lg fa-home"></i> {f:translate(key:'startpage', extensionName:
+					'tmpl_ipoa')}
+				</f:link.page>
+			</li>
+			<v:condition.string.isNumeric value="{KONTAKT_UID}">
+				<f:then>
+					<li>
+						<f:link.page pageUid="{KONTAKT_UID}" title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}" class="last__link">
+							<i class="fa fa-fw fa-lg fa-info"></i> {f:translate(key:'contact', extensionName:
+							'tmpl_ipoa')}
+						</f:link.page>
+					</li>
+				</f:then>
+			</v:condition.string.isNumeric>
+			<v:condition.string.isNumeric value="{SITEMAP_UID}">
+				<f:then>
+					<li>
+						<f:link.page pageUid="{SITEMAP_UID}" title="{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}" class="last__link">
+							<i class="fa fa-fw fa-lg fa-sitemap"></i> {f:translate(key:'sitemap', extensionName:
+							'tmpl_ipoa')}
+						</f:link.page>
+					</li>
+				</f:then>
+			</v:condition.string.isNumeric>
+			<v:condition.string.isNumeric value="{IMPRESSUM_UID}">
+				<f:then>
+					<li>
+						<f:link.page pageUid="{IMPRESSUM_UID}" title="{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}" class="last__link">
+							<i class="fa fa-fw fa-lg fa-sitemap"></i> {f:translate(key:'impressum', extensionName:
+							'tmpl_ipoa')}
+						</f:link.page>
+					</li>
+				</f:then>
+			</v:condition.string.isNumeric>
 		</ul>
-  </div><!--
-  --><div class="last__block2">
+	</div>
+
+	<div class="last__block2">
     <ul class="last__list">
-      <li><a href="mailto:info@openaccess-germany.de?subject={PAGE_TITLE}" title="{f:translate(key:'sendEmail', extensionName: 'tmpl_ipoa')}" class="last__link"><i class="fa fa-fw fa-lg fa-comment-o"></i> {f:translate(key:'commentContent', extensionName: 'tmpl_ipoa')}</a></li>
+      <li><a href="mailto:{MAILTO}?subject={PAGE_TITLE}" title="{f:translate(key:'sendEmail', extensionName: 'tmpl_ipoa')}" class="last__link"><i class="fa fa-fw fa-lg fa-comment-o"></i> {f:translate(key:'commentContent', extensionName: 'tmpl_ipoa')}</a></li>
       <li><a href="#top" title="{f:translate(key:'toTop', extensionName: 'tmpl_ipoa')}" class="last__link"><i class="fa fa-fw fa-lg fa-arrow-up"></i> {f:translate(key:'toTop', extensionName: 'tmpl_ipoa')}</a></li>
     </ul>
   </div>

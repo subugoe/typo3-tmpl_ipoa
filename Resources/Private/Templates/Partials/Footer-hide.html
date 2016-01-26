@@ -1,3 +1,5 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
 <div class="footer-hide">
 	<div class="footer-hide__content">
 		<div class="footer">
@@ -10,7 +12,18 @@
 			--></div>
 		<div class="tracking">
 			<div class="tracking__content">
-				<p><a href="/impressum#piwik-optout" class="tracking__link"><svg class="fa-icon fa-icon-toggle-on fa-icon--xs"><use xlink:href="#icon-toggle-on"></use></svg> {f:translate(key:'optOut', extensionName: 'tmpl_ipoa')}</a></p>
+				<p>
+					<v:condition.string.isNumeric value="{IMPRESSUM_UID}">
+						<f:then>
+							<f:link.page pageUid="{IMPRESSUM_UID}#piwik-optout" class="tracking__link">
+								<svg class="fa-icon fa-icon-toggle-on fa-icon--xs">
+									<use xlink:href="#icon-toggle-on"></use>
+								</svg>
+								{f:translate(key:'optOut', extensionName: 'tmpl_ipoa')}
+							</f:link.page>
+						</f:then>
+					</v:condition.string.isNumeric>
+				</p>
 			</div>
 		</div>
 	</div>
