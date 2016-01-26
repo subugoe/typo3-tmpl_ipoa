@@ -33,6 +33,9 @@ lib.ids {
 	UEBERUNS_TITLE = TEXT
 	UEBERUNS_TITLE.value = {$ids.ueberUns.title}
 
+	MAILTO = TEXT
+	MAILTO.value = {$ids.mailto}
+
 	SEARCH_UID = TEXT
 	SEARCH_UID.value = {$ids.search}
 
