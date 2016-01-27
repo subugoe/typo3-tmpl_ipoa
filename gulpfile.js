@@ -67,3 +67,4 @@ function color(string, color) {
 }
 
 gulp.task('default', ['jshint', 'sasslint', 'sass'], function() {});
+gulp.task('server', ['sass'], function() {});
