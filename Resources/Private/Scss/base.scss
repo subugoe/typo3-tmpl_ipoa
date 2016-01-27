@@ -1,91 +1,81 @@
-// scss-lint:disable PropertySpelling
-/**
- * .body
- */
 .body {
-	text-rendering: optimizeLegibility;
-	font-family: 'Open Sans', sans-serif;
-	font-size: $inuit-base-font-size;
-	font-style: normal;
-	font-synthesis: none;
-	font-weight: 100;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-size: $inuit-base-font-size;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  // scss-lint:disable PropertySpelling
+  font-synthesis: none; // Firefox only: https://developer.mozilla.org/de/docs/Web/CSS/font-synthesis
+  // scss-lint:enable PropertySpelling
+  font-weight: 100;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
 }
 
-/**
- * .image
- */
 .image {
-	width: 100%;
+  width: 100%;
 }
 
-/**
- * blockquote
- */
 blockquote {
-	// font-style: italic;
-	margin-left: $content-padding--phone * 2;
-	margin-top: $content-padding--phone * 2;
-	margin-bottom: $content-padding--phone * 4;
+  margin-bottom: $content-padding--phone * 4;
+  margin-left: $content-padding--phone * 2;
+  margin-top: $content-padding--phone * 2;
 
-	@include media-query('tablet') { margin-left: $content-padding--tablet; }
+  @include media-query("tablet") {
+    margin-left: $content-padding--tablet;
+  }
 
-	@include media-query('notebook') { margin-left: $content-padding--notebook / 2; }
+  @include media-query("notebook") {
+    margin-left: $content-padding--notebook / 2;
+  }
 
-	@include media-query('desk') { margin-left: $content-padding--desk / 4; }
+  @include media-query("desk") {
+    margin-left: $content-padding--desk / 4;
+  }
 
-	@include media-query('huge') { margin-left: $content-padding--desk / 4; }
+  @include media-query("huge") {
+    margin-left: $content-padding--desk / 4;
+  }
 
+  &:before {
+    font-weight: bold;
+    margin-left: -10px;
+    margin-right: 2px;
+  }
 
-	&:before {
-		//content: '„';
-		font-weight: bold;
-		margin-left: -10px;
-		margin-right: 2px;
-	}
-
-	&:after {
-		//content: '“';
-		font-weight: bold;
-		margin-left: 2px;
-		margin-right: -8px;
-	}
+  &:after {
+    font-weight: bold;
+    margin-left: 2px;
+    margin-right: -8px;
+  }
 }
 
-/**
- * sub, sup
- */
 sub,
 sup {
-	&:before {
-		content: '';
-		margin-left: 2px;
-	}
+  &:before {
+    content: "";
+    margin-left: 2px;
+  }
 
-	&:after {
-		content: '';
-		margin-right: 2px;
-	}
+  &:after {
+    content: "";
+    margin-right: 2px;
+  }
 }
 
-/**
- * a
- */
 a {
-	color: $link-color--default;
+  color: $link-color--default;
 }
 
 a,
 textarea,
 input {
-	outline: none;
+  outline: none;
 }
 
 h1,
 h2,
 h3,
 h4 {
-	font-weight: initial;
+  font-weight: initial;
 }

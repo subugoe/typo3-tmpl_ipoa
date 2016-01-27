@@ -1,185 +1,136 @@
-// scss-lint:disable NameFormat
-/**
- * .start
- */
 .start {
-	background: url('../Images/bg-1.jpg') no-repeat center center fixed;
-	background-size: cover;
-	height: 100vh;
-	min-height: 100%;
+  background: url("../Images/bg-1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  min-height: 100%;
+
+  nav a {
+    border: none;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
 }
 
-/**
- * .start__header
- */
-.start__header { @extend %ic-layout; }
+.start__header {
+  @extend %ic-layout;
+}
 
-/**
- * .start__logo
- */
 .start__logo {
-	@extend %ic-layout__item;
-	@extend .ic-tablet-and-up-one-half;
-	@extend .ic-layout--center;
+  @extend %ic-layout__item;
+  @extend .ic-tablet-and-up-one-half;
+  @extend %ic-layout--center;
 
-	margin: 20vh 0 0;
+  margin: 20vh 0 0;
 
-	@include media-query('tablet-and-up') {
-		text-align: right;
-		padding-right: 4vh;
-	}
+  @include media-query("tablet-and-up") {
+    padding-right: 4vh;
+    text-align: right;
+  }
 
-	.image {
-		max-width: 300px;
-	}
+  .image {
+    max-width: 300px;
+  }
 }
 
-/**
- * .start__title
- */
 .start__title {
-	@extend %ic-layout__item;
-	@extend .ic-tablet-and-up-one-half;
-	@extend .ic-layout--center;
-	font-size: 1.8em;
-	display: none;
+  @extend %ic-layout__item;
+  @extend .ic-tablet-and-up-one-half;
+  @extend %ic-layout--center;
+  display: none;
+  font-size: 1.8em;
 
-	@include media-query('tablet-and-up') {
-		display: inline-block;
-		text-align: left;
-		padding: 23vh 0 0 3vh;
-	}
+  @include media-query("tablet-and-up") {
+    display: inline-block;
+    padding: 23vh 0 0 3vh;
+    text-align: left;
+  }
 }
 
-/**
- * .start__main
- */
 .start__main {
-	@extend %ic-layout__item;
-	@extend %ic-layout--center;
-	padding: 2vh 0 0;
+  @extend %ic-layout__item;
+  @extend %ic-layout--center;
+  padding: 2vh 0 0;
 }
 
-/**
- * .start__navigation
- */
 .start__navigation { @extend %ic-layout--center; }
 
-/**
- * .start__links
- */
 .start__links {
-	@extend %ic-layout__item;
-	@extend .ic-smaller-than-tablet-two-thirds;
-	@extend .ic-tablet-and-up-three-quarters;
-	@extend .ic-mt--;
-	text-align: right;
+  @extend %ic-layout__item;
+  @extend .ic-smaller-than-tablet-two-thirds;
+  @extend .ic-tablet-and-up-three-quarters;
+  @extend .ic-mt--;
+  text-align: right;
 
-	@include media-query('tablet-and-up') { text-align: left; }
+  @include media-query("tablet-and-up") {
+    text-align: left;
+  }
 }
 
-/**
- * .start__link
- * 1. give the icon a little bit more space to top
- * 2. these links are not allowed to break into a new line
- */
+// 1. give the icon a little bit more space to top
+// 2. these links are not allowed to break into a new line
 .start__link {
-	@extend %link--default;
-	@extend %start__link--on-bright;
-	@extend %nobr; // 2.
-	padding: 7px 5px 5px; // 1.
-	&:hover,
-	&:focus {
-		@extend %link--on-bright;
+  @extend %link--default;
+  @extend %start__link--on-bright;
+  @extend %link--with-icon-on-bright;
+  @extend %link--on-bright;
+  @extend %nobr; // 2.
+  border: none;
+  padding: 7px;
 
-		svg {
-			color: $color--brightest;
-			fill: currentColor;
-		}
+  &:hover,
+  &:focus {
+    @extend %link--on-bright;
 
-	}
+    svg {
+      color: $color--brightest;
+      fill: currentColor;
+    }
 
-	&:active svg { color: $color--darkest; }
+  }
+
+  &:active svg {
+    color: $color--darkest;
+  }
 }
 
-/**
- * .start__link--active
- */
 .start__link--active {
-	background-color: $color--darkest;
-	color: $color--brightest;
+  background-color: $color--darkest;
+  color: $color--brightest;
 }
 
-/**
- * .start__list
- * 1. LIs are inline
- * 2. UL is inline
- */
+// 1. LIs are inline
+// 2. UL is inline
 .start__list {
-	@extend %ic-list-bare;
-	@extend %ic-list-inline; // 1.
-	display: inline; // 2.
+  @extend %ic-list-bare;
+  @extend %ic-list-inline; // 1.
+  display: inline; // 2.
 }
 
 .start__footer-content {
-	text-align: center;
+  text-align: center;
 }
 
-
-/**
- * .start__button
- */
 .start__button {
-	@extend %ic-btn;
-	@extend %border--big;
-	@extend %text--large;
-	@extend %text--bold;
-	background-color: $color--brightest;
-	color: $color--darkest;
-	margin: 5px;
+  @extend %ic-btn;
+  @extend %border--big;
+  @extend %text--large;
+  @extend %text--bold;
+  background-color: $color--brightest;
+  color: $color--darkest;
+  margin: 5px;
 
-	&:hover,
-	&:active,
-	&:focus {
-		background-color: darken($color--brightest, 15%);
-		color: $color--darkest;
-	}
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($color--brightest, 15%);
+    color: $color--darkest;
+  }
 }
 
-.start nav a {
-	border: 0;
-
-	&:hover {
-		background-color: transparent;
-	}
-}
-/**
- * .start__footer
- */
 .start__footer {
-	@extend %ic-layout;
-	@extend %ic-layout--flush;
-	margin-top: 20px;
-}
-
-/**
- * .start__list
- * 1. LIs are inline
- * 2. UL is inline
- */
-.start__list {
-	@extend %ic-list-bare;
-	@extend %ic-list-inline; // 1.
-	display: inline; // 2.
-}
-
-/**
- * .start__link
- */
-.start__link {
-	@extend %link--default;
-	@extend %link--with-icon-on-bright;
-	@extend %link--on-bright;
-	padding: 7px;
-	border: 0;
+  @extend %ic-layout;
+  @extend %ic-layout--flush;
+  margin-top: 20px;
 }

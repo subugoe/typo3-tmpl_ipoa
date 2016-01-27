@@ -1,237 +1,209 @@
-// scss-lint:disable NameFormat
-/**
- * .menu
- */
 .menu {
-	@extend %ic-layout;
-	@extend .ic-pt;
-	@extend .ic-pb;
+  @extend %ic-layout;
+  @extend .ic-pt;
+  @extend .ic-pb;
 
-	@include responsive-content-padding();
+  @include responsive-content-padding();
 
-	display: none;
-	z-index: 99;
+  display: none;
+  z-index: 99;
 }
 
-/**
- * .no-js .menu
- * JS Fallback
- * always show the menu if user has no JS.
- */
+// JS Fallback
+// always show the menu if user has no JS.
 .no-js .menu {
-	display: block;
+  display: block;
 }
 
-/**
- * .menu__button
- */
 .menu__button {
-	padding: 5px;
-	border-radius: $border-radius--large;
-	background: transparent;
-	border: 1px solid transparent;
-	color: $color--darkest;
-	text-decoration: none;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: $border-radius--large;
+  color: $color--darkest;
+  padding: 5px;
+  text-decoration: none;
 
-	&:hover,
-	&:focus {
-		background-color: $color-ipoa-green;
-		color: $color--brightest;
+  &:hover,
+  &:focus {
+    background-color: $color-ipoa-green;
+    color: $color--brightest;
 
-		svg {
-			color: $color--brightest;
-			fill: currentColor;
-		}
-	}
+    svg {
+      color: $color--brightest;
+      fill: currentColor;
+    }
+  }
 
-	&:active {
-		background-color: $color-ipoa-yellow;
-		color: $color--darkest;
+  &:active {
+    background-color: $color-ipoa-yellow;
+    color: $color--darkest;
 
-		svg { color: $color--darkest; }
-	}
+    svg { color: $color--darkest; }
+  }
 }
 
-/**
- * .menu__column
- * formats every menu section to appear and behave like a column e. g. have many
- * menu sections side by side in various breakpoint viewports
- */
+// formats every menu section to appear and behave like a column e. g. have many
+// menu sections side by side in various breakpoint viewports
 .menu__column {
-	@extend %ic-layout__item;
-	@extend .ic-pb-;
-	background-color: #fff;
+  @extend %ic-layout__item;
+  @extend .ic-pb-;
+  background-color: $color--brightest;
 
-	@include media-query('smaller-than-tablet') { padding-left: 5px; }
+  @include media-query("smaller-than-tablet") {
+    padding-left: 5px;
+  }
 }
 
-/**
- * .menu__list
- * formats menu__list to be a list without list-style-type
- */
-.menu__list { @extend %ic-list-bare; }
+// formats menu__list to be a list without list-style-type
+.menu__list {
+  @extend %ic-list-bare;
 
-/**
- * .menu__list--indented
- */
+  span {
+    border-radius: 3px;
+    float: left;
+    margin-left: -10px;
+    margin-right: .2em;
+    padding: 3px;
+    text-align: center;
+    width: 20px;
+
+    &:hover,
+    &:focus {
+      background: $color-ipoa-green;
+      color: $color--brightest;
+    }
+
+    &:active {
+      background: $color-ipoa-yellow;
+      color: $color--darkest;
+    }
+
+    svg {
+      margin-bottom: -3px;
+    }
+  }
+}
+
 .menu__list--indented {
-	@extend .menu__list;
-	margin-left: $inuit-base-spacing-unit;
+  @extend .menu__list;
+  margin-left: $inuit-base-spacing-unit;
 }
 
-/**
- * .menu__link
- * define how links in the menu appear
- */
+// define how links in the menu appear
 .menu__link {
-	@extend %link-in-linklist;
-	@extend %link-in-linklist--dense;
-	@extend %link--block;
-	color: $color--darkest;
+  @extend %link-in-linklist;
+  @extend %link-in-linklist--dense;
+  @extend %link--block;
+  color: $color--darkest;
 
-	&:before { margin-left: -17px; }
+  &:before {
+    margin-left: -17px;
+  }
 
-	&:hover,
-	&:focus {
-		color: $color--brightest;
-		background: $color-ipoa-green;
-	}
+  &:hover,
+  &:focus {
+    background: $color-ipoa-green;
+    color: $color--brightest;
+  }
 
-	&:active {
-		color: $color--darkest;
-		background: $color-ipoa-yellow;
-	}
+  &:active {
+    background: $color-ipoa-yellow;
+    color: $color--darkest;
+  }
 }
 
-/**
- * .menu__link--active
- * modifier that defines how a menu link looks like if the page the link would
- * lead to is the current page
- */
+// modifier that defines how a menu link looks like if the page the link would
+// lead to is the current page
 .menu__link--active {
-	color: $color--darkest;
-	background: $color-ipoa-yellow;
+  background: $color-ipoa-yellow;
+  color: $color--darkest;
 }
 
-.menu__list span {
-	float: left;
-	width: 20px;
-	margin-right: .2em;
-	margin-left: -10px;
-	padding: 3px;
-	border-radius: 3px;
-	text-align: center;
-
-	&:hover,
-	&:focus {
-		color: $color--brightest;
-		background: $color-ipoa-green;
-	}
-
-	&:active {
-		color: $color--darkest;
-		background: $color-ipoa-yellow;
-	}
-
-	svg {
-		margin-bottom: -3px;
-	}
-}
-
-/**
- * .menu__link--has-children
- */
 .menu__link--has-children {
-	display: inline-block;
-	margin-left: .1em;
-        max-width: 90%;
-	&:before {
-		margin-left: 0;
-		background-image: none;
-		width: 0;
-	}
+  display: inline-block;
+  margin-left: .1em;
+  max-width: 90%;
+
+  &:before {
+    background-image: none;
+    margin-left: 0;
+    width: 0;
+  }
 }
 
-/**
- * .alt-menu
- */
 .alt-menu {
-	@extend .ic-layout__item;
-	padding-top: 12px !important;
-	@extend .ic-pb;
-	background-color: #fff;
+  @extend %ic-layout__item;
+  @extend .ic-pb;
+  padding-top: 12px !important;
+  background-color: $color--brightest;
 
-	@include responsive-content-padding();
+  @include responsive-content-padding();
 
-	z-index: 99;
+  z-index: 99;
+
+  .head__list {
+    @extend .ic-mb;
+    display: block;
+    text-align: center;
+
+    @include media-query("phone-and-up") {
+      display: none;
+    }
+  }
+
+  .head__language-links .head__list {
+    text-align: left;
+  }
 }
 
-/**
- * .alt-menu--off-canvas
- * a modifier that moves the alt-menu off canvas
- */
+// a modifier that moves the alt-menu off canvas
 .alt-menu--off-canvas {
-	position: fixed;
-	top: 0;
-	height: 100%;
-	width: 30%;
-	padding: 0;
-	transform: translateX(-100%);
-	-webkit-transform: translateX(-100%);
-	-ms-transform: translateX(-100%);
-}
-
-.alt-menu .head__list {
-	@extend .ic-mb;
-	text-align: center;
-	display: block;
-
-	@include media-query('phone-and-up') {
-		display: none;
-	}
-}
-
-.alt-menu .head__language-links .head__list {
-	text-align: left;
+  height: 100%;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  transform: translateX(-100%);
+  width: 30%;
 }
 
 .alt-menu__close-button-wrap {
-	@include media-query('notebook-and-up') {
-		text-align: right;
-	}
+  padding-bottom: 10px;
+  padding-right: 24px;
+  padding-top: 2px;
 
-	padding-right: 24px;
-	padding-bottom: 10px;
-	padding-top: 2px;
+  @include media-query("notebook-and-up") {
+    text-align: right;
+  }
 }
 
 .alt-menu__close-button {
-	padding: 5px;
-	border-radius: $border-radius--default;
-	background: transparent;
-	border: 1px solid transparent;
-	text-decoration: none;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: $border-radius--default;
+  padding: 5px;
+  text-decoration: none;
 
-	&:hover,
-	&:focus {
-		background-color: $color-ipoa-green;
-		color: $color--brightest;
+  &:hover,
+  &:focus {
+    background-color: $color-ipoa-green;
+    color: $color--brightest;
 
-		svg {
-			color: $color--brightest;
-			fill: currentColor;
-		}
-	}
+    svg {
+      color: $color--brightest;
+      fill: currentColor;
+    }
+  }
 
-	&:active {
-		background-color: $color-ipoa-yellow;
-		color: $color--darkest;
+  &:active {
+    background-color: $color-ipoa-yellow;
+    color: $color--darkest;
 
-		svg { color: $color--darkest; }
-	}
-
+    svg {
+      color: $color--darkest;
+    }
+  }
 }
 
 .toggle-menu {
-	cursor: pointer;
+  cursor: pointer;
 }
