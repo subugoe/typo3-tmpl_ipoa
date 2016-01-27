@@ -1,4 +1,8 @@
 ##### MENU #####
+[globalVar = TSFE:id = {$ids.error}]
+lib.mainMenu = TEXT
+lib.mainMenu.value =
+[else]
 lib.mainMenu = HMENU
 lib.mainMenu {
 	expAll = 1
@@ -51,3 +55,4 @@ lib.mainMenu {
 	4 < .3
 	5 < .3
 }
+[end]
