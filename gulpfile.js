@@ -13,7 +13,7 @@ var autoprefixer = require('gulp-autoprefixer');
 
 // JS hint task
 gulp.task('jshint', function() {
-  gulp.src('./Resources/Public/Javascript/*.js')
+  gulp.src('./Resources/Public/Javascript/ipoa.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });

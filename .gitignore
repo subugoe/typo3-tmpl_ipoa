@@ -18,3 +18,5 @@
 /typo3temp/
 bower_components
 node_modules
+
+Resources/Public/Css/style.css

@@ -1,0 +1,20 @@
+; editorconfig.org
+root = true
+
+[*.js]
+charset = utf-8
+end_of_line = lf
+# spaces as indent so that there is no mix with spaces and tabs
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+insert_final_newline = false
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.rst]
+trim_trailing_whitespace = false
+
+[*.yml]
+indent_style = space
