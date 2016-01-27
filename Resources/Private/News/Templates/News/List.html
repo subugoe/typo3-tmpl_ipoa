@@ -11,13 +11,11 @@
 			<f:if condition="{contentObjectData.colPos} == 0"><!-- Hauptspalte -->
 				<f:then>
 					<div class="main__textblock">
-						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
-							<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+							<f:for each="{news}" as="newsItem" iteration="iterator">
 								<ul>
 									<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
 								</ul>
 							</f:for>
-						</n:widget.paginate>
 						<div>
 							 <f:link.page pageUid="{settings.newsArchivePid}">{f:translate(key:'newsArchive', extensionName: 'tmpl_ipoa')}</f:link.page>
 						</div>
