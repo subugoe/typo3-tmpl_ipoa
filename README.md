@@ -24,6 +24,7 @@ It consists of two different layouts for start page and content pages.
 		*   Definitions for the design and the menu of the page as its logo, its header.
 			Special pages are also defined like the ids of start, kontakt, impressum, news, ueberUns, error and search.
 			Here are also the definitions of the backend layouts.
+			```
 				ids {
 					header_title = Open Access
 					header_claim = Open Access to <br />Scientific Information
@@ -43,13 +44,17 @@ It consists of two different layouts for start page and content pages.
 					}
 				}
 				baseURL = http://open-access.net
+			```
 	*   Setup:
+		```
 			<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/tmpl_ipoa/Configuration/TypoScript/Static/setup.txt">
 			<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/be_ipoa/Configuration/TypoScript/Static/setup.txt">
+		```
 *   Template for start page:
 	*   Constants
 		You can display up to three buttons on the start page. Therefore you have to define their pids as well as their text.
 		If you empty one buttons uid, it will not be displayed.
+		```
 			ids {
 				startbutton_1 = 210
 				startbutton_1.title = Some information
@@ -57,10 +62,14 @@ It consists of two different layouts for start page and content pages.
 				startbutton_2.title = More information
 				startbutton_3 >
 			}
+		```
 			
 ## Build and development requirements
 You need to have several build tools installed and run gulp to create css and lint js and scss files
-	$ sudo gem install bundler
-	$ bundler install
-	$ npm install
-	$ gulp
+	```
+		$ sudo gem install bundler
+		$ bundler install
+		$ npm install
+		$ gulp
+	
+	```
