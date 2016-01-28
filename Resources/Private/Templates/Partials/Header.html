@@ -56,14 +56,18 @@
 					</li>
 				</f:then>
 			</v:condition.string.isNumeric>
-			<li>
-				<a href="#search" title="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}" class="head__link" tabindex="2">
-					<svg class="fa-icon fa-icon-search fa-icon--s">
-						<use xlink:href="#icon-search"></use>
-					</svg>
-					<span class="hidden-sub-notebook"> {f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
-				</a>
-			</li>
+			<v:condition.string.isNumeric value="{SEARCH_UID}">
+				<f:then>
+					<li>
+						<a href="#search" title="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}" class="head__link" tabindex="2">
+							<svg class="fa-icon fa-icon-search fa-icon--s">
+								<use xlink:href="#icon-search"></use>
+							</svg>
+							<span class="hidden-sub-notebook"> {f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
+						</a>
+					</li>
+				</f:then>
+			</v:condition.string.isNumeric>
 			<f:if condition="{LANGMENU}=='0'">
 				<f:then></f:then>
 				<f:else>
