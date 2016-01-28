@@ -1,9 +1,9 @@
 IPOA Template
 ======================
 
-> Template for IPOA homepage
-> Consists of two different layouts for start page and content pages.
- (To be able to switch between layouts, you have to configure a backend layout for the startpage in the backend)
+Template for IPOA homepage
+It consists of two different layouts for start page and content pages.
+(To be able to switch between layouts, you have to configure a backend layout for the startpage in the backend)
 
 # Requirements
 
@@ -66,7 +66,7 @@ IPOA Template
 			}
 			```
 			
-## Build Requirements
+## Build and development requirements
 You need to have several build tools installed and run gulp to create css and lint js and scss files
 ``` 
 	$ sudo gem install bundler
