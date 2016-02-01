@@ -35,6 +35,8 @@ lib.ids {
 
 	MAILTO = TEXT
 	MAILTO.value = {$ids.mailto}
+	MAILTO_HASH = TEXT
+	MAILTO_HASH.value = {$ids.mailto_hash}
 
 	SEARCH_UID = TEXT
 	SEARCH_UID.value = {$ids.search}
