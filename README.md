@@ -2,7 +2,9 @@ IPOA Template
 ======================
 
 Template for IPOA homepage.
+
 It consists of two different layouts for start page and content pages.
+
 (To be able to switch between layouts, you have to configure a backend layout for the startpage in the backend)
 
 # Requirements

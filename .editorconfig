@@ -18,3 +18,13 @@ trim_trailing_whitespace = false
 
 [*.yml]
 indent_style = space
+
+[*.html]
+indent_style = tab
+indent_size = 4
+
+[*.ts]
+indent_style = tab
+indent_size = 4
+
+

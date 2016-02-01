@@ -123,3 +123,4 @@ plugin.tx_news {
 		widget.Tx_News_ViewHelpers_Widget_PaginateViewHelper.templateRootPath = EXT:tmpl_ipoa/Resources/Private/News/Templates/
 	}
 }
+

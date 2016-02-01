@@ -9,7 +9,7 @@ page.headerData.111.value (
 
 
 page.headerData.112 = TEXT
-[globalString = ENV:HTTPS=on]
+[globalString = ENV:HTTPS = on]
 page.headerData.112.value (
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 )
