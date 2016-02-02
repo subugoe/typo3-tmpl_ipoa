@@ -61,6 +61,7 @@ plugin.tx_solr {
 			submit = Suchen
 			no_results_nothing_found = Keine Treffer für "@searchWord" gefunden.
 			results_per_page = Treffer pro Seite
+			searchUnavailable = Suche momentan nicht möglich.
 		}
 		AT-DE {
 			results_found = Es wurden @resultsTotal Treffer gefunden
@@ -77,6 +78,7 @@ plugin.tx_solr {
 			submit = Suchen
 			no_results_nothing_found = Keine Treffer für "@searchWord" gefunden.
 			results_per_page = Treffer pro Seite
+			searchUnavailable = Suche momentan nicht möglich.
 		}
 		DE-EN {
 			results_found = @resultsTotal results where found

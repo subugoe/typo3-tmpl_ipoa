@@ -26,7 +26,9 @@
 							<input type="submit" value="{f:translate(key:'solrSearch', extensionName: 'tmpl_ipoa')}" class="search__button tx-solr-submit">
 						</div>
 					</form>
-					<p class="paragraph">{f:translate(key:'usePageWideSearch', extensionName: 'tmpl_ipoa')}</p>
+					<p class="paragraph">{f:translate(key:'usePageWideSearch',
+						extensionName: 'tmpl_ipoa',
+						arguments:{0:'{SEARCH_PROJECT}'})}</p>
 				</div>
 			</div>
 		</div>

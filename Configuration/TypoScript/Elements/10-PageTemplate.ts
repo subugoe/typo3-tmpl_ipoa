@@ -41,6 +41,9 @@ lib.ids {
 	SEARCH_UID = TEXT
 	SEARCH_UID.value = {$ids.search}
 
+	SEARCH_PROJECT = TEXT
+	SEARCH_PROJECT.data = getIndpEnv:HTTP_HOST
+
 	STARTBUT_1_UID = TEXT
 	STARTBUT_1_UID {
 		if.isTrue = {$ids.startbutton_1}
