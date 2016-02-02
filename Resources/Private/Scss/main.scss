@@ -34,7 +34,6 @@
 
     @include media-query("phone") { padding-left: $inuit-base-line-height / 2; }
 
-    ul {
       margin-bottom: 0 !important;
 
       li:before {
@@ -45,11 +44,10 @@
         display: inline-block;
         height: 1em;
         margin-bottom: $shift-chevron-before-content;
-        margin-left: -15px;
+        margin-left: -20px;
         margin-right: 4px;
         width: 12px;
       }
-    }
 
     a {
       @extend %link--default;
