@@ -52,7 +52,7 @@
 				<source>Suchen</source>
 			</trans-unit>
 			<trans-unit id="usePageWideSearch" approved="yes" xml:space="preserve">
-			<source>Benutzen Sie die Suche, um weitere interessante Inhalte der Informationsplattform open-access.net zu finden.</source>
+			<source>Benutzen Sie die Suche, um weitere interessante Inhalte auf %1$s zu finden.</source>
 			</trans-unit>
 			<trans-unit id="oaAtTwitter" approved="yes" xml:space="preserve">
 				<source>#openaccess bei Twitter</source>
