@@ -43,9 +43,24 @@
 	</div>
 
 	<div class="last__block2">
-    <ul class="last__list">
-      <li><a href="mailto:{MAILTO}?subject={PAGE_TITLE}" title="{f:translate(key:'sendEmail', extensionName: 'tmpl_ipoa')}" class="last__link"><i class="fa fa-fw fa-lg fa-comment-o"></i> {f:translate(key:'commentContent', extensionName: 'tmpl_ipoa')}</a></li>
-      <li><a href="#top" title="{f:translate(key:'toTop', extensionName: 'tmpl_ipoa')}" class="last__link"><i class="fa fa-fw fa-lg fa-arrow-up"></i> {f:translate(key:'toTop', extensionName: 'tmpl_ipoa')}</a></li>
-    </ul>
-  </div>
+		<ul class="last__list">
+			<v:condition.string.contains haystack="{MAILTO}" needle="ids.mailto">
+				<f:then>
+				</f:then>
+				<f:else>
+					<v:condition.string.contains haystack="{MAILTO_HASH}" needle="ids.mailto_hash">
+						<f:then></f:then>
+						<f:else>
+							<a href="mailto:{MAILTO}?subject={MAILTO_HASH}: {PAGE_TITLE}" title="{f:translate(key:'sendEmail', extensionName: 'tmpl_ipoa')}" class="last__link"><i class="fa fa-fw fa-lg fa-comment-o"></i>
+								{f:translate(key:'commentContent', extensionName: 'tmpl_ipoa')}</a>
+							</li>
+						</f:else>
+					</v:condition.string.contains>
+				</f:else>
+			</v:condition.string.contains>
+			<li>
+				<a href="#top" title="{f:translate(key:'toTop', extensionName: 'tmpl_ipoa')}" class="last__link"><i class="fa fa-fw fa-lg fa-arrow-up"></i>
+					{f:translate(key:'toTop', extensionName: 'tmpl_ipoa')}</a></li>
+		</ul>
+	</div>
 </div>

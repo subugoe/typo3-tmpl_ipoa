@@ -64,7 +64,7 @@
 				<v:condition.string.isNumeric value="{UEBERUNS_UID}">
 					<f:then>
 						<li>
-							<v:condition.string.contains haystack='{UEBERUNS_TITLE}' needle='ids.ueberUns'>
+							<v:condition.string.contains haystack="{UEBERUNS_TITLE}" needle="ids.ueberUns">
 								<f:then>
 									<f:link.page pageUid="{UEBERUNS_UID}" title="{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}" class="start__link">
 										<svg class="fa-icon fa-icon-smile-o fa-icon--s fa-icon-on-bright">
