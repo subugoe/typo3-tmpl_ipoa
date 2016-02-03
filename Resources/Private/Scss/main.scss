@@ -129,6 +129,10 @@
   h2+div h3:first-child {
     margin-top: 8px;
   }
+
+  .results-highlight {
+    background-color: #eee;
+  }
 }
 
 @include media-query("desk-and-up") {
