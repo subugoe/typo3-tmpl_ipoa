@@ -133,8 +133,6 @@ lib.contentpage {
 	variables < lib.ids
 	variables {
 
-		MENU < lib.mainMenu
-
 		CUR_LANGUAGE < sys_language_uid
 
 		PAGE_TITLE = TEXT
@@ -164,8 +162,6 @@ lib.oatage {
 	file = EXT:tmpl_ipoa/Resources/Private/Templates/OAtage.html
 	variables < lib.ids
 	variables {
-
-		MENU < lib.mainMenu
 
 		CUR_LANGUAGE < sys_language_uid
 
