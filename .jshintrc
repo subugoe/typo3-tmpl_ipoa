@@ -7,7 +7,7 @@
   "forin": true,
   "immed": true,
   "latedef": "nofunc",
-  "maxlen": 90,
+  "maxlen": 95,
   "newcap": true,
   "noarg": true,
   "noempty": true,
