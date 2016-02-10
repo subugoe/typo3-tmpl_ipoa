@@ -16,7 +16,9 @@
     > div {
       @extend %caption;
 
-      @include media-query("desk-and-up") { text-align: right; }
+      @include media-query("desk-and-up") {
+        text-align: right;
+      }
     }
   }
 
@@ -32,22 +34,24 @@
     @extend %m--default;
     padding-left: $inuit-base-line-height;
 
-    @include media-query("phone") { padding-left: $inuit-base-line-height / 2; }
+    @include media-query("phone") {
+      padding-left: $inuit-base-line-height / 2;
+    }
 
-      margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
 
-      li:before {
-        background-image: url("../Images/angle-right.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        content: "";
-        display: inline-block;
-        height: 1em;
-        margin-bottom: $shift-chevron-before-content;
-        margin-left: -20px;
-        margin-right: 4px;
-        width: 12px;
-      }
+    li:before {
+      background-image: url("../Images/angle-right.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+      display: inline-block;
+      height: 1em;
+      margin-bottom: $shift-chevron-before-content;
+      margin-left: -20px;
+      margin-right: 4px;
+      width: 12px;
+    }
 
     a {
       @extend %link--default;
@@ -64,7 +68,9 @@
     @extend %heading--beta;
     line-height: round($inuit-base-line-height / .65);
 
-    @include media-query("desk-and-up") { text-align: right; }
+    @include media-query("desk-and-up") {
+      text-align: right;
+    }
 
     > div > ul {
       padding-left: 0;
@@ -126,12 +132,12 @@
     }
   }
 
-  h2+div h3:first-child {
+  h2 + div h3:first-child {
     margin-top: 8px;
   }
 
   .results-highlight {
-    background-color: #eee;
+    background-color: $color-block-background--on-bright;
   }
 }
 
