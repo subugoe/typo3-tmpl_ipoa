@@ -181,11 +181,11 @@ jQuery(function() {
 	var altMenuToggleButton = jQuery('.js-alt-menu-toggle-button');
 	var windowWidth = jQuery(window).width();
 
-	/* full viewport overlay when <768px width */
+	// full viewport overlay when <768px width
 	if (windowWidth <= 767) {
-		jQuery(altMenu).css({'display': 'none'})
-		/* when menu button receives click the menu will overlay everything an show
-		 an scrollable menu. Exit the menu by clicking a menu item. */
+		jQuery(altMenu).css({'display': 'none'});
+		// when menu button receives click the menu will overlay everything an show
+		// an scrollable menu. Exit the menu by clicking a menu item.
 		jQuery(altMenuToggleButton).click(function() {
 			jQuery(altMenu).css({'display': 'block'});
 			jQuery('.head-nav').hide();
@@ -199,7 +199,7 @@ jQuery(function() {
 			                           });
 		});
 
-		/* off canvas to the left when >=768px */
+		// off canvas to the left when >=768px
 	} else {
 		putMenuOffScreen();
 
@@ -361,6 +361,7 @@ jQuery(function() {
 	 * then execute function
 	 */
 	var url = createURLForAjax();
+	jQuery('.ajax-menu').html('<svg class="fa fa-spinner fa-pulse"><use xlink:href="#spinner"></use></svg>');
 	jQuery('.ajax-menu').load(url, function(response, status) {
 		if (status == 'success') {
 			if (windowWidth > 767) {
@@ -380,26 +381,21 @@ jQuery(function() {
 			 *
 			 */
 
-			/**
-			 * Configure toggle-icons (the arrows left of menu items)
-			 * every arrow-icon in the menu gets to toggle the respective submenu
-			 */
+			// Configure toggle-icons (the arrows left of menu items)
+			// every arrow-icon in the menu gets to toggle the respective submenu
 			jQuery('.toggle-menu').click(function() {
 				menuToggleChildren(this);
 			});
-			/**
-			 * detect keyboard /clicks/ on menu toggle buttons
-			 * keycode 13 = return/enter key
-			 */
+
+			// detect keyboard /clicks/ on menu toggle buttons
+			// keycode 13 = return/enter key
 			jQuery('.toggle-menu').focus().keydown(function(event) {
 				if (event.keyCode == 13) {
 					menuToggleChildren(this);
 				}
 			});
 
-			/**
-			 * when arrow is clicked, move menu up or down
-			 */
+			// when arrow is clicked, move menu up or down
 			var menu = jQuery('.js-menu');
 			var menuToggleButton = jQuery('.js-menu-toggle-button');
 			jQuery(menuToggleButton).click(function(event) {
@@ -420,11 +416,9 @@ jQuery(function() {
 			});
 
 
-			/**
-			 * hide all sub menu lists except for the current one
-			 * for no-js fallback cases they are open by default, so we have to explicitly
-			 * close them
-			 */
+			// hide all sub menu lists except for the current one
+			// for no-js fallback cases they are open by default, so we have to explicitly
+			// close them
 			jQuery('.alt-menu .menu__list--indented').hide();
 			jQuery('.fa-icon-angle-double-down')
 					.parent('span')
