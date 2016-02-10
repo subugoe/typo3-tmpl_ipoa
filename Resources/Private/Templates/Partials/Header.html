@@ -8,8 +8,7 @@
 				<use xlink:href="#icon-bars"></use>
 			</svg>
 			{f:translate(key:'menu', extensionName: 'tmpl_ipoa')}</a>
-	</div><!--
-  -->
+	</div>
 	<div class="head__links">
 		<ul class="head__list">
 			<li>
@@ -17,7 +16,9 @@
 					<svg class="fa-icon fa-icon-home fa-icon--s">
 						<use xlink:href="#icon-home"></use>
 					</svg>
-					<span class="hidden-sub-notebook"> {f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}</span>
+					<span class="hidden-sub-notebook">
+						{f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}
+					</span>
 				</f:link.page>
 			</li>
 			<v:condition.string.isNumeric value="{KONTAKT_UID}">
@@ -27,7 +28,9 @@
 							<svg class="fa-icon fa-icon-envelope fa-icon--s">
 								<use xlink:href="#icon-envelope"></use>
 							</svg>
-							<span class="hidden-sub-notebook"> {f:translate(key:'contact', extensionName: 'tmpl_ipoa')}</span>
+							<span class="hidden-sub-notebook">
+								{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}
+							</span>
 						</f:link.page>
 					</li>
 				</f:then>
@@ -39,7 +42,9 @@
 							<svg class="fa-icon fa-icon-bolt fa-icon--s">
 								<use xlink:href="#icon-bolt"></use>
 							</svg>
-							<span class="hidden-sub-notebook"> {f:translate(key:'news', extensionName: 'tmpl_ipoa')}</span>
+							<span class="hidden-sub-notebook">
+								{f:translate(key:'news', extensionName: 'tmpl_ipoa')}
+							</span>
 						</f:link.page>
 					</li>
 				</f:then>
@@ -51,7 +56,9 @@
 							<svg class="fa-icon fa-icon-sitemap fa-icon--s">
 								<use xlink:href="#icon-sitemap"></use>
 							</svg>
-							<span class="hidden-sub-notebook"> {f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}</span>
+							<span class="hidden-sub-notebook">
+								{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}
+							</span>
 						</f:link.page>
 					</li>
 				</f:then>
@@ -63,7 +70,9 @@
 							<svg class="fa-icon fa-icon-search fa-icon--s">
 								<use xlink:href="#icon-search"></use>
 							</svg>
-							<span class="hidden-sub-notebook"> {f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
+							<span class="hidden-sub-notebook">
+								{f:translate(key:'search', extensionName: 'tmpl_ipoa')}
+							</span>
 						</a>
 					</li>
 				</f:then>
@@ -103,14 +112,18 @@
 								<f:if condition="{ipoa:getLanguageFlag()}=={langmenu.flag}">
 									<f:then>
 										<li>
-											<a href="{langmenu.url}" title="" class="head__link head__link--active"><img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt="">
-												{langmenu.label}</a>
+											<a href="{langmenu.url}" title="" class="head__link head__link--active">
+												<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt="">
+												{langmenu.label}
+											</a>
 										</li>
 									</f:then>
 									<f:else>
 										<li>
-											<a href="{langmenu.url}" title="" class="head__link"><img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt="">
-												{langmenu.label}</a>
+											<a href="{langmenu.url}" title="" class="head__link">
+												<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt="">
+												{langmenu.label}
+											</a>
 										</li>
 									</f:else>
 								</f:if>
@@ -121,18 +134,19 @@
 			</f:else>
 		</f:if>
 	</div>
-</nav><!--
---><header class="head">
+</nav>
+<header class="head">
 	<div class="head__logo">
 		<v:condition.string.contains haystack="{HEADER_IMAGE}" needle="$">
 			<f:else>
 				<img src='<f:format.raw value="{HEADER_IMAGE}" />' class="image" alt="Logo"/>
 			</f:else>
 		</v:condition.string.contains>
-	</div><!--
-	-->
+	</div>
 	<div class="head__claim">
 		<f:format.raw value="{HEADER_CLAIM}"/>
-	</div><!--
-	--><div class="head__pagetitle"><h1 class="heading heading--alpha" id="pagetitle">{PAGE_TITLE}</h1></div>
+	</div>
+	<div class="head__pagetitle">
+		<h1 class="heading heading--alpha" id="pagetitle">{PAGE_TITLE}</h1>
+	</div>
 </header>

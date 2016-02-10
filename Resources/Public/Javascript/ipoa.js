@@ -183,13 +183,12 @@ jQuery(function() {
 
 	/* full viewport overlay when <768px width */
 	if (windowWidth <= 767) {
-		jQuery(altMenu).css({'display': 'none'});
-		// when menu button receives click the menu will overlay everything and show
-		// an scrollable menu. Exit the menu by clicking a menu item.
+		jQuery(altMenu).css({'display': 'none'})
+		/* when menu button receives click the menu will overlay everything an show
+		 an scrollable menu. Exit the menu by clicking a menu item. */
 		jQuery(altMenuToggleButton).click(function() {
 			jQuery(altMenu).css({'display': 'block'});
 			jQuery('.head-nav').hide();
-			// TODO: use cached jQuery('.footer-hide__helper') lookup if possible
 			jQuery('.footer-hide__helper').css({
 				                                   'margin-left': '100%',
 				                                   'position': 'fixed'
@@ -329,7 +328,9 @@ jQuery(function() {
 	 * the special button for very small viewports which resides in the nav-partial.
 	 * Because in case of search, there is no new pageload
 	 */
-	jQuery('.alt-menu__close-button').add('.js-nav-search-button').click(function() {
+	var altMenuCloseButton = jQuery('.alt-menu__close-button');
+	altMenuCloseButton.add('.js-nav-search-button');
+	altMenuCloseButton.click(function() {
 		altMenuToggleButton.removeClass('js-alt-menu-toggle-button--active');
 
 		if (windowWidth <= 767) {
@@ -346,6 +347,7 @@ jQuery(function() {
 				                           'margin-left': '0%',
 				                           'position': 'relative'
 			                           });
+			hideMenu();
 
 		} else {
 			hideMenu();
@@ -361,7 +363,9 @@ jQuery(function() {
 	var url = createURLForAjax();
 	jQuery('.ajax-menu').load(url, function(response, status) {
 		if (status == 'success') {
-			putMenuOffScreen();
+			if (windowWidth > 767) {
+				putMenuOffScreen();
+			}
 
 			// Add svg instances to svg tag
 			// It can't be done from typoscript,
