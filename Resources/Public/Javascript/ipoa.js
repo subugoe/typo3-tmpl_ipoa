@@ -108,44 +108,27 @@ jQuery(function() {
 	};
 
 	/**
-	 * handle ajax requests
+	 * create URL for ajax requests
 	 */
-	var menuData;
-	var getAjax = (function() {
-		var createURL = function() {
-			var url = window.location.protocol + '//';
-			url += window.location.hostname;
-			var pathname = window.location.pathname;
-			url += pathname;
-			url += '?type=37902';
-			return url;
-		};
-		var getData = function(url) {
-			var fillDocs = function(data) {
-				menuData = data;
-			};
-			return jQuery.ajax(url).done(function(data) {
-				fillDocs(data);
-			});
-		};
-		return {
-			'createURL': createURL,
-			'getData': getData
-		};
-	})();
+	var createURLForAjax = function() {
+		var url = window.location.protocol + '//';
+		url += window.location.hostname;
+		var pathname = window.location.pathname;
+		url += pathname;
+		url += '?type=37902';
+		return url;
+	};
 
 	/**
 	 * Style the menu so that it is still readable, but hidden
 	 */
-	var styleMenu = function() {
-
+	var putMenuOffScreen = function() {
 		// put the menu off canvas to the left
 		jQuery('.alt-menu').addClass('alt-menu--off-canvas');
 		// removes the no js option of columns side by side
 		// TODO: cache jQuery('.menu__column') lookup
 		jQuery('.menu__column').removeClass('ic-tablet-one-half');
 		jQuery('.menu__column').removeClass('ic-notebook-and-up-one-quarter');
-
 		jQuery('.menu__column').css({'padding-right': '24px',});
 	};
 
@@ -166,51 +149,8 @@ jQuery(function() {
 						.removeClass('js-active js-alt-menu-toggle-button--active');
 				hideMenu();
 			}
-
 			event.preventDefault();
 		}
-	});
-
-	/**
-	 * hide all sub menu lists except for the current one
-	 * for no-js fallback cases they are open by default, so we have to explicitly
-	 * close them
-	 */
-	jQuery('.alt-menu .menu__list--indented').hide();
-	jQuery('.fa-icon-angle-double-down')
-			.parent('span')
-			.siblings('.menu__list--indented').show();
-
-
-	/**
-	 * every arrow-icon in the menu gets to toggle the respective submenu
-	 */
-	jQuery('.toggle-menu').click(function() {
-		menuToggleChildren(this);
-	});
-
-	/**
-	 *
-	 */
-	var menu = jQuery('.js-menu');
-	var menuToggleButton = jQuery('.js-menu-toggle-button');
-
-	jQuery(menuToggleButton).click(function(event) {
-
-		if (menuToggleButton.hasClass('js-active')) {
-			// TODO: cache jQuery('html, body') lookup
-			jQuery('html,body').animate({'scrollTop': 0}, 500);
-			jQuery(menuToggleButton).removeClass('js-active');
-			jQuery(menu).slideUp();
-
-		} else {
-			// TODO: use cached jQuery('html, body') lookup if possible
-			jQuery('html,body').animate({'scrollTop': 0}, 500);
-			jQuery(menuToggleButton).addClass('js-active');
-			jQuery(menu).slideDown();
-		}
-
-		event.preventDefault();
 	});
 
 
@@ -235,7 +175,7 @@ jQuery(function() {
 	});
 
 	/**
-	 *
+	 * Configuration of the alternative menu for small viewports
 	 */
 	var altMenu = jQuery('.alt-menu');
 	var altMenuToggleButton = jQuery('.js-alt-menu-toggle-button');
@@ -262,7 +202,7 @@ jQuery(function() {
 
 		/* off canvas to the left when >=768px */
 	} else {
-		styleMenu();
+		putMenuOffScreen();
 
 		jQuery(altMenuToggleButton).click(function() {
 
@@ -296,19 +236,6 @@ jQuery(function() {
 			}
 		});
 	}
-
-	/**
-	 * detect keyboard /clicks/ on menu toggle buttons (those tiny double arrows/
-	 * angles in front of menu items)
-	 * keycode 13 = return/enter key
-	 */
-	jQuery('.toggle-menu').focus().keydown(function(event) {
-
-		if (event.keyCode == 13) {
-			menuToggleChildren(this);
-		}
-
-	});
 
 	/**
 	 * change the top menu bar according to scroll status
@@ -425,13 +352,79 @@ jQuery(function() {
 		}
 
 	});
+
 	/**
 	 * add menu per ajax
+	 * load answer of ajax-page directly into the element,
+	 * then execute function
 	 */
-	var url = getAjax.createURL();
-	jQuery.when(getAjax.getData(url)).then(function() {
-		jQuery('.ajaxMenu').html(menuData);
-		styleMenu();
-	});
+	var url = createURLForAjax();
+	jQuery('.ajax-menu').load(url, function(response, status) {
+		if (status == 'success') {
+			putMenuOffScreen();
 
+			// Add svg instances to svg tag
+			// It can't be done from typoscript,
+			// because the menu is created with a different typeNum without javascript on
+			jQuery('.toggle-menu').find('.fa-icon-angle-double-right')
+					.html('<use xlink:href="#icon-angle-double-right"></use>');
+			jQuery('.toggle-menu').find('.fa-icon-angle-double-down')
+					.html('<use xlink:href="#icon-angle-double-down"></use>');
+
+			/**
+			 * Now, that the DOM-Elements are available, their behaviour can be configured
+			 *
+			 */
+
+			/**
+			 * Configure toggle-icons (the arrows left of menu items)
+			 * every arrow-icon in the menu gets to toggle the respective submenu
+			 */
+			jQuery('.toggle-menu').click(function() {
+				menuToggleChildren(this);
+			});
+			/**
+			 * detect keyboard /clicks/ on menu toggle buttons
+			 * keycode 13 = return/enter key
+			 */
+			jQuery('.toggle-menu').focus().keydown(function(event) {
+				if (event.keyCode == 13) {
+					menuToggleChildren(this);
+				}
+			});
+
+			/**
+			 * when arrow is clicked, move menu up or down
+			 */
+			var menu = jQuery('.js-menu');
+			var menuToggleButton = jQuery('.js-menu-toggle-button');
+			jQuery(menuToggleButton).click(function(event) {
+
+				if (menuToggleButton.hasClass('js-active')) {
+					// TODO: cache jQuery('html, body') lookup
+					jQuery('html,body').animate({'scrollTop': 0}, 500);
+					jQuery(menuToggleButton).removeClass('js-active');
+					jQuery(menu).slideUp();
+
+				} else {
+					// TODO: use cached jQuery('html, body') lookup if possible
+					jQuery('html,body').animate({'scrollTop': 0}, 500);
+					jQuery(menuToggleButton).addClass('js-active');
+					jQuery(menu).slideDown();
+				}
+				event.preventDefault();
+			});
+
+
+			/**
+			 * hide all sub menu lists except for the current one
+			 * for no-js fallback cases they are open by default, so we have to explicitly
+			 * close them
+			 */
+			jQuery('.alt-menu .menu__list--indented').hide();
+			jQuery('.fa-icon-angle-double-down')
+					.parent('span')
+					.siblings('.menu__list--indented').show();
+		}
+	});
 });
