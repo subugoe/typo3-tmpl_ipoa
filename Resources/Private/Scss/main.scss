@@ -19,6 +19,36 @@
       @include media-query("desk-and-up") {
         text-align: right;
       }
+
+      a {
+        @extend %link--default;
+        @extend %link--on-bright;
+        @extend %link--underline;
+        @extend %link--underline-on-bright;
+
+        &:hover {
+          background-color: $color-ipoa-green;
+        }
+      }
+    }
+
+    a {
+      border-bottom-color: transparent;
+      border-width: 0;
+      padding: 0;
+
+      &:hover {
+        background: none;
+      }
+
+      img {
+        border: 1px dotted $color-ipoa-green;
+        border-radius: 2px;
+
+        &:hover {
+          border: 1px solid $color-ipoa-green;
+        }
+      }
     }
   }
 
@@ -114,22 +144,6 @@
 
   > ul {
     @extend %m--default;
-  }
-
-  picture a {
-    border-bottom-color: transparent;
-    border-width: 0;
-    padding: 0;
-
-    &:hover {
-      background-color: transparent;
-      border: transparent;
-    }
-
-    img {
-      border: 2px solid $color-ipoa-green;
-      border-radius: 2px;
-    }
   }
 
   h2 + div h3:first-child {
