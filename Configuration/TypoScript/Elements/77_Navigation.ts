@@ -53,3 +53,20 @@ lib.ajaxMenu {
 	5 < .3
 }
 [end]
+
+# load menu per ajax:
+# configure, that with the addition of type=37902 to any url
+# only the menu content will be served, nothing else
+ajax_api = PAGE
+ajax_api {
+	typeNum = 37902
+	config {
+		disableAllHeaderCode = 1
+		xhtml_cleaning = 0
+		admPanel = 0
+		additionalHeaders = Content-type: text/plain
+		no_cache = 1
+		debug = 0
+	}
+	10 < lib.ajaxMenu
+}
