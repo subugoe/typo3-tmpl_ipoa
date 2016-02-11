@@ -24,6 +24,12 @@ page.headerData.900.value (
 	<script src="/typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/picturefill.min.js" type="text/javascript" async></script>
 )
 
+# Einstellungen zum RSS-Feed
+page.headerData.1000 = TEXT
+page.headerData.1000.value (
+	<link rel="alternate" type="application/rss+xml" title="RSS-Feed" href="{$baseURL}{$rssLinkLang}rss-feed/" />
+)
+
 page.headerData.1027 = TEXT
 page.headerData.1027.value (
 	 <script src="/typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/ipoa.js" type="text/javascript"></script>
@@ -47,3 +53,9 @@ page.headerData.1129.value (
 	<meta name="msapplication-wide310x150logo" content="/typo3conf/ext/tmpl_ipoa/Resources/Public/Images/widetile.png" />
 	<meta name="msapplication-square310x310logo" content="/typo3conf/ext/tmpl_ipoa/Resources/Public/Images/largetile.png" />
 )
+
+# configuration for country specific redirects
+# execute userFunction in page-Object
+page = PAGE
+page.1 = USER_INT
+page.1.userFunc = user_301redirect->IPtoCountry

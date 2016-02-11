@@ -2,11 +2,23 @@ config {
 	# Add class to html-Tag
 	htmlTag_setParams = lang="de" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 
-	#add doctype
+	#add doctypedefinition to page
 	doctype = html5
 
 	absRefPrefix = /
-	no_cache = 1
+
+	# enable solr search
+	index.enable = 1
+
+	no_cache = 0
+	absRefPrefix = {$baseURL}
+	prefixLocalAnchors = all
+	simulateStaticDocuments = 0
+	tx_realurl_enable = 1
+	concatenateJs = 1
+	compressJs = 1
+	concatenateCss = 1
+	compressCss = 1
 }
 
 config {

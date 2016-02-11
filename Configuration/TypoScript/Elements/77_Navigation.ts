@@ -53,3 +53,20 @@ lib.ajaxMenu {
 	5 < .3
 }
 [end]
+
+# Fluidtemplate with different typeNum
+# with this, it is possible to get just the menu, nothing else
+# if you add type=37902 to any url
+ajax_api = PAGE
+ajax_api {
+  typeNum = 37902
+  config {
+    disableAllHeaderCode = 1
+    xhtml_cleaning = 0
+    admPanel = 0
+    additionalHeaders = Content-type: text/plain
+    no_cache = 1
+    debug = 0
+  }
+  10 < lib.ajaxMenu
+}
