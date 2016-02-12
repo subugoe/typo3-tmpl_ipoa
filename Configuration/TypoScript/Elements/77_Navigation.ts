@@ -65,7 +65,7 @@ ajax_api {
     xhtml_cleaning = 0
     admPanel = 0
     additionalHeaders = Content-type: text/plain
-    no_cache = 1
+    no_cache = 0
     debug = 0
   }
   10 < lib.ajaxMenu
