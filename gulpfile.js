@@ -10,6 +10,12 @@ var sass = require('gulp-sass');
 var scsslint = require('gulp-scss-lint');
 var autoprefixer = require('gulp-autoprefixer');
 
+// Fonts
+// copy all fonts into Css-directory
+gulp.task('fonts', function() {
+  gulp.src(['./bower_components/open-sans-fontface/fonts/**/*'])
+    .pipe(gulp.dest('./Resources/Public/Css/fonts/'));
+});
 
 // JS hint task
 gulp.task('jshint', function() {
@@ -66,5 +72,5 @@ function color(string, color) {
   return prefix + string + '\033[0m'
 }
 
-gulp.task('default', ['jshint', 'sasslint', 'sass'], function() {});
-gulp.task('server', ['sass'], function() {});
+gulp.task('default', ['jshint', 'sasslint', 'sass', 'fonts'], function() {});
+gulp.task('server', ['sass', 'fonts'], function() {});
