@@ -77,10 +77,6 @@ $inuit-enable-margins--huge: true;
 @import "../../../bower_components/inuit-spacing/trumps.spacing";
 // end - inuit CSS
 
-
-// Fonts
-@import "../../../bower_components/open-sans-fontface/sass/open-sans";
-
 $search-theme-dark: false;
 
 @import "var";
@@ -101,4 +97,3 @@ $search-theme-dark: false;
 @import "icon";
 @import "logocarousel";
 @import "print";
-
