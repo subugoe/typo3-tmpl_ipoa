@@ -10,8 +10,13 @@ $EM_CONF[$_EXTKEY] = array (
 	'title' => 'IPOA Template',
 	'description' => 'Template for IPOA web presence',
 	'category' => 'frontend',
+<<<<<<< HEAD
+	'version' => '2.5',
+	'state' => 'stable',
+=======
 	'version' => '1.0.7',
 	'state' => 'beta',
+>>>>>>> origin/master
 	'clearcacheonload' => true,
 	'author' => 'Sibylle Naegle',
 	'author_email' => 'naegle@sub.uni-goettingen.de',

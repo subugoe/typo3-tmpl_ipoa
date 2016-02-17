@@ -7,13 +7,27 @@ page.headerData.111.value (
   <meta content="width=device-width, initial-scale=1" name="viewport" />
 )
 
-page.headerData.800 = TEXT
-page.headerData.800.value (
-	<link rel="shortcut icon" href="typo3conf/ext/tmpl_ipoa/Resources/Public/Images/favicon.png" type="image/x-icon" />
+
+page.headerData.112 = TEXT
+[globalString = ENV:HTTPS = on]
+page.headerData.112.value (
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 )
+[else]
+page.headerData.112.value (
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+)
+[global]
+
 page.headerData.900 = TEXT
 page.headerData.900.value (
 	<script src="/typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/picturefill.min.js" type="text/javascript" async></script>
+)
+
+# Einstellungen zum RSS-Feed
+page.headerData.1000 = TEXT
+page.headerData.1000.value (
+	<link rel="alternate" type="application/rss+xml" title="RSS-Feed" href="{$baseURL}{$rssLinkLang}rss-feed/" />
 )
 
 page.headerData.1027 = TEXT
@@ -39,3 +53,9 @@ page.headerData.1129.value (
 	<meta name="msapplication-wide310x150logo" content="/typo3conf/ext/tmpl_ipoa/Resources/Public/Images/widetile.png" />
 	<meta name="msapplication-square310x310logo" content="/typo3conf/ext/tmpl_ipoa/Resources/Public/Images/largetile.png" />
 )
+
+# configuration for country specific redirects
+# execute userFunction in page-Object
+page = PAGE
+page.1 = USER_INT
+page.1.userFunc = user_301redirect->IPtoCountry

@@ -1,0 +1,52 @@
+.oadays {
+  > h3 {
+    @extend %ic-layout__item;
+    @extend .ic-desk-and-up-three-twelfths;
+    @extend %heading;
+    @extend %heading--beta;
+    line-height: round($inuit-base-line-height / .65);
+
+    @include media-query("desk-and-up") {
+      text-align: right;
+    }
+  }
+
+  h3 + div {
+    @extend %ic-layout__item;
+    @extend .ic-desk-and-up-nine-twelfths;
+    @extend %paragraph;
+
+    p {
+      @extend %m--default;
+    }
+  }
+
+  h4 {
+    margin-bottom: 5px;
+  }
+
+  .on-demand__link {
+    @extend %link--default;
+    @extend %link--on-bright;
+    @extend %link--underline;
+    @extend %link--underline-on-bright;
+    cursor: pointer;
+  }
+
+  .oadays__image {
+    border-radius: 50%;
+    clip-path: circle(25px at center);
+    margin-bottom: -10px;
+    width: 50px;
+  }
+}
+
+@include media-query("desk-and-up") {
+  .oadays h2 + div p:first-child {
+    margin-top: 10px;
+  }
+
+  .main h3 + div p:first-child {
+    margin-top: 7px;
+  }
+}

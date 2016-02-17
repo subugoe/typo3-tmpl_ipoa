@@ -1,6 +1,7 @@
 ##### MENU #####
-lib.mainMenu = HMENU
-lib.mainMenu {
+[globalString = GP:type=37902]
+lib.ajaxMenu = HMENU
+lib.ajaxMenu {
 	expAll = 1
 	excludeUidList = {$ids.excludeFromMenu}
 	wrap = |
@@ -50,4 +51,22 @@ lib.mainMenu {
 	3 < .2
 	4 < .3
 	5 < .3
+}
+[end]
+
+# Fluidtemplate with different typeNum
+# with this, it is possible to get just the menu, nothing else
+# if you add type=37902 to any url
+ajax_api = PAGE
+ajax_api {
+  typeNum = 37902
+  config {
+    disableAllHeaderCode = 1
+    xhtml_cleaning = 0
+    admPanel = 0
+    additionalHeaders = Content-type: text/plain
+    no_cache = 0
+    debug = 0
+  }
+  10 < lib.ajaxMenu
 }

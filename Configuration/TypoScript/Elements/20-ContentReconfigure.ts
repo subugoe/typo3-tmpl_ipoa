@@ -32,6 +32,23 @@ lib.stdheader.stdWrap >
 # remove class=bodytext from RTE paragraphs
 lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class =
 
+# allow special chars in content title (for example &shy;)
+lib.stdheader.10.setCurrent.htmlSpecialChars = 0
+# Allow only certain chars
+lib.stdheader.10.setCurrent.parseFunc {
+  allowTags = &shy;
+  # deny all others
+  denyTags = *
+  constants=1
+  nonTypoTagStdWrap.HTMLparser = 1
+  nonTypoTagStdWrap.HTMLparser {
+    keepNonMatchedTags=1
+    htmlSpecialChars = 2
+    allowTags = &shy;
+    removeTags = *
+  }
+}
+
 # Ändere Überschriften
 temp.lib.stdheader < lib.stdheader
 lib.stdheader >
@@ -148,5 +165,32 @@ tt_content {
 			categorized_pages.stdWrap.outerWrap = <ul>|</ul>
 			# Menu of categorized content elements, not available
 		}
+	}
+}
+
+// As of update to Typo3 6.2.16 all html chars in image captions, bulletlists and tables are escaped
+// See: https://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-013/
+// This is the fix:
+// Note, in our case, tt_content.image is a case object, depending on its colPos
+tt_content {
+	image {
+		default.20.caption.1.1 {
+			parseFunc =< lib.parseFunc
+			htmlSpecialChars >
+		}
+		0.20.caption.1.1 {
+			parseFunc =< lib.parseFunc
+			htmlSpecialChars >
+		}
+	}
+	table {
+		20.innerStdWrap.parseFunc =< lib.parseFunc
+		20.innerStdWrap.htmlSpecialChars >
+	}
+	bullets.20.split {
+		1.parseFunc =< lib.parseFunc
+		1.htmlSpecialChars >
+		2.parseFunc =< lib.parseFunc
+		2.htmlSpecialChars >
 	}
 }

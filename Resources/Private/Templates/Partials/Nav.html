@@ -28,48 +28,71 @@
        <svg class="fa-icon fa-icon-search fa-icon--s"><use xlink:href="#icon-search"></use></svg><span class="hidden-sub-notebook"> {f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
      </a>
    </li>
-   <li>
-     <a href="#" class="head__link js-head-language-indicator js-nav-language-indicator" title="{f:translate(key:'clickToClose', extensionName: 'tmpl_ipoa')}">
-       <svg class="fa-icon fa-icon-globe fa-icon--s">
-        <use xlink:href="#icon-globe"></use>
-       </svg>
-      <span class="hidden-sub-notebook">
-       <img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{ipoa:getAlternativeLanguageFlag()}.png" />'>
-       <ipoa:getAlternativeLanguage />
-      </span>
-     </a>
-   </li>
- </ul>
-	<v:page.languageMenu
-			defaultLanguageLabel="<ipoa:getDefaultLanguage />"
-			linkCurrent="0"
-			defaultIsoFlag="dede"
-			classCurrent="'head__link--active'"
-			hideNotTranslated="{true}">
-		<div class="head__language-links js-head-language-links">
-			<svg class="fa-icon fa-icon-globe fa-icon--s fa-icon-on-bright">
-				<use xlink:href="#icon-globe"></use>
-			</svg>
-			<ul class="head__list language__list">
-				<f:for each="{languageMenu}" as="langmenu" iteration="langiter">
-					<f:if condition="{ipoa:getLanguageFlag()}=={langmenu.flag}">
-						<f:then>
-							<li><a href="{langmenu.url}" title="{langmenu.label}" class="head__link head__link--active"><img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt="{langmenu.label}"> {langmenu.label}</a>
-							</li>
-						</f:then>
-						<f:else>
-							<li><a href="{langmenu.url}" title="{langmenu.label}" class="head__link"><img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt="{langmenu.label}"> {langmenu.label}</a></li>
-						</f:else>
-					</f:if>
-				</f:for>
-			</ul>
+		<f:if condition="{LANGMENU}=='0'">
+			<f:then></f:then>
+			<f:else>
+				<li>
+					<a href="#" class="head__link js-head-language-indicator js-nav-language-indicator" title="{f:translate(key:'clickToOpen', extensionName: 'tmpl_ipoa')}">
+						<svg class="fa-icon fa-icon-globe fa-icon--s">
+							<use xlink:href="#icon-globe"></use>
+						</svg>
+						<span class="hidden-sub-notebook">
+							<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{ipoa:getAlternativeLanguageFlag()}.png" />'>
+							<ipoa:getAlternativeLanguage/>
+						</span>
+					</a>
+				</li>
+			</f:else>
+		</f:if>
+	</ul>
+	<f:if condition="{LANGMENU}=='0'">
+		<f:then></f:then>
+		<f:else>
+			<v:page.languageMenu
+					defaultLanguageLabel="<ipoa:getDefaultLanguage />"
+					linkCurrent="0"
+					defaultIsoFlag="dede"
+					classCurrent="'head__link--active'"
+					hideNotTranslated="{true}">
+				<div class="head__language-links js-head-language-links">
+					<svg class="fa-icon fa-icon-globe fa-icon--s fa-icon-on-bright">
+						<use xlink:href="#icon-globe"></use>
+					</svg>
+					<ul class="head__list language__list">
+						<f:for each="{languageMenu}" as="langmenu" iteration="langiter">
+							<f:if condition="{ipoa:getLanguageFlag()}=={langmenu.flag}">
+								<f:then>
+									<li>
+										<a href="{langmenu.url}" title="{langmenu.label}" class="head__link head__link--active">
+											<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt="{langmenu.label}">
+											{langmenu.label}</a>
+									</li>
+								</f:then>
+								<f:else>
+									<li>
+										<a href="{langmenu.url}" title="{langmenu.label}" class="head__link">
+											<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt="{langmenu.label}">
+											{langmenu.label}</a>
+									</li>
+								</f:else>
+							</f:if>
+						</f:for>
+					</ul>
+				</div>
+				</div>
+			</v:page.languageMenu>
+		</f:else>
+	</f:if>
+
+	<div class="alt-menu__content">
+		<div class="alt-menu__close-button-wrap">
+			<a href="#" title="{f:translate(key:'closeMenu', extensionName: 'tmpl_ipoa')}" class="alt-menu__close-button">
+				<svg class="fa-icon fa-icon-close fa-icon-on-bright">
+					<use xlink:href="#icon-close"></use>
+				</svg>
+				{f:translate(key:'close', extensionName: 'tmpl_ipoa')}
+			</a>
 		</div>
-</div>
-</v:page.languageMenu>
-
-  <div class="alt-menu__content">
-	  <div class="alt-menu__close-button-wrap"><a href="#" title="{f:translate(key:'closeMenu', extensionName: 'tmpl_ipoa')}" class="alt-menu__close-button"><svg class="fa-icon fa-icon-close fa-icon-on-bright"><use xlink:href="#icon-close"></use></svg> {f:translate(key:'close', extensionName: 'tmpl_ipoa')}</a></div>
-	  {MENU -> f:format.raw()}
+		<div class="ajax-menu"></div>
   </div>
-
 </nav>
