@@ -273,30 +273,14 @@ jQuery(function() {
   });
 
   /**
-   * footerHide
-   */
-  var footerHideHeight = jQuery('.footer-hide__content').height();
-
-  // TODO: cache jQuery('.footer-hide') lookup
-  jQuery('.footer-hide').css({'height': footerHideHeight + 'px'});
-
-  /**
-   * recalculate (and set the new) footer height with every window resize
-   */
-  jQuery(window).resize(function() {
-    // TODO: use cached jQuery('.footer-hide__content') lookup if possible
-    footerHideHeight = jQuery('.footer-hide__content').height();
-    jQuery('.footer-hide').css({'height': footerHideHeight + 'px'});
-  });
-
-  /**
    * Prevent the logocarousel to change it's height
    * Find the logocarousel, get it's ID, get the max height of the images
    * and set the height of the logocarousel accordingly
    */
   var logoIds = jQuery('.logocarousel');
+  var logoHeight;
   logoIds.each(function() {
-    var logoHeight = 0;
+     logoHeight = 0;
 
     jQuery(this).find('img').each(function() {
 
@@ -308,6 +292,32 @@ jQuery(function() {
 
     jQuery(this).css('height', logoHeight);
   });
+
+
+  /**
+   * Calculate height of footer
+   * to determine how much the rest of the content has to slide up
+   * There has to be set up a min-height, because otherwise, in very wide screens
+   * the headers would not be visible after reload
+   */
+  var footerHideHeight = jQuery('.footer-hide__content').height();
+  var footerHideMinHeight = logoHeight+20;
+  footerHideMinHeight += jQuery('.tracking').height();
+  footerHideMinHeight += jQuery('.footer__column > h3').height();
+  jQuery('.footer-hide').css({'height': footerHideHeight + 'px'});
+  jQuery('.footer-hide').css({'min-height': footerHideMinHeight + 'px'});
+  /**
+   * recalculate (and set the new) footer height with every window resize
+   */
+  jQuery(window).resize(function() {
+    footerHideHeight = jQuery('.footer-hide__content').height();
+    jQuery('.footer-hide').css({'height': footerHideHeight + 'px'});
+  });
+  jQuery(window).on('load', function() {
+    footerHideHeight = jQuery('.footer-hide__content').height();
+    jQuery('.footer-hide').css({'height': footerHideHeight + 'px'});
+  });
+
 
   /**
    * this part allows for in-page anchor clicks that move the scroll position
