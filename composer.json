@@ -1,0 +1,25 @@
+{
+    "name": "subugoe/tmpl-adw",
+    "type": "typo3-cms-extension",
+    "description": "Template for IPOA Website",
+    "homepage": "http://open-access.net",
+    "license": ["GPL-2.0+"],
+    "keywords": ["TYPO3 CMS", "sub"],
+    "support": {
+        "issues": "https://github.com/subugoe/typo3-tmpl_ipoa/issues"
+    },
+    "replace": {
+        "tmpl_adw": "self.version"
+    },
+    "autoload": {
+        "psr-4": {
+            "Subugoe\\TmplAdw\\": "Classes/"
+        }
+    },
+    "require": {
+        "fluidtypo3/vhs": "^4.2"
+    },
+    "conflict": {
+        "friendsoftypo3/mediace": "*"
+    }
+}
