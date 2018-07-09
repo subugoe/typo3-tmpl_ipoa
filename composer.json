@@ -9,7 +9,7 @@
         "issues": "https://github.com/subugoe/typo3-tmpl_ipoa/issues"
     },
     "replace": {
-        "tmpl_adw": "self.version"
+        "tmpl_ipoa": "self.version"
     },
     "require": {
         "fluidtypo3/vhs": "^4.2"
