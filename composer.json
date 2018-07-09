@@ -11,11 +11,6 @@
     "replace": {
         "tmpl_adw": "self.version"
     },
-    "autoload": {
-        "psr-4": {
-            "Subugoe\\TmplAdw\\": "Classes/"
-        }
-    },
     "require": {
         "fluidtypo3/vhs": "^4.2"
     },
