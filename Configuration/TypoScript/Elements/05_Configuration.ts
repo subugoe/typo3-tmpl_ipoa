@@ -10,6 +10,9 @@ config {
 	# enable solr search
 	index.enable = 1
 
+	# enable verbatim error messages
+	contentObjectExceptionHandler = 1
+
 	no_cache = 0
 	absRefPrefix = {$baseURL}
 	prefixLocalAnchors = all
