@@ -9,11 +9,22 @@ var notify = require('gulp-notify');
 var sass = require('gulp-sass');
 var scsslint = require('gulp-scss-lint');
 var autoprefixer = require('gulp-autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
+
+// Concat JS
+gulp.task('concatJs', function() {
+  return gulp.src('./Resources/Private/JavaScript/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(concat('ipoa.js'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./Resources/Public/JavaScript/'))
+    .pipe(notify({message: 'Finished concatenating Javascript'}));
+})
 
 
 // JS hint task
 gulp.task('jshint', function() {
-  gulp.src('./Resources/Public/Javascript/ipoa.js')
+  gulp.src('./Resources/Public/JavaScript/ipoa.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
@@ -21,10 +32,10 @@ gulp.task('jshint', function() {
 
 // Uglify task
 gulp.task('compress', function() {
-  return gulp.src('./Resources/Public/Javascript/ipoa.js')
+  return gulp.src('./Resources/Public/JavaScript/ipoa.js')
     .pipe(concat('ipoa.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./Resources/Public/Javascript'))
+    .pipe(gulp.dest('./Resources/Public/JavaScript'))
     .pipe(notify({message: 'Finished minifying Javascript'}));
 });
 
@@ -66,5 +77,5 @@ function color(string, color) {
   return prefix + string + '\033[0m'
 }
 
-gulp.task('default', ['jshint', 'sasslint', 'sass'], function() {});
+gulp.task('default', ['concatJs', 'jshint', 'sasslint', 'sass'], function() {});
 gulp.task('server', ['sass'], function() {});

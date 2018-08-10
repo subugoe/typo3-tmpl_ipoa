@@ -1,57 +1,56 @@
 <?php
+
 namespace Subugoe\TmplIpoa\ViewHelpers;
+
 /*******************************************************************************
  * Copyright notice
  *
- * Copyright 2013 Sven-S. Porst, Göttingen State and University Library
- *                <porst@sub.uni-goettingen.de>
+ *  (c) 2015 Sibylle Naegle <naegle@sub-goettingen.de>
+ *      Goettingen State Library
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
+ *  All rights reserved
  *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
+ *  This script is part of the TYPO3 project. The TYPO3 project is
+ *  free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 3 of the License, or
+ *  (at your option) any later version.
  *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
+ *  The GNU General Public License can be found at
+ *  http://www.gnu.org/copyleft/gpl.html.
+ *
+ *  This script is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  This copyright notice MUST APPEAR in all copies of the script!
  ******************************************************************************/
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
-/**
- * View Helper
- *
- */
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
-class GetLanguageFlagViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+class GetLanguageFlagViewHelper extends AbstractViewHelper
+{
 
-	/**
-	 * Get the current language flag
-	 */
-	protected function getLanguageFlag() {
-		//DebuggerUtility::var_dump($GLOBALS['TSFE']->config);
-		if (isset($GLOBALS['TSFE']->config['config']['flag'])) {
-			return $GLOBALS['TSFE']->config['config']['flag'];
-		}
-		return 'dede'; //default
-	}
+    /**
+     * Get currently used flag
+     * @return string
+     */
+    protected function getLanguageFlag()
+    {
+        if (isset($GLOBALS['TSFE']->config['config']['flag'])) {
+            return $GLOBALS['TSFE']->config['config']['flag'];
+        }
+        return 'dede'; //default
+    }
 
-	/**
-	 * Return current language
-	 * @return  string
-	 */
-	public function render() {
-		return $this->getLanguageFlag();
-	}
+    /**
+     * Return current language
+     * @return  string
+     */
+    public function render()
+    {
+        return $this->getLanguageFlag();
+    }
 
 }
-
-?>
