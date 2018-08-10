@@ -95,7 +95,7 @@
 // define how links in the menu appear
 .menu__link {
   @extend %link-in-linklist;
-  @extend %link-in-linklist--dense;
+  // @extend %link-in-linklist--dense; not found
   @extend %link--block;
   color: $color--darkest;
 

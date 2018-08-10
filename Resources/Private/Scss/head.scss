@@ -3,6 +3,8 @@
   @extend %ic-layout--flush;
   @include responsive-content-padding();
   padding-top: 40px;
+  margin: 0;
+  padding: 0;
 
   @include media-query("tablet-and-up") {
     background: url("../Images/bg-h-1.jpg") no-repeat center center fixed;
@@ -160,10 +162,10 @@
   display: none; // 1.
 
   @include media-query("tablet-and-up") { // 2.
-    @extend %ic-layout__item;
+    // @extend %ic-layout__item;
     @extend .ic-tablet-and-up-three-quarters;
-    @extend .ic-mt\+;
-    @extend %text--huge;
+    // @extend .ic-mt\+;
+    // @extend %text--huge;
     display: inline-block;
     letter-spacing: $letter-spacing--large;
 

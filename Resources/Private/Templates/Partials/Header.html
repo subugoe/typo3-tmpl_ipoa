@@ -16,9 +16,7 @@
 					<svg class="fa-icon fa-icon-home fa-icon--s">
 						<use xlink:href="#icon-home"></use>
 					</svg>
-					<span class="hidden-sub-notebook">
-						{f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}
-					</span>
+					<span class="hidden-sub-notebook">{f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}</span>
 				</f:link.page>
 			</li>
 			<v:condition.string.isNumeric value="{KONTAKT_UID}">
@@ -28,9 +26,7 @@
 							<svg class="fa-icon fa-icon-envelope fa-icon--s">
 								<use xlink:href="#icon-envelope"></use>
 							</svg>
-							<span class="hidden-sub-notebook">
-								{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}
-							</span>
+							<span class="hidden-sub-notebook">{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}</span>
 						</f:link.page>
 					</li>
 				</f:then>
@@ -42,9 +38,7 @@
 							<svg class="fa-icon fa-icon-bolt fa-icon--s">
 								<use xlink:href="#icon-bolt"></use>
 							</svg>
-							<span class="hidden-sub-notebook">
-								{f:translate(key:'news', extensionName: 'tmpl_ipoa')}
-							</span>
+							<span class="hidden-sub-notebook">{f:translate(key:'news', extensionName: 'tmpl_ipoa')}</span>
 						</f:link.page>
 					</li>
 				</f:then>
@@ -56,9 +50,7 @@
 							<svg class="fa-icon fa-icon-sitemap fa-icon--s">
 								<use xlink:href="#icon-sitemap"></use>
 							</svg>
-							<span class="hidden-sub-notebook">
-								{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}
-							</span>
+							<span class="hidden-sub-notebook">{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}</span>
 						</f:link.page>
 					</li>
 				</f:then>
@@ -70,9 +62,7 @@
 							<svg class="fa-icon fa-icon-search fa-icon--s">
 								<use xlink:href="#icon-search"></use>
 							</svg>
-							<span class="hidden-sub-notebook">
-								{f:translate(key:'search', extensionName: 'tmpl_ipoa')}
-							</span>
+							<span class="hidden-sub-notebook">{f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
 						</a>
 					</li>
 				</f:then>
@@ -87,7 +77,7 @@
 							</svg>
 							<span class="hidden-sub-notebook">
 								<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{ipoa:getAlternativeLanguageFlag()}.png" />'>
-								<ipoa:getAlternativeLanguage/>
+										<ipoa:getAlternativeLanguage />
 							</span>
 						</a>
 					</li>

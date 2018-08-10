@@ -1,17 +1,43 @@
 {
-  "name": "ipoa",
+  "name": "oa-fwm",
   "version": "0.0.1",
+  "description": "Template for Information Platform Open Access and Open Journal Systems",
+  "private": true,
+  "repository": "http://github.com/subugoe/typo3-tmpl_ipoa",
+  "author": "Sibylle Nägle",
+  "license": "AGPL-3.0",
   "devDependencies": {
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "bootstrap": "^4.1.2",
+    "bower": "^1.7.2",
+    "buildify": "^0.4.0",
+    "eslint": "^5.1.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-jshint": "^2.0.0",
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.1.1",
+    "gulp-scss-lint": "^0.3.9",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^1.5.1",
     "jshint": "^2.9.1",
-    "bower": "^1.7.2",
-    "gulp-scss-lint": "^0.3.9"
+    "node-sass": "^4.8.3",
+    "npmrc": "^1.1.1",
+    "postcss": "^6.0.21",
+    "postcss-cli": "^4.1.1"
   },
-  "private": true
+  "scripts": {
+    "babel": "./node_modules/.bin/babel Build/JavaScript/concatenated.js -o Build/JavaScript/ipoa.js",
+    "lintJs": "./node_modules/.bin/eslint Resources/Private/JavaScript/*.js",
+    "createDistCss": "./node_modules/.bin/node-sass --output-style compressed Resources/Private/Scss/style.scss Resources/Public/Css/ipoa.css; ./node_modules/.bin/postcss --use autoprefixer --no-map -b 'last 2 versions' Resources/Public/Css/ipoa.css -o Resources/Public/Css/ipoa.css",
+    "createDevCss": "./node_modules/.bin/node-sass --source-map true Resources/Private/Scss/style.scss Resources/Public/Css/ipoa.css; ./node_modules/.bin/postcss --use autoprefixer -b 'last 2 versions' Resources/Public/Css/ipoa.css -o Resources/Public/Css/ipoa.css",
+    "buildAll": "./node_modules/.bin/node-sass --output-style compressed Resources/Private/Scss/style.scss Resources/Public/Css/ipoa.css; ./node_modules/.bin/postcss --use autoprefixer --no-map -b 'last 2 versions' Resources/Public/Css/ipoa.css -o Resources/Public/Css/ipoa.css",
+    "devAll": "npm run lintJs && npm run createDevCss && node build.js && npm run babel && cp ./Build/JavaScript/ipoa.js ./Resources/Public/JavaScript/"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
 }

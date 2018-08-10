@@ -9,15 +9,6 @@
   z-index: 1;
 }
 
-.footer-hide__helper--shifted {
-  position: fixed;
-  transform: translateX(30%);
-
-  @include media-query("phone") {
-    display: none;
-  }
-}
-
 .footer-hide__content {
   @include media-query("notebook-and-up") {
     bottom: 0;

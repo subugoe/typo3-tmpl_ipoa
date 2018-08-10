@@ -72,7 +72,7 @@
 // 2. these links are not allowed to break into a new line
 .start__link {
   @extend %link--default;
-  @extend %start__link--on-bright;
+  // @extend %start__link--on-bright; not found
   @extend %link--with-icon-on-bright;
   @extend %link--on-bright;
   @extend %nobr; // 2.
