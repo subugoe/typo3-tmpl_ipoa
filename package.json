@@ -10,7 +10,6 @@
     "@babel/preset-env": "^7.0.0-beta.54",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
-    "bootstrap": "^4.1.2",
     "bower": "^1.7.2",
     "buildify": "^0.4.0",
     "eslint": "^5.1.0",
