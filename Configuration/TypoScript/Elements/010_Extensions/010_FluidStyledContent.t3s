@@ -3,3 +3,45 @@ lib.contentElement {
     partialRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Templates/Extensions/FluidStyledContent/Partials/
     templateRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Templates/Extensions/FluidStyledContent/Templates/
 }
+
+tt_content.textmedia {
+    dataProcessing.20 {
+        # Calculate gallery info
+        20 = TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor
+        20 {
+            # numberOfColumns :: Number of columns (default: data.imagecols) + stdWrap
+            numberOfColumns.field = imagecols
+        }
+    }
+    settings.responsive_image_rendering {
+        layoutKey = srcset
+        sourceCollection {
+            10 {
+                dataKey = large
+                width = 920m
+                srcset = 920w
+            }
+
+            20 {
+                dataKey = medium
+                width = 768m
+                srcset = 768w
+            }
+
+            30 {
+                dataKey = small
+                width = 320m
+                srcset = 320w
+            }
+
+        }
+    }
+    dataProcessing.20 {
+        # Calculate gallery info
+        20 = TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor
+        20 {
+            # numberOfColumns :: Number of columns (default: data.imagecols) + stdWrap
+            numberOfColumns.field = imagecols
+        }
+    }
+}

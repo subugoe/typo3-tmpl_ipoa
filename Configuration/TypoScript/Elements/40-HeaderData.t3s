@@ -1,6 +1,3 @@
-# include bootstrap, ...
-page.includeCSS.file101 = typo3conf/ext/tmpl_ipoa/Resources/Public/Css/vendor.min.css
-
 # include css file depending on pagetree
 page.includeCSS.file103 = typo3conf/ext/tmpl_ipoa/Resources/Public/Css/ipoa.css
 
@@ -13,11 +10,11 @@ page.headerData.111.value (
 page.headerData.112 = TEXT
 [globalString = ENV:HTTPS = on]
 page.headerData.112.value (
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
 )
 [else]
 page.headerData.112.value (
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
 )
 [global]
 
