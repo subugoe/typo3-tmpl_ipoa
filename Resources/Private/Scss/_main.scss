@@ -1,8 +1,9 @@
 .main {
-  @extend %ic-layout;
   @extend .ic-pt;
 
   @include responsive-content-padding();
+  display: flex !important;
+  flex-direction: column;
 
   img {
     width: 100%;

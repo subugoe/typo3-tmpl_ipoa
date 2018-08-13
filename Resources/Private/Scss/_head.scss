@@ -28,6 +28,7 @@
   @extend %ic-layout;
   @extend %ic-layout--flush;
   @include responsive-content-padding();
+  display: flex !important;
   height: 50px;
   left: 0;
   padding-top: 10px;
@@ -200,4 +201,5 @@
 .head-nav--narrow {
   background-color: $color--brightest;
   border-bottom: 1px solid lighten($link-color--default, 50%);
+  display: flex !important;
 }

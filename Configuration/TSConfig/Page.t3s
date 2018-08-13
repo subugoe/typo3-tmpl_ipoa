@@ -1,0 +1,11 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tmpl_ipoa/Configuration/TSConfig/Visibility.t3s">
+
+TCEMAIN {
+}
+
+tx_news {
+
+	templateLayouts {
+		10 = Nur Titel anzeigen
+	}
+}
