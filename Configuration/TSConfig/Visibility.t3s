@@ -32,7 +32,7 @@ TCEFORM.tt_content.pi_flexform.news_pi1.additional {
 
 //////////////////////////////////////////////////////
 // Einstellungen für Editoren
-#[usergroup = 3] OR [usergroup = 4]
+[usergroup = 3] OR [usergroup = 4]
 // Setzen der Benutzerrechte beim Anlegen von Seiten und Inhalt
 // 3: Advanced Editing, 4: OA-Tage
 // TODO: muss noch durch Variablen gesteuert werden, falls möglich
@@ -211,4 +211,4 @@ mod.wizards.newContentElement.renderMode = list
 # Hide possibility to upload files in Element Browser
 options.folderTree.uploadFieldsInLinkBrowser = 0
 
-#[END]
+[END]
