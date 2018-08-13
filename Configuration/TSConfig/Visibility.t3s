@@ -111,56 +111,36 @@ TCEFORM {
         // Remove unwanted content elements
         # CType.removeItems = header,textpic,bullets,media,shortcut,html,div,multimedia,mailform,login,search,tx_beacl_acl,uploads
         CType.removeItems (
-    			####standardelements,
-    			header,
-            	text,
-            	textpic,
-            	image,
-    			#textmedia,
-
-    			####lists##,
-        		uploads,
-    			#bullets,
-            	table,
-
-    			####menu,
-        		menu_abstract,
-            	menu_categorized_content,
-            	menu_categorized_pages,
-    			#menu_pages,
-            	menu_subpages,
-            	menu_recently_updated,
-            	menu_related_pages,
-    			#menu_section,
-            	menu_section_pages,
-    			#menu_sitemap,
-            	menu_sitemap_pages,
-
-    			####special,
-        		shortcut,
-    			#list,
-            	div,
-            	html,
-
-    			####forms,
-        		login,
+            ####standardelements,
+            header,
+            text,
+            textpic,
+            #image,
+            #textmedia,
+            ####lists##,
+            uploads,
+            #bullets,
+            table,
+            ####menu,
+            menu_abstract,
+            menu_categorized_content,
+            menu_categorized_pages,
+            #menu_pages,
+            menu_subpages,
+            menu_recently_updated,
+            menu_related_pages,
+            #menu_section,
+            menu_section_pages,
+            #menu_sitemap,
+            menu_sitemap_pages,
+            ####special,
+            shortcut,
+            #list,
+            div,
+            html,
+            ####forms,
+            login,
         )
-
-
-        // Configure image layout
-        imageorient  {
-            // removeItems = 0,1,2,3,4,5,6,7,8,9,10,17,18,--div--,25,26
-            // 0 = above, center
-            // 17 = In text, right
-            // 18 = In text, left
-            removeItems = 1,2,3,4,5,6,7,8,9,10,25,26
-        }
-
-        // adjust columns
-        imagecols {
-            removeItems := addToList(1)
-            addItems.10 = 10
-        }
 
 
         header_layout.altLabels.1 = Standard
@@ -178,18 +158,15 @@ TCEFORM {
         sectionIndex.disabled = 1
         spaceAfter.disabled = 1
         spaceBefore.disabled = 1
-        // image:
+        # Media Adjustments
         imageheight.disabled = 1
         imagewidth.disabled = 1
         imageborder.disabled = 1
-        image_effects.disabled = 1
+        # Galery Settings
         imageorient.disabled = 0
-        image_compression.disabled = 1
-        image_noRows.disabled = 1
-        imagecols.disabled = 0
-        imagecaption_position.disabled = 1
-        longdescURL.disabled = 1
-        image_zoom.disabled = 1
+        imagecols.disabled = 1
+        # Behavior (enlarge on click)
+        image_zoom.disabled = 0
         // table
         pi_flexform.table.sDEF {
             acctables_tfoot.disabled = 1
