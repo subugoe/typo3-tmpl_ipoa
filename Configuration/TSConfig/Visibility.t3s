@@ -176,6 +176,16 @@ TCEFORM {
         }
         // menu, remove items
         #menu_type.removeItems = 3,7,categorized_content
+
+
+        // Configure image layout
+        imageorient {
+            // removeItems = 0,1,2,3,4,5,6,7,8,9,10,17,18,--div--,25,26
+            // 0 = above, center
+            // 17 = In text, right
+            // 18 = In text, left
+            removeItems = 1,2,3,4,5,6,7,8,9,10,25,26
+        }
     }
 }
 // steht in der localconf zum Enternen des Link zum direkten Upload im Contentelement:
