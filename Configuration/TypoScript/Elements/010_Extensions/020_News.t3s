@@ -1,0 +1,4 @@
+plugin.tx_news.view {
+    templateRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Templates/Extensions/News/Templates/
+    partialRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Templates/Extensions/News/Partials/
+}

@@ -1,0 +1,12 @@
+// only show title in more
+.more__column .news .description {
+  display: none;
+}
+
+.more__column .news-list-view a {
+  border-color: transparent;
+}
+
+.more__column .news-list-view li {
+  display: flex;
+}

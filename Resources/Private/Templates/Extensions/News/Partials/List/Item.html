@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<n:excludeDisplayedNews newsItem="{newsItem}"/>
+<!-- header -->
+	<li>
+		<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+			{newsItem.title}
+		-
+		<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+		</n:link>
+		<br />
+		<n:removeMediaTags>
+			<f:if condition="{newsItem.teaser}">
+				<f:then>
+					<span class="description">
+					{newsItem.teaser -> f:format.crop(maxCharacters:
+						'{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.raw()}
+					</span>
+				</f:then>
+				<f:else>
+					<span class="description">
+					{newsItem.bodytext -> f:format.crop(maxCharacters:
+						'{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.raw()}
+					</span>
+				</f:else>
+			</f:if>
+		</n:removeMediaTags>
+	</li>
+</html>
