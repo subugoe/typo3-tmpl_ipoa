@@ -4,8 +4,14 @@
   flex-wrap: wrap;
 }
 
-.frame header {
-  width: 30%;
+.frame header h2 {
+  padding-top: 20px;
+  margin: 0 0 12px 0;
+  line-height: 37px;
+}
+
+.frame p {
+  margin: 0 0 12px 0;
 }
 
 .ce-textpic {

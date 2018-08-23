@@ -13,8 +13,9 @@ if (!defined('TYPO3_MODE')) {
 ');
 
 // 404 handling:
-$TYPO3_CONF_VARS['FE']['pageNotFound_handling'] = '/Uuups,%20diese%20Seite%20existiert%20nicht/';
-$TYPO3_CONF_VARS['FE']['pageNotFound_handling_statheader'] = "HTTP/1.1 404 Not Found";
+$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = '/Uuups,%20diese%20Seite%20existiert%20nicht/';
+$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling_statheader'] = "HTTP/1.1 404 Not Found";
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['ipoa'] = 'EXT:tmpl_ipoa/Configuration/RTE/Default.yml';
 
 
 ?>
