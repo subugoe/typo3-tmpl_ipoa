@@ -199,3 +199,10 @@ mod.wizards.newContentElement.renderMode = list
 options.folderTree.uploadFieldsInLinkBrowser = 0
 
 [END]
+
+# allow media upload via url, but only in textmedia
+TCEFORM.tt_content.assets.config.appearance.fileUploadAllowed = 1
+TCEFORM.pages.media.config.appearance.fileUploadAllowed = 0
+TCEFORM.pages_language_overlay.media.config.appearance.fileUploadAllowed = 0
+TCEFORM.tt_content.image.config.appearance.fileUploadAllowed = 0
+# select + upload-button should be removed, not possible right now when url is allowed
