@@ -208,9 +208,8 @@ jQuery(function () {
   jQuery('.on-demand__content').hide();
   jQuery('.on-demand__link').click(function () {
     jQuery(this)
-      .parent()
-      .nextAll('.on-demand__content')
-      .first()
+      .parent('p')
+      .nextUntil(':not(".on-demand__content")')
       .toggle('slow');
   });
 

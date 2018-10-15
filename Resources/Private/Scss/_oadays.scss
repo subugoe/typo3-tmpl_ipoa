@@ -25,14 +25,6 @@
     margin-bottom: 5px;
   }
 
-  .on-demand__link {
-    @extend %link--default;
-    @extend %link--on-bright;
-    @extend %link--underline;
-    @extend %link--underline-on-bright;
-    cursor: pointer;
-  }
-
   .oadays__image {
     border-radius: 50%;
     clip-path: circle(25px at center);
