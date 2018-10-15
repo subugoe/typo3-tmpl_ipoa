@@ -198,7 +198,7 @@ jQuery(function () {
    */
   jQuery('.on-demand__content').hide();
   jQuery('.on-demand__link').click(function () {
-    jQuery(this).parent().nextAll('.on-demand__content').first().toggle('slow');
+    jQuery(this).parent('p').nextUntil(':not(".on-demand__content")').toggle('slow');
   });
 
   /**

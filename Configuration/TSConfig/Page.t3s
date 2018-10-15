@@ -1,10 +1,11 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:tmpl_ipoa/Configuration/TSConfig/Visibility.t3s">
 
+RTE.default.preset = ipoa
+
 TCEMAIN {
 }
 
 tx_news {
-
 	templateLayouts {
 		10 = Nur Titel anzeigen
 	}
