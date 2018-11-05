@@ -12,7 +12,7 @@
         "tmpl_ipoa": "self.version"
     },
     "require": {
-        "fluidtypo3/vhs": "^4.2"
+        "fluidtypo3/vhs": "^5.1"
     },
     "conflict": {
         "friendsoftypo3/mediace": "*"
