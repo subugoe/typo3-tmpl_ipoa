@@ -15,8 +15,8 @@ editor:
     # can be "default", but a custom stylesSet can be defined here, which fits TYPO3 best
     stylesSet:
       # block level styles
-      - { name: "Ausklapplink", element: "span", attributes: { class: "on-demand__link" }, styles: { color: "#360" } }
-      - { name: "Ausklappbarer Content", element: "div", attributes: { class: "on-demand__content" }, styles: { color: "#a80f4f" } }
+      - { name: "Link zu versteckten Inhalten", element: "span", attributes: { class: "on-demand__link" } }
+      - { name: "Versteckter Inhalt", element: "div", attributes: { class: "on-demand__content" } }
 
     toolbarGroups:
       - { name: clipboard, groups: [clipboard, undo] }
