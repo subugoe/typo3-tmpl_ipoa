@@ -16,5 +16,10 @@
     },
     "conflict": {
         "friendsoftypo3/mediace": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Subugoe\\TmplIpoa\\": "Classes/"
+        }
     }
 }
