@@ -1,6 +1,6 @@
 <?php
 if (!defined('TYPO3_MODE')) {
-	die ('Access denied.');
+    die ('Access denied.');
 }
 
 /**
@@ -28,9 +28,10 @@ if (TYPO3_MODE == 'BE' || TYPO3_MODE == 'FE' && isset($GLOBALS['BE_USER'])) {
     }
 
     foreach ($flagNames as $flagName) {
-        $TCA['sys_language']['columns']['flag']['config']['items'][] = array($flagName, $flagName, 'flags-' . $flagName);
+        $GLOBALS['TCA']['sys_language']['columns']['flag']['config']['items'][] = array($flagName, $flagName, 'flags-' . $flagName);
     }
 }
+
 // Custom CSS include
 $TBE_STYLES['styleSheetFile_post'] = 'EXT:tmpl_ipoa/Resources/Public/Css/backendipoa.css';
 ?>

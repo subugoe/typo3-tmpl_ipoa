@@ -42,17 +42,17 @@ class GetAlternativeLanguageFlagViewHelper extends AbstractViewHelper
 
             switch ($flag) {
                 case "dede":
-                    return deen;
+                    return "deen";
                 case "deen":
-                    return dede;
+                    return "dede";
                 case "chde":
-                    return chen;
+                    return "chen";
                 case "chen":
-                    return chde;
+                    return "chde";
                 case "atde":
-                    return aten;
+                    return "aten";
                 case "aten":
-                    return atde;
+                    return "atde";
             }
         }
         return $flag; //default

@@ -3,7 +3,7 @@
 
 
 # Add class to body-Tag
-[PIDinRootline = {$ids.start}]
+[PIDinRootline == {$ids.start}]
 	page {
 		bodyTag >
 		bodyTagCObject = TEXT
