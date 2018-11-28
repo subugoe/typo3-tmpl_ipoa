@@ -32,7 +32,7 @@ TCEFORM.tt_content.pi_flexform.news_pi1.additional {
 
 //////////////////////////////////////////////////////
 // Einstellungen für Editoren
-[usergroup = 3] OR [usergroup = 4]
+[usergroup == 3] || [usergroup == 4]
 // Setzen der Benutzerrechte beim Anlegen von Seiten und Inhalt
 // 3: Advanced Editing, 4: OA-Tage
 // TODO: muss noch durch Variablen gesteuert werden, falls möglich
@@ -203,6 +203,5 @@ options.folderTree.uploadFieldsInLinkBrowser = 0
 # allow media upload via url, but only in textmedia
 TCEFORM.tt_content.assets.config.appearance.fileUploadAllowed = 1
 TCEFORM.pages.media.config.appearance.fileUploadAllowed = 0
-TCEFORM.pages_language_overlay.media.config.appearance.fileUploadAllowed = 0
 TCEFORM.tt_content.image.config.appearance.fileUploadAllowed = 0
 # select + upload-button should be removed, not possible right now when url is allowed

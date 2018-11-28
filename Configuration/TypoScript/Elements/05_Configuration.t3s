@@ -29,7 +29,9 @@ config {
 config {
 	linkVars = L
 	sys_language_uid = 0
+	#language = DE-DE
 	language = DE-DE
+	#flag = dede
 	flag = dede
 	locale_all = de_DE.UTF-8
 	# don't move head javascript into external file
@@ -39,7 +41,7 @@ config {
 # enable srcset-option in f:image
 styles.content.imgtext.layoutKey = srcset
 
-[globalVar = GP:L = 1]
+[globalVar == GP:L == 1]
 	config {
 		sys_language_uid = 1
 		language = DE-EN
@@ -51,7 +53,7 @@ styles.content.imgtext.layoutKey = srcset
 		htmlTag_setParams = lang="en" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 	}
 [global]
-[globalVar = GP:L = 2]
+[globalVar == GP:L == 2]
 	config {
 		sys_language_uid = 2
 		language = CH-DE
@@ -63,7 +65,7 @@ styles.content.imgtext.layoutKey = srcset
 		htmlTag_setParams = lang="ch" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 	}
 [global]
-[globalVar = GP:L = 3]
+[globalVar == GP:L == 3]
 	config {
 		sys_language_uid = 3
 		language = CH-EN
@@ -76,7 +78,7 @@ styles.content.imgtext.layoutKey = srcset
 		htmlTag_setParams = lang="en" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 	}
 [global]
-[globalVar = GP:L = 4]
+[globalVar == GP:L == 4]
 	config {
 		sys_language_uid = 4
 		language = CH-FR
@@ -88,7 +90,7 @@ styles.content.imgtext.layoutKey = srcset
 		htmlTag_setParams = lang="fr" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 	}
 [global]
-[globalVar = GP:L = 5]
+[globalVar == GP:L == 5]
 	config {
 		sys_language_uid = 5
 		language = AT-DE
@@ -99,7 +101,7 @@ styles.content.imgtext.layoutKey = srcset
 		htmlTag_setParams = lang="de" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
 	}
 [global]
-[globalVar = GP:L = 6]
+[globalVar == GP:L == 6]
 	config {
 		sys_language_uid = 6
 		language = AT-EN
@@ -115,7 +117,7 @@ styles.content.imgtext.layoutKey = srcset
 
 
 # add IE-switch in header
-[browser = msie && version = < IE 9]
+[browser == msie && version == < IE 9]
 	page.includeJS {
 		file10 = typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/html5shiv.js
 	}
