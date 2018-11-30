@@ -1,5 +1,5 @@
 ##### MENU #####
-[GP : type=37902]
+[request.getQueryParams()['type'] == 37902]
 lib.ajaxMenu = HMENU
 lib.ajaxMenu {
 	expAll = 1
