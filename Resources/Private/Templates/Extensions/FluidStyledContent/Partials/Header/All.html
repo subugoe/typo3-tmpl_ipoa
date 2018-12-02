@@ -7,7 +7,8 @@
 				layout: data.header_layout,
 				positionClass: '{f:if(condition: data.header_position, then: \'ce-headline-{data.header_position}\')}',
 				link: data.header_link,
-				default: settings.defaultHeaderType}" />
+				default: settings.defaultHeaderType
+				uid:data.uid}" />
 			<f:render partial="Header/SubHeader" arguments="{
 				subheader: data.subheader,
 				layout: data.header_layout,
