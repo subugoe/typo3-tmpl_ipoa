@@ -5,9 +5,6 @@
   display: flex !important;
   flex-direction: column;
 
-  img {
-    width: 100%;
-  }
 
   picture {
     @extend %ic-layout__item;
