@@ -15,6 +15,16 @@
   margin: 0 0 12px 0;
 }
 
-.ce-textpic {
-  width: 70%;
+.ce-textpic  {
+  display:flex;
+}
+
+.ce-textpic.ce-right.ce-intext {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.ce-textpic.ce-left.ce-intext {
+  display: flex;
+  flex-direction: row;
 }
