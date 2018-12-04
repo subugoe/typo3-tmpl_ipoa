@@ -86,3 +86,17 @@
 .more__column fieldset input {
   width: 100%;
 }
+
+.more__column .frame {
+  flex-direction: column;
+}
+
+.more__column .frame header {
+  width: 100%;
+}
+
+.more__column .tx-felogin-pi1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

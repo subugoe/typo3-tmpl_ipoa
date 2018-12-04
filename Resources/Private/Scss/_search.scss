@@ -2,6 +2,8 @@
 //    the fixed head menu bar
 //    http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-B
 .search {
+  display: flex;
+
   .sort--active {
     background-color: $color-block-background--on-bright;
     font-weight: 400;
@@ -32,15 +34,14 @@
 }
 
 .search__content {
-  @extend %ic-layout;
-  @extend .ic-pt;
-  @include responsive-content-padding();
 }
 
 .search__heading {
-  @extend %ic-layout__item;
-  @extend .ic-desk-and-up-one-quarter;
-  @extend %heading;
+  display: flex;
+  justify-content: flex-end;
+  width: 25%;
+  margin: 0 !important;
+  padding-right: 2*$base-distance;
 
   line-height: round($inuit-base-line-height / .65);
 
@@ -50,8 +51,8 @@
 }
 
 .search__enter {
-  @extend %ic-layout__item;
-  @extend .ic-desk-and-up-three-quarters;
+  width: 75%;
+  padding: 0 !important;
   @if $search-theme-dark {
     color: $color--brightest;
   }
@@ -165,7 +166,7 @@
     background-size: contain;
     content: "";
     display: inline-block;
-    height: 16;
+    height: 16px;
     margin-bottom: $shift-chevron-before-content;
     margin-left: -6px;
     margin-right: 0;

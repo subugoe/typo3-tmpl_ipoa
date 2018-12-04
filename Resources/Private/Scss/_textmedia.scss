@@ -2,13 +2,24 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
+  margin-bottom: $base-distance;
+}
+
+.frame header {
+  display: flex;
+  width: 25%
+}
+
+.frame > div {
+  display: flex;
+  width: 75%;
 }
 
 .frame header h2 {
-  padding-top: 20px;
   margin: 0 0 12px 0;
   line-height: 37px;
+  font-size: $inuit-heading-size-2;
 }
 
 .frame p {
