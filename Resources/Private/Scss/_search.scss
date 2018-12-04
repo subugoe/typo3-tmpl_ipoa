@@ -3,6 +3,7 @@
 //    http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-B
 .search {
   display: flex;
+  align-items: flex-start ;
 
   .sort--active {
     background-color: $color-block-background--on-bright;
@@ -39,15 +40,21 @@
 .search__heading {
   display: flex;
   justify-content: flex-end;
+  align-items: flex-start;
   width: 25%;
   margin: 0 !important;
   padding-right: 2*$base-distance;
+  padding-top: 1/2*$base-distance;
 
   line-height: round($inuit-base-line-height / .65);
 
   @include media-query("desk-and-up") {
     text-align: right;
   }
+}
+
+.search__heading svg {
+  margin: 1/2 * $base-distance;
 }
 
 .search__enter {

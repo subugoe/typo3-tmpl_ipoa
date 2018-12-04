@@ -4,6 +4,8 @@
 }
 
 .footer-hide__helper {
+  display: flex;
+  flex-direction: column;
   background-color: $color-text-background--default;
   position: relative;
   z-index: 1;
