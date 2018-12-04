@@ -1,3 +1,9 @@
 <main role="main" class="main">
-	<!--TYPO3SEARCH_begin--><f:cObject typoscriptObjectPath="lib.relContent.def"/><!--TYPO3SEARCH_end-->
+	<f:if condition="{data.author}">
+		<div class="authors">
+			<a href="./community/authoren">Bearbeitet von: {data.author}</a>
+		</div>
+	</f:if>
+	<!--TYPO3SEARCH_begin-->
+	<f:cObject typoscriptObjectPath="lib.relContent.def"/><!--TYPO3SEARCH_end-->
 </main>
