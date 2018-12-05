@@ -1,14 +1,34 @@
 .footer__content {
-  @extend %ic-layout;
-  @include responsive-content-padding();
+  padding: 0 150px;
+  width: 100%;
+  display: flex;
 }
 
 .footer__column {
-  @extend %ic-layout__item;
-  @extend .ic-tablet-one-half;
-  @extend .ic-notebook-and-up-one-quarter;
-  @extend .ic-pt+;
-  @extend .ic-pb+;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 25%;
+  display: inline-block;
+  padding-left: 20px;
+  vertical-align: top;
+}
+
+.footer__column .frame {
+  flex-direction: column;
+}
+
+.footer__column .frame header {
+  width: 100%;
+}
+
+.footer__column .ce-textpic {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__column .ce-textpic figure {
+  margin: 0;
 }
 
 .footer {
@@ -27,6 +47,7 @@
 
   img {
     max-width: 100%;
+    height: auto;
   }
 
   ul {

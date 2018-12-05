@@ -43,11 +43,12 @@
 }
 
 .more__column {
-  @extend %ic-layout__item;
-  @extend .ic-tablet-one-half;
-  @extend .ic-notebook-and-up-one-quarter;
-  @extend .ic-pt +;
-  @extend .ic-pb +;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 25%;
+  display: inline-block;
+  padding-left: 20px;
+  vertical-align: top;
 
   div a {
     @extend %link--default;
