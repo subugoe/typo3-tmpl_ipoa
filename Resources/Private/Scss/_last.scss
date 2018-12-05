@@ -1,9 +1,8 @@
 .last {
-  @extend %ic-layout;
-  @extend .ic-pt;
-  @extend .ic-pb;
   @extend %text--very-bright;
-  @extend %text--small;
+  display: flex;
+  font-size: $base-font-size;
+  padding: $base-distance 150px;
 
   @include responsive-content-padding();
   border-bottom: 1px solid lighten($color--darkest, 50%);

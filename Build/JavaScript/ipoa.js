@@ -2,9 +2,11 @@ jQuery(function () {
 
   /**
    * carousel related code
+   * just show one image at a time
    */
-  const carousel = function (id) {
-    const arr = jQuery('#' + id).find('li');
+  const carousel = function (carel) {
+    const arr = jQuery(carel).find('.ce-row');
+
     jQuery(arr).hide();
     jQuery(arr[0]).show();
 
@@ -13,18 +15,15 @@ jQuery(function () {
       Reflect.deleteProperty(arr[counter]);
       arr.push(item);
       setTimeout(function () {
-        jQuery('#' + id).find('li').hide();
+        jQuery(carel).find('.ce-row').hide();
         recurse(counter + 1);
         jQuery(item).show();
       }, 2500);
     })(0);
   };
 
-  /**
-   * put carousel related code to use
-   */
-  jQuery.each(jQuery('.logocarousel'), function () {
-    carousel(jQuery(this).attr('id'));
+  jQuery.each(jQuery('.footer__column .ce-gallery'), function () {
+    carousel(jQuery(this));
   });
 
   /**

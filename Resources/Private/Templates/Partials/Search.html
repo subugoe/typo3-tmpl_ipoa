@@ -3,33 +3,32 @@
 <v:condition.string.isNumeric value="{SEARCH_UID}">
 	<f:then>
 		<div class="search" id="search">
-			<div class="search__content">
-				<h2 class="search__heading">
-					<svg class="fa-icon fa-icon-search fa-icon--default">
-						<use xlink:href="#icon-search"></use>
-					</svg>
-					{f:translate(key:'solrSearch', extensionName: 'tmpl_ipoa')}
-				</h2>
-				<div class="search__enter">
-					<form action="/suche/" method="get" accept-charset="utf-8" class="search__form tx-solr-search-form-pi-results">
-						<div class="search__field tx-solr-search-form">
-							<script type="text/javascript">
-								var tx_solr_suggestUrl = '{PAGE_UID}';
-							</script>
-							<input type="text" class="search__input tx-solr-q" name="q" value="">
-							<input type="hidden" name="id" value="{SEARCH_UID}">
-							<input type="hidden" name="L" value="{v:page.language(pageUid: '{PAGE_UID}', normalWhenNoLanguage: 1)}">
-						</div>
-						<!--
-									-->
-						<div class="search__submit">
-							<input type="submit" value="{f:translate(key:'solrSearch', extensionName: 'tmpl_ipoa')}" class="search__button tx-solr-submit">
-						</div>
-					</form>
-					<p class="paragraph">{f:translate(key:'usePageWideSearch',
-						extensionName: 'tmpl_ipoa',
-						arguments:{0:'{SEARCH_PROJECT}'})}</p>
-				</div>
+			<h2 class="search__heading">
+				<svg class="fa-icon fa-icon-search fa-icon--default">
+					<use xlink:href="#icon-search"></use>
+				</svg>
+				{f:translate(key:'solrSearch', extensionName: 'tmpl_ipoa')}
+			</h2>
+			<div class="search__enter">
+				<form action="/suche/" method="get" accept-charset="utf-8"
+					  class="search__form tx-solr-search-form-pi-results">
+					<div class="search__field tx-solr-search-form">
+						<script type="text/javascript">
+							var tx_solr_suggestUrl = '{PAGE_UID}';
+						</script>
+						<input type="text" class="search__input tx-solr-q" name="q" value="">
+						<input type="hidden" name="id" value="{SEARCH_UID}">
+						<input type="hidden" name="L"
+							   value="{v:page.language(pageUid: '{PAGE_UID}', normalWhenNoLanguage: 1)}">
+					</div><!--
+                                --><div class="search__submit">
+						<input type="submit" value="{f:translate(key:'solrSearch', extensionName: 'tmpl_ipoa')}"
+							   class="search__button tx-solr-submit">
+					</div>
+				</form>
+				<p class="paragraph">{f:translate(key:'usePageWideSearch',
+					extensionName: 'tmpl_ipoa',
+					arguments:{0:'{SEARCH_PROJECT}'})}</p>
 			</div>
 		</div>
 	</f:then>

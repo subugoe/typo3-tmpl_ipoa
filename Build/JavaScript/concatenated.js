@@ -1,10 +1,12 @@
-jQuery(function() {
+jQuery(function () {
 
   /**
    * carousel related code
+   * just show one image at a time
    */
-  const carousel = function(id) {
-    const arr = jQuery('#' + id).find('li');
+  const carousel = function (carel) {
+    const arr = jQuery(carel).find('.ce-row');
+
     jQuery(arr).hide();
     jQuery(arr[0]).show();
 
@@ -12,21 +14,18 @@ jQuery(function() {
       const item = arr[counter];
       Reflect.deleteProperty(arr[counter]);
       arr.push(item);
-      setTimeout(function() {
-        jQuery('#' + id).find('li').hide();
+      setTimeout(function () {
+        jQuery(carel).find('.ce-row').hide();
         recurse(counter + 1);
         jQuery(item).show();
       }, 2500);
     })(0);
-
   };
 
-  /**
-   * put carousel related code to use
-   */
-  jQuery.each(jQuery('.logocarousel'), function() {
-    carousel(jQuery(this).attr('id'));
+  jQuery.each(jQuery('.footer__column .ce-gallery'), function () {
+    carousel(jQuery(this));
   });
+
 
   /**
    * Prevent the logocarousel to change it's height
@@ -36,7 +35,7 @@ jQuery(function() {
   const getLogoHeight = () => {
     let logoHeight = 100;
 
-    jQuery(this).find('img').each(function() {
+    jQuery(this).find('img').each(function () {
       if (this.height > logoHeight) {
         logoHeight = this.height;
       }
@@ -63,11 +62,11 @@ jQuery(function() {
   /**
    * recalculate (and set the new) footer height with every window resize
    */
-  jQuery(window).resize(function() {
+  jQuery(window).resize(function () {
     footerHideHeight = jQuery('.footer-hide__content').height();
     jQuery('.footer-hide').css({'height': footerHideHeight + 'px'});
   });
-  jQuery(window).on('load', function() {
+  jQuery(window).on('load', function () {
     footerHideHeight = jQuery('.footer-hide__content').height();
     jQuery('.footer-hide').css({'height': footerHideHeight + 'px'});
   });
@@ -79,7 +78,7 @@ jQuery(function() {
    *
    * 1. TODO : make dirty number clean
    */
-  jQuery('.main div a').click(function() {
+  jQuery('.main div a').click(function () {
     const scrollToId = this.hash;
     const offsetTopOfTarget = jQuery(scrollToId).offset().top;
     jQuery('html, body').scrollTop(offsetTopOfTarget - 65);

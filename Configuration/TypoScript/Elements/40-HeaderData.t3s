@@ -10,11 +10,11 @@ page.headerData.111.value (
 page.headerData.112 = TEXT
 [globalString = ENV:HTTPS = on]
 page.headerData.112.value (
-  <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 )
 [else]
 page.headerData.112.value (
-  <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 )
 [global]
 
