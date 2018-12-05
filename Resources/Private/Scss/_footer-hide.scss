@@ -1,6 +1,7 @@
 .footer-hide {
-  position: relative;
   z-index: 0;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .footer-hide__helper {
@@ -14,9 +15,9 @@
 .footer-hide__content {
   @include media-query("notebook-and-up") {
     bottom: 0;
-    position: fixed;
     width: 100%;
     z-index: -1;
+    position: fixed;
   }
 }
 

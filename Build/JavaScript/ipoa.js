@@ -34,7 +34,7 @@ jQuery(function () {
   const getLogoHeight = () => {
     let logoHeight = 100;
 
-    jQuery(this).find('img').each(function () {
+    jQuery(this).find('.footer__column img').each(function () {
       if (this.height > logoHeight) {
         logoHeight = this.height;
       }
@@ -51,22 +51,21 @@ jQuery(function () {
    * There has to be set up a min-height, because otherwise, in very wide screens
    * the headers would not be visible after reload
    */
-  let footerHideHeight = jQuery('.footer-hide__content').height();
-  let footerHideMinHeight = getLogoHeight() + 20;
-  footerHideMinHeight += jQuery('.tracking').height();
-  footerHideMinHeight += jQuery('.footer__column > h3').height();
-  jQuery('.footer-hide').css({ 'height': footerHideHeight + 'px' });
-  jQuery('.footer-hide').css({ 'min-height': footerHideMinHeight + 'px' });
+  let footerHideHeight = getLogoHeight() + 20;
+  footerHideHeight += jQuery('.tracking').height();
+  footerHideHeight += jQuery('.footer__column h2').height();
+  jQuery('.footer').css({ 'height': footerHideHeight + 'px' });
+  jQuery('.footer-hide').css({ 'height': footerHideHeight + 20 + 'px' });
   /**
    * recalculate (and set the new) footer height with every window resize
    */
   jQuery(window).resize(function () {
-    footerHideHeight = jQuery('.footer-hide__content').height();
-    jQuery('.footer-hide').css({ 'height': footerHideHeight + 'px' });
+    jQuery('.footer').css({ 'height': footerHideHeight + 'px' });
+    jQuery('.footer-hide').css({ 'height': footerHideHeight + 20 + 'px' });
   });
   jQuery(window).on('load', function () {
-    footerHideHeight = jQuery('.footer-hide__content').height();
-    jQuery('.footer-hide').css({ 'height': footerHideHeight + 'px' });
+    jQuery('.footer').css({ 'height': footerHideHeight + 'px' });
+    jQuery('.footer-hide').css({ 'min-height': footerHideHeight + 20 + 'px' });
   });
 
   /**
