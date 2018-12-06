@@ -1,6 +1,16 @@
 // only show title in more
+.more__column .news {
+  width: 100% !important;
+}
+
 .more__column .news .description {
   display: none;
+}
+
+.more__column .news-list-view {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .more__column .news-list-view a {
