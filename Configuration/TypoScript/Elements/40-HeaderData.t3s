@@ -6,18 +6,6 @@ page.headerData.111.value (
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
 )
 
-
-page.headerData.112 = TEXT
-[globalString = ENV:HTTPS = on]
-page.headerData.112.value (
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-)
-[else]
-page.headerData.112.value (
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-)
-[global]
-
 #page.headerData.900 = TEXT
 #page.headerData.900.value (
 #	<script src="/typo3conf/ext/tmpl_ipoa/Resources/Public/JavaScript/picturefill.min.js" type="text/javascript" async></script>
