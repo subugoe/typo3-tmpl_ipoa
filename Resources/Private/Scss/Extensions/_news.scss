@@ -1,3 +1,30 @@
+.news {
+  display: flex;
+  width: 100% !important; // override .frame > div
+  justify-content: flex-end;
+}
+
+.news-menu-view {
+  display: flex;
+  width: 75%;
+}
+
+.news .article {
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+}
+
+.news-list-view {
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+}
+
+.news-list-view li {
+  margin-bottom: 6px;
+}
+
 // only show title in more
 .more__column .news {
   width: 100% !important;
@@ -19,4 +46,9 @@
 
 .more__column .news-list-view li {
   display: flex;
+  margin-bottom: 0px;
+}
+
+.more__column .news-date {
+  display: none;
 }

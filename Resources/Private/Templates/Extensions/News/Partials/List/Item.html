@@ -10,9 +10,11 @@
 	<li>
 		<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 			{newsItem.title}
+		</n:link>
+		<span class="news-date">
 		-
 		<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-		</n:link>
+			</span>
 		<br />
 		<n:removeMediaTags>
 			<f:if condition="{newsItem.teaser}">
