@@ -1,25 +1,49 @@
 .frame {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   flex-wrap: wrap;
   flex-direction: row;
   margin-bottom: $base-distance;
 }
 
+// empty element with element id
+.frame > a {
+  border: 0;
+}
+
 .frame header {
   display: flex;
-  width: 25%
+  padding-right: 6px;
+
+  @include media-l {
+    width: 25%;
+  }
+  @include media-m {
+    width: 100%;
+  }
+  @include media-m {
+    width: 100%;
+  }
 }
 
 .frame > div {
-  display: flex;
-  width: 75%;
+  display: block;
+
+  @include media-l {
+    width: 75%;
+  }
+  @include media-m {
+    width: 100%;
+  }
+  @include media-s {
+    width: 100%;
+  }
 }
 
 .frame header h2 {
   margin: 0 0 12px 0;
   line-height: 37px;
-  font-size: $inuit-heading-size-2;
+  font-size: 26px;
 }
 
 .frame p {
@@ -30,12 +54,30 @@
   display:flex;
 }
 
-.ce-textpic.ce-right.ce-intext {
-  display: flex;
-  flex-direction: row-reverse;
+.ce-gallery {
+  display: block;
 }
 
-.ce-textpic.ce-left.ce-intext {
-  display: flex;
-  flex-direction: row;
+.ce-bodytext {
+  display: block;
+}
+
+.ce-textpic.ce-right.ce-intext .ce-gallery {
+  float: right;
+}
+
+.ce-textpic.ce-left.ce-intext .ce-gallery {
+  float: left;
+}
+
+.ce-textpic.ce-right.ce-above .ce-gallery {
+  text-align: right;
+}
+
+.ce-textpic.ce-left figure {
+  margin-left: 0;
+}
+
+.ce-textpic.ce-right figure {
+  margin-right: 0;
 }

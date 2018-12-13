@@ -14,9 +14,6 @@
   url('./fonts/open-sans-v15-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-$base-distance: 12px;
-$base-font-size: 16px;
-$large-font-size: 32px;
 
 
 $inuit-base-font-size: 16px;
@@ -51,12 +48,6 @@ $breakpoints: (
 @import "../../../bower_components/inuit-normalize/generic.normalize";
 @import "../../../bower_components/inuit-box-sizing/generic.box-sizing";
 
-// Base
-$inuit-heading-size-1: 32px;
-$inuit-heading-size-2: 25px;
-$inuit-heading-size-3: 24px;
-$inuit-heading-size-3: 20px;
-$inuit-heading-size-4: 16px;
 @import "../../../bower_components/inuit-page/base.page";
 @import "../../../bower_components/inuit-headings/base.headings";
 
@@ -100,6 +91,7 @@ $inuit-enable-margins--huge: true;
 $search-theme-dark: false;
 
 @import "var";
+@import "media";
 @import "base";
 @import "extend";
 @import "start";
