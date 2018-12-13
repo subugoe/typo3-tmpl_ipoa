@@ -32,90 +32,149 @@ TCEFORM.tt_content.pi_flexform.news_pi1.additional {
 
 //////////////////////////////////////////////////////
 // Einstellungen für Editoren
-[usergroup == 3] || [usergroup == 4]
-// Setzen der Benutzerrechte beim Anlegen von Seiten und Inhalt
-// 3: Advanced Editing, 4: OA-Tage
-// TODO: muss noch durch Variablen gesteuert werden, falls möglich
+[usergroup = = 3] || [usergroup = = 4]
+    // Setzen der Benutzerrechte beim Anlegen von Seiten und Inhalt
+    // 3: Advanced Editing, 4: OA-Tage
+    // TODO: muss noch durch Variablen gesteuert werden, falls möglich
 
-// Verstecken des Moduls "Admin Tools"
-options.hideModules = tools
+    // Verstecken des Moduls "Admin Tools"
+    options.hideModules = tools
 
-// Verstecken unerwünschter möglicher Inhaltselemente
-mod.web_list {
+    // Verstecken unerwünschter möglicher Inhaltselemente
+    mod.web_list {
 
-    // verstecke Elemente die im "new record wizard" neu angelegt werden könnten
-    deniedNewTables = tx_devlog,backend_layout,sys_domain,tx_rtehtmlarea_acronym,sys_template,tx_scheduler_task_group,sys_note,sys_file_collection,tx_beacl_acl
-    hideTables = sys_domain,sys_template,tx_beacl_acl
-}
-
-// Verstecken unerwünschter Seiten- und Inhaltselemente
-TCEFORM {
-    // Entfernen des alternativen Text von image
-    // Todo: würde es vermutlich überall entfernen
-    #sys_file_reference.alternative.disabled  = 1
-
-    pages {
-        description.disabled = 0
-        media.disabled = 0
-        author.disabled = 0
-        #1 = Standard
-        #2 = Erweitert
-        #3 = Externe URL
-        #4 = Shortcut
-        #5 = Nicht im Menü
-        #6 = Backend Benutzer Bereich
-        #7 = Mount Seite
-        #199 = Abstand
-        #254 = Sysordner
-        #255 = Recycler
-        #--div-- = Trennlinie
-        doktype.removeItems = 6,4,7,3,254,199,255
-
-        // Seiteneigenschaften
-        // General
-        subtitle.disabled = 1
-        nav_title.disabled = 1
-        target.disabled = 1
-        // Access
-        fe_group.disabled = 1
-        extendToSubpages.disabled = 1
-        fe_login_mode.disabled = 1
-        // Metadata
-        abstract.disabled = 1
-        author.disabled = 1
-        author_email.disabled = 1
-        lastUpdated.disabled = 1
-        // Appearance
-        layout.disabled = 1
-        backend_layout.disabled = 1
-        backend_layout_next_level.disabled = 1
-        content_from_pid.disabled = 1
-        // Behaviour
-        alias.disabled = 1
-        url_scheme.disabled = 1
-        cache_timeout.disabled = 1
-        no_cache.disabled = 1
-        cache_tags.disabled = 1
-        is_siteroot.disabled = 1
-        no_search.disabled = 1
-        editlock.disabled = 1
-        php_tree_stop.disabled = 1
-        module.disabled = 1
-        // Resources
-        media.disabled = 1
-        storage_pid.disabled = 1
-        TSconfig.disabled = 1
+        // verstecke Elemente die im "new record wizard" neu angelegt werden könnten
+        deniedNewTables = tx_devlog,backend_layout,sys_domain,tx_rtehtmlarea_acronym,sys_template,tx_scheduler_task_group,sys_note,sys_file_collection,tx_beacl_acl
+        hideTables = sys_domain,sys_template,tx_beacl_acl
     }
 
-    tt_content {
-        // Remove unwanted content elements
-        # CType.removeItems = header,textpic,bullets,media,shortcut,html,div,multimedia,mailform,login,search,tx_beacl_acl,uploads
-        CType.removeItems (
+    // Verstecken unerwünschter Seiten- und Inhaltselemente
+    TCEFORM {
+        // Entfernen des alternativen Text von image
+        // Todo: würde es vermutlich überall entfernen
+        #sys_file_reference.alternative.disabled  = 1
+
+        pages {
+            description.disabled = 0
+            media.disabled = 0
+            author.disabled = 0
+            #1 = Standard
+            #2 = Erweitert
+            #3 = Externe URL
+            #4 = Shortcut
+            #5 = Nicht im Menü
+            #6 = Backend Benutzer Bereich
+            #7 = Mount Seite
+            #199 = Abstand
+            #254 = Sysordner
+            #255 = Recycler
+            #--div-- = Trennlinie
+            doktype.removeItems = 6,4,7,3,254,199,255
+
+            // Seiteneigenschaften
+            // General
+            subtitle.disabled = 1
+            nav_title.disabled = 1
+            target.disabled = 1
+            // Access
+            fe_group.disabled = 1
+            extendToSubpages.disabled = 1
+            fe_login_mode.disabled = 1
+            // Metadata
+            abstract.disabled = 1
+            author.disabled = 1
+            author_email.disabled = 1
+            lastUpdated.disabled = 1
+            // Appearance
+            layout.disabled = 1
+            backend_layout.disabled = 1
+            backend_layout_next_level.disabled = 1
+            content_from_pid.disabled = 1
+            // Behaviour
+            alias.disabled = 1
+            url_scheme.disabled = 1
+            cache_timeout.disabled = 1
+            no_cache.disabled = 1
+            cache_tags.disabled = 1
+            is_siteroot.disabled = 1
+            no_search.disabled = 1
+            editlock.disabled = 1
+            php_tree_stop.disabled = 1
+            module.disabled = 1
+            // Resources
+            media.disabled = 1
+            storage_pid.disabled = 1
+            TSconfig.disabled = 1
+        }
+
+        tt_content {
+            header_layout.altLabels.1 = Standard
+            header_layout.altLabels.2 = OA-Tage Untertitel
+            header_layout.removeItems = 0,3,4,5,100
+            header_position.disabled = 1
+            colPos.disabled = 0
+            header_link.disabled = 1
+            date.disabled = 1
+            linkToTop.disabled = 1
+            fe_group.disabled = 1
+            section_frame.disabled = 1
+            layout.disabled = 1
+            margin_top.disabled = 1
+            sectionIndex.disabled = 1
+            spaceAfter.disabled = 1
+            spaceBefore.disabled = 1
+            # Media Adjustments
+            imageheight.disabled = 1
+            imagewidth.disabled = 1
+            imageborder.disabled = 1
+            # Galery Settings
+            imageorient.disabled = 0
+            imagecols.disabled = 1
+            # Behavior (enlarge on click)
+            image_zoom.disabled = 0
+            // table
+            pi_flexform.table.sDEF {
+                acctables_tfoot.disabled = 1
+                acctables_nostyles.disabled = 1
+                acctables_headerpos.disabled = 1
+                acctables_tableclass.disabled = 1
+            }
+
+            // menu, remove items
+            #menu_type.removeItems = 3,7,categorized_content
+        }
+    }
+
+
+    // steht in der localconf zum Enternen des Link zum direkten Upload im Contentelement:
+    setup.override.edit_docModuleUpload = 0
+
+
+    // Im "new content element wizard" keine Tabs anzeigen, es sind sowieso nicht so viele Elemente
+    mod.wizards.newContentElement.renderMode = list
+
+    # Hide possibility to upload files in Element Browser
+    options.folderTree.uploadFieldsInLinkBrowser = 0
+
+    // remove unwanted content objects
+    CType.removeItems (
+            html,
+            ####forms,
+            login
+    )
+
+[END]
+
+
+TCEFORM.tt_content {
+    // Remove unwanted content elements
+    # CType.removeItems = header,textpic,bullets,media,shortcut,html,div,multimedia,mailform,login,search,tx_beacl_acl,uploads
+    CType.removeItems (
             ####standardelements,
             header,
             text,
             textpic,
-            #image,
+            image,
             #textmedia,
             ####lists##,
             uploads,
@@ -136,69 +195,12 @@ TCEFORM {
             ####special,
             shortcut,
             #list,
-            div,
-            html,
-            ####forms,
-            login,
-        )
-
-
-        header_layout.altLabels.1 = Standard
-        header_layout.altLabels.2 = OA-Tage Untertitel
-        header_layout.removeItems = 0,3,4,5,100
-        header_position.disabled = 1
-        colPos.disabled = 0
-        header_link.disabled = 1
-        date.disabled = 1
-        linkToTop.disabled = 1
-        fe_group.disabled = 1
-        section_frame.disabled = 1
-        layout.disabled = 1
-        margin_top.disabled = 1
-        sectionIndex.disabled = 1
-        spaceAfter.disabled = 1
-        spaceBefore.disabled = 1
-        # Media Adjustments
-        imageheight.disabled = 1
-        imagewidth.disabled = 1
-        imageborder.disabled = 1
-        # Galery Settings
-        imageorient.disabled = 0
-        imagecols.disabled = 1
-        # Behavior (enlarge on click)
-        image_zoom.disabled = 0
-        // table
-        pi_flexform.table.sDEF {
-            acctables_tfoot.disabled = 1
-            acctables_nostyles.disabled = 1
-            acctables_headerpos.disabled = 1
-            acctables_tableclass.disabled = 1
-        }
-        // menu, remove items
-        #menu_type.removeItems = 3,7,categorized_content
-
-
-        // Configure image layout
-        imageorient {
-            // removeItems = 0,1,2,3,4,5,6,7,8,9,10,17,18,--div--,25,26
-            // 0 = above, center
-            // 17 = In text, right
-            // 18 = In text, left
-            removeItems = 1,2,3,4,5,6,7,8,9,10,25,26
-        }
-    }
+            div
+    )
 }
-// steht in der localconf zum Enternen des Link zum direkten Upload im Contentelement:
-setup.override.edit_docModuleUpload = 0
 
-
-// Im "new content element wizard" keine Tabs anzeigen, es sind sowieso nicht so viele Elemente
-mod.wizards.newContentElement.renderMode = list
-
-# Hide possibility to upload files in Element Browser
-options.folderTree.uploadFieldsInLinkBrowser = 0
-
-[END]
+// configure image position
+TCEFORM.tt_content.imageorient.removeItems = 3,4,5,6,7,8,9,10,25,26
 
 # allow media upload via url, but only in textmedia
 TCEFORM.tt_content.assets.config.appearance.fileUploadAllowed = 1
