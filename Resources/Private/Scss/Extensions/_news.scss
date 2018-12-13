@@ -22,7 +22,14 @@
 }
 
 .news-list-view li {
+  display: flex;
+  justify-content: flex-start;
   margin-bottom: 6px;
+}
+
+.news-list-view li a {
+  display: flex;
+  flex-grow: 1;
 }
 
 // only show title in more
