@@ -3,10 +3,22 @@
   flex-wrap: wrap;
   padding: 40px 150px 0px 150px;
   margin: 0;
-
-  @include media-query("tablet-and-up") {
-    background: url("../Images/bg-h-1.jpg") no-repeat center center fixed;
-    background-size: cover;
+  background: url("../Images/bg-h-1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  @include media-xl {
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  @include media-l {
+    justify-content: flex-start;
+  }
+  @include media-m {
+    align-items: center;
+    flex-direction: column;
+  }
+  @include media-s {
+    align-items: center;
+    flex-direction: column;
   }
 }
 
@@ -133,49 +145,60 @@
 
 // 1. simulating "@extend .ic-pr"
 .head__logo {
-  text-align: center;
-  width: 25%;
-  margin-top: 20px;
-
-  img {
-    width: 150px;
+  display: flex;
+  @include media-xl {
+    margin-top: 20px;
   }
+  @include media-l {
+    margin-top: 20px;
+  }
+  @include media-m {
+    margin-top: 10px;
+  }
+  @include media-s {
+    margin-top: 10px;
+  }
+}
 
-  @include media-query("tablet-and-up") {
-    padding-right: double($inuit-base-spacing-unit) !important; // 1.
+.head__logo img {
 
-    img {
-      width: 100%;
-      max-width: 250px;
-    }
+  @include media-xl {
+    margin-right: 40px;
+    width: 200px;
+  }
+  @include media-l {
+    margin-right: 20px;
+    width: 120px;
+  }
+  @include media-m {
+    margin-right: 10px;
+    width: 120px;
+  }
+  @include media-s {
+    width: 90px;
   }
 }
 
 .head__text {
-  display: flex;
   flex-direction: column;
-  width: 75%;
+  @include media-xl { display: flex; }
+  @include media-l { display: flex; }
+  @include media-m { display: none; }
+  @include media-s { display: none; }
 }
 
 // only visible in tablet-and-up
 // 1.,2. show claim only if enough screen estate is available
 .head__text-claim {
-  width: 100%;
-  font-size: $large-font-size;
   font-weight: 400;
-  margin-top: 40px;
 
-  @include media-query("tablet-and-up") { // 2.
-    // @extend %ic-layout__item;
-    // @extend .ic-mt\+;
-    // @extend %text--huge;
-    display: inline-block;
-    letter-spacing: $letter-spacing--large;
-
-    @include media-query("notebook") {
-      margin-top: ($inuit-base-spacing-unit * 4) !important;
-      transform: translateY(-10%);
-    }
+  @include media-xl {
+    margin-top: 40px;
+    font-size: $large-font-size;
+  }
+  @include media-l {
+    margin-top: 30px;
+    font-size: $large-font-size - 6px;
   }
 }
 
@@ -186,9 +209,33 @@
   width: 100%;
   font-size: $large-font-size;
   font-weight: 400;
+  @include media-xl { display: flex; }
+  @include media-l { display: none; }
+  @include media-m { display: none; }
+  @include media-s { display: none; }
+}
 
-  @include media-query("tablet-and-up") {
-    text-align: left;
+h1.head__text-pagetitle-small {
+
+  @include media-xl {
+    display: none;
+    margin: 24px 0;
+  }
+  @include media-l {
+    display: flex;
+    margin: 0 0 24px 0;
+    font-size: $large-font-size - 6px;
+    width: 100%;
+  }
+  @include media-m {
+    display: flex;
+    margin: 0 0 12px 0;
+    font-size: $large-font-size - 6px;
+  }
+  @include media-s {
+    display: flex;
+    margin: 0 0 6px 0;
+    font-size: $base-font-size + 6px;
   }
 }
 

@@ -4,14 +4,20 @@ $break-l: 1200px;
 $break-m: 1025px;
 $break-s: 480px;
 
-@mixin media-l {
+@mixin media-xl {
   @media (min-width: 1200px) {
     @content;
   }
 }
 
+@mixin media-l {
+  @media (min-width: 820px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
 @mixin media-m {
-  @media (min-width: 480px) and (max-width: 1199px) {
+  @media (min-width: 480px) and (max-width: 820px) {
     @content;
   }
 }
