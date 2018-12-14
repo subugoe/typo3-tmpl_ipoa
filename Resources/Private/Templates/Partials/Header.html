@@ -12,7 +12,8 @@
 	<div class="head__links">
 		<ul class="head__list">
 			<li>
-				<f:link.page pageUid="{START_UID}" title="{f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}" class="head__link" tabindex="2">
+				<f:link.page pageUid="{START_UID}" title="{f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}"
+							 class="head__link" tabindex="2">
 					<svg class="fa-icon fa-icon-home fa-icon--s">
 						<use xlink:href="#icon-home"></use>
 					</svg>
@@ -22,11 +23,14 @@
 			<v:condition.string.isNumeric value="{KONTAKT_UID}">
 				<f:then>
 					<li>
-						<f:link.page pageUid="{KONTAKT_UID}" title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}" class="head__link" tabindex="2">
+						<f:link.page pageUid="{KONTAKT_UID}"
+									 title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}" class="head__link"
+									 tabindex="2">
 							<svg class="fa-icon fa-icon-envelope fa-icon--s">
 								<use xlink:href="#icon-envelope"></use>
 							</svg>
-							<span class="hidden-sub-notebook">{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}</span>
+							<span
+								class="hidden-sub-notebook">{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}</span>
 						</f:link.page>
 					</li>
 				</f:then>
@@ -34,11 +38,13 @@
 			<v:condition.string.isNumeric value="{NEWS_UID}">
 				<f:then>
 					<li>
-						<f:link.page pageUid="{NEWS_UID}" title="{f:translate(key:'news', extensionName: 'tmpl_ipoa')}" class="head__link" tabindex="2">
+						<f:link.page pageUid="{NEWS_UID}" title="{f:translate(key:'news', extensionName: 'tmpl_ipoa')}"
+									 class="head__link" tabindex="2">
 							<svg class="fa-icon fa-icon-bolt fa-icon--s">
 								<use xlink:href="#icon-bolt"></use>
 							</svg>
-							<span class="hidden-sub-notebook">{f:translate(key:'news', extensionName: 'tmpl_ipoa')}</span>
+							<span
+								class="hidden-sub-notebook">{f:translate(key:'news', extensionName: 'tmpl_ipoa')}</span>
 						</f:link.page>
 					</li>
 				</f:then>
@@ -46,11 +52,14 @@
 			<v:condition.string.isNumeric value="{SITEMAP_UID}">
 				<f:then>
 					<li>
-						<f:link.page pageUid="{SITEMAP_UID}" title="{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}" class="head__link" tabindex="2">
+						<f:link.page pageUid="{SITEMAP_UID}"
+									 title="{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}" class="head__link"
+									 tabindex="2">
 							<svg class="fa-icon fa-icon-sitemap fa-icon--s">
 								<use xlink:href="#icon-sitemap"></use>
 							</svg>
-							<span class="hidden-sub-notebook">{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}</span>
+							<span
+								class="hidden-sub-notebook">{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}</span>
 						</f:link.page>
 					</li>
 				</f:then>
@@ -58,11 +67,13 @@
 			<v:condition.string.isNumeric value="{SEARCH_UID}">
 				<f:then>
 					<li>
-						<a href="#search" title="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}" class="head__link" tabindex="2">
+						<a href="#search" title="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}"
+						   class="head__link" tabindex="2">
 							<svg class="fa-icon fa-icon-search fa-icon--s">
 								<use xlink:href="#icon-search"></use>
 							</svg>
-							<span class="hidden-sub-notebook">{f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
+							<span
+								class="hidden-sub-notebook">{f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
 						</a>
 					</li>
 				</f:then>
@@ -71,13 +82,15 @@
 				<f:then></f:then>
 				<f:else>
 					<li>
-						<a href="#" class="head__link js-head-language-indicator" title="{f:translate(key:'clickToOpen', extensionName: 'tmpl_ipoa')}">
+						<a href="#" class="head__link js-head-language-indicator"
+						   title="{f:translate(key:'clickToOpen', extensionName: 'tmpl_ipoa')}">
 							<svg class="fa-icon fa-icon-globe fa-icon--s">
 								<use xlink:href="#icon-globe"></use>
 							</svg>
 							<span class="hidden-sub-notebook">
-								<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{ipoa:getAlternativeLanguageFlag()}.png" />'>
-										<ipoa:getAlternativeLanguage />
+								<img
+									src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{ipoa:getAlternativeLanguageFlag()}.png" />'>
+										<ipoa:getAlternativeLanguage/>
 							</span>
 						</a>
 					</li>
@@ -88,11 +101,11 @@
 			<f:then></f:then>
 			<f:else>
 				<v:page.languageMenu
-						defaultLanguageLabel="<ipoa:getDefaultLanguage />"
-						linkCurrent="0"
-						defaultIsoFlag="dede"
-						classCurrent="'head__link--active'"
-						hideNotTranslated="{true}">
+					defaultLanguageLabel="<ipoa:getDefaultLanguage />"
+					linkCurrent="0"
+					defaultIsoFlag="dede"
+					classCurrent="'head__link--active'"
+					hideNotTranslated="{true}">
 					<div class="head__language-links js-head-language-links">
 						<svg class="fa-icon fa-icon-globe fa-icon--s fa-icon-on-bright">
 							<use xlink:href="#icon-globe"></use>
@@ -103,7 +116,9 @@
 									<f:then>
 										<li>
 											<a href="{langmenu.url}" title="" class="head__link head__link--active">
-												<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt="">
+												<img
+													src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />'
+													class="" alt="">
 												{langmenu.label}
 											</a>
 										</li>
@@ -111,7 +126,9 @@
 									<f:else>
 										<li>
 											<a href="{langmenu.url}" title="" class="head__link">
-												<img src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />' class="" alt="">
+												<img
+													src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{langmenu.flag}.png" />'
+													class="" alt="">
 												{langmenu.label}
 											</a>
 										</li>
@@ -138,7 +155,8 @@
 			<f:format.raw value="{HEADER_CLAIM}"/>
 		</div>
 		<div class="head__text-pagetitle">
-			<h1 class="heading heading--alpha" id="pagetitle">{PAGE_TITLE}</h1>
+			<h1 class="heading" id="pagetitle">{PAGE_TITLE}</h1>
 		</div>
 	</div>
+	<h1 class="heading head__text-pagetitle-small" id="pagetitle-small">{PAGE_TITLE}</h1>
 </header>
