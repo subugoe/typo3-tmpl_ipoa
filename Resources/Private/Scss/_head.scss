@@ -23,43 +23,56 @@
 }
 
 .head__links {
-  @extend %ic-layout__item;
-  @extend .ic-smaller-than-tablet-two-thirds;
-  @extend .ic-tablet-and-up-three-quarters;
-  @extend .ic-mt--;
-  text-align: right;
+  padding-left: $inuit-layout-gutter;
+  width: 100%;
+  align-items: center;
 
-  @include media-query("tablet-and-up") {
-    text-align: left;
+  @include media-xl {
+    display: flex;
   }
+  @include media-l {
+    display: flex;
+  }
+  @include media-m {
+    display: flex;
+  }
+  @include media-s {
+    display: none;
+  }
+  text-align: right;
 }
 
 .head-nav {
   display: flex;
   height: 50px;
   left: 0;
-  padding: 10px 150px 0 150px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 9999;
 
-  .head__links {
-    @include media-query("phone") {
-      display: none;
-    }
+  @include media-xl {
+    padding: 10px 150px 0 150px;
+  }
+  @include media-l {
+    padding: 10px 75px 0 75px;
+  }
+  @include media-m {
+    padding: 10px 25px 0 25px;
+  }
+  @include media-s {
+    padding: 5px 0 0 0;
   }
 }
-
-
 
 // 1. give the icon a little bit more space to top
 // 2. these links are not allowed to break into a new line
 .head__link {
-  @extend %link--default;
-  @extend %head__link--on-bright;
-  @extend %nobr; // 2.
   padding: 7px 5px 5px; // 1.
+  white-space: nowrap; // 2.
+  background-color: transparent;
+  border-color: transparent;
+
   &:hover,
   &:focus {
     @extend %link--on-bright;
@@ -76,39 +89,46 @@
   }
 }
 
+.head__link svg {
+  margin-bottom: -3px;
+}
+
 .head__link--active {
   background-color: $color-ipoa-green;
   color: $color--brightest;
 }
 
-// 1. LIs are inline
-// 2. UL is inline
 .head__list {
-  @extend %ic-list-bare;
-  @extend %ic-list-inline; // 1.
-  display: inline; // 2.
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+}
+
+.head__list > li {
+  display: inline-block;
 }
 
 // .head__menubutton
 // 1. simulating "@extend .ic-mt+"
 .head__menubutton {
-  @extend %ic-layout__item;
-  @extend .ic-smaller-than-tablet-one-third;
-  @extend .ic-tablet-and-up-one-quarter;
-  @extend .ic-mt--;
+  display: flex; /* [1] */
+  padding-left: $inuit-layout-gutter; /* [2] */
+  vertical-align: top; /* [3] */
+  width: 100%; /* [4] */
+  align-items: center;
+  margin: 0;
+}
 
-  @include media-query("tablet-and-up") {
-    text-align: right;
-    padding-right: double($inuit-base-spacing-unit) !important;
-  }
+.head__menubutton svg {
+  margin-bottom: -3px;
 }
 
 // the block that contains the various links to choose a different language
 // hidden by default
 // visible if ___ clicked
 .head__language-links {
-  @extend %ic-layout__item;
-  @extend .ic-pt;
   display: none;
   line-height: 220%;
   padding-left: 0;
@@ -143,7 +163,6 @@
   display: none;
 }
 
-// 1. simulating "@extend .ic-pr"
 .head__logo {
   display: flex;
   @include media-xl {
@@ -220,28 +239,41 @@ h1.head__text-pagetitle-small {
   @include media-xl {
     display: none;
     margin: 24px 0;
+    text-align: left;
   }
   @include media-l {
     display: flex;
     margin: 0 0 24px 0;
     font-size: $large-font-size - 6px;
     width: 100%;
+    text-align: left;
   }
   @include media-m {
     display: flex;
     margin: 0 0 12px 0;
     font-size: $large-font-size - 6px;
+    text-align: center;
   }
   @include media-s {
     display: flex;
     margin: 0 0 6px 0;
     font-size: $base-font-size + 6px;
+    text-align: center;
   }
 }
 
 .no-js .head-nav {
   display: flex;
   width: 100%;
+
+  @include media-xl {
+  }
+  @include media-l {
+  }
+  @include media-m {
+  }
+  @include media-s {
+  }
 }
 
 .head-nav--narrow {
