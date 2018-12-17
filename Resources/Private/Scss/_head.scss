@@ -68,6 +68,8 @@
 // 1. give the icon a little bit more space to top
 // 2. these links are not allowed to break into a new line
 .head__link {
+  @extend %link--default;
+  @extend %head__link--on-bright;
   padding: 7px 5px 5px; // 1.
   white-space: nowrap; // 2.
   background-color: transparent;

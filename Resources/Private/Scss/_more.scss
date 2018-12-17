@@ -22,6 +22,8 @@
 
     a:before {
       margin-bottom: $shift-chevron-before-content;
+      display: flex;
+      flex-shrink: 0;
     }
 
     a:hover,
