@@ -27,3 +27,13 @@ $break-s: 480px;
     @content;
   }
 }
+
+@mixin media-sub-l {
+  @include media-m { @content; }
+  @include media-s { @content; }
+}
+
+@mixin media-sup-m {
+  @include media-l { @content; }
+  @include media-xl { @content; }
+}

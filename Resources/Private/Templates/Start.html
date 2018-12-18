@@ -1,7 +1,6 @@
 {namespace v=FluidTYPO3\Vhs\ViewHelpers}
 {namespace ipoa=Subugoe\TmplIpoa\ViewHelpers}
 
-<div class="container-fluid">
 
 	<f:render partial="Icons.html"/>
 	<!-- structure according to Tag 0.0.7 -->
@@ -10,11 +9,9 @@
 
 		<header class="start__header" role="banner">
 			<div class="start__logo">
-				<v:condition.string.contains haystack="{HEADER_IMAGE}" needle="$">
-					<f:else>
+				<f:if condition="{HEADER_IMAGE}">
 						<img src='<f:format.raw value="{HEADER_IMAGE}" />' class="image" alt="Logo"/>
-					</f:else>
-				</v:condition.string.contains>
+				</f:if>
 			</div><!--
 		--><div class="start__title">
 				<h1>
@@ -27,7 +24,7 @@
 		<main role="start__main" class="main">
 
 			<nav class="start__navigation">
-				<v:condition.string.isNumeric value="{STARTBUT_1_UID}">
+				<f:if condition="{STARTBUT_1_UID}">
 					<f:then>
 						<f:link.page pageUid="{STARTBUT_1_UID}" tabindex="-1">
 							<button class="start__button" tabindex="1" accesskey="{STARTBUT_1_AC}" role="link">
@@ -35,8 +32,8 @@
 							</button>
 						</f:link.page>
 					</f:then>
-				</v:condition.string.isNumeric>
-				<v:condition.string.isNumeric value="{STARTBUT_2_UID}">
+				</f:if>
+				<f:if condition="{STARTBUT_2_UID}">
 					<f:then>
 						<f:link.page pageUid="{STARTBUT_2_UID}" tabindex="-1">
 							<button class="start__button" tabindex="2" accesskey="{STARTBUT_2_AC}" role="link">
@@ -44,8 +41,8 @@
 							</button>
 						</f:link.page>
 					</f:then>
-				</v:condition.string.isNumeric>
-				<v:condition.string.isNumeric value="{STARTBUT_3_UID}">
+				</f:if>
+				<f:if condition="{STARTBUT_3_UID}">
 					<f:then>
 						<f:link.page pageUid="{STARTBUT_3_UID}" tabindex="-1">
 							<button class="start__button" tabindex="3" accesskey="{STARTBUT_3_AC}" role="link">
@@ -53,7 +50,7 @@
 							</button>
 						</f:link.page>
 					</f:then>
-				</v:condition.string.isNumeric>
+				</f:if>
 			</nav>
 		</main>
 
@@ -65,10 +62,10 @@
 		<footer role="contentinfo" class="start__footer">
 			<div class="start__footer-content">
 				<ul class="start__list">
-					<v:condition.string.isNumeric value="{UEBERUNS_UID}">
+					<f:if condition="{UEBERUNS_UID}">
 						<f:then>
 							<li>
-								<v:condition.string.contains haystack="{UEBERUNS_TITLE}" needle="ids.ueberUns">
+								<f:if condition="{UEBERUNS_TITLE}">
 									<f:then>
 										<f:link.page pageUid="{UEBERUNS_UID}"
 													 title="{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}"
@@ -88,14 +85,14 @@
 											{UEBERUNS_TITLE}
 										</f:link.page>
 									</f:else>
-								</v:condition.string.contains>
+								</f:if>
 							</li>
 						</f:then>
-					</v:condition.string.isNumeric>
-					<v:condition.string.isNumeric value="{KONTAKT_UID}">
+					</f:if>
+					<f:if condition="{KONTAKT_UID}">
 						<f:then>
 							<li>
-								<v:condition.string.contains haystack='{KONTAKT_TITLE}' needle='ids.kontakt'>
+								<f:if condition="{KONTAKT_TITLE}">
 									<f:then>
 										<f:link.page pageUid="{KONTAKT_UID}"
 													 title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}"
@@ -115,14 +112,14 @@
 											{KONTAKT_TITLE}
 										</f:link.page>
 									</f:else>
-								</v:condition.string.contains>
+								</f:if>
 							</li>
 						</f:then>
-					</v:condition.string.isNumeric>
-					<v:condition.string.isNumeric value="{IMPRESSUM_UID}">
+					</f:if>
+					<f:if condition="{IMPRESSUM_UID}">
 						<f:then>
 							<li>
-								<v:condition.string.contains haystack='{IMPRESSUM_TITLE}' needle='ids.impressum'>
+								<f:if condition="{IMPRESSUM_TITLE}">
 									<f:then>
 										<f:link.page pageUid="{IMPRESSUM_UID}"
 													 title="{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}"
@@ -142,10 +139,10 @@
 											{IMPRESSUM_TITLE}
 										</f:link.page>
 									</f:else>
-								</v:condition.string.contains>
+								</f:if>
 							</li>
 						</f:then>
-					</v:condition.string.isNumeric>
+					</f:if>
 					<f:if condition="{LANGMENU}=='0'">
 						<f:then></f:then>
 						<f:else>
@@ -155,7 +152,7 @@
 									<svg class="fa-icon fa-icon-globe fa-icon--s">
 										<use xlink:href="#icon-globe"></use>
 									</svg>
-									<span class="hidden-sub-notebook">
+									<span class="hidden-sub-l">
 										<img
 											src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{ipoa:getAlternativeLanguageFlag()}.png" />'>
 											<ipoa:getAlternativeLanguage/>
@@ -210,4 +207,3 @@
 			</div>
 		</footer>
 	</div>
-</div>
