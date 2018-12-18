@@ -11,11 +11,15 @@
   }
 }
 
-@include class("hidden-sub-notebook") {
-  @include media-query("smaller-than-notebook") {
-    display: none !important;
+@include class("hidden-sub-l") {
+  @include media-m {
+    display: none;
+  }
+  @include media-s {
+    display: none;
   }
 }
+
 
 // what it does: prevents the browser to add a break / new line if there is not
 // enough space to dislay things like long words
@@ -25,6 +29,46 @@
 
 @include class("m--default") {
   margin: 0 0 round($inuit-base-line-height / 2);
+}
+
+@include class("btn") {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin:  0; /* [4] */
+  cursor: pointer; /* [5] */
+  overflow: visible; /* [6] */
+  padding: $inuit-btn-padding - $inuit-btn-border-width  double($inuit-btn-padding) - $inuit-btn-border-width; /* [7] */
+  background-color: $inuit-btn-background;
+  border: none; /* [4] */
+  border-radius: 7px;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; /* [4] */
+    color: $inuit-btn-color;
+  }
+
+
+}
+
+@include class("list-bare") {
+  margin:  0;
+  padding: 0;
+  list-style: none;
+}
+
+@include class("list-inline") {
+  margin:  0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    display: inline-block;
+  }
 }
 
 @include class("picture") {

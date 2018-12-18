@@ -1,5 +1,7 @@
 .start {
+  display: block;
   background: url("../Images/bg-1.jpg") no-repeat center center fixed;
+  background-color: #cacaca;
   background-size: cover;
   height: 100vh;
   min-height: 100%;
@@ -14,19 +16,24 @@
 }
 
 .start__header {
-  @extend %ic-layout;
+  display: flex;
+  justify-content: center;
+  flex: 0;
 }
 
 .start__logo {
-  @extend %ic-layout__item;
-  @extend .ic-tablet-and-up-one-half;
-  @extend %ic-layout--center;
+  display: inline-block;
+  padding-left: $inuit-layout-gutter;
+  vertical-align: top;
+  width: 100%;
 
-  margin: 20vh 0 0;
-
-  @include media-query("tablet-and-up") {
-    padding-right: 4vh;
+  @include media-sup-m {
     text-align: right;
+    margin: 20vh 20px 0;
+  }
+  @include media-sub-l {
+    text-align: center;
+    margin: 20vh 0 0;
   }
 
   .image {
@@ -35,13 +42,13 @@
 }
 
 .start__title {
-  @extend %ic-layout__item;
-  @extend .ic-tablet-and-up-one-half;
-  @extend %ic-layout--center;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
   display: none;
   font-size: 1.8em;
 
-  @include media-query("tablet-and-up") {
+  @include media-sup-m {
     display: inline-block;
     padding: 23vh 0 0 3vh;
     text-align: left;
@@ -49,33 +56,24 @@
 }
 
 .start__main {
-  @extend %ic-layout__item;
-  @extend %ic-layout--center;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
   padding: 2vh 0 0;
 }
 
-.start__navigation { @extend %ic-layout--center; }
-
-.start__links {
-  @extend %ic-layout__item;
-  @extend .ic-smaller-than-tablet-two-thirds;
-  @extend .ic-tablet-and-up-three-quarters;
-  @extend .ic-mt--;
-  text-align: right;
-
-  @include media-query("tablet-and-up") {
-    text-align: left;
-  }
+.start__navigation {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-// 1. give the icon a little bit more space to top
-// 2. these links are not allowed to break into a new line
 .start__link {
   @extend %link--default;
-  // @extend %start__link--on-bright; not found
   @extend %link--with-icon-on-bright;
   @extend %link--on-bright;
-  @extend %nobr; // 2.
+  @extend %nobr;
   border: none;
   padding: 7px;
 
@@ -100,12 +98,11 @@
   color: $color--brightest;
 }
 
-// 1. LIs are inline
-// 2. UL is inline
 .start__list {
-  @extend %ic-list-bare;
-  @extend %ic-list-inline; // 1.
-  display: inline; // 2.
+  @extend %btn;
+  @extend %list-bare;
+  @extend %list-inline;
+  display: inline;
 }
 
 .start__footer-content {
@@ -113,7 +110,7 @@
 }
 
 .start__button {
-  @extend %ic-btn;
+  @extend %btn;
   @extend %border--big;
   @extend %text--large;
   @extend %text--bold;
@@ -130,7 +127,5 @@
 }
 
 .start__footer {
-  @extend %ic-layout;
-  @extend %ic-layout--flush;
   margin-top: 20px;
 }
