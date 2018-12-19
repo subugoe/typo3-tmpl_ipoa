@@ -1,16 +1,24 @@
 .more {
-  @extend %ic-layout;
+  list-style: none;
+  margin:  0;
+  padding: 0;
+  margin-left: -$inuit-layout-gutter;
+  word-wrap: break-word;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0;
 
   @include responsive-content-padding();
 
-  word-wrap: break-word;
-
-  h3 {
+  h2 {
     @extend %heading--gamma;
+    font-size: $larger-font-size !important;
   }
 
   ul {
-    @extend %ic-list-bare;
+    @extend %list-bare;
     @extend %m--default;
 
     a {
@@ -47,10 +55,22 @@
 .more__column {
   padding-bottom: 20px;
   padding-top: 20px;
-  width: 25%;
   display: inline-block;
   padding-left: 20px;
   vertical-align: top;
+
+  @include media-xl {
+    width: 25%;
+  }
+  @include media-l {
+    width: 50%;
+  }
+  @include media-m {
+    width: 50%;
+  }
+  @include media-s {
+    width: 100%;
+  }
 
   div a {
     @extend %link--default;
