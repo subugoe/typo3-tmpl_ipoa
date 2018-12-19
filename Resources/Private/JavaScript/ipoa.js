@@ -115,5 +115,7 @@ jQuery(function () {
     });
   });
 
+  // const carouselColumn = jQuery('.footer__column .ce-gallery[data-ce-images!="1"]').parents('.footer__column');
 
 });
+
