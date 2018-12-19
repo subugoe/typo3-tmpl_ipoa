@@ -1,11 +1,18 @@
 .last {
   @extend %text--very-bright;
   display: flex;
-  font-size: $base-font-size;
+  font-size: $smaller-font-size;
   padding: $base-distance 150px;
 
   @include responsive-content-padding();
   border-bottom: 1px solid lighten($color--darkest, 50%);
+
+  @include media-sup-m {
+    flex-direction: row;
+  }
+  @include media-sub-l {
+    flex-direction: column;
+  }
 
   img {
     max-width: 100%;
@@ -15,20 +22,31 @@
 .last__block1 {
   @extend %ic-layout__item;
   @extend .ic-tablet-and-up-one-half;
+  @extend %ic-list-bare;
+  @extend %ic-list-inline;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .last__block2 {
-  @extend %ic-layout__item;
-  @extend .ic-tablet-and-up-one-half;
+  @extend %list-bare;
+  @extend %list-inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: row;
 
-  @include media-query("tablet-and-up") {
-    text-align: right;
+  @include media-sup-m {
+    justify-content: flex-end;
   }
-}
-
-.last__list {
-  @extend %ic-list-bare;
-  @extend %ic-list-inline;
+  @include media-sub-l {
+    justify-content: flex-start;
+    margin-top: 12px;
+  }
 }
 
 .last__link {
