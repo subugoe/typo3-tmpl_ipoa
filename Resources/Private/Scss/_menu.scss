@@ -1,7 +1,9 @@
 .menu {
-  @extend %ic-layout;
-  @extend .ic-pt;
-  @extend .ic-pb;
+  list-style: none;
+  margin:  0;
+  padding: 20px 0;
+  margin-left: -$inuit-layout-gutter;
+
 
   @include responsive-content-padding();
 
@@ -44,22 +46,27 @@
 
 .ajax-menu {
   max-width: 90%;
+  display: flex;
+  flex-direction: column;
 }
 // formats every menu section to appear and behave like a column e. g. have many
 // menu sections side by side in various breakpoint viewports
 .menu__column {
-  @extend %ic-layout__item;
-  @extend .ic-pb-;
+  display: inline-block;
+  padding-left: $inuit-layout-gutter;
+  vertical-align: top;
+  width: 100%;
+  padding-button: 12px;
   background-color: $color--brightest;
 
-  @include media-query("smaller-than-tablet") {
+  @include media-s {
     padding-left: 5px;
   }
 }
 
 // formats menu__list to be a list without list-style-type
 .menu__list {
-  @extend %ic-list-bare;
+  @extend %list-bare;
 
   span {
     border-radius: 3px;
@@ -135,17 +142,16 @@
 }
 
 .alt-menu {
-  @extend %ic-layout__item;
-  @extend .ic-pb;
-  padding-top: 12px !important;
-  background-color: $color--brightest;
-
   @include responsive-content-padding();
-
+  display: inline-block;
+  padding: 12px 0 20px $inuit-layout-gutter;
+  vertical-align: top;
+  width: 100%;
+  background-color: $color--brightest;
   z-index: 99;
 
   .head__list {
-    @extend .ic-mb;
+    margin-bottom: 20px;
     display: block;
     text-align: center;
 
@@ -165,8 +171,24 @@
   padding: 0;
   position: fixed;
   top: 0;
-  transform: translateX(-100%);
-  width: 30%;
+  transform: translateX(-300%);
+
+  @include media-xl {
+    width: 30%;
+  }
+  @include media-l {
+    width: 30%;
+  }
+  @include media-m {
+    width: 100%;
+  }
+  @include media-s {
+    width: 100%;
+  }
+}
+
+.alt-menu__content {
+  padding: 20px 0 0 6px;
 }
 
 .alt-menu__close-button-wrap {

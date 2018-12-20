@@ -19,9 +19,9 @@ jQuery(function () {
    */
   const hideMenu = function () {
     jQuery('.alt-menu').css({
-      'transform': 'translateX(-100%)',
-      '-webkit-transform': 'translateX(-100%)',
-      '-ms-transform': 'translateX(-100%)',
+      'transform': 'translateX(-300%)',
+      '-webkit-transform': 'translateX(-300%)',
+      '-ms-transform': 'translateX(-300%)',
       'transition': 'all .25s ease-in-out',
       '-webkit-transition': 'all .25s ease-in-out',
       '-ms-transition': 'all .25s ease-in-out'
@@ -67,11 +67,13 @@ jQuery(function () {
    * handle show and hide of menu and remove classes
    */
   jQuery('.footer-hide__helper').click(function (event) {
-
     if (menuIsActive()) {
-      const classNamesOfClickedElement = event.target.attr('class');
+      const classNamesOfClickedElement = event.target.className;
+      const clickedElement = jQuery(`.${classNamesOfClickedElement.split(' ')[0]}`);
 
-      if (classNamesOfClickedElement.split(' ')[0] !== 'menu__button') {
+      if (
+        jQuery(clickedElement).parents('.menu__button').length === 0) {
+
         jQuery('.menu__button')
           .removeClass('js-active js-alt-menu-toggle-button--active');
         hideMenu();
@@ -94,23 +96,13 @@ jQuery(function () {
   /**
    * Configuration of the alternative menu for small viewports
    */
-  const altMenu = jQuery('.alt-menu');
   const altMenuToggleButton = jQuery('.js-alt-menu-toggle-button');
   const windowWidth = jQuery(window).width();
 
   /**
    * move the menu from off canvas into viewport
    */
-  const showMenu = function () {
-    // move the menu from off canvas into viewport
-    jQuery('.alt-menu').css({
-      'transform': 'translateX(0%)',
-      '-webkit-transform': 'translateX(0%)',
-      '-ms-transform': 'translateX(0%)',
-      'transition': 'all .25s ease-in-out',
-      '-webkit-transition': 'all .25s ease-in-out',
-      '-ms-transition': 'all .25s ease-in-out'
-    });
+  const loadMenu = function () {
 
     /**
      * add menu per ajax
@@ -123,7 +115,8 @@ jQuery(function () {
     let spHTML = '<svg class="fa fa-spinner fa-pulse">';
     spHTML += '<use xlink:href="#spinner"></use></svg>';
     jQuery('.ajax-menu').html(spHTML);
-    // load menu per ajax
+
+    // load menu per ajax, but only once
     jQuery('.ajax-menu').load(url, function (response, status) {
       if (status === 'success') {
         if (windowWidth > 767) {
@@ -181,16 +174,17 @@ jQuery(function () {
           .parent('span')
           .siblings('.menu__list--indented').show();
       }
+      jQuery('.alt-menu__content').animate({'scrollTop': 0}, 500);
     });
   };
 
   // full viewport overlay when <768px width
   if (windowWidth <= 767) {
-    jQuery(altMenu).css({'display': 'none'});
+    jQuery('.alt-menu').css({'display': 'none'});
     // when menu button receives click the menu will overlay everything an show
     // an scrollable menu. Exit the menu by clicking a menu item.
     jQuery(altMenuToggleButton).click(function () {
-      jQuery(altMenu).css({'display': 'block'});
+      jQuery('.alt-menu').css('display', 'flex');
       jQuery('.head-nav').hide();
       jQuery('.footer-hide__helper').css({
         'margin-left': '100%',
@@ -218,7 +212,14 @@ jQuery(function () {
       } else {
         // add '--active' modifier to the menu button
         altMenuToggleButton.addClass('js-alt-menu-toggle-button--active');
-        showMenu();
+        // loadMenu();
+        jQuery('.alt-menu').css({
+          'transform': 'translateX(0%)',
+          '-webkit-transform': 'translateX(0%)',
+          '-ms-transform': 'translateX(0%)'
+        });
+
+        jQuery('.alt-menu').css('transform', 'translateX(0%)');
         // make the menu content fill the whole left side (top to bottom)
         // and let its content scroll
         jQuery('.alt-menu__content').css({
@@ -226,6 +227,8 @@ jQuery(function () {
           'height': '100%',
           'min-height': '100%'
         });
+
+        jQuery('.alt-menu__content').animate({'scrollTop': 0}, 500);
         // set keyboard focus to second link in menu
         jQuery('.alt-menu__close-button').focus();
         // set tabindex of menu items to be able to navigate them via keyboard
@@ -252,7 +255,7 @@ jQuery(function () {
     altMenuToggleButton.removeClass('js-alt-menu-toggle-button--active');
 
     if (windowWidth <= 767) {
-      jQuery(altMenu).css({'display': 'none'});
+      jQuery('.alt-menu').css({'display': 'none'});
       // TODO: use cached jQuery('.head-nav') lookup if possible
       jQuery('.head-nav').show();
       // TODO: use cached jQuery('.footer-hide__helper') lookup if possible
@@ -270,4 +273,11 @@ jQuery(function () {
       hideMenu();
     }
   });
+
+  /**
+   * make sure, menu is already in cache
+   */
+  setTimeout(function () {
+    loadMenu();
+  }, 10);
 });
