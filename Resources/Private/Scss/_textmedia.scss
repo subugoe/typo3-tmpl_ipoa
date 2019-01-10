@@ -69,6 +69,12 @@
   margin: 0 0 12px 0;
 }
 
+.frame ul {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
 .ce-textpic  {
   display:flex;
 }
