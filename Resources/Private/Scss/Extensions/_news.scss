@@ -5,30 +5,50 @@
 
 .news-menu-view {
   display: flex;
-  width: 75%;
+  width: 100%;
 }
 
 .news .article {
   display: flex;
-  width: 75%;
+  width: 100%;
   flex-direction: column;
+}
+
+.news .header {
+  width: 25%;
+}
+
+.news.news-single .header {
+  padding-top: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+
+  h3 {
+    font-size: $larger-font-size !important; // overriding base.h3
+  }
 }
 
 .news-list-view {
   display: flex;
-  width: 75%;
   flex-direction: column;
 }
 
+.news-list-view ul {
+  width: 100%; //override regular 75% for ul
+}
+
 .news-list-view li {
-  display: flex;
-  justify-content: flex-start;
   margin-bottom: 6px;
 }
 
-.news-list-view li a {
-  display: flex;
-  flex-grow: 1;
+.news .description {
+  *:not(:first-child) {
+    display: none;
+  }
+
+  * {
+    margin: 0;
+  }
 }
 
 // only show title in more
@@ -57,4 +77,9 @@
 
 .more__column .news-date {
   display: none;
+}
+
+.more__column .news-list-view .news-title {
+  display: flex;
+  width: 100%;
 }
