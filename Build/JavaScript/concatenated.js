@@ -26,26 +26,28 @@ jQuery(function () {
     carousel(jQuery(this));
   });
 
-
   /**
-   * Prevent the logocarousel to change it's height
-   * Find the logocarousel, get it's ID, get the max height of the images
-   * and set the height of the logocarousel accordingly
+   * find carousels (contents with several images),
+   * determine the height of the tallest image and
+   * set height of element according to tallest image
    */
-  const getLogoHeight = () => {
-    let logoHeight = 100;
+  const setCarouselHeight = () => {
+    jQuery('.footer__column .ce-gallery, .more__column').each((index, el) => {
+      const elements = jQuery(el).find('img').length;
+      if (elements > 1) {
+        let logoHeight = 100;
+        jQuery(el).find('img').each((ix, img) => {
+          if (img.height > logoHeight) {
+            logoHeight = img.height;
+          }
+        });
 
-    jQuery(this).find('.footer__column img').each(function () {
-      if (this.height > logoHeight) {
-        logoHeight = this.height;
+        const columnHeight = logoHeight + 32 + jQuery('.footer__column h2').height();
+        jQuery(el).parents('.footer__column').css('height', columnHeight + 'px');
       }
     });
-    jQuery(this).css('height', logoHeight);
-
-    return logoHeight;
   };
-  getLogoHeight();
-
+  setCarouselHeight();
 
   /**
    * Calculate height of footer
@@ -53,21 +55,16 @@ jQuery(function () {
    * There has to be set up a min-height, because otherwise, in very wide screens
    * the headers would not be visible after reload
    */
-  let footerHideHeight = getLogoHeight() + 20;
-  footerHideHeight += jQuery('.tracking').height();
-  footerHideHeight += jQuery('.footer__column h2').height();
-  jQuery('.footer').css({'height': footerHideHeight + 'px'});
-  jQuery('.footer-hide').css({'height': footerHideHeight + 20 + 'px'});
-  /**
-   * recalculate (and set the new) footer height with every window resize
-   */
-  jQuery(window).resize(function () {
-    jQuery('.footer').css({'height': footerHideHeight + 'px'});
-    jQuery('.footer-hide').css({'height': footerHideHeight + 20 + 'px'});
-  });
+  const setFooterHeight = () => {
+    const footerHeight = jQuery('.footer-hide__content').height();
+    jQuery('.footer-hide').css('height', footerHeight + 'px');
+  };
+
   jQuery(window).on('load', function () {
-    jQuery('.footer').css({'height': footerHideHeight + 'px'});
-    jQuery('.footer-hide').css({'min-height': footerHideHeight + 20 + 'px'});
+    setFooterHeight();
+  });
+  jQuery(window).on('resize', function () {
+    setFooterHeight();
   });
 
 
