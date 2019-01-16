@@ -140,6 +140,10 @@
 				<source>News Archiv</source>
 				<target>News Archive</target>
 			</trans-unit>
+			<trans-unit id="dateFormat" xml:space="preserve">
+				<source>%d.%m.%Y</source>
+				<target>%m/%d/%Y</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

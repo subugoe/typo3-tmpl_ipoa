@@ -105,6 +105,9 @@
 			<trans-unit id="newsArchive" approved="yes" xml:space="preserve">
 				<source>News Archiv</source>
 			</trans-unit>
+			<trans-unit id="dateFormat" xml:space="preserve">
+				<source>%d.%m.%Y</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

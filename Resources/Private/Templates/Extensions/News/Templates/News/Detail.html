@@ -54,12 +54,12 @@
 				</n:simplePrevNext>
 			</f:if>
 			<div class="header">
-				<h2 itemprop="headline">{newsItem.title}</h2>
+				<h3 itemprop="headline">{newsItem.title}</h3>
 			</div>
 					<!-- date -->
 					<span class="news-list-date">
 						<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-							<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+							<f:format.date format="{f:translate(key:'dateFormat', extensionName: 'tmpl_ipoa')}">{newsItem.datetime}</f:format.date>
 						</time>
 					</span>
 
