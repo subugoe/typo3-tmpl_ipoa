@@ -1,7 +1,7 @@
 .more {
   @include responsive-content-padding();
   list-style: none;
-  margin:  0;
+  margin: 0;
   padding: 0;
   margin-left: -$inuit-layout-gutter;
   word-wrap: break-word;
@@ -10,45 +10,46 @@
   flex-direction: row;
   flex-wrap: wrap;
   flex: 0;
+}
 
-  h2 {
-    @extend %heading--gamma;
-    font-size: $larger-font-size !important;
-  }
+.more h2 {
+  @extend %heading--gamma;
+  font-size: $larger-font-size !important;
+}
 
-  ul {
-    @extend %list-bare;
-    @extend %m--default;
-
-    a {
-      @extend %link--default;
-      @extend %link--in-linklist;
-      @extend %link--block;
-      @extend %link--block-on-bright;
-    }
-
-    a:before {
-      margin-bottom: $shift-chevron-before-content;
-      display: flex;
-      flex-shrink: 0;
-    }
-
-    a:hover,
-    a:focus {
-      @extend %link--on-bright;
-    }
-  }
+.more ul {
+  @extend %list-bare;
+  @extend %m--default;
+  width: 100%;
 
   a {
     @extend %link--default;
-    @extend %link--on-bright;
-    @extend %link--underline;
-    @extend %link--underline-on-bright;
+    @extend %link--in-linklist;
+    @extend %link--block;
+    @extend %link--block-on-bright;
   }
 
-  img {
-    max-width: 100%;
+  a:before {
+    margin-bottom: $shift-chevron-before-content;
+    display: flex;
+    flex-shrink: 0;
   }
+
+  a:hover,
+  a:focus {
+    @extend %link--on-bright;
+  }
+}
+
+.more a {
+  @extend %link--default;
+  @extend %link--on-bright;
+  @extend %link--underline;
+  @extend %link--underline-on-bright;
+}
+
+.more img {
+  max-width: 100%;
 }
 
 .more__column {
@@ -80,7 +81,7 @@
     }
   }
 
-   a > img {
+  a > img {
     border: 1px dotted $color-ipoa-green;
     border-radius: 2px;
 

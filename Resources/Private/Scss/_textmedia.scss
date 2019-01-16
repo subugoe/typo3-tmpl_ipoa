@@ -72,7 +72,19 @@
 .frame ul {
   display: flex;
   flex-direction: column;
-  width: 75%;
+
+  @include media-xl {
+    width: 75%;
+  }
+  @include media-l {
+    width: 100%;
+  }
+  @include media-m {
+    width: 100%;
+  }
+  @include media-s {
+    width: 100%;
+  }
 }
 
 .ce-textpic  {
