@@ -50,33 +50,33 @@ $inuit-global-border-box: false !default;
  */
 .#{$inuit-btn-namespace}btn,
 %#{$inuit-btn-namespace}btn {
-  display: inline-block; /* [1] */
-  vertical-align: middle; /* [2] */
-  font: inherit; /* [3] */
-  text-align: center; /* [4] */
-  margin:  0; /* [4] */
-  cursor: pointer; /* [5] */
-  overflow: visible; /* [6] */
-  padding: $inuit-btn-padding - $inuit-btn-border-width  double($inuit-btn-padding) - $inuit-btn-border-width; /* [7] */
-  background-color: $inuit-btn-background;
+    display: inline-block; /* [1] */
+    vertical-align: middle; /* [2] */
+    font: inherit; /* [3] */
+    text-align: center; /* [4] */
+    margin:  0; /* [4] */
+    cursor: pointer; /* [5] */
+    overflow: visible; /* [6] */
+    padding: $inuit-btn-padding - $inuit-btn-border-width  double($inuit-btn-padding) - $inuit-btn-border-width; /* [7] */
+    background-color: $inuit-btn-background;
 
-  @if($inuit-btn-border-width != 0) {
-    border: $inuit-btn-border-width $inuit-btn-border-style $inuit-btn-border-color;
-  } @else {
-    border: none; /* [4] */
-  }
+    @if($inuit-btn-border-width != 0) {
+        border: $inuit-btn-border-width $inuit-btn-border-style $inuit-btn-border-color;
+    } @else {
+        border: none; /* [4] */
+    }
 
-  @if($inuit-btn-radius != 0) {
-    border-radius: $inuit-btn-radius;
-  }
+    @if($inuit-btn-radius != 0) {
+        border-radius: $inuit-btn-radius;
+    }
 
-  &,
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none; /* [4] */
-    color: $inuit-btn-color;
-  }
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none; /* [4] */
+        color: $inuit-btn-color;
+    }
 
 }
 
@@ -85,8 +85,8 @@ $inuit-global-border-box: false !default;
  */
 .#{$inuit-btn-namespace}btn::-moz-focus-inner,
 %#{$inuit-btn-namespace}btn::-moz-focus-inner {
-  border:  0;
-  padding: 0;
+    border:  0;
+    padding: 0;
 }
 
 
@@ -95,27 +95,27 @@ $inuit-global-border-box: false !default;
 
 @if ($inuit-enable-btn--small == true) {
 
-  /**
-   * Small buttons.
-   */
+    /**
+     * Small buttons.
+     */
 
-  .#{$inuit-btn-namespace}btn--small,
-  %#{$inuit-btn-namespace}btn--small {
-    padding: $inuit-btn-padding--small - $inuit-btn-border-width  double($inuit-btn-padding--small) - $inuit-btn-border-width; /* [7] */
-  }
+    .#{$inuit-btn-namespace}btn--small,
+    %#{$inuit-btn-namespace}btn--small {
+        padding: $inuit-btn-padding--small - $inuit-btn-border-width  double($inuit-btn-padding--small) - $inuit-btn-border-width; /* [7] */
+    }
 
 }
 
 @if ($inuit-enable-btn--large == true) {
 
-  /**
-   * Large buttons.
-   */
+    /**
+     * Large buttons.
+     */
 
-  .#{$inuit-btn-namespace}btn--large,
-  %#{$inuit-btn-namespace}btn--large {
-    padding: $inuit-btn-padding--large - $inuit-btn-border-width  double($inuit-btn-padding--large) - $inuit-btn-border-width; /* [7] */
-  }
+    .#{$inuit-btn-namespace}btn--large,
+    %#{$inuit-btn-namespace}btn--large {
+        padding: $inuit-btn-padding--large - $inuit-btn-border-width  double($inuit-btn-padding--large) - $inuit-btn-border-width; /* [7] */
+    }
 
 }
 
@@ -125,23 +125,23 @@ $inuit-global-border-box: false !default;
 
 @if ($inuit-enable-btn--full == true) {
 
-  /**
-   * Full-width buttons.
-   */
+    /**
+     * Full-width buttons.
+     */
 
-  .#{$inuit-btn-namespace}btn--full,
-  %#{$inuit-btn-namespace}btn--full {
-    width: 100%;
+    .#{$inuit-btn-namespace}btn--full,
+    %#{$inuit-btn-namespace}btn--full {
+        width: 100%;
 
-    @if $inuit-global-border-box == false {
-      /**
-       * Remove paddings so that widths and paddings don’t conflict.
-       */
-      padding-right: 0;
-      padding-left:  0;
+        @if $inuit-global-border-box == false {
+            /**
+             * Remove paddings so that widths and paddings don’t conflict.
+             */
+            padding-right: 0;
+            padding-left:  0;
+        }
+
     }
-
-  }
 
 }
 
@@ -151,16 +151,16 @@ $inuit-global-border-box: false !default;
 
 @if ($inuit-enable-btn--pill == true) {
 
-  /**
-   * Round-ended buttons.
-   *
-   * 1. Overly-large value to ensure the radius rounds the whole end of the
-   *    button.
-   */
+    /**
+     * Round-ended buttons.
+     *
+     * 1. Overly-large value to ensure the radius rounds the whole end of the
+     *    button.
+     */
 
-  .#{$inuit-btn-namespace}btn--pill,
-  %#{$inuit-btn-namespace}btn--pill {
-    border-radius: 100px; /* [1] */
-  }
+    .#{$inuit-btn-namespace}btn--pill,
+    %#{$inuit-btn-namespace}btn--pill {
+        border-radius: 100px; /* [1] */
+    }
 
 }
