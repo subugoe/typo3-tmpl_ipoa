@@ -10,12 +10,8 @@ It consists of two different layouts for start page and content pages.
 # Requirements
 
 ## Dependency on other extensions
-	* Backend IPOA Backend Rights Management (be_ipoa)
 	* vhs (vhs)
-	* T3jQuery (t3jquery)
 	* Apache Solr (solr)
-	* RealURL (realurl)
-	* HTML Minifier (html_minifier)
 	* Twitter feed (cw_twitter)
 
 ## Required TypoScript in BE
@@ -30,7 +26,7 @@ It consists of two different layouts for start page and content pages.
 		Here are also the definitions of the backend layouts.
 		```
 				ids {
-				header_title = Open Access
+				    header_title = Open Access
 					header_claim = Open Access to <br />Scientific Information
 					header_image = /fileadmin/logos/oa.svg
 					excludeFromMenu = 11,221,321,117
@@ -47,12 +43,10 @@ It consists of two different layouts for start page and content pages.
 						oatage = 4
 					}
 				}
-				baseURL = http://open-access.net
 		```
 	*   Setup:
 	```
 			<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/tmpl_ipoa/Configuration/TypoScript/Static/setup.txt">
-			<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/be_ipoa/Configuration/TypoScript/Static/setup.txt">
 	```
 *   Template for start page:
 	*   Constants
@@ -65,14 +59,15 @@ It consists of two different layouts for start page and content pages.
 				startbutton_2 = 116
 				startbutton_2.title = More information
 				startbutton_3 >
+				startbutton_3.title = Even more information
 			}
 	```
 			
 ## Build and development requirements
-You need to have several build tools installed and run gulp to create css and lint js and scss files
+You need to have nvm and npm installed for package management, linting and building css and js files. The correct version of npm can be chosen with nvm
 ```
-		$ sudo gem install bundler
-		$ bundler install
+		$ nvm use
 		$ npm install
-		$ gulp
+		$ npm run devAll // for development
+		$ npm run buildAll // for production
 ```

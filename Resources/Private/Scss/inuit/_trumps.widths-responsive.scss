@@ -133,31 +133,97 @@
         @if ($alias != retina) {
     
             @include media-query($alias) {
+
+                /**
+                 * Whole.
+                 */
+                .#{$inuit-widths-namespace}#{$alias}-one-whole          { width: 100% !important; }
                 
                 /**
                  * Halves.
                  */
-                .#{$inuit-widths-namespace}#{$alias}-one-half       { width: 50% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-one-half,
+                .#{$inuit-widths-namespace}#{$alias}-two-quarters,
+                .#{$inuit-widths-namespace}#{$alias}-three-sixths,
+                .#{$inuit-widths-namespace}#{$alias}-four-eighths,
+                .#{$inuit-widths-namespace}#{$alias}-five-tenths,
+                .#{$inuit-widths-namespace}#{$alias}-six-twelfths       { width: 50% !important; }
                 
                 /**
                  * Thirds.
                  */
-                .#{$inuit-widths-namespace}#{$alias}-one-third      { width: 33.3333333% !important; }
-                .#{$inuit-widths-namespace}#{$alias}-two-thirds     { width: 66.6666666% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-one-third,
+                .#{$inuit-widths-namespace}#{$alias}-two-sixths,
+                .#{$inuit-widths-namespace}#{$alias}-three-ninths,
+                .#{$inuit-widths-namespace}#{$alias}-four-twelfths      { width: 33.3333333% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-two-thirds,
+                .#{$inuit-widths-namespace}#{$alias}-four-sixths,
+                .#{$inuit-widths-namespace}#{$alias}-six-ninths,
+                .#{$inuit-widths-namespace}#{$alias}-eight-twelfths     { width: 66.6666666% !important; }
                 
                 /**
                  * Quarters.
                  */
                 .#{$inuit-widths-namespace}#{$alias}-one-quarter,
+                .#{$inuit-widths-namespace}#{$alias}-two-eighths,
                 .#{$inuit-widths-namespace}#{$alias}-three-twelfths     { width: 25% !important; }
-
                 .#{$inuit-widths-namespace}#{$alias}-three-quarters,
+                .#{$inuit-widths-namespace}#{$alias}-six-eighths,
                 .#{$inuit-widths-namespace}#{$alias}-nine-twelfths      { width: 75% !important; }
+                
+                /**
+                 * Fifths.
+                 */
+                .#{$inuit-widths-namespace}#{$alias}-one-fifth,
+                .#{$inuit-widths-namespace}#{$alias}-two-tenths         { width: 20% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-two-fifths,
+                .#{$inuit-widths-namespace}#{$alias}-four-tenths        { width: 40% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-three-fifths,
+                .#{$inuit-widths-namespace}#{$alias}-six-tenths         { width: 60% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-four-fifths,
+                .#{$inuit-widths-namespace}#{$alias}-eight-tenths       { width: 80% !important; }
+                
+                /**
+                 * Sixths.
+                 */
+                .#{$inuit-widths-namespace}#{$alias}-one-sixth,
+                .#{$inuit-widths-namespace}#{$alias}-two-twelfths       { width: 16.6666666% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-five-sixths,
+                .#{$inuit-widths-namespace}#{$alias}-ten-twelfths       { width: 83.3333333% !important; }
+                
+                /**
+                 * Eighths.
+                 */
+                .#{$inuit-widths-namespace}#{$alias}-one-eighth         { width: 12.5% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-three-eighths      { width: 37.5% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-five-eighths       { width: 62.5% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-seven-eighths      { width: 87.5% !important; }
+                
+                /**
+                 * Ninths.
+                 */
+                .#{$inuit-widths-namespace}#{$alias}-one-ninth          { width: 11.1111111% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-two-ninths         { width: 22.2222222% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-four-ninths        { width: 44.4444444% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-five-ninths        { width: 55.5555555% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-seven-ninths       { width: 77.7777777% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-eight-ninths       { width: 88.8888888% !important; }
                 
                 /**
                  * Tenths.
                  */
+                .#{$inuit-widths-namespace}#{$alias}-one-tenth          { width: 10% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-three-tenths       { width: 30% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-seven-tenths       { width: 70% !important; }
                 .#{$inuit-widths-namespace}#{$alias}-nine-tenths        { width: 90% !important; }
+                
+                /**
+                 * Twelfths.
+                 */
+                .#{$inuit-widths-namespace}#{$alias}-one-twelfth        { width:  8.3333333% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-five-twelfths      { width: 41.6666666% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-seven-twelfths     { width: 58.3333333% !important; }
+                .#{$inuit-widths-namespace}#{$alias}-eleven-twelfths    { width: 91.6666666% !important; }
 
             } // Close media query.
 
