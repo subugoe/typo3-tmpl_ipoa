@@ -1,24 +1,27 @@
 .head {
   display: flex;
   flex-wrap: wrap;
-  padding: 40px 150px 0px 150px;
   margin: 0;
   background: url("../Images/bg-h-1.jpg") no-repeat center center fixed;
   background-size: cover;
   @include media-xl {
     justify-content: flex-start;
     flex-direction: row;
+    padding: 40px 150px 20px 150px;
   }
   @include media-l {
     justify-content: flex-start;
+    padding: 40px 75px 20px 75px;
   }
   @include media-m {
     align-items: center;
     flex-direction: column;
+    padding: 40px 150px 20px 150px;
   }
   @include media-s {
     align-items: center;
     flex-direction: column;
+    padding: 40px 150px 20px 150px;
   }
 }
 
@@ -29,17 +32,20 @@
 
   @include media-xl {
     display: flex;
+    justify-content: flex-start;
   }
   @include media-l {
     display: flex;
+    justify-content: flex-start;
   }
   @include media-m {
     display: flex;
+    justify-content: flex-end;
   }
   @include media-s {
     display: none;
+    justify-content: flex-end;
   }
-  text-align: right;
 }
 
 .head-nav {
@@ -118,9 +124,25 @@
   display: flex; /* [1] */
   padding-left: $inuit-layout-gutter; /* [2] */
   vertical-align: top; /* [3] */
-  width: 100%; /* [4] */
   align-items: center;
   margin: 0;
+
+  @include media-xl {
+    width: 25%;
+    justify-content: flex-end;
+  }
+  @include media-l {
+    width: 25%;
+    justify-content: flex-end;
+  }
+  @include media-m {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  @include media-s {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
 
 .head__menubutton svg {
@@ -167,11 +189,14 @@
 
 .head__logo {
   display: flex;
+  align-items: flex-start;
+
   @include media-xl {
-    margin-top: 20px;
+    width: 25%;
+    margin-top: 40px;
   }
   @include media-l {
-    margin-top: 20px;
+    margin: 40px 40px 0 0;
   }
   @include media-m {
     margin-top: 10px;
@@ -184,12 +209,12 @@
 .head__logo img {
 
   @include media-xl {
-    margin-right: 40px;
-    width: 200px;
+    width: 204px;
+    max-width: 250px;
   }
   @include media-l {
-    margin-right: 20px;
-    width: 120px;
+    width: 204px;
+    max-width: 250px;
   }
   @include media-m {
     margin-right: 10px;
@@ -202,10 +227,21 @@
 
 .head__text {
   flex-direction: column;
-  @include media-xl { display: flex; }
-  @include media-l { display: flex; }
-  @include media-m { display: none; }
-  @include media-s { display: none; }
+  justify-content: flex-end;
+
+  @include media-xl {
+    display: flex;
+    width: 75%;
+  }
+  @include media-l {
+    display: flex;
+  }
+  @include media-m {
+    display: none;
+  }
+  @include media-s {
+    display: none;
+  }
 }
 
 // only visible in tablet-and-up
@@ -219,24 +255,42 @@
   }
   @include media-l {
     margin-top: 30px;
+    font-size: $large-font-size;
+  }
+  @include media-m {
+    margin-top: 40px;
+    font-size: $large-font-size;
+  }
+  @include media-s {
+    margin-top: 30px;
     font-size: $large-font-size - 6px;
   }
 }
 
 // 1. align page title with content
-.head__text-pagetitle {
+.head__text-pagetitle h1 {
   letter-spacing: $letter-spacing--larger;
   text-align: center;
   width: 100%;
   font-size: $large-font-size;
   font-weight: 400;
-  @include media-xl { display: flex; }
-  @include media-l { display: none; }
-  @include media-m { display: none; }
-  @include media-s { display: none; }
+  @include media-xl {
+    display: flex;
+    margin: 24px 0 0 0;
+  }
+  @include media-l {
+    display: none;
+    margin: 24px 0 0 0;
+  }
+  @include media-m {
+    display: none;
+  }
+  @include media-s {
+    display: none;
+  }
 }
 
-h1.head__text-pagetitle-small {
+.head__text-pagetitle-small {
 
   @include media-xl {
     display: none;
@@ -245,8 +299,8 @@ h1.head__text-pagetitle-small {
   }
   @include media-l {
     display: flex;
-    margin: 0 0 24px 0;
-    font-size: $large-font-size - 6px;
+    margin: 24px 0 24px 0;
+    font-size: $large-font-size;
     width: 100%;
     text-align: left;
   }
