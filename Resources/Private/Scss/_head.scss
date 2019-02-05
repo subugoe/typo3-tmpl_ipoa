@@ -4,39 +4,39 @@
   margin: 0;
   background: url("../Images/bg-h-1.jpg") no-repeat center center fixed;
   background-size: cover;
+  @include responsive-content-padding();
+
   @include media-xl {
     justify-content: flex-start;
     flex-direction: row;
-    padding: 40px 150px 20px 150px;
+    padding-bottom: 20px;
   }
   @include media-l {
     justify-content: flex-start;
-    padding: 40px 75px 20px 75px;
   }
   @include media-m {
     align-items: center;
     flex-direction: column;
-    padding: 40px 150px 20px 150px;
   }
   @include media-s {
     align-items: center;
     flex-direction: column;
-    padding: 40px 150px 20px 150px;
   }
 }
 
 .head__links {
-  padding-left: $inuit-layout-gutter;
   width: 100%;
   align-items: center;
 
   @include media-xl {
     display: flex;
     justify-content: flex-start;
+    width: 75%;
   }
   @include media-l {
     display: flex;
     justify-content: flex-start;
+    width: 75%;
   }
   @include media-m {
     display: flex;
@@ -56,19 +56,7 @@
   top: 0;
   width: 100%;
   z-index: 9999;
-
-  @include media-xl {
-    padding: 10px 150px 0 150px;
-  }
-  @include media-l {
-    padding: 10px 75px 0 75px;
-  }
-  @include media-m {
-    padding: 10px 25px 0 25px;
-  }
-  @include media-s {
-    padding: 5px 0 0 0;
-  }
+  @include responsive-content-padding();
 }
 
 // 1. give the icon a little bit more space to top
@@ -118,11 +106,10 @@
   display: inline-block;
 }
 
-// .head__menubutton
-// 1. simulating "@extend .ic-mt+"
 .head__menubutton {
   display: flex; /* [1] */
-  padding-left: $inuit-layout-gutter; /* [2] */
+  padding-left: $inuit-layout-gutter;
+  padding-right: $inuit-layout-gutter;
   vertical-align: top; /* [3] */
   align-items: center;
   margin: 0;
@@ -132,7 +119,9 @@
     justify-content: flex-end;
   }
   @include media-l {
-    width: 25%;
+    width: 204px; // like logo
+    margin-right: 40px;
+    padding-right: 0;
     justify-content: flex-end;
   }
   @include media-m {
@@ -190,6 +179,7 @@
 .head__logo {
   display: flex;
   align-items: flex-start;
+  padding-top: 20px;
 
   @include media-xl {
     width: 25%;
