@@ -1,7 +1,10 @@
 <main role="main" class="main">
+	<f:if condition="{data.rowDescription}">
+		<div class="page_description">(Notes - Description:) {data.rowDescription}</div>
+	</f:if>
 	<f:if condition="{data.author}">
-		<div class="authors">
-			<a href="./community/authoren">Bearbeitet von: {data.author}</a>
+		<div class="page_authors">
+			<a href="/community/authoren">(Author:) Bearbeitet von: {data.author}</a>
 		</div>
 	</f:if>
 	<!--TYPO3SEARCH_begin-->

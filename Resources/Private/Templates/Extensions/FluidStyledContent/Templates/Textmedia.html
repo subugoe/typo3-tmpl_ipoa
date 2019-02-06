@@ -48,6 +48,8 @@
 			<f:render partial="Media/Gallery" arguments="{_all}"/>
 		</f:if>
 	</div>
-
+	<f:if condition="{data.rowDescription}">
+		<div class="content_description">(Notes - Description:) {data.rowDescription}</div>
+	</f:if>
 </f:section>
 </html>

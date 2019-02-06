@@ -1,6 +1,19 @@
-.authors {
+.page_authors {
+  font-style: italic;
   display: flex;
   justify-content: flex-end;
   font-weight: 400;
   margin-bottom: $base-distance;
+}
+
+.page_description {
+  font-style: italic;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.content_description {
+  font-style: italic;
+  text-align: right;
 }
