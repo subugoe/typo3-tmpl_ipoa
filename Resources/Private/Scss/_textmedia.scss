@@ -105,6 +105,10 @@
 
 .ce-textpic.ce-left.ce-intext .ce-gallery {
   float: left;
+
+  img {
+    padding-top: 7px;
+  }
 }
 
 .ce-textpic.ce-right.ce-above .ce-gallery {
