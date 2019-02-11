@@ -26,6 +26,21 @@
   }
 }
 
+.frame form fieldset {
+    margin-top: 12px;
+}
+
+.frame form fieldset legend {
+  margin-left: 12px;
+}
+
+.frame form fieldset .form-group {
+  margin: 12px 0 0 12px;
+
+  &:last-of-type {
+    margin-bottom: 12px;
+  }
+}
 .frame form .form-group .control-label {
   margin: 0 0 6px;
 }
