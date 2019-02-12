@@ -1,0 +1,46 @@
+.frame form {
+  width: 75%;
+}
+
+.frame form .clearfix {
+  padding: 0;
+}
+
+.frame form .form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 1px;
+
+  .input {
+    display: flex !important;
+    padding-right: 12px;
+
+    input {
+      margin-right: 12px;
+    }
+  }
+
+  textarea {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.frame form fieldset {
+    margin-top: 12px;
+}
+
+.frame form fieldset legend {
+  margin-left: 12px;
+}
+
+.frame form fieldset .form-group {
+  margin: 12px 0 0 12px;
+
+  &:last-of-type {
+    margin-bottom: 12px;
+  }
+}
+.frame form .form-group .control-label {
+  margin: 0 0 6px;
+}
