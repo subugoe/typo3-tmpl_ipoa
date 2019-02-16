@@ -12,7 +12,7 @@ use TYPO3\CMS\Install\Updates\AbstractUpdate;
  */
 class ContentTypesToTextMediaUpdate extends AbstractUpdate
 {
-    protected function getDatabaseConnection()
+    private function getDatabaseConnection()
     {
         return $GLOBALS['TYPO3_DB'];
     }

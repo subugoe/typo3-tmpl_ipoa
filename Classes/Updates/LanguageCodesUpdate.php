@@ -24,25 +24,26 @@ class LanguageCodesUpdate extends AbstractUpdate
     public function performUpdate(array &$dbQueries, &$customMessage)
     {
         $languages = [
-            'chfr' => 'chfr',
-            'aten' => 'aten',
-            'deen' => 'deen',
-            'chde' => 'chde',
-            'chen' => 'chen',
-            'atde' => 'atde',
-        ];
+           'DE-DE' => 'de',
+           'DE-EN' => 'gb',
+           'AT-DE' => 'de',
+           'AT-EN' => 'bg',
+           'CH-DE' => 'de',
+           'CH-EN' => 'gb',
+           'CH-FR' => 'de',
+       ];
         $connectionPool = GeneralUtility::makeInstance(ConnectionPool::class);
         $queryBuilder = $connectionPool->getQueryBuilderForTable('sys_language');
         foreach ($languages as $key => $value) {
             $queryBuilder
-                ->update('sys_language')
-                ->where(
-                    $queryBuilder
-                        ->expr()
-                        ->eq('flag', $queryBuilder->createNamedParameter($value))
-                )
-                ->set('language_isocode', $key)
-                ->execute();
+               ->update('sys_language')
+               ->where(
+                   $queryBuilder
+                       ->expr()
+                       ->eq('flag', $queryBuilder->createNamedParameter($value))
+               )
+               ->set('language_isocode', $key)
+               ->execute();
         }
 
         $this->markWizardAsDone();
