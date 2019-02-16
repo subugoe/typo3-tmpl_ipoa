@@ -32,6 +32,8 @@ if (TYPO3_MODE == 'BE' || TYPO3_MODE == 'FE' && isset($GLOBALS['BE_USER'])) {
     }
 }
 
+
+
 // Custom CSS include
 $TBE_STYLES['styleSheetFile_post'] = 'EXT:tmpl_ipoa/Resources/Public/Css/backendipoa.css';
 ?>

@@ -22,6 +22,13 @@ if (!defined('TYPO3_MODE')) {
 	options.enableBookmarks = 1
 ');
 
+#$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['ipoaimage'] = \Subugoe\TmplIpoa\Updates\ImageFieldUpdate::class;
+#$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['ipoamedia'] = \Subugoe\TmplIpoa\Updates\MediaFieldUpdate::class;
+#$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['ipoatextmedia'] = \Subugoe\TmplIpoa\Updates\ContentTypesToTextMediaUpdate::class;
+#$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['ipoalanguage'] = \Subugoe\TmplIpoa\Updates\LanguageCodesUpdate::class;
+#$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['ipoarealurl'] = \Subugoe\TmplIpoa\Updates\RealUrlUpdate::class;
+
+
 // 404 handling:
 $GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = '/Uuups,%20diese%20Seite%20existiert%20nicht/';
 $GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling_statheader'] = "HTTP/1.1 404 Not Found";

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Subugoe\TmplAdw\Updates;
+namespace Subugoe\TmplIpoa\Updates;
 
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
