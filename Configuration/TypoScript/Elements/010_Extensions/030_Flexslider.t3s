@@ -2,3 +2,9 @@ page.includeCSS {
     flexslider =
     flexslider_mods = EXT:ws_flexslider/Resources/Public/Css/mods.css
 }
+
+plugin.tx_wsflexslider.settings {
+    animationLoop = true
+    slideshowSpeed = 2000
+    controlNav = false
+}
