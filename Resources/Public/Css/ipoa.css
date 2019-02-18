@@ -4624,7 +4624,7 @@ html[xmlns] .slides {
   display: flex;
   -ms-flex-pack: start;
       justify-content: flex-start;
-  height: 350px; }
+  height: 370px; }
 
 .footer-hide__helper {
   display: -ms-flexbox;
