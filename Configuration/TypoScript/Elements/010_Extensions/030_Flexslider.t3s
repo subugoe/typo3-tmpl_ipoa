@@ -1,0 +1,4 @@
+page.includeCSS {
+    flexslider =
+    flexslider_mods = EXT:ws_flexslider/Resources/Public/Css/mods.css
+}
