@@ -41,7 +41,7 @@
   }
 }
 
-.frame > div {
+.main .frame > div {
   display: block;
 
   @include media-xl {
@@ -69,7 +69,7 @@
   margin: 0 0 12px 0;
 }
 
-.frame ul {
+.main .frame ul {
   display: flex;
   flex-direction: column;
 
