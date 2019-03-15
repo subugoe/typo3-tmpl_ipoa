@@ -102,10 +102,14 @@
   @extend %btn;
   @extend %list-bare;
   @extend %list-inline;
-  display: inline;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .start__footer-content {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
 }
 
@@ -127,5 +131,12 @@
 }
 
 .start__footer {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
+}
+
+.start__language-links {
+  width: 100%;
+  padding-top: 16px;
 }

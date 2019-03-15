@@ -328,14 +328,14 @@ jQuery(function () {
    * - once on the start screen
    */
   const languageMenuShow = function (place) {
-    jQuery('.js-' + place + '-language-links').hide();
+    jQuery('.js-' + place + '-language-links').removeClass('-shown').addClass('-hidden');
     const jsLanguageIndicator = jQuery('.js-' + place + '-language-indicator');
 
     jsLanguageIndicator.click(function () {
-      jQuery('.js-' + place + '-language-links').show();
+      jQuery('.js-' + place + '-language-links').removeClass('-hidden').addClass('-shown');
       const langHeight = jQuery('.' + place + '__links').height();
       jQuery('.' + place).css({ 'padding-top': langHeight });
-      jsLanguageIndicator.hide();
+      jsLanguageIndicator.removeClass('-shown').addClass('-hidden');
     });
   };
 

@@ -41,7 +41,7 @@ class GetLanguageFlagViewHelper extends AbstractViewHelper
         if (isset($GLOBALS['TSFE']->config['config']['flag'])) {
             return $GLOBALS['TSFE']->config['config']['flag'];
         }
-        return 'dede'; //default
+        return 'de'; //default
     }
 
     /**

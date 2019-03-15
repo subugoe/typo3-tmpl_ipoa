@@ -86,11 +86,6 @@ lib.ids {
 		case = lower
 	}
 
-	DEFLANG = TEXT
-	DEFLANG < mod.SHARED.defaultLanguage
-	DEFLANG_LABEL = TEXT
-	DEFLANG_LABEL.value < mod.SHARED.defaultLanguageLabel
-
 	LANGMENU = TEXT
 	LANGMENU.value = {$ids.langMenu}
 }
@@ -139,8 +134,6 @@ lib.contentpage {
 	variables < lib.ids
 	variables {
 
-		CUR_LANGUAGE < sys_language_uid
-
 		PAGE_TITLE = TEXT
 		PAGE_TITLE.data = page:title
 		PAGE_UID = TEXT
@@ -163,7 +156,6 @@ lib.startpage {
 	variables < lib.ids
 	variables {
 
-		CUR_LANGUAGE < sys_language_uid
 	}
 }
 
@@ -176,8 +168,6 @@ lib.oatage {
 	layoutRootPath = EXT:tmpl_ipoa/Resources/Private/Templates/Layouts/
 	variables < lib.ids
 	variables {
-
-		CUR_LANGUAGE < sys_language_uid
 
 		PAGE_TITLE = TEXT
 		PAGE_TITLE.data = page:title
@@ -200,6 +190,12 @@ lib.layoutTemplate {
 		pageTitle = TEXT
 		pageTitle.data = page:title
 
+		lang = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+		lang {
+			languages = auto
+			as = languageNavigation
+		}
+
 		subTemplate = CASE
 		subTemplate {
 			# Abfrage, welches Backendlayout verwendet wird
@@ -209,6 +205,15 @@ lib.layoutTemplate {
 			{$ids.backendLayout.startseite} < lib.startpage
 			{$ids.backendLayout.oatage} < lib.oatage
 		}
+	}
+}
+
+
+lib.lang {
+	10 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+	10 {
+		languages = auto
+		as = languageNavigation
 	}
 }
 

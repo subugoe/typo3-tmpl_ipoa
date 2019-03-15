@@ -146,13 +146,15 @@
   line-height: 220%;
   padding-left: 0;
   text-align: right;
+  justify-content: flex-start;
+  align-items: center;
 
   @include media-query("tablet-and-up") {
     text-align: left;
   }
 
   @include media-query("phone") {
-    display: block;
+    display: flex;
     text-align: left;
   }
 
@@ -163,7 +165,7 @@
 
 // always show language selection links if user has no JS
 .no-js .head__language-links {
-  display: block;
+  display: flex;
 }
 
 // align language icon with those above
