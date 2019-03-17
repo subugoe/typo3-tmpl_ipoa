@@ -29,44 +29,44 @@ namespace Subugoe\TmplIpoa\ViewHelpers;
 
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
-class GetAlternativeLanguageFlagViewHelper extends AbstractViewHelper
+/**
+ * View Helper
+ *
+ */
+class GetLanguageViewHelper extends AbstractViewHelper
 {
-
     /**
-     * Check current language flag and return alternative
+     * Get currently used language
+     * @return string
      */
-    protected function getAlternativeLanguageFlag()
+    protected function getLanguage()
     {
-        if (isset($GLOBALS['TSFE']->config['config']['flag'])) {
-            $flag = $GLOBALS['TSFE']->config['config']['flag'];
-
-            switch ($flag) {
-                case "dede":
-                    return "deen";
-                case "deen":
-                    return "dede";
-                case "chde":
-                    return "chen";
-                case "chen":
-                    return "chde";
-                case "atde":
-                    return "aten";
-                case "aten":
-                    return "atde";
+        if (isset($GLOBALS['TSFE']->config['config']['language'])) {
+            $language = $GLOBALS['TSFE']->config['config']['language'];
+            switch ($language) {
+                case "en":
+                    return "English";
+                case "de":
+                    return "Deutsch";
+                case "CH-DE":
+                    //return "CH-EN";
+                case "CH-EN":
+                    //return "CH-DE";
+                case "AT-DE":
+                    //return "AT-EN";
+                case "AT-EN":
+                    //return "AT-DE";
             }
         }
-        return $flag; //default
+        return 'English'; //default
     }
-
     /**
      * Return current language
      * @return  string
      */
     public function render()
     {
-        return $this->getAlternativeLanguageFlag();
+        return $this->getLanguage();
     }
-
 }
 
-?>
