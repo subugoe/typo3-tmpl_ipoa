@@ -17,8 +17,6 @@
   @include media-query("notebook-and-up") {
     bottom: 0;
     width: 100%;
-    z-index: -1;
-    position: fixed;
   }
 }
 
