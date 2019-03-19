@@ -10,11 +10,4 @@ plugin.tx_news {
 	}
 }
 
-plugin.tx_cwtwitter {
-
-	view {
-		partialRootPath = EXT:tmpl_ipoa/Resources/Private/Twitter/Partials
-		templateRootPath = EXT:tmpl_ipoa/Resources/Private/Twitter/Templates
-		layoutRootPath = EXT:tmpl_ipoa/Resources/Private/Twitter/Layouts
-	}
-}
+plugin.tx_pbsocial.settings.load-jquery = 0

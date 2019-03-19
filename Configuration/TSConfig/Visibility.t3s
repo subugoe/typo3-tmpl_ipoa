@@ -5,10 +5,11 @@ TCEMAIN {
         # Besitzergruppe (ID der Gruppe Page Access):
         // TODO: muss noch durch Variablen gesteuert werden
         groupid = 2
+        ### Rechte: show = 1, edit = 2, delete = 4, new = 8, editcontent = 16
         # Rechte Besitzer:
-        user = show, editcontent, edit, delete, new
+        user = 31
         # Rechte Besitzergruppe:
-        group = show
+        group = 1
         # Rechte "everybody" (kann ungesetzt bleiben):
         everybody =
     }
@@ -32,9 +33,9 @@ TCEFORM.tt_content.pi_flexform.news_pi1.additional {
 
 //////////////////////////////////////////////////////
 // Einstellungen für Editoren
-[usergroup = = 3] || [usergroup = = 4]
+[usergroup = 6] || [usergroup = 8] || [usergroup = 9]
     // Setzen der Benutzerrechte beim Anlegen von Seiten und Inhalt
-    // 3: Advanced Editing, 4: OA-Tage
+    // 6: OAT, 8: IPOA, 9: OJS
     // TODO: muss noch durch Variablen gesteuert werden, falls möglich
 
     // Verstecken des Moduls "Admin Tools"
