@@ -139,4 +139,11 @@
 .start__language-links {
   width: 100%;
   padding-top: 16px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.start__language-list {
+  display: flex;
+
 }
