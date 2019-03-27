@@ -25,11 +25,11 @@ class LanguageCodesUpdate extends AbstractUpdate
     {
         $languages = [
            'DE-DE' => 'de',
-           'DE-EN' => 'gb',
+           'DE-EN' => 'en',
            'AT-DE' => 'de',
-           'AT-EN' => 'bg',
+           'AT-EN' => 'en',
            'CH-DE' => 'de',
-           'CH-EN' => 'gb',
+           'CH-EN' => 'en',
            'CH-FR' => 'de',
        ];
         $connectionPool = GeneralUtility::makeInstance(ConnectionPool::class);
