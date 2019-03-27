@@ -14,8 +14,6 @@ config {
     contentObjectExceptionHandler = 1
 
     no_cache = 0
-    # Removed to prevent mixed content
-    # absRefPrefix = {$baseURL}
 
     prefixLocalAnchors = all
     simulateStaticDocuments = 0
@@ -46,9 +44,6 @@ styles.content.imgtext.layoutKey = srcset
 [siteLanguage('title') == 'English']
     config {
         sys_language_uid = 1
-        language = en
-        flag = gb
-        locale_all = en_US.utf8
         sys_language_mode = content_fallback
         sys_language_overlay = 1
         # change setting in html-tag

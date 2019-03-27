@@ -23,9 +23,9 @@ if (!defined('TYPO3_MODE')) {
 ');
 
 #$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['ipoaimage'] = \Subugoe\TmplIpoa\Updates\ImageFieldUpdate::class;
-#$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['ipoamedia'] = \Subugoe\TmplIpoa\Updates\MediaFieldUpdate::class;
 #$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['ipoatextmedia'] = \Subugoe\TmplIpoa\Updates\ContentTypesToTextMediaUpdate::class;
-#$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['ipoalanguage'] = \Subugoe\TmplIpoa\Updates\LanguageCodesUpdate::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['newLanguageUpgradeWizard'] = \Subugoe\TmplIpoa\Updates\NewLanguageUpgradeWizard::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['newMediaFieldUpgradeWizard'] = \Subugoe\TmplIpoa\Updates\NewLanguageUpgradeWizard::class;
 
 // 404 handling:
 $GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = '/Uuups,%20diese%20Seite%20existiert%20nicht/';
