@@ -53,11 +53,11 @@
 					<f:then></f:then>
 					<f:else>
 						<li>
-						<a href="mailto:{MAILTO}?subject={MAILTO_HASH}: {PAGE_TITLE}"
+							<f:link.email email="{MAILTO}?subject={MAILTO_HASH}: {PAGE_TITLE}"
 						   title="{f:translate(key:'sendEmail', extensionName: 'tmpl_ipoa')}" class="last__link"><i
 							class="fa fa-fw fa-lg fa-comment-o"></i>
 							{f:translate(key:'commentContent', extensionName: 'tmpl_ipoa')}
-						</a>
+							</f:link.email>
 						</li>
 					</f:else>
 				</v:condition.string.contains>
