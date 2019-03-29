@@ -5,7 +5,7 @@ RTE.default.preset = ipoa
 TCEMAIN {
 }
 
-tx_news {
+plugin.tx_news {
 	templateLayouts {
 		10 = Nur Titel anzeigen
 	}
