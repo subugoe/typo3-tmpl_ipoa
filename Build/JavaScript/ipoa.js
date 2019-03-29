@@ -1,4 +1,5 @@
 jQuery(function () {
+  jQuery('html,body').animate({ 'scrollTop': 0 }, 500);
 
   /**
    * this part allows for in-page anchor clicks that move the scroll position
