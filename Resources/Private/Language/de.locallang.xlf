@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+   <file source-language="en" target-language="de" datatype="plaintext" original="messages" product-name="tmpl_ipoa">
+      <header/>
+      <body>
+      <trans-unit id="readLatest" approved="yes" xml:space="preserve">
+	    <source>Read here the latest  %1$s News</source>
+	    <target>Lesen Sie hier die letzten %1$s News</target>
+      </trans-unit>
+      <trans-unit id="commentContent" approved="yes" xml:space="preserve">
+	    <source>Comment on this content</source>
+	    <target>Diese Inhalte kommentieren</target>
+      </trans-unit>
+      <trans-unit id="sendEmail" approved="yes" xml:space="preserve">
+	    <source>Send Email</source>
+	    <target>Email versenden</target>
+      </trans-unit>
+      <trans-unit id="menu" approved="yes" xml:space="preserve">
+	    <source>Menu</source>
+	    <target>Menü</target>
+      </trans-unit>
+      <trans-unit id="startpage" approved="yes" xml:space="preserve">
+	    <source>Start</source>
+	    <target>Startseite</target>
+      </trans-unit>
+      <trans-unit id="contact" approved="yes" xml:space="preserve">
+	    <source>Contact</source>
+	    <target>Kontakt</target>
+      </trans-unit>
+      <trans-unit id="sitemap" approved="yes" xml:space="preserve">
+	    <source>Sitemap</source>
+	    <target>Sitemap</target>
+      </trans-unit>
+      <trans-unit id="aboutUs" approved="yes" xml:space="preserve">
+	    <source>About</source>
+	    <target>Über uns</target>
+      </trans-unit>
+      <trans-unit id="search" approved="yes" xml:space="preserve">
+	    <source>Search</source>
+	    <target>Suche</target>
+      </trans-unit>
+      <trans-unit id="impressum" approved="yes" xml:space="preserve">
+	    <source>Impressum</source>
+	    <target>Impressum</target>
+      </trans-unit>
+      <trans-unit id="toTop" approved="yes" xml:space="preserve">
+	    <source>Back to top</source>
+	    <target>Zurück zum Seitenanfang</target>
+      </trans-unit>
+      <trans-unit id="news" approved="yes" xml:space="preserve">
+	    <source>News</source>
+	    <target>News</target>
+      </trans-unit>
+      <trans-unit id="freeAccess" approved="yes" xml:space="preserve">
+	    <source>Open Access to  %1$s Scientific Information %2$s</source>
+	    <target>Der freie Zugang zu %1$s wissenschaftlicher Information %2$s</target>
+      </trans-unit>
+      <trans-unit id="optOutWithLink" approved="yes" xml:space="preserve">
+	    <source>This website collects anonymous data. You can opt out for the duration of your visit by clicking this link:</source>
+	    <target>Diese Webseite erfasst anonymisierte Daten zur Nutzung. Sie können dies für die Dauer ihres Besuchs unterbinden, indem sie folgenden Link klicken:</target>
+      </trans-unit>
+      <trans-unit id="optOut" approved="yes" xml:space="preserve">
+	    <source>Remove collection of data (Opt-Out)</source>
+	    <target>Nutzungserfassung ausschalten (Opt-Out)</target>
+      </trans-unit>
+      <trans-unit id="solrSearch" approved="yes" xml:space="preserve">
+	    <source>Search</source>
+	    <target>Suchen</target>
+      </trans-unit>
+      <trans-unit id="usePageWideSearch" approved="yes" xml:space="preserve">
+	    <source>Use the search box to find other interesting content on %1$s.</source>
+	    <target>Benutzen Sie die Suche, um weitere interessante Inhalte auf %1$s zu finden.</target>
+      </trans-unit>
+      <trans-unit id="oaAtTwitter" approved="yes" xml:space="preserve">
+	    <source>#openaccess at Twitter</source>
+	    <target>#openaccess bei Twitter</target>
+      </trans-unit>
+      <trans-unit id="month.01" approved="yes" xml:space="preserve">
+	    <source>January</source>
+	    <target>Januar</target>
+      </trans-unit>
+      <trans-unit id="month.02" approved="yes" xml:space="preserve">
+	    <source>February</source>
+	    <target>Februar</target>
+      </trans-unit>
+      <trans-unit id="month.03" approved="yes" xml:space="preserve">
+	    <source>March</source>
+	    <target>März</target>
+      </trans-unit>
+      <trans-unit id="month.04" approved="yes" xml:space="preserve">
+	    <source>April</source>
+	    <target>April</target>
+      </trans-unit>
+      <trans-unit id="month.05" approved="yes" xml:space="preserve">
+	    <source>May</source>
+	    <target>Mai</target>
+      </trans-unit>
+      <trans-unit id="month.06" approved="yes" xml:space="preserve">
+	    <source>June</source>
+	    <target>Juni</target>
+      </trans-unit>
+      <trans-unit id="month.07" approved="yes" xml:space="preserve">
+	    <source>July</source>
+	    <target>Juli</target>
+      </trans-unit>
+      <trans-unit id="month.08" approved="yes" xml:space="preserve">
+	    <source>August</source>
+	    <target>Augugst</target>
+      </trans-unit>
+      <trans-unit id="month.09" approved="yes" xml:space="preserve">
+	    <source>September</source>
+	    <target>September</target>
+      </trans-unit>
+      <trans-unit id="month.10" approved="yes" xml:space="preserve">
+	    <source>October</source>
+	    <target>Oktober</target>
+      </trans-unit>
+      <trans-unit id="month.11" approved="yes" xml:space="preserve">
+	    <source>November</source>
+	    <target>November</target>
+      </trans-unit>
+      <trans-unit id="month.12" approved="yes" xml:space="preserve">
+	    <source>December</source>
+	    <target>Dezember</target>
+      </trans-unit>
+      <trans-unit id="close" approved="yes" xml:space="preserve">
+	    <source>Close</source>
+	    <target>Schließen</target>
+      </trans-unit>
+      <trans-unit id="closeMenu" approved="yes" xml:space="preserve">
+	    <source>Close menu</source>
+	    <target>Menü schliessen</target>
+      </trans-unit>
+      <trans-unit id="newsArchive" approved="yes" xml:space="preserve">
+	    <source>News Archive</source>
+	    <target>News Archiv</target>
+      </trans-unit>
+      <trans-unit id="dateFormat" xml:space="preserve">
+	    <source>%m/%d/%Y</source>
+	    <target>%d.%m.%Y</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
