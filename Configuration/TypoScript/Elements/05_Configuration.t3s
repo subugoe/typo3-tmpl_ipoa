@@ -46,6 +46,8 @@ styles.content.imgtext.layoutKey = srcset
 
 [siteLanguage('title') == 'English']
     config {
+        language = en
+        flag = gb
         sys_language_uid = 1
         sys_language_mode = content_fallback
         sys_language_overlay = 1

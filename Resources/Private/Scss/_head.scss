@@ -64,7 +64,7 @@
 .head__link {
   @extend %link--default;
   @extend %head__link--on-bright;
-  padding: 7px 5px 5px; // 1.
+  padding: 2px; // 1.
   white-space: nowrap; // 2.
   background-color: transparent;
   border-color: transparent;
@@ -160,6 +160,12 @@
 
   g {
     fill: $color--brightest;
+  }
+}
+
+.head__language-label {
+  @include media-sub-l {
+    display: none;
   }
 }
 
