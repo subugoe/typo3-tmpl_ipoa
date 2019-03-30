@@ -10,11 +10,17 @@ plugin.tx_news {
 	}
 }
 
-plugin.tx_cwtwitter {
-
+plugin.tx_pbsocial {
 	view {
-		partialRootPath = EXT:tmpl_ipoa/Resources/Private/Twitter/Partials
-		templateRootPath = EXT:tmpl_ipoa/Resources/Private/Twitter/Templates
-		layoutRootPath = EXT:tmpl_ipoa/Resources/Private/Twitter/Layouts
+		# cat=plugin.tx_pbsocial/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:tmpl_ipoa/Resources/Private/PbSocial/Templates/
+		# cat=plugin.tx_pbsocial/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:pb_social/Resources/Private/PbSocial/Partials/
+		# cat=plugin.tx_pbsocial/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:pb_social/Resources/Private/PbSocial/Layouts/
+	}
+	settings {
+		load-jquery = 0
+		cacheLifetime = 6
 	}
 }

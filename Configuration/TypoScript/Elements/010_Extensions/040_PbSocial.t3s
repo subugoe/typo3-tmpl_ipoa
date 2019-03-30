@@ -1,0 +1,8 @@
+plugin.tx_pbsocial {
+
+    view {
+      templateRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/PbSocial/Templates/
+      partialRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/PbSocial/Partials/
+      layoutRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/PbSocial/Layouts/
+    }
+}

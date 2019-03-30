@@ -1,0 +1,27 @@
+<div class="twitter pb_social" data-type="" data-id="{feed.id}" data-url="{feed.link}">
+	<div class="pb_social-header">
+		<img src="{feed.Raw.user.profile_image_url_https}">
+		<span class="pb_social-name">
+			<f:if condition="{feed.Raw.user.url}">
+				<f:then>
+			<f:link.external uri="{feed.Raw.user.url}">
+				{feed.Raw.user.name}
+			</f:link.external>
+				</f:then>
+				<f:else>
+					{feed.Raw.user.name}
+				</f:else>
+			</f:if>
+		</span>
+		<div class="pb_social-time text--small">
+			<f:format.date format="H:m - d.m.Y">{feed.Raw.created_at}</f:format.date>
+		</div>
+	</div>
+
+	<f:if condition="{feed.text}">
+		<f:link.external uri="{feed.Link}">
+			<span class="pb_socil-text">{feed.text}</span>
+		</f:link.external>
+	</f:if>
+	<div class="icon"></div>
+</div>
