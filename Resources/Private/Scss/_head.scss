@@ -94,15 +94,18 @@
   color: $color--brightest;
 }
 
-.head__list {
+.head-nav .head__list {
   margin: 0;
   padding: 0;
   list-style: none;
-
   display: flex;
+
+  @include media-sub-l {
+    display: none;
+  }
 }
 
-.head__list > li {
+.head-nav .head__list > li {
   display: inline-block;
 }
 

@@ -1,7 +1,7 @@
 {namespace v=FluidTYPO3\Vhs\ViewHelpers}
 {namespace ipoa=Subugoe\TmplIpoa\ViewHelpers}
 
-<nav class="alt-menu js-alt-menu" id="menu">
+<nav class="alt-menu js-alt-menu --off-canvas" id="menu">
 	<ul class="head__list">
 		<li>
 			<f:link.page pageUid="{START_UID}" title="{f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}"
@@ -11,8 +11,7 @@
 				</svg>
 				<span class="hidden-sub-l"> {f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}</span>
 			</f:link.page>
-		</li><!--
-   -->
+		</li>
 		<li>
 			<f:link.page pageUid="{KONTAKT_UID}" title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}"
 						 class="head__link" tabindex="2">
@@ -49,35 +48,29 @@
 				<span class="hidden-sub-l"> {f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
 			</a>
 		</li>
-				<v:page.languageMenu
-					defaultLanguageLabel="Deutsch"
-					defaultIsoFlag="de"
-					hideNotTranslated="1"
-					linkCurrent="1">
-							<f:for each="{languageMenu}" as="lang">
-								<li>
-									<a class="head__link {f:if(condition: '{lang.current}', then: 'head__link--active',  else:'')}"
-									   href="{lang.url}">
-										<img
-											src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{lang.flag}.png" />'
-											class="" alt="">
-									</a>
-								</li>
-							</f:for>
-				</v:page.languageMenu>
+		<v:page.languageMenu
+			defaultLanguageLabel="Deutsch"
+			defaultIsoFlag="de"
+			hideNotTranslated="1"
+			linkCurrent="1">
+			<f:for each="{languageMenu}" as="lang">
+				<li>
+					<a class="head__link {f:if(condition: '{lang.current}', then: 'head__link--active',  else:'')}"
+					   href="{lang.url}">
+						<img
+							src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{lang.flag}.png" />'
+							class="" alt="">
+					</a>
+				</li>
+			</f:for>
+		</v:page.languageMenu>
 	</ul>
-	<f:if condition="{LANGMENU}=='0'">
-		<f:then></f:then>
-		<f:else>
-		</f:else>
-	</f:if>
-
 	<div class="alt-menu__content">
 		<div class="alt-menu__close-button-wrap">
 			<a href="#" title="{f:translate(key:'closeMenu', extensionName: 'tmpl_ipoa')}"
 			   class="alt-menu__close-button">
 				<svg class="fa-icon fa-icon-close fa-icon-on-bright">
-					<use xlink:href="#icon-close"></use>
+					<use xlink:href="#icon-close" />
 				</svg>
 				{f:translate(key:'close', extensionName: 'tmpl_ipoa')}
 			</a>
