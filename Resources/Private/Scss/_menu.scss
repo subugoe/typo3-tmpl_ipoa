@@ -1,9 +1,8 @@
 .menu {
   list-style: none;
-  margin:  0;
+  margin: 0;
   padding: 20px 0;
   margin-left: -$inuit-layout-gutter;
-
 
   @include responsive-content-padding();
 
@@ -22,7 +21,7 @@
   border: 1px solid transparent;
   border-radius: $border-radius--large;
   color: $color--darkest;
-  padding: 5px;
+  padding: 2px;
   text-decoration: none;
 
   &:hover,
@@ -40,7 +39,9 @@
     background-color: $color-ipoa-yellow;
     color: $color--darkest;
 
-    svg { color: $color--darkest; }
+    svg {
+      color: $color--darkest;
+    }
   }
 }
 
@@ -49,6 +50,7 @@
   display: flex;
   flex-direction: column;
 }
+
 // formats every menu section to appear and behave like a column e. g. have many
 // menu sections side by side in various breakpoint viewports
 .menu__column {
@@ -142,58 +144,41 @@
 }
 
 .alt-menu {
-  @include responsive-content-padding();
+  //@include responsive-content-padding();
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 12px 0 20px $inuit-layout-gutter;
+  // padding: 12px 0 20px $inuit-layout-gutter;
+  padding: 0;
   vertical-align: top;
-  width: 100%;
   background-color: $color--brightest;
   z-index: 99;
-
-  .head__list {
-    margin-bottom: 20px;
-    display: block;
-    text-align: center;
-
-    @include media-query("phone-and-up") {
-      display: none;
-    }
-  }
-
-  .head__language-links .head__list {
-    text-align: left;
-  }
-}
-
-// a modifier that moves the alt-menu off canvas
-.alt-menu--off-canvas {
+  border-right: 1px solid lighten($link-color--default, 50%);
   height: 100%;
-  padding: 0;
   position: fixed;
   top: 0;
-  transform: translateX(-300%);
+}
 
-  @include media-xl {
-    width: 30%;
-  }
-  @include media-l {
-    width: 30%;
-  }
-  @include media-m {
-    width: 100%;
-  }
-  @include media-s {
-    width: 100%;
+.alt-menu .head__list {
+  margin: 0;
+  padding: 20px 20px 0 20px;
+  display: flex;
+  width: 100%;
+
+  @include media-sup-m {
+    display: none;
   }
 }
 
+
 .alt-menu__content {
-  padding: 20px 0 0 6px;
+  padding: 6px 0 0 6px;
+  width: 100%;
 }
 
 .alt-menu__close-button-wrap {
+  display: flex;
+  justify-content: flex-end;
   padding-bottom: 10px;
   padding-right: 24px;
   padding-top: 2px;
@@ -207,7 +192,7 @@
   background: transparent;
   border: 1px solid transparent;
   border-radius: $border-radius--default;
-  padding: 5px;
+  padding: 2px;
   text-decoration: none;
 
   &:hover,
