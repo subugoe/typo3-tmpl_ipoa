@@ -83,6 +83,11 @@
   &:active svg {
     color: $color--darkest;
   }
+
+  a {
+    border: 0;
+    text-decoration-line: none;
+  }
 }
 
 .head__link svg,
@@ -95,6 +100,12 @@
 }
 
 li.head__link-language {
+  @extend %link--default;
+  @extend %head__link--on-bright;
+  padding: 2px 4px; // 1.
+  white-space: nowrap; // 2.
+  background-color: transparent;
+  border-color: transparent;
   display: none;
   justify-content: flex-start;
   align-items: center;
