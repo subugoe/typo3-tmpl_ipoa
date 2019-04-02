@@ -89,7 +89,7 @@
 				hideNotTranslated="1"
 				linkCurrent="0">
 				<f:for each="{languageMenu}" as="lang">
-					<li class="head__link-language {f:if(condition: '{lang.current}', then: 'head__link-active',  else:'')}">
+					<li class="head__link head__link-language {f:if(condition: '{lang.current}', then: 'head__link-active',  else:'')}">
 						<svg class="fa-icon fa-icon-global fa-icon--s">
 							<use xlink:href="#icon-globe"></use>
 						</svg>
@@ -100,7 +100,7 @@
 									</span>
 							</f:then>
 							<f:else>
-								<a class="head__link" href="{lang.url}">
+								<a href="{lang.url}">
 									<span class="head__language-label">
 										{lang.label}
 									</span>
