@@ -219,3 +219,12 @@
 .toggle-menu {
   cursor: pointer;
 }
+
+// a modifier that moves the alt-menu off canvas
+.alt-menu-off-canvas {
+  transform: translateX(-3000px);
+}
+
+.alt-menu-in-canvas {
+  transform: translateX(0px);
+}

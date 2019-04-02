@@ -58,7 +58,7 @@
   }
 
   ul {
-    @extend %ic-list-bare;
+    @extend %list-bare;
     @extend %m--default;
     padding-left: $inuit-base-line-height;
 

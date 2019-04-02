@@ -93,11 +93,3 @@ ul {
 .-hidden {
   display: none !important;
 }
-// a modifier that moves the alt-menu off canvas
-.--off-canvas {
-  transform: translateX(-3000px);
-}
-
-.--in-canvas {
-  transform: translateX(0px);
-}
