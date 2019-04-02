@@ -16,7 +16,7 @@
 	<div class="head__links">
 
 		<ul class="head__list">
-			<li>
+			<li class="head__link">
 				<f:link.page pageUid="{START_UID}" title="{f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}"
 							 class="head__link" tabindex="2">
 					<svg class="fa-icon fa-icon-home fa-icon--s">
@@ -27,7 +27,7 @@
 			</li>
 			<v:condition.string.isNumeric value="{KONTAKT_UID}">
 				<f:then>
-					<li>
+					<li class="head__link">
 						<f:link.page pageUid="{KONTAKT_UID}"
 									 title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}" class="head__link"
 									 tabindex="2">
@@ -42,7 +42,7 @@
 			</v:condition.string.isNumeric>
 			<v:condition.string.isNumeric value="{NEWS_UID}">
 				<f:then>
-					<li>
+					<li class="head__link">
 						<f:link.page pageUid="{NEWS_UID}" title="{f:translate(key:'news', extensionName: 'tmpl_ipoa')}"
 									 class="head__link" tabindex="2">
 							<svg class="fa-icon fa-icon-bolt fa-icon--s">
@@ -56,7 +56,7 @@
 			</v:condition.string.isNumeric>
 			<v:condition.string.isNumeric value="{SITEMAP_UID}">
 				<f:then>
-					<li>
+					<li class="head__link">
 						<f:link.page pageUid="{SITEMAP_UID}"
 									 title="{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}" class="head__link"
 									 tabindex="2">
@@ -71,7 +71,7 @@
 			</v:condition.string.isNumeric>
 			<v:condition.string.isNumeric value="{SEARCH_UID}">
 				<f:then>
-					<li>
+					<li class="head__link">
 						<a href="#search" title="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}"
 						   class="head__link" tabindex="2">
 							<svg class="fa-icon fa-icon-search fa-icon--s">
@@ -87,23 +87,28 @@
 				defaultLanguageLabel="Deutsch"
 				defaultIsoFlag="de"
 				hideNotTranslated="1"
-				linkCurrent="1">
-				<div class="head__language">
-					<ul class="head__list">
+				linkCurrent="0">
 				<f:for each="{languageMenu}" as="lang">
-					<li>
-					<a class="head__link {f:if(condition: '{lang.current}', then: 'head__link--active',  else:'')}" href="{lang.url}">
-						<img
-							src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{lang.flag}.png" />'
-							class="" alt="">
-						<span class="head__language-label">
-						{lang.label}
-						</span>
-					</a>
+					<li class="head__link-language {f:if(condition: '{lang.current}', then: 'head__link-active',  else:'')}">
+						<svg class="fa-icon fa-icon-global fa-icon--s">
+							<use xlink:href="#icon-globe"></use>
+						</svg>
+						<f:if condition="{lang.current}">
+							<f:then>
+									<span class="head__language-label">
+										{lang.label}
+									</span>
+							</f:then>
+							<f:else>
+								<a class="head__link" href="{lang.url}">
+									<span class="head__language-label">
+										{lang.label}
+									</span>
+								</a>
+							</f:else>
+						</f:if>
 					</li>
 				</f:for>
-					</ul>
-				</div>
 			</v:page.languageMenu>
 		</ul>
 	</div>

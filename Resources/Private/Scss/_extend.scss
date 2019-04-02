@@ -67,7 +67,9 @@
   list-style: none;
 
   > li {
-    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 
@@ -193,6 +195,7 @@
   // padding: 2px 3px 0;
   text-decoration: none;
   transition: all $transition-time--default ease;
+  cursor: pointer;
 }
 
 %link--underline {
@@ -317,6 +320,12 @@
       @extend .fa-icon-on-dark;
     }
   }
+}
+
+%list-bare {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .no-js .on-demand__link {

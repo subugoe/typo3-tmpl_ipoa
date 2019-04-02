@@ -64,7 +64,7 @@
 .head__link {
   @extend %link--default;
   @extend %head__link--on-bright;
-  padding: 2px; // 1.
+  padding: 2px 4px; // 1.
   white-space: nowrap; // 2.
   background-color: transparent;
   border-color: transparent;
@@ -85,13 +85,19 @@
   }
 }
 
-.head__link svg {
-  margin-bottom: -3px;
+.head__link svg,
+.head__link-language svg {
+  padding-right: 2px;
 }
 
-.head__link--active {
-  background-color: $color-ipoa-green;
-  color: $color--brightest;
+.head__link-language.head__link-active {
+  display: flex;
+}
+
+li.head__link-language {
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .head-nav .head__list {
@@ -105,8 +111,10 @@
   }
 }
 
-.head-nav .head__list > li {
-  display: inline-block;
+.head__link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .head__menubutton {

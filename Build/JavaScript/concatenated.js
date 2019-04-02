@@ -151,15 +151,15 @@ jQuery(function () {
    * handle display of menu
    */
   const menuIsActive = function () {
-    return jQuery('.alt-menu').hasClass('--in-canvas');
+    return jQuery('.alt-menu').hasClass('alt-menu-in-canvas');
   };
 
   const hideMenu = function() {
-    jQuery('.alt-menu').removeClass('--in-canvas').addClass('--off-canvas');
+    jQuery('.alt-menu').removeClass('alt-menu-in-canvas').addClass('alt-menu-off-canvas');
   };
 
   const showMenu = function() {
-    jQuery('.alt-menu').removeClass('--off-canvas').addClass('--in-canvas');
+    jQuery('.alt-menu').removeClass('alt-menu-off-canvas').addClass('alt-menu-in-canvas');
   };
 
   jQuery('.head-nav .menu__button, .alt-menu__close-button').on('click', function() {
@@ -170,6 +170,10 @@ jQuery(function () {
     }
   });
 
+  // make sure, only active language is visible - except for decision
+  jQuery('.head__link-language').on('click', function() {
+    jQuery('.head__link-language:not(.head__link-active)').toggleClass('-shown');
+  });
 
   /**
    * handle on demand content on pages like those for the oa days

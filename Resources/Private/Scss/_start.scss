@@ -71,11 +71,11 @@
 
 .start__link {
   @extend %link--default;
-  @extend %link--with-icon-on-bright;
-  @extend %link--on-bright;
-  @extend %nobr;
-  border: none;
-  padding: 7px;
+  @extend %head__link--on-bright;
+  padding: 2px 4px; // 1.
+  white-space: nowrap; // 2.
+  background-color: transparent;
+  border-color: transparent;
 
   &:hover,
   &:focus {
@@ -85,11 +85,14 @@
       color: $color--brightest;
       fill: currentColor;
     }
-
   }
 
   &:active svg {
     color: $color--darkest;
+  }
+
+  a {
+    text-decoration-line: none;
   }
 }
 

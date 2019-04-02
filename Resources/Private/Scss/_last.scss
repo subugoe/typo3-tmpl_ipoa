@@ -22,7 +22,7 @@
 .last__block1 {
   @extend %ic-layout__item;
   @extend .ic-tablet-and-up-one-half;
-  @extend %ic-list-bare;
+  @extend %list-bare;
   @extend %ic-list-inline;
   display: flex;
   flex-direction: row;

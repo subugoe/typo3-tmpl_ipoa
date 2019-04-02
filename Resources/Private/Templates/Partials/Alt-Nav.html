@@ -1,9 +1,9 @@
 {namespace v=FluidTYPO3\Vhs\ViewHelpers}
 {namespace ipoa=Subugoe\TmplIpoa\ViewHelpers}
 
-<nav class="alt-menu js-alt-menu --off-canvas" id="menu">
+<nav class="alt-menu js-alt-menu alt-menu-off-canvas" id="menu">
 	<ul class="head__list">
-		<li>
+		<li class="head__link">
 			<f:link.page pageUid="{START_UID}" title="{f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}"
 						 class="head__link" tabindex="2">
 				<svg class="fa-icon fa-icon-home fa-icon--s">
@@ -12,7 +12,7 @@
 				<span class="hidden-sub-l"> {f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}</span>
 			</f:link.page>
 		</li>
-		<li>
+		<li class="head__link">
 			<f:link.page pageUid="{KONTAKT_UID}" title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}"
 						 class="head__link" tabindex="2">
 				<svg class="fa-icon fa-icon-envelope fa-icon--s">
@@ -21,7 +21,7 @@
 				<span class="hidden-sub-l"> {f:translate(key:'contact', extensionName: 'tmpl_ipoa')}</span>
 			</f:link.page>
 		</li>
-		<li>
+		<li class="head__link">
 			<f:link.page pageUid="{NEWS_UID}" title="{f:translate(key:'news', extensionName: 'tmpl_ipoa')}"
 						 class="head__link" tabindex="2">
 				<svg class="fa-icon fa-icon-bolt fa-icon--s">
@@ -30,7 +30,7 @@
 				<span class="hidden-sub-l"> {f:translate(key:'news', extensionName: 'tmpl_ipoa')}</span>
 			</f:link.page>
 		</li>
-		<li>
+		<li class="head__link">
 			<f:link.page pageUid="{SITEMAP_UID}" title="{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}"
 						 class="head__link" tabindex="2">
 				<svg class="fa-icon fa-icon-sitemap fa-icon--s">
@@ -39,7 +39,7 @@
 				<span class="hidden-sub-l"> {f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}</span>
 			</f:link.page>
 		</li>
-		<li>
+		<li class="head__link">
 			<a href="#search" title="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}"
 			   class="head__link js-nav-search-button" tabindex="2">
 				<svg class="fa-icon fa-icon-search fa-icon--s">
@@ -49,18 +49,26 @@
 			</a>
 		</li>
 		<v:page.languageMenu
-			defaultLanguageLabel="Deutsch"
+			defaultLanguageLabel="de"
 			defaultIsoFlag="de"
 			hideNotTranslated="1"
-			linkCurrent="1">
+			labelOverwrite="(de), (en)"
+			linkCurrent="0">
 			<f:for each="{languageMenu}" as="lang">
-				<li>
-					<a class="head__link {f:if(condition: '{lang.current}', then: 'head__link--active',  else:'')}"
-					   href="{lang.url}">
-						<img
-							src='<f:uri.image src="EXT:tmpl_ipoa/Resources/Public/Images/flags/{lang.flag}.png" />'
-							class="" alt="">
-					</a>
+				<li class="head__link head__link-language {f:if(condition: '{lang.current}', then: 'head__link-active',  else:'')}">
+					<svg class="fa-icon fa-icon-global fa-icon--s">
+						<use xlink:href="#icon-globe"></use>
+					</svg>
+					<f:if condition="{lang.current}">
+						<f:then>
+							{lang.label}
+						</f:then>
+						<f:else>
+							<a class="head__link" href="{lang.url}">
+								{lang.label}
+							</a>
+						</f:else>
+					</f:if>
 				</li>
 			</f:for>
 		</v:page.languageMenu>
