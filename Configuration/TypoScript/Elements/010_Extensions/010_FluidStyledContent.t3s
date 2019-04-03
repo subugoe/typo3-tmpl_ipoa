@@ -1,7 +1,7 @@
 lib.contentElement {
-    layoutRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Templates/Extensions/FluidStyledContent/Layouts/
-    partialRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Templates/Extensions/FluidStyledContent/Partials/
-    templateRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Templates/Extensions/FluidStyledContent/Templates/
+    layoutRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/FluidStyledContent/Layouts/
+    partialRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/FluidStyledContent/Partials/
+    templateRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/FluidStyledContent/Templates/
 }
 
 tt_content.textmedia {
