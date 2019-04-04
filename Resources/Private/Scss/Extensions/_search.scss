@@ -1,9 +1,7 @@
-// 1. pseudo space above the search box to avoid scrolling via anchor behind
-//    the fixed head menu bar
-//    http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-B
+// Search form
 .search {
   display: flex;
-  align-items: flex-start ;
+  align-items: flex-start;
   padding-top: 16px;
 
   @include media-xl {
@@ -17,34 +15,6 @@
   }
   @include media-s {
     flex-direction: column;
-  }
-
-  .sort--active {
-    background-color: $color-block-background--on-bright;
-    font-weight: 400;
-  }
-
-  .highlight {
-    // background-color: $color-block-background--on-bright;
-    // color: $color--darkest;
-    // border-radius: 3px;
-    // padding: 3px;
-    font-weight: 400;
-  }
-
-  ul li > a {
-    font-weight: 400;
-  }
-
-  li {
-    margin-bottom: 10px;
-  }
-
-  &:before { // 1.
-    content: "";
-    display: block;
-    height: 50px;
-    margin: -50px 0 0;
   }
 }
 
@@ -178,76 +148,44 @@
   }
 }
 
-.search__pagination__list li:before {
-  background-image: none !important;
-  content: "" !important;
+.tx_solr .pagination {
   margin: 0;
-  width: 0;
+  padding: 0 16px 0 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row !important;
 }
 
-.search__pagination__list li {
-  display: inline;
-  padding-right: 20px;
-}
+.tx_solr .pagination li {
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
+  padding: 0 8px;
 
-.search__pagination__list li:first-child {
+  a {
+    padding: 0 8px;
+    border: 0;
+  }
+
+  &:first-of-type {
+    padding-left: 0px;
+  }
+
   &:before {
-    background-image: url("../Images/angle-double-right.svg") !important;
-    background-repeat: no-repeat;
-    background-size: contain;
-    content: "";
-    display: inline-block;
-    height: 16px;
-    margin-bottom: $shift-chevron-before-content;
-    margin-left: -6px;
-    margin-right: 0;
-    transform: rotate(180deg);
-    width: 16px;
+    background-image: none;
+    content: "" !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 0;
+    height: 0;
+  }
+
+  &.next {
+    font-size: 16px;
+    border-bottom: 0;
   }
 }
 
-.search__pagination__list li:nth-child(2) {
-  &:before {
-    background-image: url("../Images/angle-right.svg") !important;
-    background-repeat: no-repeat;
-    background-size: contain;
-    content: "";
-    display: inline-block;
-    height: 1em;
-    margin-bottom: $shift-chevron-before-content;
-    margin-left: -6px;
-    margin-right: 0;
-    transform: rotate(180deg);
-    width: 6px;
-  }
-}
-
-.search__pagination__list li:last-child {
-  &:after {
-    background-image: url("../Images/angle-double-right.svg") !important;
-    background-repeat: no-repeat;
-    background-size: contain;
-    content: "";
-    display: inline-block;
-    height: 16px;
-    margin-bottom: $shift-chevron-before-content;
-    margin-left: 0;
-    margin-right: -6px;
-    width: 16px;
-  }
-}
-
-.search__pagination__list li:nth-last-child(2) {
-  &:after {
-    background-image: url("../Images/angle-right.svg") !important;
-    background-repeat: no-repeat;
-    background-size: contain;
-    content: "";
-    display: inline-block;
-    height: 1em;
-    margin-bottom: $shift-chevron-before-content;
-    margin-left: 0;
-    margin-right: -6px;
-    width: 6px;
-  }
+.tx_solr #results-per-page {
+  padding: 8px 0;
 }

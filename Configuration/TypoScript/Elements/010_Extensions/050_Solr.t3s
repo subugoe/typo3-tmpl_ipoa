@@ -1,0 +1,65 @@
+plugin.tx_solr {
+
+    view {
+        templateRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Solr/Private/Templates/
+        partialRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Solr/Private/Partials/
+        layoutRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Layouts/
+    }
+
+    # configuration for searching news
+    index {
+        files = 1
+        queue {
+            news = 1
+            news {
+                table = tx_news_domain_model_news
+
+                fields {
+                    abstract = teaser
+                    author = author
+                    title = title
+                    content = SOLR_CONTENT
+                    content {
+                        field = bodytext
+                    }
+
+                    url = TEXT
+                    url {
+                        typolink {
+                            additionalParams = &tx_news_pi1[controller]=News&tx_news_pi1[action]=detail&tx_news_pi1[news]={field:uid}
+                            additionalParams.insertData = 1
+                            returnLast = url
+                            useCacheHash = 0
+                        }
+                    }
+
+                    sortAuthor_stringS = author
+                    sortTitle_stringS = title
+                }
+            }
+        }
+    }
+
+    suggest = 1
+
+    logging.indexing {
+        queue.pages = 1
+        pageIndexed = 1
+    }
+
+    search {
+        spellchecking = 1
+        query.sortBy = type desc, created desc, sortTitle asc
+
+        results {
+            resultsHighlighting = 1
+        }
+    }
+}
+
+plugin.tx_solr.search.spellchecking.wrap = |<div class="spelling-suggestions">Meinten Sie |?</div>|
+[globalVar = = GP:L == 0,GP:L == 2, GP:L == 5]
+    plugin.tx_solr.search.spellchecking.wrap = |<div class="spelling-suggestions">Meinten Sie |?</div>|
+[globalVar = = GP:L == 1, GP:L == 3, GP:L == 6]
+    plugin.tx_solr.search.spellchecking.wrap = |<div class="spelling-suggestions">Did you mean |?</div>|
+[global]
