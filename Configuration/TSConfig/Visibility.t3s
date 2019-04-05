@@ -3,14 +3,13 @@ mod.SHARED.defaultLanguageFlag = dede
 TCEMAIN {
     permissions {
         # Besitzergruppe (ID der Gruppe Page Access):
-        // TODO: muss noch durch Variablen gesteuert werden
-        groupid = 2
+        groupid = 5
         # Rechte Besitzer:
-        user = show, editcontent, edit, delete, new
+        user = 31
         # Rechte Besitzergruppe:
-        group = show
-        # Rechte "everybody" (kann ungesetzt bleiben):
-        everybody =
+        group = 31
+        # Rechte "everybody":
+        everybody = 31
     }
 }
 
