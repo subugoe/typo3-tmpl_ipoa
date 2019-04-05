@@ -1,5 +1,3 @@
-mod.SHARED.defaultLanguageFlag = dede
-
 TCEMAIN {
     permissions {
         # Besitzergruppe (ID der Gruppe Page Access):
@@ -31,7 +29,7 @@ TCEFORM.tt_content.pi_flexform.news_pi1.additional {
 
 //////////////////////////////////////////////////////
 // Einstellungen für Editoren
-[usergroup = = 3] || [usergroup = = 4]
+[usergroup = 3] || [usergroup = 6]
     // Setzen der Benutzerrechte beim Anlegen von Seiten und Inhalt
     // 3: Advanced Editing, 4: OA-Tage
     // TODO: muss noch durch Variablen gesteuert werden, falls möglich
