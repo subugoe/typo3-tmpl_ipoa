@@ -41,6 +41,7 @@
   }
 }
 
+
 .main .frame > div {
   display: block;
 
@@ -58,11 +59,17 @@
   }
 }
 
-.frame header h2 {
-  margin: 0 0 12px 0;
-  line-height: 37px;
-  font-size: 26px;
-  max-width: 100%;
+.frame header {
+  h2 {
+    margin: 0 0 12px 0;
+    line-height: 37px;
+    font-size: 26px;
+    max-width: 100%;
+  }
+
+  &:only-child {
+    justify-self: flex-start;
+  }
 }
 
 .frame p {
