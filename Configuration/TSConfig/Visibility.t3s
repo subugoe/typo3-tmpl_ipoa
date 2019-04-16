@@ -122,7 +122,7 @@ TCEFORM.tt_content.pi_flexform.news_pi1.additional {
             spaceBefore.disabled = 1
             # Media Adjustments
             imageheight.disabled = 1
-            imagewidth.disabled = 1
+            imagewidth.disabled = 0
             imageborder.disabled = 1
             # Galery Settings
             imageorient.disabled = 0
@@ -144,14 +144,14 @@ TCEFORM.tt_content.pi_flexform.news_pi1.additional {
 
 
     // steht in der localconf zum Enternen des Link zum direkten Upload im Contentelement:
-    setup.override.edit_docModuleUpload = 0
+    setup.override.edit_docModuleUpload = 1
 
 
     // Im "new content element wizard" keine Tabs anzeigen, es sind sowieso nicht so viele Elemente
     mod.wizards.newContentElement.renderMode = list
 
-    # Hide possibility to upload files in Element Browser
-    options.folderTree.uploadFieldsInLinkBrowser = 0
+    # Number of visible upload buttons in media element
+    options.folderTree.uploadFieldsInLinkBrowser = 3
 
     // remove unwanted content objects
     CType.removeItems (
