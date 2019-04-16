@@ -4431,6 +4431,21 @@ li.head__link-language {
     .main .frame ul {
       width: 100%; } }
 
+.main .frame > table {
+  display: block; }
+  @media (min-width: 1200px) {
+    .main .frame > table {
+      width: 75%; } }
+  @media (min-width: 820px) and (max-width: 1200px) {
+    .main .frame > table {
+      width: 100%; } }
+  @media (min-width: 480px) and (max-width: 820px) {
+    .main .frame > table {
+      width: 100%; } }
+  @media (max-width: 480px) {
+    .main .frame > table {
+      width: 100%; } }
+
 .ce-textpic {
   display: -ms-flexbox;
   display: flex; }
