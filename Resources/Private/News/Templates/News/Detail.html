@@ -10,9 +10,11 @@
 		News/Detail.html
 -->
 
-<f:section name="content">
+
+<f:section name="detailcontent">
 	<f:if condition="{newsItem}">
 		<f:then>
+
 			<n:format.nothing>
 				<n:excludeDisplayedNews newsItem="{newsItem}" />
 				<f:if condition="{newsItem.alternativeTitle}">
@@ -205,6 +207,42 @@
 		<f:else>
 
 		</f:else>
+	</f:if>
+</f:section>
+
+
+
+
+<f:section name="content">
+	<f:comment>
+		Implementation of switch for CoP. Only logged in CoPas should see their badge or level, the members of another
+		group should not see that badge or level.
+	</f:comment>
+	<f:if condition="{newsItem">
+		<f:if condition="{newsItem.categories}">
+			<f:then>
+				<f:for each="{newsItem.categories}" as="category">
+					<f:switch expression="{category.parentcategory.title}">
+						<f:case value="Badge">
+							<f:be.security.ifHasRole role="{settings.cop-badge-gid}">
+								<f:render section="detailcontent"  arguments="{_all}"/>
+							</f:be.security.ifHasRole>
+						</f:case>
+						<f:case value="Level">
+							<f:be.security.ifHasRole role="{settings.cop-level-gid}">
+								<f:render section="detailcontent"  arguments="{_all}"/>
+							</f:be.security.ifHasRole>
+						</f:case>
+						<f:defaultCase>
+							<f:render section="detailcontent" arguments="{_all}"/>
+						</f:defaultCase>
+					</f:switch>
+				</f:for>
+			</f:then>
+			<f:else>
+				<f:render section="detailcontent"  arguments="{_all}"/>
+			</f:else>
+		</f:if>
 	</f:if>
 </f:section>
 </html>
