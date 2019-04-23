@@ -210,32 +210,6 @@
 	</f:if>
 </f:section>
 
-<f:section name="copcontent">
-			<div class="header">
-				<h3 itemprop="headline">{newsItem.title}</h3>
-			</div>
-			<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
-				<f:if condition="{newsItem.teaser}">
-					<!-- teaser -->
-					<div class="teaser-text" itemprop="description">
-						<f:format.html>{newsItem.teaser}</f:format.html>
-					</div>
-				</f:if>
-
-				<f:if condition="{newsItem.contentElements}">
-					<!-- content elements -->
-					<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
-				</f:if>
-
-				<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
-
-				<!-- main text -->
-				<div class="news-text-wrap" itemprop="articleBody">
-					<f:format.html>{newsItem.bodytext}</f:format.html>
-				</div>
-			</n:renderMedia>
-</f:section>
-
 
 
 
@@ -243,20 +217,20 @@
 	<f:comment>
 		Implementation of switch for CoP. Only logged in CoPas should see their badge or level, the members of another
 		group should not see that badge or level.
-	</f:comment><f:debug>{newsItem}</f:debug>
+	</f:comment>
 	<f:if condition="{newsItem">
 		<f:if condition="{newsItem.categories}">
 			<f:then>
 				<f:for each="{newsItem.categories}" as="category">
-					<f:switch expression="{category.title}">
+					<f:switch expression="{category.parentcategory.title}">
 						<f:case value="Badge">
 							<f:be.security.ifHasRole role="{settings.cop-badge-gid}">
-								<f:render section="copcontent"  arguments="{_all}"/>
+								<f:render section="detailcontent"  arguments="{_all}"/>
 							</f:be.security.ifHasRole>
 						</f:case>
 						<f:case value="Level">
 							<f:be.security.ifHasRole role="{settings.cop-level-gid}">
-								<f:render section="copcontent"  arguments="{_all}"/>
+								<f:render section="detailcontent"  arguments="{_all}"/>
 							</f:be.security.ifHasRole>
 						</f:case>
 						<f:defaultCase>
