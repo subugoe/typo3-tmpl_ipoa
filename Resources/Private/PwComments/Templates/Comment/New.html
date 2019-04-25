@@ -1,0 +1,79 @@
+{namespace pw=PwCommentsTeam\PwComments\ViewHelpers}
+<f:layout name="Default" />
+
+<f:section name="main">
+	<header>
+	<h3><f:if condition="{commentToReplyTo}">
+		<f:then>
+			<f:translate key="tx_pwcomments.writeNewCommentReply" />
+		</f:then>
+		<f:else>
+			<f:translate key="tx_pwcomments.writeNewComment" />
+		</f:else>
+	</f:if></h3>
+	</header>
+
+	<div id="{settings.writeCommentAnchor}">
+	<f:form name="newComment" object="{newComment}" action="create" section="{settings.writeCommentAnchor}" addQueryString="true">
+		<div class="typo3-messages">
+			<a name="{settings.successfulAnchor}"></a>
+			<f:flashMessages/>
+			<f:render partial="Comment/FormErrors/ValidationResults"/>
+		</div>
+
+		<div class="pw-username">
+			<f:if condition="{settings.replaceUsernameWith}">
+				<f:then>
+					<label>
+						<f:translate key="tx_pwcomments.newComment.name"/>
+					</label> <span class="username">{settings.replaceUsernameWith}</span>
+				</f:then>
+				<f:else>
+					<div><label>
+						<f:translate key="tx_pwcomments.newComment.name"/>
+					</label>
+						<f:form.textfield property="authorName" value="{unregistredUserName}"/>
+					</div>
+				</f:else>
+			</f:if>
+		</div>
+		<div class="pw-email">
+
+			<f:if condition="{settings.replaceMailWith}">
+				<f:then>
+					<label>
+						<f:translate key="tx_pwcomments.newComment.mail"/>
+					</label> <span class="mail">{settings.replaceMailWith}</span>
+				</f:then>
+				<f:else>
+					<div><label>
+						<f:translate key="tx_pwcomments.newComment.mail"/>
+					</label>
+						<f:form.textfield property="authorMail" value="{unregistredUserMail}"/>
+					</div>
+				</f:else>
+			</f:if>
+		</div>
+
+		<div class="{settings.hiddenFieldClass}"><label><f:translate key="tx_pwcomments.newComment.hiddenField" /></label><f:form.textfield name="{settings.hiddenFieldName}" /></div>
+
+		<div><label><f:translate key="tx_pwcomments.newComment.comment" /></label><f:form.textarea property="message" rows="8" cols="40" /></div>
+
+		<f:if condition="{settings.requireAcceptedTerms}">
+			<div>
+				<label>
+					<f:form.checkbox property="termsAccepted" value="1" />
+					<f:translate key="tx_pwcomments.newComment.termsBefore" /><f:link.typolink parameter="{settings.termsTypolinkParameter}"><f:translate key="tx_pwcomments.newComment.terms" /></f:link.typolink><f:translate key="tx_pwcomments.newComment.termsAfter" />
+				</label>
+			</div>
+		</f:if>
+
+		<f:if condition="{settings.enableRepliesToComments}">
+			<f:if condition="{commentToReplyTo}">
+				<f:form.hidden property="parentComment" value="{commentToReplyTo}" />
+			</f:if>
+		</f:if>
+		<f:form.submit value="{f:translate(key:'tx_pwcomments.newComment.submit')}" class="button" />
+	</f:form>
+</div>
+</f:section>
