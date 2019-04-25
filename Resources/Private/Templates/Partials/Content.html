@@ -2,6 +2,7 @@
 	  data-namespace-typo3-fluid="true">
 
 <main role="main" class="main">
+	<f:cObject typoscriptObjectPath="lib.breadCrumb" />
 	<f:if condition="{data.rowDescription}">
 		<div class="page_description">
 			<f:translate key="info" extensionName="tmpl_ipoa" />: {data.rowDescription}</div>
