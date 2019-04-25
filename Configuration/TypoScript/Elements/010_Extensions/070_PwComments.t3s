@@ -1,0 +1,36 @@
+plugin.tx_pwcomments {
+    view {
+        templateRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/PwComments/Templates
+        partialRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/PwComments/Partials
+        layoutRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/PwComments/Layouts
+    }
+    settings {
+        enableCommentVotes = 0
+        enableReplyVotes = 0
+        moderateNewComments = 0
+        secondsBetweenTwoComments = 10
+        requireAcceptedTerms = 0
+        ignoreVotingForOwnComments = 0
+
+        backendUserUid = TEXT
+        backendUserUid.data = GLOBAL:BE_USER|user|uid
+
+        replaceUsernameWith = TEXT
+        replaceUsernameWith.data = GLOBAL:BE_USER|user|realName
+
+        replaceMailWith = TEXT
+        replaceMailWith.data = GLOBAL:BE_USER|user|email
+
+        showAvatar = 0
+    }
+}
+lib.pwcomments = COA
+lib.pwcomments {
+    variables < lib.ids
+
+    # List comments
+    20 < lib.pwCommentsIndex
+
+    # Write new comment
+    30 < lib.pwCommentsNew
+}

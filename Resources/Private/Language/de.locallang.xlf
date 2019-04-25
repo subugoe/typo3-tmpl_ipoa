@@ -135,9 +135,17 @@
 	    <source>News Archive</source>
 	    <target>News Archiv</target>
       </trans-unit>
-      <trans-unit id="dateFormat" xml:space="preserve">
+      <trans-unit id="dateFormat" approved="yes"  xml:space="preserve">
 	    <source>%m/%d/%Y</source>
 	    <target>%d.%m.%Y</target>
+      </trans-unit>
+      <trans-unit id="info" approved="yes"  xml:space="preserve">
+	    <source>Information</source>
+	    <target>Information</target>
+      </trans-unit>
+      <trans-unit id="author" approved="yes"  xml:space="preserve">
+	    <source>Author</source>
+	    <target>Autor</target>
       </trans-unit>
     </body>
   </file>

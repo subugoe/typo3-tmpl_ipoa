@@ -1,13 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
 <main role="main" class="main">
 	<f:if condition="{data.rowDescription}">
-		<div class="page_description">(Notes - Description:) {data.rowDescription}</div>
+		<div class="page_description">
+			<f:translate key="info" extensionName="tmpl_ipoa" />: {data.rowDescription}</div>
 	</f:if>
 	<f:if condition="{data.author}">
 		<div class="page_authors">
-			<a href="/community/mitarbeitende">(Author:) Bearbeitet von: {data.author}</a>
+			<a href="/community/mitarbeitende">
+				<f:translate key="author" extensionName="tmpl_ipoa" />: {data.author}</a>
 		</div>
 	</f:if>
 	<!--TYPO3SEARCH_begin-->
-	<f:cObject typoscriptObjectPath="lib.relContent.def"/><!--TYPO3SEARCH_end-->
-	<f:render partial="Search.html" arguments="{_all}"/>
+	<f:cObject typoscriptObjectPath="lib.relContent.def" /><!--TYPO3SEARCH_end-->
+	<f:render partial="Search.html" arguments="{_all}" />
+	<f:be.security.ifAuthenticated>
+		<f:cObject typoscriptObjectPath="lib.pwcomments" />
+	</f:be.security.ifAuthenticated>
 </main>
