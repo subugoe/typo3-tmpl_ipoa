@@ -1,0 +1,116 @@
+
+.main .frame .comments-container {
+  display: block;
+
+  @include media-xl {
+    width: 75%;
+  }
+  @include media-l {
+    width: 100%;
+  }
+  @include media-m {
+    width: 100%;
+  }
+  @include media-s {
+    width: 100%;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    &:before {
+      background-image: none;
+      margin: 0;
+      content: none;
+    }
+  }
+}
+
+.comments-container .comment-avatar {
+  display: flex;
+  margin: 0 16px 0 0;
+
+  img {
+    max-height: 35px;
+  }
+}
+
+.comments-container li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.comments-container .comment-main-level {
+  display: flex;
+  flex-direction: row;
+}
+
+.comments-container .comment-name {
+  font-weight: bold;
+}
+
+.comments-container .comment-reply {
+  display: flex;
+  flex-direction: row;
+  margin-left: 60px;
+}
+
+.comments-container .comment-box {
+  padding: 0 0 16px 0;
+}
+
+.comments-container .new-comment {
+  width: 25%;
+}
+
+#writeComment a[name='thanksForYourComment'] {
+  border: none;
+}
+
+#writeComment form div:not(.hide_initally) {
+  display: flex;
+  flex-direction: column;
+}
+
+#writeComment form div.hide_initally {
+  display: none;
+}
+
+#writeComment form div.pw-username {
+  flex-direction: row !important;
+
+  label {
+    margin: 0 6px 0 0;
+  }
+}
+
+#writeComment .pw-email {
+  display: none !important;
+}
+
+#writeComment form .mail {
+  font-weight: bold;
+}
+
+#writeComment form .username {
+  font-weight: bold;
+}
+
+#writeComment .comment_error {
+  background-color: $color-block-backgound--alert;
+  color: $color-alert;
+  padding: 6px;
+}
+
+#writeComment ul li:before {
+  background-image: none;
+  margin: 0;
+  content: none;
+}
+
+#writeComment textarea {
+  margin: 0 0 6px 0;
+}
