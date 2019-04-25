@@ -70,3 +70,36 @@ ajax_api {
   }
   10 < lib.ajaxMenu
 }
+
+lib.breadCrumb = COA
+lib.breadCrumb {
+
+  10 = IMAGE
+  10 {
+    stdWrap.typolink.parameter = 1
+    stdWrap.typolink.ATagParams = class="home-icon"
+    stdWrap.typolink.wrap = <li class="crumb">|</li>
+  }
+
+  20 = HMENU
+  20 {
+    special = rootline
+    special.range = 1|-1
+    1 = TMENU
+    1 {
+      noBlur = 1
+      NO = 1
+      NO {
+        linkWrap = <li class="crumb">|</li>
+      }
+      CUR = 1
+      CUR {
+        linkWrap = <li class="crumb -current">|</li>
+		doNotLinkIt = 1
+      }
+    }
+  }
+
+  wrap = <nav><ul class="bread-crumbs">|</ul></nav>
+
+}
