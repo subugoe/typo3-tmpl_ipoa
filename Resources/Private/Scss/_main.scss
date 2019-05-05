@@ -131,11 +131,24 @@
       border-bottom: 1px solid $color--darkest;
     }
 
-    td {
-      padding: $table-cell-padding;
+    tr {
+      display: flex;
+      justify-content: space-between;
     }
 
-    .uneven {
+    td {
+      padding: $table-cell-padding;
+      width: 100%;
+      text-align: left;
+    }
+
+    th {
+      padding: $table-cell-padding;
+      width: 100%;
+      text-align: left;
+    }
+
+    .odd {
       background-color: $table-uneven-background-color;
     }
   }
