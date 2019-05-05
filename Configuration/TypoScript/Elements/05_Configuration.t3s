@@ -28,17 +28,9 @@ config {
     spamProtectEmailAddresses = 2
     spamProtectEmailAddresses_atSubst = (at)
 }
-
 config {
+    sys_language_overlay = 1
     linkVars = L
-    sys_language_uid = 0
-    #language = DE-DE
-    language = de
-    #flag = dede
-    flag = de
-    locale_all = de_DE.UTF-8
-    # don't move head javascript into external file
-    removeDefaultJS = 0
 }
 
 # enable srcset-option in f:image
@@ -46,12 +38,6 @@ styles.content.imgtext.layoutKey = srcset
 
 [siteLanguage('title') == 'English']
     config {
-        language = en
-        flag = gb
-        sys_language_uid = 1
-        sys_language_mode = content_fallback
-        sys_language_overlay = 1
-        # change setting in html-tag
         htmlTag_setParams = lang="en" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
     }
 [global]

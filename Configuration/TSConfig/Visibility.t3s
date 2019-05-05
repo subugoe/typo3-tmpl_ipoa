@@ -131,9 +131,9 @@ TCEFORM.tt_content.pi_flexform.news_pi1.additional {
             image_zoom.disabled = 0
             // table
             pi_flexform.table.sDEF {
-                acctables_tfoot.disabled = 1
+                acctables_tfoot.disabled = 0
                 acctables_nostyles.disabled = 1
-                acctables_headerpos.disabled = 1
+                acctables_headerpos.disabled = 0
                 acctables_tableclass.disabled = 1
             }
 
