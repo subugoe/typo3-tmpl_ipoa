@@ -36,8 +36,17 @@
 				<li>
 					<f:link.page pageUid="{IMPRESSUM_UID}"
 								 title="{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}" class="last__link">
-						<i class="fa fa-fw fa-lg fa-sitemap"></i> {f:translate(key:'impressum', extensionName:
-						'tmpl_ipoa')}
+						<i class="fa fa-fw fa-lg fa-sitemap"></i> {f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}
+					</f:link.page>
+				</li>
+			</f:then>
+		</v:condition.string.isNumeric>
+		<v:condition.string.isNumeric value="{PRIVACY_UID}">
+			<f:then>
+				<li>
+					<f:link.page pageUid="{PRIVACY_UID}"
+								 title="{f:translate(key:'privacy', extensionName: 'tmpl_ipoa')}" class="last__link">
+						<i class="fa fa-fw fa-lg fa-info"></i> {f:translate(key:'privacy', extensionName: 'tmpl_ipoa')}
 					</f:link.page>
 				</li>
 			</f:then>

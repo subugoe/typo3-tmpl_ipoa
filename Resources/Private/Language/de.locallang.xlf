@@ -43,6 +43,10 @@
 	    <source>Impressum</source>
 	    <target>Impressum</target>
       </trans-unit>
+      <trans-unit id="privacy" approved="yes" xml:space="preserve">
+	    <source>Privacy Policy</source>
+	    <target>Datenschutzerklärung</target>
+      </trans-unit>
       <trans-unit id="toTop" approved="yes" xml:space="preserve">
 	    <source>Back to top</source>
 	    <target>Zurück zum Seitenanfang</target>

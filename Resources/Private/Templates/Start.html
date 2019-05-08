@@ -65,75 +65,52 @@
 				<f:if condition="{UEBERUNS_UID}">
 					<f:then>
 						<li class="start__link">
-							<f:if condition="{UEBERUNS_TITLE}">
-								<f:then>
-									<f:link.page pageUid="{UEBERUNS_UID}"
-												 title="{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}">
-										<svg class="fa-icon fa-icon-smile-o fa-icon--s fa-icon-on-bright">
-											<use xlink:href="#icon-smile-o"></use>
-										</svg>
-										{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}
-									</f:link.page>
-								</f:then>
-								<f:else>
-									<f:link.page pageUid="{UEBERUNS_UID}" title="{UEBERUNS_TITLE}">
-										<svg class="fa-icon fa-icon-smile-o fa-icon--s fa-icon-on-bright">
-											<use xlink:href="#icon-smile-o"></use>
-										</svg>
-										{UEBERUNS_TITLE}
-									</f:link.page>
-								</f:else>
-							</f:if>
+							<f:link.page pageUid="{UEBERUNS_UID}"
+										 title="{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}">
+								<svg class="fa-icon fa-icon-smile-o fa-icon--s fa-icon-on-bright">
+									<use xlink:href="#icon-smile-o"></use>
+								</svg>
+								{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}
+							</f:link.page>
 						</li>
 					</f:then>
 				</f:if>
 				<f:if condition="{KONTAKT_UID}">
 					<f:then>
 						<li class="start__link">
-							<f:if condition="{KONTAKT_TITLE}">
-								<f:then>
-									<f:link.page pageUid="{KONTAKT_UID}"
-												 title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}">
-										<svg class="fa-icon fa-icon-envelope fa-icon--s fa-icon-on-bright">
-											<use xlink:href="#icon-envelope"></use>
-										</svg>
-										{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}
-									</f:link.page>
-								</f:then>
-								<f:else>
-									<f:link.page pageUid="{KONTAKT_UID}" title="{KONTAKT_TITLE}">
-										<svg class="fa-icon fa-icon-envelope fa-icon--s fa-icon-on-bright">
-											<use xlink:href="#icon-envelope"></use>
-										</svg>
-										{KONTAKT_TITLE}
-									</f:link.page>
-								</f:else>
-							</f:if>
+							<f:link.page pageUid="{KONTAKT_UID}"
+										 title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}">
+								<svg class="fa-icon fa-icon-envelope fa-icon--s fa-icon-on-bright">
+									<use xlink:href="#icon-envelope"></use>
+								</svg>
+								{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}
+							</f:link.page>
 						</li>
 					</f:then>
 				</f:if>
 				<f:if condition="{IMPRESSUM_UID}">
 					<f:then>
 						<li class="start__link">
-							<f:if condition="{IMPRESSUM_TITLE}">
-								<f:then>
-									<f:link.page pageUid="{IMPRESSUM_UID}"
-												 title="{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}">
-										<svg class="fa-icon fa-icon-gavel fa-icon--s fa-icon-on-bright">
-											<use xlink:href="#icon-gavel"></use>
-										</svg>
-										{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}
-									</f:link.page>
-								</f:then>
-								<f:else>
-									<f:link.page pageUid="{IMPRESSUM_UID}" title="{IMPRESSUM_TITLE}">
-										<svg class="fa-icon fa-icon-gavel fa-icon--s fa-icon-on-bright">
-											<use xlink:href="#icon-gavel"></use>
-										</svg>
-										{IMPRESSUM_TITLE}
-									</f:link.page>
-								</f:else>
-							</f:if>
+							<f:link.page pageUid="{IMPRESSUM_UID}"
+										 title="{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}">
+								<svg class="fa-icon fa-icon-gavel fa-icon--s fa-icon-on-bright">
+									<use xlink:href="#icon-gavel"></use>
+								</svg>
+								{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}
+							</f:link.page>
+						</li>
+					</f:then>
+				</f:if>
+				<f:if condition="{PRIVACY_UID}">
+					<f:then>
+						<li class="start__link">
+							<f:link.page pageUid="{PRIVACY_UID}"
+										 title="{f:translate(key:'privacy', extensionName: 'tmpl_ipoa')}">
+								<svg class="fa-icon fa-icon-info fa-icon--s fa-icon-on-bright">
+									<use xlink:href="#icon-info"></use>
+								</svg>
+								{f:translate(key:'privacy', extensionName: 'tmpl_ipoa')}
+							</f:link.page>
 						</li>
 					</f:then>
 				</f:if>
