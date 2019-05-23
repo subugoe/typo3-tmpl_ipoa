@@ -5,5 +5,4 @@ if (!defined('TYPO3_MODE')) {
 
 
 // Custom CSS include
-$TBE_STYLES['styleSheetFile_post'] = 'EXT:tmpl_ipoa/Resources/Public/Css/backendipoa.css';
-?>
+$GLOBALS['TBE_STYLES']['stylesheet2'] = 'EXT:tmpl_ipoa/Resources/Public/Css/beipoa.css';
