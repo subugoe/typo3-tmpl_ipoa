@@ -1,5 +1,0 @@
-// Todo: hide direct upload button in backend
-a.btn.btn-default.t3js-drag-uploader.inlineNewFileUploadButton {
-	display: none !important;
-	visibility: hidden;
-}

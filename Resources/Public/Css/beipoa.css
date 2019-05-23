@@ -1,0 +1,5 @@
+.inlineNewFileUploadButton  {
+    // hide file upload button in media tab
+    display: none !important;
+	visibility: hidden;
+}
