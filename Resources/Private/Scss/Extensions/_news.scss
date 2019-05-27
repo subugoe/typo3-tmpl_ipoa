@@ -79,3 +79,26 @@
   display: flex;
   width: 100%;
 }
+
+.news .page-navigation {
+  display: flex;
+
+  p {
+    display: flex;
+    float: none;
+    margin: 0;
+  }
+
+  ul {
+    float: none;
+
+    li {
+      float: none;
+      display: flex;
+
+      &:before {
+
+      }
+    }
+  }
+}

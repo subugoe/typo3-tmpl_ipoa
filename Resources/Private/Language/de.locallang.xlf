@@ -155,6 +155,18 @@
 	    <source>Author</source>
 	    <target>Autor</target>
       </trans-unit>
+      <trans-unit id="paginate_next" approved="yes"  xml:space="preserve">
+	    <source>Next</source>
+	    <target>Nächste</target>
+      </trans-unit>
+      <trans-unit id="paginate_overall" approved="yes"  xml:space="preserve">
+	    <source>Page %s of %s.</source>
+	    <target>Seite %s von %s.</target>
+      </trans-unit>
+      <trans-unit id="paginate_previous" approved="yes"  xml:space="preserve">
+	    <source>Previous</source>
+	    <target>Vorherige</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
