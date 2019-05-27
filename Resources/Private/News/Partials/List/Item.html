@@ -21,13 +21,13 @@
 			<f:then>
 					<span class="description">
 					{newsItem.teaser -> f:format.crop(maxCharacters:
-						'{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.raw()}
+						'{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
 					</span>
 			</f:then>
 			<f:else>
 					<span class="description">
 					{newsItem.bodytext -> f:format.crop(maxCharacters:
-						'{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.raw()}
+						'{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
 					</span>
 			</f:else>
 		</f:if>
