@@ -82,6 +82,11 @@
 
 .news .page-navigation {
   display: flex;
+  margin: $base-distance 0;
+
+  &:last-of-type {
+    margin: 0;
+  }
 
   p {
     display: flex;
