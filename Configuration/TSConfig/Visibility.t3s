@@ -140,6 +140,10 @@ TCEFORM.tt_content.pi_flexform.news_pi1.additional {
             // menu, remove items
             #menu_type.removeItems = 3,7,categorized_content
         }
+
+        # remove all types beside standard, shortcut and folder
+        pages.doktype.removeItems = 6,7,3,255,199
+
     }
 
 
@@ -153,48 +157,44 @@ TCEFORM.tt_content.pi_flexform.news_pi1.additional {
     # Number of visible upload buttons in media element
     options.folderTree.uploadFieldsInLinkBrowser = 3
 
-    // remove unwanted content objects
-    CType.removeItems (
-            html,
-            ####forms,
-            login
-    )
-
 [END]
 
+TCEFORM.tt_content.CType.removeItems (
+    ####standardelements,
+    header,
+    text,
+    textpic,
+    image,
+    #textmedia,
+    #lists,
+    uploads,
+    #bullets,
+    #table,
+    #menu,
+    #html,
+    menu_abstract,
+    #menu_categorized_content,
+    #menu_categorized_pages,
+    #menu_pages,
+    #menu_subpages,
+    menu_recently_updated,
+    menu_related_pages,
+    #menu_section,
+    menu_section_pages,
+    #menu_sitemap,
+    menu_sitemap_pages,
+    #special,
+    shortcut,
+    #list,
+    div
+)
 
-TCEFORM.tt_content {
-    // Remove unwanted content elements
-    # CType.removeItems = header,textpic,bullets,media,shortcut,html,div,multimedia,mailform,login,search,tx_beacl_acl,uploads
-    CType.removeItems (
-            ####standardelements,
-            header,
-            text,
-            textpic,
-            image,
-            #textmedia,
-            ####lists##,
-            uploads,
-            #bullets,
-            #table,
-            ####menu,
-            menu_abstract,
-            #menu_categorized_content,
-            #menu_categorized_pages,
-            #menu_pages,
-            #menu_subpages,
-            menu_recently_updated,
-            menu_related_pages,
-            #menu_section,
-            menu_section_pages,
-            #menu_sitemap,
-            menu_sitemap_pages,
-            ####special,
-            shortcut,
-            #list,
-            div
+# remove html element for oat members
+[usergroup = 6]
+    TCEFORM.tt_content.CType.removeItems (
+        html
     )
-}
+[end]
 
 // configure image position
 TCEFORM.tt_content.imageorient.removeItems = 3,4,5,6,7,8,9,10,25,26
