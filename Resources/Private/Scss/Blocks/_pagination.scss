@@ -13,6 +13,11 @@ ul.pagination li {
   padding: 0 8px !important;
 
   a {
+    @extend %link--default;
+    @extend %link--on-bright;
+    @extend %link--underline;
+    @extend %link--underline-on-bright;
+border: 1px solid red;
     padding: 0 8px !important;
     border: 0;
   }
