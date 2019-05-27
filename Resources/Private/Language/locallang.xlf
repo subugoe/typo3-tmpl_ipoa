@@ -3,6 +3,9 @@
   <file source-language="en" datatype="plaintext" original="messages" product-name="tmpl_ipoa">
     <header/>
     <body>
+      <trans-unit id="back-link" approved="yes" xml:space="preserve">
+	<source>Back</source>
+      </trans-unit>
       <trans-unit id="readLatest" approved="yes" xml:space="preserve">
 	<source>Read here the latest  %1$s News</source>
       </trans-unit>
