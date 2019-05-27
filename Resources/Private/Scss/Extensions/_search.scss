@@ -148,51 +148,6 @@
   }
 }
 
-.tx_solr .pagination {
-  margin: 0;
-  padding: 0 16px 0 0;
-  list-style: none;
-  display: flex;
-  flex-direction: row !important;
-}
-
-.tx_solr .pagination li {
-  display: flex;
-  align-items: center;
-  flex: 0 1 auto;
-  padding: 0 8px;
-
-  a {
-    padding: 0 8px;
-    border: 0;
-  }
-
-  &:first-of-type {
-    padding-left: 0px;
-  }
-
-  &:before {
-    background-image: none;
-    content: "" !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 0;
-    height: 0;
-  }
-
-  &.search__pagination__item-current {
-    font-size: 16px;
-    border-bottom: 0;
-    background-color: $color-ipoa-yellow;
-    color: $color--darkest;
-  }
-
-  &.search__pagination__item-next {
-    font-size: 16px;
-    border-bottom: 0;
-  }
-}
-
 .tx_solr #results-per-page {
   padding: 8px 0;
 }
