@@ -157,3 +157,7 @@
 .ce-textpic.ce-intext figure {
     margin-top: 0;
 }
+
+.ce-textpic figure > a {
+  @extend %link--bare;
+}
