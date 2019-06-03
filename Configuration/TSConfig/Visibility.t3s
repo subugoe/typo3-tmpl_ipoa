@@ -123,7 +123,7 @@ TCEFORM.tt_content.pi_flexform.news_pi1.additional {
             # Media Adjustments
             imageheight.disabled = 1
             imagewidth.disabled = 0
-            imageborder.disabled = 1
+            imageborder.disabled = 0
             # Galery Settings
             imageorient.disabled = 0
             imagecols.disabled = 1
