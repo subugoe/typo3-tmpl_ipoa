@@ -74,7 +74,7 @@ ajax_api {
 lib.breadCrumb = COA
 lib.breadCrumb {
 
-  10 = IMAGE
+  10 = HMENU
   10 {
     stdWrap.typolink.parameter = 1
     stdWrap.typolink.ATagParams = class="home-icon"

@@ -152,4 +152,13 @@ jQuery(function () {
   }
 
 
+  /**
+   * Breadcrumbs
+   */
+
+  /**
+   * put "Home" and Icon in root Element
+   */
+  jQuery('a.home-icon').text('Home');
+
 });

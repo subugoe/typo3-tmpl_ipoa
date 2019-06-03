@@ -72,7 +72,11 @@
 }
 
 .frame p {
-  margin: 0 0 12px 0;
+  margin: 0 0 $base-distance 0;
+}
+
+.frame ul {
+  margin: 0 0 $base-distance 0;
 }
 
 .main .frame ul {
@@ -158,6 +162,16 @@
     margin-top: 0;
 }
 
+.ce-border img {
+  border: 1px ridge $color-block-background--on-bright;
+}
+
 .ce-textpic figure > a {
   @extend %link--bare;
+  background-color: transparent !important;
+
+  &:hover {
+    border: 3px solid $color-ipoa-green;
+
+  }
 }
