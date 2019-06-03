@@ -185,4 +185,13 @@ jQuery(function () {
   } else {
     jQuery('.alt-menu').css('width', '100%');
   }
+
+  /**
+   * Breadcrumbs
+   */
+
+  /**
+   * put "Home" and Icon in root Element
+   */
+  jQuery('a.home-icon').text('Home');
 });
