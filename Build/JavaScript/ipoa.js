@@ -191,7 +191,10 @@ jQuery(function () {
    */
 
   /**
-   * put "Home" and Icon in root Element
+   * put "Home" root Element of breadcrumb for IPOA
+   * (breadcrumb for OJS begins at higher entry level)
    */
-  jQuery('a.home-icon').text('Home');
+  if (jQuery('li.crumb').first().text() === 'IPOA') {
+    jQuery('li.crumb').first().text('Home');
+  }
 });
