@@ -6,6 +6,12 @@
       <trans-unit id="back-link" approved="yes" xml:space="preserve">
 	<source>Back</source>
       </trans-unit>
+      <trans-unit id="entry" approved="yes" xml:space="preserve">
+	<source>entry</source>
+      </trans-unit>
+      <trans-unit id="entries" approved="yes" xml:space="preserve">
+	<source>entries</source>
+      </trans-unit>
       <trans-unit id="readLatest" approved="yes" xml:space="preserve">
 	<source>Read here the latest  %1$s News</source>
       </trans-unit>
