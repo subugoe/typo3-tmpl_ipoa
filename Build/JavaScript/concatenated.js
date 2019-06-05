@@ -203,4 +203,17 @@ jQuery(function () {
   }
 
 
+  /**
+   * Breadcrumbs
+   */
+
+  /**
+   * put "Home" root Element of breadcrumb for IPOA
+   * (breadcrumb for OJS begins at higher entry level)
+   */
+  if (jQuery('li.crumb').first().text() === 'IPOA') {
+    jQuery('li.crumb').first().text('Home');
+  }
+
+
 });

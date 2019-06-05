@@ -74,17 +74,9 @@ ajax_api {
 lib.breadCrumb = COA
 lib.breadCrumb {
 
-  10 = IMAGE
+  10 = HMENU
   10 {
-    stdWrap.typolink.parameter = 1
-    stdWrap.typolink.ATagParams = class="home-icon"
-    stdWrap.typolink.wrap = <li class="crumb">|</li>
-  }
-
-  20 = HMENU
-  20 {
     special = rootline
-    special.range = 1|-1
     1 = TMENU
     1 {
       noBlur = 1
