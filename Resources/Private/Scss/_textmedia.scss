@@ -163,10 +163,25 @@
 }
 
 .ce-border img {
-  border: 1px ridge $color-block-background--on-bright;
+  // border: 1px ridge $color-block-background--on-bright;
 }
 
-.ce-textpic figure > a {
-  @extend %link--bare;
-  background-color: transparent !important;
+.ce-textpic figure {
+  @extend %list-bare;
+
+  a {
+    padding: 0;
+    @extend %link--default;
+    @extend %link--block;
+    @extend %link--block-on-bright;
+
+    img {
+      display: flex;
+    }
+  }
+
+  a:hover,
+  a:focus {
+    @extend %link--on-bright;
+  }
 }
