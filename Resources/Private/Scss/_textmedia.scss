@@ -169,9 +169,4 @@
 .ce-textpic figure > a {
   @extend %link--bare;
   background-color: transparent !important;
-
-  &:hover {
-    border: 3px solid $color-ipoa-green;
-
-  }
 }
