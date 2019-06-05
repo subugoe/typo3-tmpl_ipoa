@@ -7,6 +7,14 @@
 	    <source>Back</source>
 	    <target>Zurück</target>
       </trans-unit>
+      <trans-unit id="entry" approved="yes" xml:space="preserve">
+	    <source>entry</source>
+	    <target>Eintrag</target>
+      </trans-unit>
+      <trans-unit id="entries" approved="yes" xml:space="preserve">
+	    <source>entries</source>
+	    <target>Einträge</target>
+      </trans-unit>
       <trans-unit id="readLatest" approved="yes" xml:space="preserve">
 	    <source>Read here the latest  %1$s News</source>
 	    <target>Lesen Sie hier die letzten %1$s News</target>
