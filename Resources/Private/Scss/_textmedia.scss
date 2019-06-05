@@ -170,13 +170,15 @@
   @extend %list-bare;
 
   a {
+    display: flex;
     padding: 0;
     @extend %link--default;
     @extend %link--block;
     @extend %link--block-on-bright;
+    background-color: transparent !important;
 
     img {
-      display: flex;
+      display: flex !important;
     }
   }
 
