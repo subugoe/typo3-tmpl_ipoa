@@ -5,51 +5,6 @@
   display: flex !important;
   flex-direction: column;
 
-
-  picture {
-    @extend %ic-layout__item;
-    @extend .ic-mt;
-    @extend %picture;
-
-    > div {
-      @extend %caption;
-
-      @include media-query("desk-and-up") {
-        text-align: right;
-      }
-
-      a {
-        @extend %link--default;
-        @extend %link--on-bright;
-        @extend %link--underline;
-        @extend %link--underline-on-bright;
-
-        &:hover {
-          background-color: $color-ipoa-green;
-        }
-      }
-    }
-
-    a {
-      border-bottom-color: transparent;
-      border-width: 0;
-      padding: 0;
-
-      &:hover {
-        background: none;
-      }
-
-      img {
-        border: 1px dotted $color-ipoa-green;
-        border-radius: 2px;
-
-        &:hover {
-          border: 1px solid $color-ipoa-green;
-        }
-      }
-    }
-  }
-
   a {
     @extend %link--default;
     @extend %link--on-bright;
