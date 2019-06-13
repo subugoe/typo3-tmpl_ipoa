@@ -28,10 +28,12 @@ config {
     spamProtectEmailAddresses = 2
     spamProtectEmailAddresses_atSubst = (at)
 }
+
 config {
     sys_language_overlay = 1
     linkVars = L
 }
+
 
 # enable srcset-option in f:image
 styles.content.imgtext.layoutKey = srcset

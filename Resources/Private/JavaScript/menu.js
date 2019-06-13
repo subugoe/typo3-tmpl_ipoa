@@ -1,4 +1,4 @@
-jQuery(function () {
+jQuery(() => {
 
 
   /**
@@ -7,10 +7,10 @@ jQuery(function () {
 
   // Load menu per ajax and load it paralelly
   const createURLForAjax = function () {
-    let url = window.location.protocol + '//';
+    let url = `${window.location.protocol}//`;
     url += window.location.hostname;
     if (window.location.port !== '') {
-      url += ':' + window.location.port;
+      url += `:${window.location.port}`;
     }
     url += window.location.pathname;
     url += '?type=37902';
@@ -42,15 +42,15 @@ jQuery(function () {
     jQuery('.ajax-menu').html(spHTML);
 
     // load menu per ajax, but only once
-    jQuery('.ajax-menu').load(url, function (response, status) {
+    jQuery('.ajax-menu').load(url, (response, status) => {
       if (status === 'success') {
 
         // Add svg instances to svg tag as it can't be done from typoscript,
         // because the menu is created with a different typeNum without javascript on
-        jQuery('.toggle-menu').find('.fa-icon-angle-double-right')
-          .html('<use xlink:href="#icon-angle-double-right"></use>');
-        jQuery('.toggle-menu').find('.fa-icon-angle-double-down')
-          .html('<use xlink:href="#icon-angle-double-down"></use>');
+        jQuery('.toggle-menu').find('.fa-icon-angle-double-right').
+          html('<use xlink:href="#icon-angle-double-right"></use>');
+        jQuery('.toggle-menu').find('.fa-icon-angle-double-down').
+          html('<use xlink:href="#icon-angle-double-down"></use>');
 
         // Now, that the DOM-Elements are available, their behaviour can be configured:
         // Configure toggle-icons (the arrows left of menu items)
@@ -71,7 +71,7 @@ jQuery(function () {
         const menu = jQuery('.js-menu');
         const menuToggleButton = jQuery('.js-menu-toggle-button');
 
-        jQuery(menuToggleButton).click(function (event) {
+        jQuery(menuToggleButton).click((event) => {
           jQuery('html,body').animate({'scrollTop': 0}, 500);
           jQuery(menu).slideUp();
           event.preventDefault();
@@ -81,9 +81,9 @@ jQuery(function () {
         // for no-js fallback cases they are open by default, so we have to explicitly
         // close them
         jQuery('.alt-menu .menu__list--indented').hide();
-        jQuery('.fa-icon-angle-double-down')
-          .parent('span')
-          .siblings('.menu__list--indented').show();
+        jQuery('.fa-icon-angle-double-down').
+          parent('span').
+          siblings('.menu__list--indented').show();
       }
       jQuery('.alt-menu__content').animate({'scrollTop': 0}, 500);
     });
@@ -91,7 +91,7 @@ jQuery(function () {
 
 
   // make sure, menu is already in cache
-  setTimeout(function () {
+  setTimeout(() => {
     loadMenu();
   }, 10);
 
@@ -111,7 +111,7 @@ jQuery(function () {
     jQuery('.alt-menu').removeClass('alt-menu-off-canvas').addClass('alt-menu-in-canvas');
   };
 
-  jQuery('.head-nav .menu__button, .alt-menu__close-button').on('click', function() {
+  jQuery('.head-nav .menu__button, .alt-menu__close-button').on('click', () => {
     if (menuIsActive()) {
       hideMenu();
     } else {
@@ -120,7 +120,7 @@ jQuery(function () {
   });
 
   // make sure, only active language is visible - except for decision
-  jQuery('.head__link-language').on('click', function() {
+  jQuery('.head__link-language').on('click', () => {
     jQuery('.head__link-language:not(.head__link-active)').toggleClass('-shown');
   });
 
@@ -129,14 +129,14 @@ jQuery(function () {
    */
   jQuery('.on-demand__content').hide();
   jQuery('.on-demand__link').click(function () {
-    jQuery(this)
-      .parent('p')
-      .nextUntil(':not(".on-demand__content")')
-      .toggle('slow');
+    jQuery(this).
+      parent('p').
+      nextUntil(':not(".on-demand__content")').
+      toggle('slow');
   });
 
 
-  jQuery(window).resize(function () {
+  jQuery(window).resize(() => {
     hideMenu();
     if (jQuery(window).width() > 820) {
       jQuery('.alt-menu').css('width', jQuery('.head__text').position().left);
