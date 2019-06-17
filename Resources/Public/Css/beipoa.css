@@ -1,5 +1,20 @@
 .inlineNewFileUploadButton  {
-    // hide file upload button in media tab
+    /* hide file upload button in media tab */
     display: none !important;
 	visibility: hidden;
+}
+
+.module-docheader-bar-column-left .t3js-editform-new,
+.module-docheader-bar-column-left .t3js-editform-view {
+    /* remove "new" and "view" buttons in page edit */
+    display: none;
+}
+
+.module-docheader-bar .module-docheader-bar-column-right {
+    /* remove language selection */
+    display: none;
+}
+
+.help-block {
+    display: none;
 }

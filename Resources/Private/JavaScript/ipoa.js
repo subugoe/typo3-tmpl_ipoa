@@ -1,4 +1,4 @@
-jQuery(function () {
+jQuery(() => {
   jQuery('html,body').animate({'scrollTop': 0}, 500);
 
 
@@ -19,7 +19,7 @@ jQuery(function () {
   /**
    * change the top menu bar according to scroll status
    */
-  jQuery(function () {
+  jQuery(() => {
     let lastScrollTop = 0;
     const delta = 5;
 

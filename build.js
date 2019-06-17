@@ -3,7 +3,8 @@ const buildify = require('buildify');
 buildify()
   .concat([
     'Resources/Private/JavaScript/ipoa.js',
-    'Resources/Private/JavaScript/menu.js'
+    'Resources/Private/JavaScript/menu.js',
+    'Resources/Private/JavaScript/frontend-editing.js'
   ])
   .save('Build/JavaScript/concatenated.js');
 
