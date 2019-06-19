@@ -16,3 +16,11 @@
   // hide span children, because parent is not hideable
   display: none !important;
 }
+
+
+
+.more__column .t3-frontend-editing__dropzone,
+.footer .t3-frontend-editing__dropzone {
+  // Remove dropzones from more and footer areas
+  display: none !important;
+}

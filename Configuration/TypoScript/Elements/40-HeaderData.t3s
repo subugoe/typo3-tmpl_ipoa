@@ -1,4 +1,3 @@
-# include css file depending on pagetree
 page.includeCSS.file103 = typo3conf/ext/tmpl_ipoa/Resources/Public/Css/ipoa.css
 
 page.headerData.111 = TEXT

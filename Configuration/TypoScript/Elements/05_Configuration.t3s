@@ -45,7 +45,7 @@ styles.content.imgtext.layoutKey = srcset
 [global]
 
 # add IE-switch in header
-[browser = = msie && version == < IE 9]
+[browser == msie && version == < IE 9]
 page.includeJS {
 file10 = typo3conf/ext/tmpl_ipoa/Resources/Public/Javascript/html5shiv.js
 }
