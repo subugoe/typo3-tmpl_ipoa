@@ -2,9 +2,6 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:tmpl_ipoa/Configuration/TSConfig/CoP.t3s">
 
 RTE.default.preset = ipoa
-[usergroup = 8]
-RTE.default.preset = cop
-[end]
 
 TCEMAIN {
 
