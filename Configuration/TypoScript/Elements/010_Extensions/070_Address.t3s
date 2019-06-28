@@ -1,0 +1,11 @@
+plugin.tx_ttaddress {
+    view {
+    templateRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Address/Templates/
+    partialRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Address/Partials/
+    layoutRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Address/Layout/
+    }
+
+    settings {
+        hidePagination = 1
+    }
+}
