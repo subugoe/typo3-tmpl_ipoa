@@ -1,6 +1,10 @@
 
 <main role="main" class="main oadays">
 	<f:cObject typoscriptObjectPath="lib.breadCrumb" />
-	<!--TYPO3SEARCH_begin--><f:cObject typoscriptObjectPath="lib.relContent.oaTage" /><!--TYPO3SEARCH_end-->
-	<f:render partial="Search.html" arguments="{_all}"/>
+	<!--TYPO3SEARCH_begin-->
+	<f:cObject typoscriptObjectPath="lib.relContent.oaTage" />
+	<!--TYPO3SEARCH_end-->
+	<f:if condition="{SEARCH_UID} == {data.uid}">
+		<f:render partial="Search.html" arguments="{_all}"/>
+	</f:if>
 </main>
