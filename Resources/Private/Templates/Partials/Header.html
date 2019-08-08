@@ -72,6 +72,17 @@
 			<v:condition.string.isNumeric value="{SEARCH_UID}">
 				<f:then>
 					<li class="head__link">
+						<f:link.page pageUid="{SEARCH_UID}"
+									 title="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}"
+									 class="head__link"
+									 tabindex="2">
+							<svg class="fa-icon fa-icon-search fa-icon--s">
+								<use xlink:href="#icon-search"></use>
+							</svg>
+							<span
+								class="hidden-sub-l">{f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
+						</f:link.page>
+						<f:comment>
 						<a href="#search" title="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}"
 						   class="head__link" tabindex="2">
 							<svg class="fa-icon fa-icon-search fa-icon--s">
@@ -80,6 +91,7 @@
 							<span
 								class="hidden-sub-l">{f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
 						</a>
+						</f:comment>
 					</li>
 				</f:then>
 			</v:condition.string.isNumeric>
