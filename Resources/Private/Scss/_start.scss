@@ -132,6 +132,11 @@
     background-color: darken($color--brightest, 15%);
     color: $color--darkest;
   }
+
+  &[tabindex='4'] {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 }
 
 .start__footer {
