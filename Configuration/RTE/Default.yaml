@@ -12,7 +12,7 @@ imports:
 # For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
 editor:
   config:
-    format_tags: 'h3;h4'
+    format_tags: 'p;h3;h4'
     # can be "default", but a custom stylesSet can be defined here, which fits TYPO3 best
     stylesSet:
       # block level styles
