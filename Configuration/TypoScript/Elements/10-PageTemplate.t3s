@@ -1,7 +1,6 @@
 
-content < styles.content.get
-
 lib.ids {
+
 	HEADER_TITLE = TEXT
 	HEADER_TITLE.value = {$ids.header_title}
 	HEADER_CLAIM = TEXT
@@ -79,6 +78,20 @@ lib.ids {
 	STARTBUT_3_AC = TEXT
 	STARTBUT_3_AC {
 		data = DB:pages:{$ids.startbutton_3}:title
+		crop = 1
+		case = lower
+	}
+
+	STARTBUT_4_UID = TEXT
+	STARTBUT_4_UID {
+		if.isTrue = {$ids.startbutton_4}
+		value = {$ids.startbutton_4}
+	}
+	STARTBUT_4_TITLE = TEXT
+	STARTBUT_4_TITLE.value = {$ids.startbutton_4.title}
+	STARTBUT_4_AC = TEXT
+	STARTBUT_4_AC {
+		data = DB:pages:{$ids.startbutton_4}:title
 		crop = 1
 		case = lower
 	}

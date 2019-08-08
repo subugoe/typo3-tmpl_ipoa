@@ -23,8 +23,6 @@ config {
     concatenateCss = 0
     compressCss = 0
 
-    frontend_editing = 1
-
     spamProtectEmailAddresses = 2
     spamProtectEmailAddresses_atSubst = (at)
 }
