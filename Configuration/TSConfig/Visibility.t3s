@@ -224,7 +224,7 @@ TCEFORM.tt_content.CType.removeItems (
             # general
             colPos.disabled = 1
             header_layout.disabled = 1
-            CType.disabled = 1
+            CType.disabled = 0
             # media
             imageborder.disabled = 1
             # language
