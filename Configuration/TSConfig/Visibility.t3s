@@ -235,7 +235,7 @@ TCEFORM.tt_content.CType.removeItems (
             endtime.disabled = 1
 
             # remove html, forms and plugins
-            CType.removeItems := addToList(html,plugin,list,header)
+            CType.removeItems := addToList(html,plugin,list,header,table)
         }
     }
 [end]

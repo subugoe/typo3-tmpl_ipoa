@@ -27,10 +27,5 @@ if (!defined('TYPO3_MODE')) {
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['newLanguageUpgradeWizard'] = \Subugoe\TmplIpoa\Updates\NewLanguageUpgradeWizard::class;
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update']['newMediaFieldUpgradeWizard'] = \Subugoe\TmplIpoa\Updates\NewLanguageUpgradeWizard::class;
 
-// 404 handling:
-$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = '/Uuups,%20diese%20Seite%20existiert%20nicht/';
-$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling_statheader'] = "HTTP/1.1 404 Not Found";
-
-
 
 ?>
