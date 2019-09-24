@@ -71,9 +71,15 @@
   table {
     @extend %m--default;
 
-    table-layout: fixed;
-    width: 100%;
-    word-break: break-word;
+    tbody,
+    thead {
+      table-layout: fixed;
+      width: 100%;
+      word-break: break-word;
+      display: flex;
+      flex-direction: column;
+      border-bottom: none !important;
+    }
 
     caption {
       @extend %m--default;
