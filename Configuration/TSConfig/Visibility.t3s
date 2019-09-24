@@ -187,6 +187,9 @@ TCEFORM.tt_content.CType.removeItems (
             editlock.disabled = 1
             // categories tab
             categories.disabled = 1
+            // table
+            cols.disabled = 1
+            table_delimiter.disabled = 1
 
             // table element
             pi_flexform.table.sDEF {
