@@ -27,6 +27,8 @@
     @extend %link--in-linklist;
     @extend %link--block;
     @extend %link--block-on-bright;
+    display: flex;
+    border-bottom: none;
   }
 
   a:before {
