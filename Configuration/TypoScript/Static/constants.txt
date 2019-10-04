@@ -24,13 +24,3 @@ plugin.tx_pbsocial {
 		cacheLifetime = 6
 	}
 }
-
-plugin.tx_pwcomments {
-
-	view {
-		templateRootPaths = EXT:tmpl_ipoa/Resources/Private/PwComments/Templates/
-		partialRootPaths = EXT:tmpl_ipoa/Resources/Private/PwComments/Partials/
-		layoutRootPaths = EXT:tmpl_ipoa/Resources/Private/PwComments/Layouts/
-	}
-
-}

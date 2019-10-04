@@ -84,6 +84,11 @@
     }
   }
 
+  div li a {
+    display: flex;
+    border-bottom: none;
+  }
+
   a > img {
     border: 1px dotted $color-ipoa-green;
     border-radius: 2px;
