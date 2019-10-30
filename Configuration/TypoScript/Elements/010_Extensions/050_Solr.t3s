@@ -1,5 +1,4 @@
 plugin.tx_solr {
-
     view {
         templateRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Solr/Private/Templates/
         partialRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/Solr/Private/Partials/
