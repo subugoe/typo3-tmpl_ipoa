@@ -201,7 +201,7 @@ TCEFORM.tt_content.CType.removeItems (
         }
 
         // remove all types beside standard, shortcut and folder
-        pages.doktype.removeItems = 6,7,3,255,199
+        pages.doktype.removeItems := addToList(1,6,7,3,255,199)
 
     }
 
