@@ -4,15 +4,17 @@
 
 <nav class="head-nav">
 	<div class="head__menubutton">
-		<a class="menu__button js-menu-toggle-button js-alt-menu-toggle-button" href="#menu" tabindex="1">
-			<svg class="fa-icon fa-icon-bars fa-icon--s">
-				<use xlink:href="#icon-bars"></use>
-			</svg>
-			<span
-				class="hidden-sub-l">
+		<f:if condition="{MENU} == 1">
+			<a class="menu__button js-menu-toggle-button js-alt-menu-toggle-button" href="#menu" tabindex="1">
+				<svg class="fa-icon fa-icon-bars fa-icon--s">
+					<use xlink:href="#icon-bars"></use>
+				</svg>
+				<span
+					class="hidden-sub-l">
 			{f:translate(key:'menu', extensionName: 'tmpl_ipoa')}
 			</span>
-		</a>
+			</a>
+		</f:if>
 	</div>
 	<div class="head__links">
 
@@ -84,14 +86,14 @@
 								class="hidden-sub-l">{f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
 						</f:link.page>
 						<f:comment>
-						<a href="#search" title="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}"
-						   class="head__link" tabindex="2">
-							<svg class="fa-icon fa-icon-search fa-icon--s">
-								<use xlink:href="#icon-search"></use>
-							</svg>
-							<span
-								class="hidden-sub-l">{f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
-						</a>
+							<a href="#search" title="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}"
+							   class="head__link" tabindex="2">
+								<svg class="fa-icon fa-icon-search fa-icon--s">
+									<use xlink:href="#icon-search"></use>
+								</svg>
+								<span
+									class="hidden-sub-l">{f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
+							</a>
 						</f:comment>
 					</li>
 				</f:then>
