@@ -33,7 +33,6 @@ jQuery(() => {
         jQuery('.js-head-language-links').hide();
         jQuery('.js-head-language-indicator').show();
         jQuery('.head-nav').addClass('head-nav--narrow');
-        jQuery('.head').removeAttr('style');
       }
 
       if (jQuery(this).scrollTop() < 10) {
@@ -133,7 +132,7 @@ jQuery(() => {
   /**
    * handle on demand content on pages like those for the oa days
    */
-  jQuery('.on-demand__content').hide();
+  jQuery('.on-demand__content').addClass('').hide();
   jQuery('.on-demand__link').click(function () {
     jQuery(this).parent('p').nextUntil(':not(".on-demand__content")').toggle('slow');
   });

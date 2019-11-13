@@ -35,7 +35,6 @@ jQuery(() => {
         jQuery('.js-head-language-links').hide();
         jQuery('.js-head-language-indicator').show();
         jQuery('.head-nav').addClass('head-nav--narrow');
-        jQuery('.head').removeAttr('style');
       }
 
       if (jQuery(this).scrollTop() < 10) {

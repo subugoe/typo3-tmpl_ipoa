@@ -2,8 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  background: url("../Images/bg-h-1.jpg") no-repeat center center fixed;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
   @include responsive-content-padding();
 
   @include media-xl {
