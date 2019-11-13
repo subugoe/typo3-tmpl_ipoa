@@ -1,6 +1,9 @@
 
 lib.ids {
 
+	MENU = TEXT
+	MENU.value = {$ids.menu}
+
 	HEADER_TITLE = TEXT
 	HEADER_TITLE.value = {$ids.header_title}
 	HEADER_CLAIM = TEXT
