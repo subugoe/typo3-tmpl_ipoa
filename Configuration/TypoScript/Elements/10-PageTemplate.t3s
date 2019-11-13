@@ -8,6 +8,9 @@ lib.ids {
 	HEADER_IMAGE = TEXT
 	HEADER_IMAGE.value = {$ids.header_image}
 
+	HEADER_BACKGROUND = TEXT
+	HEADER_BACKGROUND.value = {$ids.header_background}
+
 	START_UID = TEXT
 	START_UID.value = {$ids.start}
 
