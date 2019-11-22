@@ -45,3 +45,8 @@ tt_content.textmedia {
         }
     }
 }
+
+// add variable for pages and page trees, which are excluded from frontend editing
+lib.contentElement.settings.pages = {$ids.excludeFromPageEditing}
+lib.contentElement.settings.pageTrees = {$ids.excludeTreeFromPageEditing}
+

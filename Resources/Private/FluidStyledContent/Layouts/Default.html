@@ -1,4 +1,40 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+
+<f:for each="{v:iterator.explode(content:'{settings.pageTrees}')}" as="exclude">
+	<f:for each="{v:page.rootline()}" as="root">
+		<f:if condition="{exclude} == {root.uid}">
+			<f:variable name="excluded" value="1"/>
+		</f:if>
+	</f:for>
+</f:for>
+
+<!-- exclude from page editing -->
+<f:variable name="excluded" value="0"/>
+<f:for each="{v:iterator.explode(content:'{settings.pages}')}" as="exclude">
+	<f:if condition="{data.uid}=={exclude}">
+		<f:then>
+			<f:variable name="excluded" value="1"/>
+		</f:then>
+	</f:if>
+</f:for>
+
+<f:if condition="{excluded = 0}">
+	<!-- exclude page tree vom editing -->
+	<f:for each="{v:iterator.explode(content:'{settings.pageTrees}')}" as="exclude">
+		<f:for each="{v:page.rootline()}" as="root">
+			<f:if condition="{exclude} == {root.uid}">
+				<f:variable name="excluded" value="1"/>
+			</f:if>
+		</f:for>
+	</f:for>
+</f:if>
+<!-- don't edit bullets -->
+<f:if condition="{data.CType} == bullets">
+	<f:variable name="excluded" value="1"/>
+</f:if>
+
 <f:spaceless>
 	<f:if condition="{data.frame_class} != none">
 		<f:then>

@@ -23,7 +23,7 @@
 					<f:if condition="{gallery.position.noWrap}">
 						<f:render partial="Header/All" arguments="{_all}"/>
 					</f:if>
-					<f:if condition="{data.colPos} == 0">
+					<f:if condition="{data.colPos} == 0 && {excluded} == 0">
 						<f:then>
 							<core:contentEditable table="tt_content" field="bodytext" uid="{data.uid}">
 								<f:format.html>{data.bodytext}</f:format.html>
