@@ -50,17 +50,28 @@ TCEFORM.tt_content.CType.removeItems (
     menu_section_pages,
     #menu_sitemap,
     menu_sitemap_pages,
-    shortcut,
+    #shortcut,
     #list,
     div,
     #html,
     #form_formframework,
     login
 )
-// further rights for editors and CoPas
-[usergroup = 3] || [usergroup = 6] || [usergroup = 8]
 
-    // hide module "Admin Tools"
+// Header always h2 or hidden (Header type 0 throws error with frontend-editing
+TCEFORM.tt_content.header_layout.removeItems = 0,2,3,4,5
+// OAT also have a smaller header type
+[usergroup = 6]
+    TCEFORM.tt_content {
+        header_layout.removeItems = 0,3,4,5
+        header_layout.altLabels.2 = OA-Tage Untertitel
+    }
+[END]
+
+
+// remove rights, also for admins to avoid thing that are not allowed
+
+// hide module "Admin Tools"
     options.hideModules = tools
 
     // hide page elements
@@ -160,8 +171,6 @@ TCEFORM.tt_content.CType.removeItems (
         tt_content {
             // general tab
             header_layout.altLabels.1 = Standard
-            header_layout.altLabels.2 = OA-Tage Untertitel
-            header_layout.removeItems = 0,3,4,5
             header_position.disabled = 1
             colPos.disabled = 0
             header_link.disabled = 1
@@ -216,8 +225,6 @@ TCEFORM.tt_content.CType.removeItems (
     # number of visible upload buttons in media element
     options.folderTree.uploadFieldsInLinkBrowser = 3
 
-
-[END]
 
 // remove more elements for copas
 [usergroup = 8]
