@@ -42,7 +42,7 @@ TCEFORM.tt_content.CType.removeItems (
     menu_abstract,
     menu_categorized_content,
     menu_categorized_pages,
-    menu_pages,
+    #menu_pages,
     #menu_subpages,
     menu_recently_updated,
     menu_related_pages,

@@ -126,6 +126,16 @@
   display: block;
 }
 
+.ce-bodytext h3 {
+  margin-bottom: 16px;
+}
+
+.ce-bodytext h4 {
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: $base-font-size;
+}
+
 .ce-textpic.ce-right.ce-intext .ce-gallery {
   float: right;
 }
