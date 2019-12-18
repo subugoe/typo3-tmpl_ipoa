@@ -70,160 +70,153 @@ TCEFORM.tt_content.header_layout.removeItems = 0,2,3,4,5
 
 
 // remove rights, also for admins to avoid thing that are not allowed
+// hide page elements
+mod.web_list {
+     // hide elements in "new record wizard"
+    deniedNewTables = tx_devlog,backend_layout,sys_domain,tx_rtehtmlarea_acronym,sys_template,tx_scheduler_task_group,sys_note,sys_file_collection,tx_beacl_acl
+    hideTables = sys_domain,sys_template,tx_beacl_acl
+}
 
-// hide module "Admin Tools"
-    options.hideModules = tools
+// hide page types
+TCEFORM {
+    // hide alternative text in images
+    // (would probably hide it everywhere)
+    #sys_file_reference.alternative.disabled  = 1
 
-    // hide page elements
-    mod.web_list {
+     pages {
+        description.disabled = 0
+        media.disabled = 0
+        author.disabled = 0
+        #1 = standard
+        #2 = extended
+        #3 = external url
+        #4 = Shortcut
+        #5 = not in menu
+        #6 = backend user
+        #7 = mount page
+        #199 = space
+        #254 = sysfolder
+        #255 = recycler
+        #--div-- = horizonal rule
+        doktype.removeItems = 6,4,7,3,254,199,255
 
-        // hide elements in "new record wizard"
-        deniedNewTables = tx_devlog,backend_layout,sys_domain,tx_rtehtmlarea_acronym,sys_template,tx_scheduler_task_group,sys_note,sys_file_collection,tx_beacl_acl
-        hideTables = sys_domain,sys_template,tx_beacl_acl
+        // page properties
+        // general
+        subtitle.disabled = 1
+        nav_title.disabled = 1
+        target.disabled = 1
+        slug.disabled = 1
+        // SEO
+        seo_title.disabled = 1
+        no_index.disabled = 1
+        no_follow.disabled = 1
+        canonical_link.disabled = 1
+        // Social media
+        og_title.disabled = 1
+        og_description.disabled = 1
+        og_image.disabled = 1
+        twitter_title.disabled = 1
+        twitter_description.disabled = 1
+        twitter_image.disabled = 1
+        // Metadata
+        keywords.disabled = 1
+        description.disabled = 1
+        // Language
+        l18n_cfg.disabled = 1
+        // Access
+        fe_group.disabled = 1
+        extendToSubpages.disabled = 1
+        fe_login_mode.disabled = 1
+        starttime.disabled = 1
+        endtime.disabled = 1
+        nav_hide.disabled = 1
+        // Metadata
+        abstract.disabled = 1
+        author.disabled = 1
+        author_email.disabled = 1
+        lastUpdated.disabled = 1
+        // Appearance
+        layout.disabled = 1
+        backend_layout.disabled = 1
+        backend_layout_next_level.disabled = 1
+        content_from_pid.disabled = 1
+        newUntil.disabled = 1
+        // Categories
+        categories.disabled = 1
+        // Behaviour
+        alias.disabled = 1
+        url_scheme.disabled = 1
+        cache_timeout.disabled = 1
+        no_cache.disabled = 1
+        cache_tags.disabled = 1
+        is_siteroot.disabled = 1
+        no_search.disabled = 1
+        editlock.disabled = 1
+        php_tree_stop.disabled = 1
+        module.disabled = 1
+        // Resources
+        media.disabled = 1
+        storage_pid.disabled = 1
+        TSconfig.disabled = 1
+        tsconfig_includes.disabled = 1
+        // Notes
+        rowDescription.disabled = 1
     }
 
-    // hide page types
-    TCEFORM {
-        // hide alternative text in images
-        // (would probably hide it everywhere)
-        #sys_file_reference.alternative.disabled  = 1
+    tt_content {
+        // general tab
+        header_layout.altLabels.1 = Standard
+        header_position.disabled = 1
+        colPos.disabled = 0
+        header_link.disabled = 1
+        subheader.disabled = 1
+        date.disabled = 1
+        linkToTop.disabled = 1
+        fe_group.disabled = 1
+        section_frame.disabled = 1
+        layout.disabled = 1
+        margin_top.disabled = 1
+        sectionIndex.disabled = 1
+        spaceAfter.disabled = 1
+        spaceBefore.disabled = 1
+        // media tab
+        imageheight.disabled = 1
+        imagewidth.disabled = 0
+        imageborder.disabled = 0
+        imageorient.disabled = 0
+        imagecols.disabled = 1
+        image_zoom.disabled = 0
+        // access tab
+        fe_group.disabled = 1
+        editlock.disabled = 1
+        // categories tab
+        categories.disabled = 1
+        // table
+        cols.disabled = 1
+        table_delimiter.disabled = 1
 
-        pages {
-            description.disabled = 0
-            media.disabled = 0
-            author.disabled = 0
-            #1 = standard
-            #2 = extended
-            #3 = external url
-            #4 = Shortcut
-            #5 = not in menu
-            #6 = backend user
-            #7 = mount page
-            #199 = space
-            #254 = sysfolder
-            #255 = recycler
-            #--div-- = horizonal rule
-            doktype.removeItems = 6,4,7,3,254,199,255
-
-            // page properties
-            // general
-            subtitle.disabled = 1
-            nav_title.disabled = 1
-            target.disabled = 1
-            slug.disabled = 1
-            // SEO
-            seo_title.disabled = 1
-            no_index.disabled = 1
-            no_follow.disabled = 1
-            canonical_link.disabled = 1
-            // Social media
-            og_title.disabled = 1
-            og_description.disabled = 1
-            og_image.disabled = 1
-            twitter_title.disabled = 1
-            twitter_description.disabled = 1
-            twitter_image.disabled = 1
-            // Metadata
-            keywords.disabled = 1
-            description.disabled = 1
-            // Language
-            l18n_cfg.disabled = 1
-            // Access
-            fe_group.disabled = 1
-            extendToSubpages.disabled = 1
-            fe_login_mode.disabled = 1
-            starttime.disabled = 1
-            endtime.disabled = 1
-            nav_hide.disabled = 1
-            // Metadata
-            abstract.disabled = 1
-            author.disabled = 1
-            author_email.disabled = 1
-            lastUpdated.disabled = 1
-            // Appearance
-            layout.disabled = 1
-            backend_layout.disabled = 1
-            backend_layout_next_level.disabled = 1
-            content_from_pid.disabled = 1
-            newUntil.disabled = 1
-            // Categories
-            categories.disabled = 1
-            // Behaviour
-            alias.disabled = 1
-            url_scheme.disabled = 1
-            cache_timeout.disabled = 1
-            no_cache.disabled = 1
-            cache_tags.disabled = 1
-            is_siteroot.disabled = 1
-            no_search.disabled = 1
-            editlock.disabled = 1
-            php_tree_stop.disabled = 1
-            module.disabled = 1
-            // Resources
-            media.disabled = 1
-            storage_pid.disabled = 1
-            TSconfig.disabled = 1
-            tsconfig_includes.disabled = 1
-            // Notes
-            rowDescription.disabled = 1
+        // table element
+        pi_flexform.table.sDEF {
+            acctables_tfoot.disabled = 0
+            acctables_nostyles.disabled = 1
+            acctables_headerpos.disabled = 0
+            acctables_tableclass.disabled = 1
         }
-
-        tt_content {
-            // general tab
-            header_layout.altLabels.1 = Standard
-            header_position.disabled = 1
-            colPos.disabled = 0
-            header_link.disabled = 1
-            subheader.disabled = 1
-            date.disabled = 1
-            linkToTop.disabled = 1
-            fe_group.disabled = 1
-            section_frame.disabled = 1
-            layout.disabled = 1
-            margin_top.disabled = 1
-            sectionIndex.disabled = 1
-            spaceAfter.disabled = 1
-            spaceBefore.disabled = 1
-            // media tab
-            imageheight.disabled = 1
-            imagewidth.disabled = 0
-            imageborder.disabled = 0
-            imageorient.disabled = 0
-            imagecols.disabled = 1
-            image_zoom.disabled = 0
-            // access tab
-            fe_group.disabled = 1
-            editlock.disabled = 1
-            // categories tab
-            categories.disabled = 1
-            // table
-            cols.disabled = 1
-            table_delimiter.disabled = 1
-
-            // table element
-            pi_flexform.table.sDEF {
-                acctables_tfoot.disabled = 0
-                acctables_nostyles.disabled = 1
-                acctables_headerpos.disabled = 0
-                acctables_tableclass.disabled = 1
-            }
-        }
-
-        // remove all types beside standard, shortcut and folder
-        pages.doktype.removeItems := addToList(1,6,7,3,255,199)
-
     }
 
+    // remove all types beside standard, shortcut and folder
+    pages.doktype.removeItems := addToList(1,6,7,3,255,199)
+}
 
-    // placed in localconf to remove link for direct upload in content element:
-    setup.override.edit_docModuleUpload = 1
 
+// placed in localconf to remove link for direct upload in content element:
+setup.override.edit_docModuleUpload = 1
 
-    // don't show tabs in "new content element wizard"
-    mod.wizards.newContentElement.renderMode = list
+// don't show tabs in "new content element wizard"
+mod.wizards.newContentElement.renderMode = list
 
-    # number of visible upload buttons in media element
-    options.folderTree.uploadFieldsInLinkBrowser = 3
+# number of visible upload buttons in media element
+options.folderTree.uploadFieldsInLinkBrowser = 3
 
 
 // remove more elements for copas
