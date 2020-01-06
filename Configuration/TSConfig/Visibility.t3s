@@ -84,84 +84,85 @@ TCEFORM {
     #sys_file_reference.alternative.disabled  = 1
 
      pages {
-        description.disabled = 0
-        media.disabled = 0
-        author.disabled = 0
-        #1 = standard
-        #2 = extended
-        #3 = external url
-        #4 = Shortcut
-        #5 = not in menu
-        #6 = backend user
-        #7 = mount page
-        #199 = space
-        #254 = sysfolder
-        #255 = recycler
-        #--div-- = horizonal rule
-        doktype.removeItems = 6,4,7,3,254,199,255
+         description.disabled = 0
+         media.disabled = 0
+         author.disabled = 0
+         #1 = standard
+         #2 = extended
+         #3 = external url
+         #4 = Shortcut
+         #5 = not in menu
+         #6 = backend user
+         #7 = mount page
+         #137 = blog
+         #199 = space
+         #254 = sysfolder
+         #255 = recycler
+         #--div-- = horizonal rule
+         doktype.removeItems = 6,7,3,254,199,255
 
-        // page properties
-        // general
-        subtitle.disabled = 1
-        nav_title.disabled = 1
-        target.disabled = 1
-        slug.disabled = 1
-        // SEO
-        seo_title.disabled = 1
-        no_index.disabled = 1
-        no_follow.disabled = 1
-        canonical_link.disabled = 1
-        // Social media
-        og_title.disabled = 1
-        og_description.disabled = 1
-        og_image.disabled = 1
-        twitter_title.disabled = 1
-        twitter_description.disabled = 1
-        twitter_image.disabled = 1
-        // Metadata
-        keywords.disabled = 1
-        description.disabled = 1
-        // Language
-        l18n_cfg.disabled = 1
-        // Access
-        fe_group.disabled = 1
-        extendToSubpages.disabled = 1
-        fe_login_mode.disabled = 1
-        starttime.disabled = 1
-        endtime.disabled = 1
-        nav_hide.disabled = 1
-        // Metadata
-        abstract.disabled = 1
-        author.disabled = 1
-        author_email.disabled = 1
-        lastUpdated.disabled = 1
-        // Appearance
-        layout.disabled = 1
-        backend_layout.disabled = 1
-        backend_layout_next_level.disabled = 1
-        content_from_pid.disabled = 1
-        newUntil.disabled = 1
-        // Categories
-        categories.disabled = 1
-        // Behaviour
-        alias.disabled = 1
-        url_scheme.disabled = 1
-        cache_timeout.disabled = 1
-        no_cache.disabled = 1
-        cache_tags.disabled = 1
-        is_siteroot.disabled = 1
-        no_search.disabled = 1
-        editlock.disabled = 1
-        php_tree_stop.disabled = 1
-        module.disabled = 1
-        // Resources
-        media.disabled = 1
-        storage_pid.disabled = 1
-        TSconfig.disabled = 1
-        tsconfig_includes.disabled = 1
-        // Notes
-        rowDescription.disabled = 1
-    }
+         // page properties
+         // general
+         subtitle.disabled = 1
+         nav_title.disabled = 1
+         target.disabled = 1
+         slug.disabled = 0
+         // SEO
+         seo_title.disabled = 1
+         no_index.disabled = 1
+         no_follow.disabled = 1
+         canonical_link.disabled = 1
+         // Social media
+         og_title.disabled = 1
+         og_description.disabled = 1
+         og_image.disabled = 1
+         twitter_title.disabled = 1
+         twitter_description.disabled = 1
+         twitter_image.disabled = 1
+         // Metadata
+         keywords.disabled = 1
+         description.disabled = 1
+         // Language
+         l18n_cfg.disabled = 1
+         // Access
+         fe_group.disabled = 1
+         extendToSubpages.disabled = 1
+         fe_login_mode.disabled = 1
+         starttime.disabled = 1
+         endtime.disabled = 1
+         nav_hide.disabled = 0
+         // Metadata
+         abstract.disabled = 1
+         author.disabled = 1
+         author_email.disabled = 1
+         lastUpdated.disabled = 1
+         // Appearance
+         layout.disabled = 1
+         backend_layout.disabled = 1
+         backend_layout_next_level.disabled = 1
+         content_from_pid.disabled = 1
+         newUntil.disabled = 1
+         // Categories
+         categories.disabled = 1
+         // Behaviour
+         alias.disabled = 1
+         url_scheme.disabled = 1
+         cache_timeout.disabled = 1
+         no_cache.disabled = 1
+         cache_tags.disabled = 1
+         is_siteroot.disabled = 1
+         no_search.disabled = 1
+         editlock.disabled = 1
+         php_tree_stop.disabled = 1
+         module.disabled = 1
+         // Resources
+         media.disabled = 1
+         storage_pid.disabled = 1
+         TSconfig.disabled = 1
+         tsconfig_includes.disabled = 1
+         // Notes
+         rowDescription.disabled = 1
+     }
 
     tt_content {
         // general tab
@@ -205,7 +206,7 @@ TCEFORM {
     }
 
     // remove all types beside standard, shortcut and folder
-    pages.doktype.removeItems := addToList(1,6,7,3,255,199)
+    pages.doktype.removeItems := addToList(6,7,3,255,199)
 }
 
 
@@ -218,16 +219,22 @@ mod.wizards.newContentElement.renderMode = list
 # number of visible upload buttons in media element
 options.folderTree.uploadFieldsInLinkBrowser = 3
 
+// remove more element for oat members
+[usergroup = 6]
+    TCEFORM.tt_content.CType.removeItems (
+        html
+    )
+[end]
 
-// remove more elements for copas
+// has to be here, doesn't work in oafwm_gamification
 [usergroup = 8]
     TCEFORM {
+        pages.doktype.removeItems := addToList(1,3,4,6,7,254,255,199)
         tt_content {
-            sys_language_uid.disabled = 1
             # general
             colPos.disabled = 1
             header_layout.disabled = 1
-            CType.disabled = 0
+            CType.disabled = 1
             # media
             imageborder.disabled = 1
             # language
@@ -237,17 +244,9 @@ options.folderTree.uploadFieldsInLinkBrowser = 3
             starttime.disabled = 1
             endtime.disabled = 1
 
-            # remove html, forms and plugins
-            CType.removeItems := addToList(html,plugin,list,header,table)
+            CType.removeItems := addToList(text,textpic,bullets,table,uploads,menu_abstract,menu_categorized_content,menu_categorized_pages,menu_pages,menu_subpages,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages,shortcut,list,div,html,login)
         }
     }
-[end]
-
-// remove more element for oat members
-[usergroup = 6]
-    TCEFORM.tt_content.CType.removeItems (
-        html
-    )
 [end]
 
 // configure image position
