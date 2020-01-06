@@ -223,7 +223,6 @@ options.folderTree.uploadFieldsInLinkBrowser = 3
 [usergroup = 8]
     TCEFORM {
         tt_content {
-            sys_language_uid.disabled = 1
             # general
             colPos.disabled = 1
             header_layout.disabled = 1
