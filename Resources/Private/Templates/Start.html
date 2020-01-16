@@ -43,24 +43,28 @@
 					</f:link.page>
 				</f:then>
 			</f:if>
-			<f:if condition="{STARTBUT_3_UID}">
+			<v:condition.string.contains haystack="{STARTBUT_3_UID}" needle="{">
 				<f:then>
+				</f:then>
+				<f:else>
 					<f:link.page pageUid="{STARTBUT_3_UID}" tabindex="-1">
 						<button class="start__button" tabindex="3" accesskey="{STARTBUT_3_AC}" role="link">
 							{STARTBUT_3_TITLE}
 						</button>
 					</f:link.page>
-				</f:then>
-			</f:if>
-			<f:if condition="{STARTBUT_4_UID}">
+				</f:else>
+			</v:condition.string.contains>
+			<v:condition.string.contains haystack="{STARTBUT_4_UID}" needle="{">
 				<f:then>
+				</f:then>
+				<f:else>
 					<f:link.page pageUid="{STARTBUT_4_UID}" tabindex="-1">
 						<button class="start__button" tabindex="4" accesskey="{STARTBUT_4_AC}" role="link">
 							{STARTBUT_4_TITLE}
 						</button>
 					</f:link.page>
-				</f:then>
-			</f:if>
+				</f:else>
+			</v:condition.string.contains>
 		</nav>
 	</main>
 
