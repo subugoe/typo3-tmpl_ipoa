@@ -48,7 +48,6 @@ lib.ids {
 
 	STARTBUT_1_UID = TEXT
 	STARTBUT_1_UID {
-		if.isTrue = {$ids.startbutton_1}
 		value = {$ids.startbutton_1}
 	}
 	STARTBUT_1_TITLE = TEXT
@@ -62,7 +61,6 @@ lib.ids {
 
 	STARTBUT_2_UID = TEXT
 	STARTBUT_2_UID {
-		if.isTrue = {$ids.startbutton_2}
 		value = {$ids.startbutton_2}
 	}
 	STARTBUT_2_TITLE = TEXT
@@ -76,7 +74,6 @@ lib.ids {
 
 	STARTBUT_3_UID = TEXT
 	STARTBUT_3_UID {
-		if.isTrue = {$ids.startbutton_3}
 		value = {$ids.startbutton_3}
 	}
 	STARTBUT_3_TITLE = TEXT
@@ -90,7 +87,6 @@ lib.ids {
 
 	STARTBUT_4_UID = TEXT
 	STARTBUT_4_UID {
-		if.isTrue = {$ids.startbutton_4}
 		value = {$ids.startbutton_4}
 	}
 	STARTBUT_4_TITLE = TEXT
