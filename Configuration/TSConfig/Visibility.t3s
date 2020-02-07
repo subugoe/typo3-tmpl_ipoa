@@ -94,11 +94,12 @@ TCEFORM {
          #5 = not in menu
          #6 = backend user
          #7 = mount page
+         #137 = blog
          #199 = space
          #254 = sysfolder
          #255 = recycler
          #--div-- = horizonal rule
-         doktype.removeItems = 6,4,7,3,254,199,255
+         doktype.removeItems = 6,7,3,254,199,255
 
          // page properties
          // general
@@ -129,7 +130,7 @@ TCEFORM {
          fe_login_mode.disabled = 1
          starttime.disabled = 1
          endtime.disabled = 1
-         nav_hide.disabled = 1
+         nav_hide.disabled = 0
          // Metadata
          abstract.disabled = 1
          author.disabled = 1
@@ -205,7 +206,7 @@ TCEFORM {
     }
 
     // remove all types beside standard, shortcut and folder
-    pages.doktype.removeItems := addToList(1,6,7,3,255,199)
+    pages.doktype.removeItems := addToList(6,7,3,255,199)
 }
 
 
@@ -217,15 +218,6 @@ mod.wizards.newContentElement.renderMode = list
 
 # number of visible upload buttons in media element
 options.folderTree.uploadFieldsInLinkBrowser = 3
-
-// remove more elements for advanced editing
-[usergroup = 3]
-    TCEFORM {
-        pages {
-            slug.disabled = 1
-        }
-    }
-[end]
 
 // remove more element for oat members
 [usergroup = 6]
