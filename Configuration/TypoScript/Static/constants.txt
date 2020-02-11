@@ -24,3 +24,16 @@ plugin.tx_pbsocial {
 		cacheLifetime = 6
 	}
 }
+
+plugin.tx_powermail {
+	view {
+		# cat=powermail_main/file; type=string; label= Path to template root (FE)
+		templateRootPath = EXT:tmpl_ipoa/Resources/Private/Powermail/Templates/
+
+		# cat=powermail_main/file; type=string; label= Path to template partials (FE)
+		partialRootPath = EXT:tmpl_ipoa/Resources/Private/Powermail/Partials/
+
+		# cat=powermail_main/file; type=string; label= Path to template layouts (FE)
+		layoutRootPath = EXT:tmpl_ipoa/Resources/Private/Powermail/Layouts/
+	}
+}
