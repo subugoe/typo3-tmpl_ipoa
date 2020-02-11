@@ -11,22 +11,6 @@ TCEMAIN {
     }
 }
 
-// Standardmäßig sollen Clipboard, Localization und Editiermöglichkeiten im Backend angezeigt werden
-mod.web_list {
-    enableClipBoard = activated
-    enableDisplayBigControlPanel = activated
-    enableLocalizationView = activated
-}
-
-# News Extension:
-# durch das überschriebene Template sind einige Einstellungen im Backend sinnlos geworden.
-# die "Items per Page" und "Hide the Pagination" geben keinen Sinn, da es bei uns gar keine
-# Paginierung mehr gibt weil wir sie aus dem Fluid herausgeschrieben haben.
-TCEFORM.tt_content.pi_flexform.news_pi1.additional {
-    settings\.list\.paginate\.itemsPerPage.disabled = 1
-    settings\.hidePagination.disabled = 1
-}
-
 //////////////////////////////////////////////////////
 // remove content types for all
 TCEFORM.tt_content.CType.removeItems (
@@ -58,33 +42,26 @@ TCEFORM.tt_content.CType.removeItems (
     login
 )
 
-// Header always h2 or hidden (Header type 0 throws error with frontend-editing
-TCEFORM.tt_content.header_layout.removeItems = 0,2,3,4,5
-// OAT also have a smaller header type
-[usergroup = 6]
-    TCEFORM.tt_content {
-        header_layout.removeItems = 0,3,4,5
-        header_layout.altLabels.2 = OA-Tage Untertitel
-    }
-[END]
 
-
-// remove rights, also for admins to avoid thing that are not allowed
-// hide page elements
+// ########################################################
+// reducing elements for all
+// ########################################################
 mod.web_list {
-     // hide elements in "new record wizard"
+    // hide elements in "new record wizard"
     deniedNewTables = tx_devlog,backend_layout,sys_domain,tx_rtehtmlarea_acronym,sys_template,tx_scheduler_task_group,sys_note,sys_file_collection,tx_beacl_acl
     hideTables = sys_domain,sys_template,tx_beacl_acl
+
+    // Standardmäßig sollen Clipboard, Localization und Editiermöglichkeiten im Backend angezeigt werden
+    enableClipBoard = activated
+    enableDisplayBigControlPanel = activated
+    enableLocalizationView = activated
 }
 
-// hide page types
 TCEFORM {
-    // hide alternative text in images
-    // (would probably hide it everywhere)
-    #sys_file_reference.alternative.disabled  = 1
 
      pages {
          description.disabled = 0
+         media.config.appearance.fileUploadAllowed = 0
          media.disabled = 0
          author.disabled = 0
          #1 = standard
@@ -99,7 +76,7 @@ TCEFORM {
          #254 = sysfolder
          #255 = recycler
          #--div-- = horizonal rule
-         doktype.removeItems = 6,7,3,254,199,255
+         doktype.removeItems = 6,7,3,199,255
 
          // page properties
          // general
@@ -166,6 +143,8 @@ TCEFORM {
 
     tt_content {
         // general tab
+        // Header always h2 or hidden (Header type 0 throws error with frontend-editing)
+        header_layout.removeItems = 0,2,3,4,5
         header_layout.altLabels.1 = Standard
         header_position.disabled = 1
         colPos.disabled = 0
@@ -181,9 +160,12 @@ TCEFORM {
         spaceAfter.disabled = 1
         spaceBefore.disabled = 1
         // media tab
+        image.config.appearance.fileUploadAllowed = 0
         imageheight.disabled = 1
         imagewidth.disabled = 0
         imageborder.disabled = 0
+        // configure image position
+        imageorient.removeItems = 3,4,5,6,7,8,9,10,25,26
         imageorient.disabled = 0
         imagecols.disabled = 1
         image_zoom.disabled = 0
@@ -203,12 +185,13 @@ TCEFORM {
             acctables_headerpos.disabled = 0
             acctables_tableclass.disabled = 1
         }
+        # allow media upload via url, but only in textmedia
+        assets.config.appearance.fileUploadAllowed = 1
     }
 
     // remove all types beside standard, shortcut and folder
     pages.doktype.removeItems := addToList(6,7,3,255,199)
 }
-
 
 // placed in localconf to remove link for direct upload in content element:
 setup.override.edit_docModuleUpload = 1
@@ -219,13 +202,25 @@ mod.wizards.newContentElement.renderMode = list
 # number of visible upload buttons in media element
 options.folderTree.uploadFieldsInLinkBrowser = 3
 
-// remove more element for oat members
+// ########################################################
+// reducing elements for oat members
+// ########################################################
 [usergroup = 6]
     TCEFORM.tt_content.CType.removeItems (
         html
     )
+
+    // OAT also have a smaller header type
+    TCEFORM.tt_content {
+        header_layout.removeItems = 0,3,4,5
+        header_layout.altLabels.2 = OA-Tage Untertitel
+    }
 [end]
 
+
+// ########################################################
+// reducing elements for oat members
+// ########################################################
 // has to be here, doesn't work in oafwm_gamification
 [usergroup = 8]
     TCEFORM {
@@ -249,11 +244,3 @@ options.folderTree.uploadFieldsInLinkBrowser = 3
     }
 [end]
 
-// configure image position
-TCEFORM.tt_content.imageorient.removeItems = 3,4,5,6,7,8,9,10,25,26
-
-# allow media upload via url, but only in textmedia
-TCEFORM.tt_content.assets.config.appearance.fileUploadAllowed = 1
-TCEFORM.pages.media.config.appearance.fileUploadAllowed = 0
-TCEFORM.tt_content.image.config.appearance.fileUploadAllowed = 0
-# select + upload-button should be removed, not possible right now when url is allowed
