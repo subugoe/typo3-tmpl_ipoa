@@ -113,6 +113,11 @@
     width: 100%;
   }
 }
+/* fix css for fixed header */
+.frame span.anchor {
+  position: relative;
+  top: -55px;
+}
 
 .ce-textpic  {
   display:flex;
