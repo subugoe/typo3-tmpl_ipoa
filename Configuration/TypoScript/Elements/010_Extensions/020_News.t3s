@@ -3,4 +3,7 @@ plugin.tx_news {
         templateRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/News/Templates/
         partialRootPaths.20 = EXT:tmpl_ipoa/Resources/Private/News/Partials/
     }
+
+    // Settings for RSS, ids have to be set in root template
+    settings.rssPage = {$ids.rssPage}
 }

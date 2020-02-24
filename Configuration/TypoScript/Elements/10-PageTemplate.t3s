@@ -100,9 +100,6 @@ lib.ids {
 
 	LANGMENU = TEXT
 	LANGMENU.value = {$ids.langMenu}
-
-	USERNAME = TEXT
-	USERNAME.data = GLOBAL:BE_USER|user|realName
 }
 
 # definitions for the content, depending on colPos
