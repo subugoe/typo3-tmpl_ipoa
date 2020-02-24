@@ -48,8 +48,7 @@ TCEFORM.tt_content.CType.removeItems (
 // ########################################################
 mod.web_list {
     // hide elements in "new record wizard"
-    deniedNewTables = tx_devlog,backend_layout,sys_domain,tx_rtehtmlarea_acronym,sys_template,tx_scheduler_task_group,sys_note,sys_file_collection,tx_beacl_acl
-    hideTables = sys_domain,tx_beacl_acl
+    #deniedNewTables = tx_devlog,backend_layout,sys_domain,tx_rtehtmlarea_acronym,sys_template,tx_scheduler_task_group,sys_note,sys_file_collection,tx_beacl_acl
 
     // Standardmäßig sollen Clipboard, Localization und Editiermöglichkeiten im Backend angezeigt werden
     enableClipBoard = activated
