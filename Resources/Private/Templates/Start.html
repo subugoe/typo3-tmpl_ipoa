@@ -7,19 +7,24 @@
 <!-- structure according to Tag 0.0.7 -->
 
 <div class="start">
-
+	<div class="start__breaking">
+		<div class="breaking__text">
+			<f:format.raw value="{BREAKING_TEXT}" />
+		</div>
+	</div>
 	<header class="start__header" role="banner">
 		<div class="start__logo">
 			<f:if condition="{HEADER_IMAGE}">
 				<img src='<f:format.raw value="{HEADER_IMAGE}" />' class="image" alt="Logo"/>
 			</f:if>
 		</div><!--
-		--><div class="start__title">
-		<h1>
-			<f:format.raw value="{HEADER_TITLE}"/>
-		</h1>
-		<f:format.raw value="{HEADER_CLAIM}"/>
-	</div>
+		-->
+		<div class="start__title">
+			<h1>
+				<f:format.raw value="{HEADER_TITLE}"/>
+			</h1>
+			<f:format.raw value="{HEADER_CLAIM}"/>
+		</div>
 	</header>
 
 	<main role="start__main" class="main">
@@ -140,7 +145,7 @@
 							</svg>
 							<f:if condition="{lang.current}">
 								<f:then>
-										{lang.label}
+									{lang.label}
 								</f:then>
 								<f:else>
 									<a class="start__link" href="{lang.url}">

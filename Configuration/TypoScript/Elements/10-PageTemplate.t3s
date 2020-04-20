@@ -98,6 +98,9 @@ lib.ids {
 		case = lower
 	}
 
+	BREAKING_TEXT = TEXT
+	BREAKING_TEXT.value = {$ids.breaking}
+
 	LANGMENU = TEXT
 	LANGMENU.value = {$ids.langMenu}
 }

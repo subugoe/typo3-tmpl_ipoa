@@ -156,3 +156,32 @@
   display: flex;
 
 }
+
+.start__breaking {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 8vh;
+
+
+  img {
+    margin-right: 8px;
+    max-height: $large-font-size;
+  }
+}
+
+.breaking__text {
+  @extend %btn;
+  @extend %border--big;
+  @extend %text--large;
+  background-color: $color-ipoa-yellow;
+  color: $color--darkest;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 80%;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
+}

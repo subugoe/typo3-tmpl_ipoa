@@ -79,6 +79,10 @@
   margin: 0 0 $base-distance 0;
 }
 
+.frame ul ul {
+  margin-bottom: 0;
+}
+
 .main .frame ul {
   display: flex;
   flex-direction: column;
@@ -202,4 +206,13 @@
   a:focus {
     @extend %link--on-bright;
   }
+}
+
+#screenshot{
+  position:absolute;
+  border:1px solid #ccc;
+  background:#333;
+  padding:5px;
+  display:none;
+  color:#fff;
 }

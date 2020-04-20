@@ -1,4 +1,7 @@
 jQuery(() => {
+  /**
+   * scroll to top when page is loaded
+   */
   jQuery('html,body').animate({'scrollTop': 0}, 500);
 
 

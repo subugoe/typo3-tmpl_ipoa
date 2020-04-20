@@ -30,7 +30,7 @@ TCEFORM.tt_content.CType.removeItems (
     #menu_subpages,
     menu_recently_updated,
     menu_related_pages,
-    menu_section,
+    #menu_section,
     menu_section_pages,
     #menu_sitemap,
     menu_sitemap_pages,
@@ -85,7 +85,7 @@ TCEFORM {
          slug.disabled = 0
          // SEO
          seo_title.disabled = 1
-         no_index.disabled = 1
+         no_index.disabled = 0
          no_follow.disabled = 1
          canonical_link.disabled = 1
          // Social media
@@ -155,7 +155,7 @@ TCEFORM {
         section_frame.disabled = 1
         layout.disabled = 1
         margin_top.disabled = 1
-        sectionIndex.disabled = 1
+        sectionIndex.disabled = 0
         spaceAfter.disabled = 1
         spaceBefore.disabled = 1
         // media tab
@@ -163,6 +163,10 @@ TCEFORM {
         imageheight.disabled = 1
         imagewidth.disabled = 0
         imageborder.disabled = 0
+        // apperance tab of menu content
+        frame_class.disabled = 1
+        space_before_class.disabled = 1
+        space_after_class.disabled = 1
         // configure image position
         imageorient.removeItems = 3,4,5,6,7,8,9,10,25,26
         imageorient.disabled = 0
@@ -171,6 +175,8 @@ TCEFORM {
         // access tab
         fe_group.disabled = 1
         editlock.disabled = 1
+        starttime.disabled = 1
+        endtime.disabled = 1
         // categories tab
         categories.disabled = 1
         // table
