@@ -38,6 +38,6 @@
     "devAll": "npm run lintJs && npm run createDevCss && node build.js && npm run babel && cp ./Build/JavaScript/ipoa.js ./Resources/Public/JavaScript/"
   },
   "dependencies": {
-    "jquery": "^3.4.0"
+    "jquery": "^3.5.0"
   }
 }
