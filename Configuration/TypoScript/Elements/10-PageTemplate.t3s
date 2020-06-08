@@ -14,8 +14,8 @@ lib.ids {
 	HEADER_BACKGROUND = TEXT
 	HEADER_BACKGROUND.value = {$ids.header_background}
 
-	START_UID = TEXT
-	START_UID.value = {$ids.start}
+	INFO_UID = TEXT
+	INFO_UID.value = {$ids.start}
 
 	KONTAKT_UID = TEXT
 	KONTAKT_UID.value = {$ids.kontakt}
@@ -46,60 +46,96 @@ lib.ids {
 	SEARCH_PROJECT = TEXT
 	SEARCH_PROJECT.data = getIndpEnv:HTTP_HOST
 
-	STARTBUT_1_UID = TEXT
-	STARTBUT_1_UID {
-		value = {$ids.startbutton_1}
+	INFOBUT_1_UID = TEXT
+	INFOBUT_1_UID {
+		value = {$ids.infobutton_1}
 	}
-	STARTBUT_1_TITLE = TEXT
-	STARTBUT_1_TITLE.value = {$ids.startbutton_1.title}
-	STARTBUT_1_AC = TEXT
-	STARTBUT_1_AC {
-		data = DB:pages:{$ids.startbutton_1}:title
+	INFOBUT_1_TITLE = TEXT
+	INFOBUT_1_TITLE.value = {$ids.infobutton_1.title}
+	INFOBUT_1_AC = TEXT
+	INFOBUT_1_AC {
+		data = DB:pages:{$ids.infobutton_1}:title
 		crop = 1
 		case = lower
 	}
 
-	STARTBUT_2_UID = TEXT
-	STARTBUT_2_UID {
-		value = {$ids.startbutton_2}
+	INFOBUT_2_UID = TEXT
+	INFOBUT_2_UID {
+		value = {$ids.infobutton_2}
 	}
-	STARTBUT_2_TITLE = TEXT
-	STARTBUT_2_TITLE.value = {$ids.startbutton_2.title}
-	STARTBUT_2_AC = TEXT
-	STARTBUT_2_AC {
-		data = DB:pages:{$ids.startbutton_2}:title
+	INFOBUT_2_TITLE = TEXT
+	INFOBUT_2_TITLE.value = {$ids.infobutton_2.title}
+	INFOBUT_2_AC = TEXT
+	INFOBUT_2_AC {
+		data = DB:pages:{$ids.infobutton_2}:title
 		crop = 1
 		case = lower
 	}
 
-	STARTBUT_3_UID = TEXT
-	STARTBUT_3_UID {
-		value = {$ids.startbutton_3}
+	INFOBUT_3_UID = TEXT
+	INFOBUT_3_UID {
+		value = {$ids.infobutton_3}
 	}
-	STARTBUT_3_TITLE = TEXT
-	STARTBUT_3_TITLE.value = {$ids.startbutton_3.title}
-	STARTBUT_3_AC = TEXT
-	STARTBUT_3_AC {
-		data = DB:pages:{$ids.startbutton_3}:title
+	INFOBUT_3_TITLE = TEXT
+	INFOBUT_3_TITLE.value = {$ids.infobutton_3.title}
+	INFOBUT_3_AC = TEXT
+	INFOBUT_3_AC {
+		data = DB:pages:{$ids.infobutton_3}:title
 		crop = 1
 		case = lower
 	}
 
-	STARTBUT_4_UID = TEXT
-	STARTBUT_4_UID {
-		value = {$ids.startbutton_4}
+	ADDBUT_1_UID = TEXT
+	ADDBUT_1_UID {
+		value = {$ids.addbutton_1}
 	}
-	STARTBUT_4_TITLE = TEXT
-	STARTBUT_4_TITLE.value = {$ids.startbutton_4.title}
-	STARTBUT_4_AC = TEXT
-	STARTBUT_4_AC {
-		data = DB:pages:{$ids.startbutton_4}:title
+	ADDBUT_1_TITLE = TEXT
+	ADDBUT_1_TITLE.value = {$ids.addbutton_1.title}
+	ADDBUT_1_AC = TEXT
+	ADDBUT_1_AC {
+		data = DB:pages:{$ids.addbutton_1}:title
 		crop = 1
 		case = lower
 	}
 
-	BREAKING_TEXT = TEXT
-	BREAKING_TEXT.value = {$ids.breaking}
+	ADDBUT_2_UID = TEXT
+	ADDBUT_2_UID {
+		value = {$ids.addbutton_2}
+	}
+	ADDBUT_2_TITLE = TEXT
+	ADDBUT_2_TITLE.value = {$ids.addbutton_2.title}
+	ADDBUT_2_AC = TEXT
+	ADDBUT_2_AC {
+		data = DB:pages:{$ids.addbutton_2}:title
+		crop = 1
+		case = lower
+	}
+
+	ADDBUT_3_UID = TEXT
+	ADDBUT_3_UID {
+		value = {$ids.addbutton_3}
+	}
+	ADDBUT_3_TITLE = TEXT
+	ADDBUT_3_TITLE.value = {$ids.addbutton_3.title}
+	ADDBUT_3_AC = TEXT
+	ADDBUT_3_AC {
+		data = DB:pages:{$ids.addbutton_3}:title
+		crop = 1
+		case = lower
+	}
+
+	ADDBUT_4_UID = TEXT
+	ADDBUT_4_UID {
+		value = {$ids.addbutton_4}
+	}
+	ADDBUT_4_TITLE = TEXT
+	ADDBUT_4_TITLE.value = {$ids.addbutton_4.title}
+	ADDBUT_4_AC = TEXT
+	ADDBUT_4_AC {
+		data = DB:pages:{$ids.addbutton_4}:title
+		crop = 1
+		case = lower
+	}
 
 	LANGMENU = TEXT
 	LANGMENU.value = {$ids.langMenu}

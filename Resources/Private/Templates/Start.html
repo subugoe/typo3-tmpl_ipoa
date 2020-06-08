@@ -7,11 +7,6 @@
 <!-- structure according to Tag 0.0.7 -->
 
 <div class="start">
-	<div class="start__breaking">
-		<div class="breaking__text">
-			<f:format.raw value="{BREAKING_TEXT}" />
-		</div>
-	</div>
 	<header class="start__header" role="banner">
 		<div class="start__logo">
 			<f:if condition="{HEADER_IMAGE}">
@@ -29,45 +24,80 @@
 
 	<main role="start__main" class="main">
 
-		<nav class="start__navigation">
-			<f:if condition="{STARTBUT_1_UID}">
+		<nav class="start__navigation-infos">
+			<f:if condition="{INFOBUT_1_UID}">
 				<f:then>
-					<f:link.page pageUid="{STARTBUT_1_UID}" tabindex="-1">
-						<button class="start__button" tabindex="1" accesskey="{STARTBUT_1_AC}" role="link">
-							{STARTBUT_1_TITLE}
-						</button>
-					</f:link.page>
+					<button class="start__button" tabindex="1" accesskey="{INFOBUT_1_AC}" role="link">
+						<f:link.page pageUid="{INFOBUT_1_UID}" tabindex="-1">
+							{INFOBUT_1_TITLE}
+						</f:link.page>
+					</button>
 				</f:then>
 			</f:if>
-			<f:if condition="{STARTBUT_2_UID}">
+			<f:if condition="{INFOBUT_2_UID}">
 				<f:then>
-					<f:link.page pageUid="{STARTBUT_2_UID}" tabindex="-1">
-						<button class="start__button" tabindex="2" accesskey="{STARTBUT_2_AC}" role="link">
-							{STARTBUT_2_TITLE}
-						</button>
-					</f:link.page>
+					<button class="start__button" tabindex="2" accesskey="{INFOBUT_2_AC}" role="link">
+						<f:link.page pageUid="{INFOBUT_2_UID}" tabindex="-1">
+							{INFOBUT_2_TITLE}
+						</f:link.page>
+					</button>
 				</f:then>
 			</f:if>
-			<v:condition.string.contains haystack="{STARTBUT_3_UID}" needle="{">
+			<v:condition.string.contains haystack="{INFOBUT_3_UID}" needle="{">
 				<f:then>
 				</f:then>
 				<f:else>
-					<f:link.page pageUid="{STARTBUT_3_UID}" tabindex="-1">
-						<button class="start__button" tabindex="3" accesskey="{STARTBUT_3_AC}" role="link">
-							{STARTBUT_3_TITLE}
-						</button>
-					</f:link.page>
+					<button class="start__button" tabindex="3" accesskey="{INFOBUT_3_AC}" role="link">
+						<f:link.page pageUid="{INFOBUT_3_UID}" tabindex="-1">
+							{INFOBUT_3_TITLE}
+						</f:link.page>
+					</button>
 				</f:else>
 			</v:condition.string.contains>
-			<v:condition.string.contains haystack="{STARTBUT_4_UID}" needle="{">
+		</nav>
+		<nav class="start__navigation-additional">
+			<v:condition.string.contains haystack="{ADDBUT_1_UID}" needle="{">
 				<f:then>
 				</f:then>
 				<f:else>
-					<f:link.page pageUid="{STARTBUT_4_UID}" tabindex="-1">
-						<button class="start__button" tabindex="4" accesskey="{STARTBUT_4_AC}" role="link">
-							{STARTBUT_4_TITLE}
-						</button>
-					</f:link.page>
+					<button class="start__button" tabindex="4" accesskey="{ADDBUT_1_AC}" role="link">
+						<f:link.page pageUid="{ADDBUT_1_UID}" tabindex="-1">
+							{ADDBUT_1_TITLE}
+						</f:link.page>
+					</button>
+				</f:else>
+			</v:condition.string.contains>
+			<v:condition.string.contains haystack="{ADDBUT_2_UID}" needle="{">
+				<f:then>
+				</f:then>
+				<f:else>
+					<button class="start__button" tabindex="5" accesskey="{ADDBUT_2_AC}" role="link">
+						<f:link.page pageUid="{ADDBUT_2_UID}" tabindex="-1">
+							{ADDBUT_2_TITLE}
+						</f:link.page>
+					</button>
+				</f:else>
+			</v:condition.string.contains>
+			<v:condition.string.contains haystack="{ADDBUT_3_UID}" needle="{">
+				<f:then>
+				</f:then>
+				<f:else>
+					<button class="start__button" tabindex="6" accesskey="{ADDBUT_3_AC}" role="link">
+						<f:link.page pageUid="{ADDBUT_3_UID}" tabindex="-1">
+							{ADDBUT_3_TITLE}
+						</f:link.page>
+					</button>
+				</f:else>
+			</v:condition.string.contains>
+			<v:condition.string.contains haystack="{ADDBUT_4_UID}" needle="{">
+				<f:then>
+				</f:then>
+				<f:else>
+					<button class="start__button" tabindex="7" accesskey="{ADDBUT_4_AC}" role="link">
+						<f:link.page pageUid="{ADDBUT_4_UID}" tabindex="-1">
+							{ADDBUT_4_TITLE}
+						</f:link.page>
+					</button>
 				</f:else>
 			</v:condition.string.contains>
 		</nav>
