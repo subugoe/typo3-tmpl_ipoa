@@ -1,10 +1,11 @@
 .start {
   display: block;
   background: url("../Images/bg-1.jpg") no-repeat center center fixed;
-  background-color: #cacaca;
   background-size: cover;
+  background-color: #cacaca;
   height: 100vh;
   min-height: 100%;
+  overflow: scroll;
 
   nav a {
     border: none;
@@ -86,6 +87,7 @@
     svg {
       color: $color--brightest;
       fill: currentColor;
+      padding: 2px;
     }
   }
 
@@ -119,47 +121,9 @@
   text-align: center;
 }
 
-.start__button {
-  @extend %btn;
-  @extend %border--big;
-  @extend %text--large;
-  @extend %text--bold;
-  border-radius: 0;
-  display: flex;
-  flex: 1 0 auto;
-  align-items: center;
-  justify-content: center;
-  min-width: 200px;
-  height: 5em;
-  background-color: $color--brightest;
-  color: $color--darkest;
-  margin: 5px;
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: darken($color--brightest, 15%);
-    color: $color--darkest;
-  }
-
-  &[tabindex='4'] {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-}
-
-.start__navigation-infos .start__button {
-  width: 32%;
-}
-
-.start__navigation-additional .start__button {
-  width: 23%;
-}
-
 .start__footer {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .start__language-links {
@@ -172,4 +136,14 @@
 .start__language-list {
   display: flex;
 
+}
+
+// Bootstrap stuff
+.start .card-title {
+  font-weight: bold;
+  font-size: ($inuit-base-font-size / 16px) * $factor-text--large;
+}
+
+.start .w-100 {
+  padding-bottom: 24px;
 }

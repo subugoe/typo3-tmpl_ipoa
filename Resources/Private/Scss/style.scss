@@ -126,6 +126,7 @@ $inuit-enable-margins--huge: true;
 
 $search-theme-dark: false;
 
+@import "Extensions/bootstrap";
 @import "var";
 @import "media";
 @import "base";

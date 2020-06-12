@@ -1,4 +1,6 @@
+page.includeCSS.file101 = typo3conf/ext/tmpl_ipoa/Resources/Public/Css/bootstrap.min.css
 page.includeCSS.file103 = typo3conf/ext/tmpl_ipoa/Resources/Public/Css/ipoa.css
+
 
 page.headerData.111 = TEXT
 page.headerData.111.value (
