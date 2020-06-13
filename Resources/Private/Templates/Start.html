@@ -8,17 +8,24 @@
 
 <div class="start">
 	<header class="start__header" role="banner">
-		<div class="start__logo">
-			<f:if condition="{HEADER_IMAGE}">
-				<img src='<f:format.raw value="{HEADER_IMAGE}" />' class="image" alt="Logo"/>
-			</f:if>
-		</div><!--
-		-->
-		<div class="start__title">
-			<h1>
-				<f:format.raw value="{HEADER_TITLE}"/>
-			</h1>
-			<f:format.raw value="{HEADER_CLAIM}"/>
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<div class="start__logo">
+						<f:if condition="{HEADER_IMAGE}">
+							<img src='<f:format.raw value="{HEADER_IMAGE}" />' class="image" alt="Logo"/>
+						</f:if>
+					</div>
+				</div>
+				<div class="col-8">
+					<div class="start__title">
+						<h1>
+							<f:format.raw value="{HEADER_TITLE}"/>
+						</h1>
+						<f:format.raw value="{HEADER_CLAIM}"/>
+					</div>
+				</div>
+			</div>
 		</div>
 	</header>
 
@@ -60,11 +67,11 @@
 								<f:then>
 								</f:then>
 								<f:else>
-							<f:link.page pageUid="{INFOBUT_3_UID}" tabindex="-1">
-								<f:format.raw value="{INFOBUT_3_TITLE}"/>
-							</f:link.page>
-						</f:else>
-						</v:condition.string.contains>
+									<f:link.page pageUid="{INFOBUT_3_UID}" tabindex="-1">
+										<f:format.raw value="{INFOBUT_3_TITLE}"/>
+									</f:link.page>
+								</f:else>
+							</v:condition.string.contains>
 						</p>
 					</div>
 				</div>
@@ -91,11 +98,11 @@
 								<f:then>
 								</f:then>
 								<f:else>
-							<f:link.page pageUid="{ADDBUT_1_UID}" tabindex="-1">
-								<f:format.raw value="{ADDBUT_1_TITLE}"/>
-							</f:link.page>
-						</f:else>
-						</v:condition.string.contains>
+									<f:link.page pageUid="{ADDBUT_1_UID}" tabindex="-1">
+										<f:format.raw value="{ADDBUT_1_TITLE}"/>
+									</f:link.page>
+								</f:else>
+							</v:condition.string.contains>
 						</p>
 					</div>
 				</div>
@@ -106,11 +113,11 @@
 								<f:then>
 								</f:then>
 								<f:else>
-							<f:link.page pageUid="{ADDBUT_2_UID}" tabindex="-1">
-								<f:format.raw value="{ADDBUT_2_TITLE}"/>
-							</f:link.page>
-						</f:else>
-						</v:condition.string.contains>
+									<f:link.page pageUid="{ADDBUT_2_UID}" tabindex="-1">
+										<f:format.raw value="{ADDBUT_2_TITLE}"/>
+									</f:link.page>
+								</f:else>
+							</v:condition.string.contains>
 						</p>
 					</div>
 				</div>
@@ -122,11 +129,11 @@
 								<f:then>
 								</f:then>
 								<f:else>
-							<f:link.page pageUid="{ADDBUT_3_UID}" tabindex="-1">
-								<f:format.raw value="{ADDBUT_3_TITLE}"/>
-							</f:link.page>
-						</f:else>
-						</v:condition.string.contains>
+									<f:link.page pageUid="{ADDBUT_3_UID}" tabindex="-1">
+										<f:format.raw value="{ADDBUT_3_TITLE}"/>
+									</f:link.page>
+								</f:else>
+							</v:condition.string.contains>
 						</p>
 					</div>
 				</div>
@@ -137,11 +144,11 @@
 								<f:then>
 								</f:then>
 								<f:else>
-							<f:link.page pageUid="{ADDBUT_4_UID}" tabindex="-1">
-								<f:format.raw value="{ADDBUT_4_TITLE}"/>
-							</f:link.page>
-						</f:else>
-						</v:condition.string.contains>
+									<f:link.page pageUid="{ADDBUT_4_UID}" tabindex="-1">
+										<f:format.raw value="{ADDBUT_4_TITLE}"/>
+									</f:link.page>
+								</f:else>
+							</v:condition.string.contains>
 						</p>
 					</div>
 				</div>
