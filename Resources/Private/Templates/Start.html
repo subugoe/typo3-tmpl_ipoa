@@ -24,83 +24,130 @@
 
 	<main role="start__main" class="main">
 
-		<nav class="start__navigation-infos">
-			<f:if condition="{INFOBUT_1_UID}">
-				<f:then>
-					<button class="start__button" tabindex="1" accesskey="{INFOBUT_1_AC}" role="link">
-						<f:link.page pageUid="{INFOBUT_1_UID}" tabindex="-1">
-							{INFOBUT_1_TITLE}
-						</f:link.page>
-					</button>
-				</f:then>
-			</f:if>
-			<f:if condition="{INFOBUT_2_UID}">
-				<f:then>
-					<button class="start__button" tabindex="2" accesskey="{INFOBUT_2_AC}" role="link">
-						<f:link.page pageUid="{INFOBUT_2_UID}" tabindex="-1">
-							{INFOBUT_2_TITLE}
-						</f:link.page>
-					</button>
-				</f:then>
-			</f:if>
-			<v:condition.string.contains haystack="{INFOBUT_3_UID}" needle="{">
-				<f:then>
-				</f:then>
-				<f:else>
-					<button class="start__button" tabindex="3" accesskey="{INFOBUT_3_AC}" role="link">
-						<f:link.page pageUid="{INFOBUT_3_UID}" tabindex="-1">
-							{INFOBUT_3_TITLE}
-						</f:link.page>
-					</button>
-				</f:else>
-			</v:condition.string.contains>
-		</nav>
-		<nav class="start__navigation-additional">
-			<v:condition.string.contains haystack="{ADDBUT_1_UID}" needle="{">
-				<f:then>
-				</f:then>
-				<f:else>
-					<button class="start__button" tabindex="4" accesskey="{ADDBUT_1_AC}" role="link">
-						<f:link.page pageUid="{ADDBUT_1_UID}" tabindex="-1">
-							{ADDBUT_1_TITLE}
-						</f:link.page>
-					</button>
-				</f:else>
-			</v:condition.string.contains>
-			<v:condition.string.contains haystack="{ADDBUT_2_UID}" needle="{">
-				<f:then>
-				</f:then>
-				<f:else>
-					<button class="start__button" tabindex="5" accesskey="{ADDBUT_2_AC}" role="link">
-						<f:link.page pageUid="{ADDBUT_2_UID}" tabindex="-1">
-							{ADDBUT_2_TITLE}
-						</f:link.page>
-					</button>
-				</f:else>
-			</v:condition.string.contains>
-			<v:condition.string.contains haystack="{ADDBUT_3_UID}" needle="{">
-				<f:then>
-				</f:then>
-				<f:else>
-					<button class="start__button" tabindex="6" accesskey="{ADDBUT_3_AC}" role="link">
-						<f:link.page pageUid="{ADDBUT_3_UID}" tabindex="-1">
-							{ADDBUT_3_TITLE}
-						</f:link.page>
-					</button>
-				</f:else>
-			</v:condition.string.contains>
-			<v:condition.string.contains haystack="{ADDBUT_4_UID}" needle="{">
-				<f:then>
-				</f:then>
-				<f:else>
-					<button class="start__button" tabindex="7" accesskey="{ADDBUT_4_AC}" role="link">
-						<f:link.page pageUid="{ADDBUT_4_UID}" tabindex="-1">
-							{ADDBUT_4_TITLE}
-						</f:link.page>
-					</button>
-				</f:else>
-			</v:condition.string.contains>
-		</nav>
+		<div class="container-fluid">
+
+			<div class="card-deck start__navigation-infos">
+				<div class="card col-12 col-lg-4">
+					<div class="card-body text-center">
+						<p class="card-title" tabindex="1" accesskey="{INFOBUT_1_AC}" role="link">
+							<f:if condition="{INFOBUT_1_UID}">
+								<f:then>
+									<f:link.page pageUid="{INFOBUT_1_UID}" tabindex="-1">
+										<f:format.raw value="{INFOBUT_1_TITLE}"/>
+									</f:link.page>
+								</f:then>
+							</f:if>
+						</p>
+					</div>
+				</div>
+				<div class="card col-12 col-lg-4">
+					<div class="card-body text-center">
+						<p class="card-title" tabindex="2" accesskey="{INFOBUT_2_AC}" role="link">
+							<f:if condition="{INFOBUT_2_UID}">
+								<f:then>
+									<f:link.page pageUid="{INFOBUT_2_UID}" tabindex="-1">
+										<f:format.raw value="{INFOBUT_2_TITLE}"/>
+									</f:link.page>
+								</f:then>
+							</f:if>
+						</p>
+					</div>
+				</div>
+				<div class="card col-12 col-lg-4">
+					<div class="card-body text-center">
+						<p class="card-title" tabindex="3" accesskey="{INFOBUT_3_AC}" role="link">
+							<v:condition.string.contains haystack="{INFOBUT_3_UID}" needle="{">
+								<f:then>
+								</f:then>
+								<f:else>
+							<f:link.page pageUid="{INFOBUT_3_UID}" tabindex="-1">
+								<f:format.raw value="{INFOBUT_3_TITLE}"/>
+							</f:link.page>
+						</f:else>
+						</v:condition.string.contains>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="card-deck start__navigation-additional">
+				<div class="card col-12">
+					<div class="card-body p-2 align-middle">
+						<div class="card-title" tabindex="4" accesskey="News">
+							News
+						</div>
+						<div class="card-text">
+							<f:cObject typoscriptObjectPath="lib.relContent.10"/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card-deck start__navigation-additional">
+				<div class="card col-12">
+					<div class="card-body text-center">
+						<p class="card-title" tabindex="5" accesskey="{ADDBUT_1_AC}" role="link">
+							<v:condition.string.contains haystack="{ADDBUT_1_UID}" needle="{">
+								<f:then>
+								</f:then>
+								<f:else>
+							<f:link.page pageUid="{ADDBUT_1_UID}" tabindex="-1">
+								<f:format.raw value="{ADDBUT_1_TITLE}"/>
+							</f:link.page>
+						</f:else>
+						</v:condition.string.contains>
+						</p>
+					</div>
+				</div>
+				<div class="card col-12">
+					<div class="card-body text-center">
+						<p class="card-title" tabindex="6" accesskey="{ADDBUT_2_AC}" role="link">
+							<v:condition.string.contains haystack="{ADDBUT_2_UID}" needle="{">
+								<f:then>
+								</f:then>
+								<f:else>
+							<f:link.page pageUid="{ADDBUT_2_UID}" tabindex="-1">
+								<f:format.raw value="{ADDBUT_2_TITLE}"/>
+							</f:link.page>
+						</f:else>
+						</v:condition.string.contains>
+						</p>
+					</div>
+				</div>
+				<div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+				<div class="card col-12">
+					<div class="card-body text-center">
+						<p class="card-title" tabindex="7" accesskey="{ADDBUT_3_AC}" role="link">
+							<v:condition.string.contains haystack="{ADDBUT_3_UID}" needle="{">
+								<f:then>
+								</f:then>
+								<f:else>
+							<f:link.page pageUid="{ADDBUT_3_UID}" tabindex="-1">
+								<f:format.raw value="{ADDBUT_3_TITLE}"/>
+							</f:link.page>
+						</f:else>
+						</v:condition.string.contains>
+						</p>
+					</div>
+				</div>
+				<div class="card col-12">
+					<div class="card-body text-center">
+						<p class="card-title" tabindex="8" accesskey="{ADDBUT_4_AC}" role="link">
+							<v:condition.string.contains haystack="{ADDBUT_4_UID}" needle="{">
+								<f:then>
+								</f:then>
+								<f:else>
+							<f:link.page pageUid="{ADDBUT_4_UID}" tabindex="-1">
+								<f:format.raw value="{ADDBUT_4_TITLE}"/>
+							</f:link.page>
+						</f:else>
+						</v:condition.string.contains>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</main>
 
 	<f:comment>

@@ -169,6 +169,9 @@ lib.relContent {
 	8 < styles.content.get
 	8.select.where = colPos = 8
 	8.slide = -1
+	10 < styles.content.get
+	10.select.where = colPos = 10
+	10.slide = -1
 	oaTage < styles.content.get
 	oaTage.select.where = colPos = 9
 }
