@@ -52,6 +52,8 @@ lib.ids {
 	}
 	INFOBUT_1_TITLE = TEXT
 	INFOBUT_1_TITLE.value = {$ids.infobutton_1.title}
+	INFOBUT_1_ICON = TEXT
+	INFOBUT_1_ICON.value = {$ids.infobutton_1.icon}
 	INFOBUT_1_AC = TEXT
 	INFOBUT_1_AC {
 		data = DB:pages:{$ids.infobutton_1}:title
@@ -65,6 +67,8 @@ lib.ids {
 	}
 	INFOBUT_2_TITLE = TEXT
 	INFOBUT_2_TITLE.value = {$ids.infobutton_2.title}
+	INFOBUT_2_ICON = TEXT
+	INFOBUT_2_ICON.value = {$ids.infobutton_2.icon}
 	INFOBUT_2_AC = TEXT
 	INFOBUT_2_AC {
 		data = DB:pages:{$ids.infobutton_2}:title
@@ -78,6 +82,8 @@ lib.ids {
 	}
 	INFOBUT_3_TITLE = TEXT
 	INFOBUT_3_TITLE.value = {$ids.infobutton_3.title}
+	INFOBUT_3_ICON = TEXT
+	INFOBUT_3_ICON.value = {$ids.infobutton_3.icon}
 	INFOBUT_3_AC = TEXT
 	INFOBUT_3_AC {
 		data = DB:pages:{$ids.infobutton_3}:title
@@ -91,6 +97,8 @@ lib.ids {
 	}
 	ADDBUT_1_TITLE = TEXT
 	ADDBUT_1_TITLE.value = {$ids.addbutton_1.title}
+	ADDBUT_1_ICON = TEXT
+	ADDBUT_1_ICON.value = {$ids.addbutton_1.icon}
 	ADDBUT_1_AC = TEXT
 	ADDBUT_1_AC {
 		data = DB:pages:{$ids.addbutton_1}:title
@@ -104,6 +112,8 @@ lib.ids {
 	}
 	ADDBUT_2_TITLE = TEXT
 	ADDBUT_2_TITLE.value = {$ids.addbutton_2.title}
+	ADDBUT_2_ICON = TEXT
+	ADDBUT_2_ICON.value = {$ids.addbutton_2.icon}
 	ADDBUT_2_AC = TEXT
 	ADDBUT_2_AC {
 		data = DB:pages:{$ids.addbutton_2}:title
@@ -117,6 +127,8 @@ lib.ids {
 	}
 	ADDBUT_3_TITLE = TEXT
 	ADDBUT_3_TITLE.value = {$ids.addbutton_3.title}
+	ADDBUT_3_ICON = TEXT
+	ADDBUT_3_ICON.value = {$ids.addbutton_3.icon}
 	ADDBUT_3_AC = TEXT
 	ADDBUT_3_AC {
 		data = DB:pages:{$ids.addbutton_3}:title
@@ -130,6 +142,8 @@ lib.ids {
 	}
 	ADDBUT_4_TITLE = TEXT
 	ADDBUT_4_TITLE.value = {$ids.addbutton_4.title}
+	ADDBUT_4_ICON = TEXT
+	ADDBUT_4_ICON.value = {$ids.addbutton_4.icon}
 	ADDBUT_4_AC = TEXT
 	ADDBUT_4_AC {
 		data = DB:pages:{$ids.addbutton_4}:title

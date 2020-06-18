@@ -10,14 +10,14 @@
 	<header class="start__header" role="banner">
 		<div class="container">
 			<div class="row">
-				<div class="col-4">
+				<div class="col-5">
 					<div class="start__logo">
 						<f:if condition="{HEADER_IMAGE}">
 							<img src='<f:format.raw value="{HEADER_IMAGE}" />' class="image" alt="Logo"/>
 						</f:if>
 					</div>
 				</div>
-				<div class="col-8">
+				<div class="col-7">
 					<div class="start__title">
 						<h1>
 							<f:format.raw value="{HEADER_TITLE}"/>
@@ -33,12 +33,15 @@
 
 		<div class="container-fluid">
 
-			<div class="card-deck start__navigation-infos">
-				<div class="card col-12 col-lg-4">
-					<div class="card-body text-center">
-						<p class="card-title" tabindex="1" accesskey="{INFOBUT_1_AC}" role="link">
+						<div class="card-deck start__navigation-infos">
+				<div class="card col-12 col-lg-4 p-2">
+					<div class="card-body text-center d-flex p-0 m-0">
+						<p class="card-title d-flex align-self-center" tabindex="1" accesskey="{INFOBUT_1_AC}" role="link">
 							<f:if condition="{INFOBUT_1_UID}">
 								<f:then>
+									<svg class="align-self-center mr-2 fa-icon fa-icon-on-bright">
+										<use xlink:href="#icon-{INFOBUT_1_ICON}"></use>
+									</svg>
 									<f:link.page pageUid="{INFOBUT_1_UID}" tabindex="-1">
 										<f:format.raw value="{INFOBUT_1_TITLE}"/>
 									</f:link.page>
@@ -47,11 +50,14 @@
 						</p>
 					</div>
 				</div>
-				<div class="card col-12 col-lg-4">
-					<div class="card-body text-center">
-						<p class="card-title" tabindex="2" accesskey="{INFOBUT_2_AC}" role="link">
+				<div class="card col-12 col-lg-4 p-2">
+					<div class="card-body text-center d-flex m-0 p-0">
+						<p class="card-title d-flex align-self-center" tabindex="2" accesskey="{INFOBUT_2_AC}" role="link">
 							<f:if condition="{INFOBUT_2_UID}">
 								<f:then>
+									<svg class="align-self-center mr-2 fa-icon fa-icon-on-bright">
+										<use xlink:href="#icon-{INFOBUT_2_ICON}"></use>
+									</svg>
 									<f:link.page pageUid="{INFOBUT_2_UID}" tabindex="-1">
 										<f:format.raw value="{INFOBUT_2_TITLE}"/>
 									</f:link.page>
@@ -60,13 +66,16 @@
 						</p>
 					</div>
 				</div>
-				<div class="card col-12 col-lg-4">
-					<div class="card-body text-center">
-						<p class="card-title" tabindex="3" accesskey="{INFOBUT_3_AC}" role="link">
+				<div class="card col-12 col-lg-4 p-2">
+					<div class="card-body text-center d-flex p-0 m-0">
+						<p class="card-title d-flex align-self-center" tabindex="3" accesskey="{INFOBUT_3_AC}" role="link">
 							<v:condition.string.contains haystack="{INFOBUT_3_UID}" needle="{">
 								<f:then>
 								</f:then>
 								<f:else>
+									<svg class="align-self-center mr-2 fa-icon fa-icon-on-bright">
+										<use xlink:href="#icon-{INFOBUT_3_ICON}"></use>
+									</svg>
 									<f:link.page pageUid="{INFOBUT_3_UID}" tabindex="-1">
 										<f:format.raw value="{INFOBUT_3_TITLE}"/>
 									</f:link.page>
@@ -78,9 +87,12 @@
 			</div>
 
 			<div class="card-deck start__navigation-additional">
-				<div class="card col-12">
-					<div class="card-body p-2 align-middle">
+				<div class="card col-12 p-2">
+					<div class="card-body align-middle p-0 m-0">
 						<div class="card-title" tabindex="4" accesskey="News">
+							<svg class="align-self-center mr-2 fa-icon fa-icon-on-bright">
+								<use xlink:href="#icon-bullhorn"></use>
+							</svg>
 							News
 						</div>
 						<div class="card-text">
@@ -91,13 +103,16 @@
 			</div>
 
 			<div class="card-deck start__navigation-additional">
-				<div class="card col-12">
-					<div class="card-body text-center">
-						<p class="card-title" tabindex="5" accesskey="{ADDBUT_1_AC}" role="link">
+				<div class="card col-12 p-2">
+					<div class="card-body text-center d-flex p-0 m-0">
+						<p class="card-title d-flex align-self-center" tabindex="5" accesskey="{ADDBUT_1_AC}" role="link">
 							<v:condition.string.contains haystack="{ADDBUT_1_UID}" needle="{">
 								<f:then>
 								</f:then>
 								<f:else>
+									<svg class="align-self-center mr-2 fa-icon fa-icon-on-bright">
+										<use xlink:href="#icon-{ADDBUT_1_ICON}"></use>
+									</svg>
 									<f:link.page pageUid="{ADDBUT_1_UID}" tabindex="-1">
 										<f:format.raw value="{ADDBUT_1_TITLE}"/>
 									</f:link.page>
@@ -106,13 +121,16 @@
 						</p>
 					</div>
 				</div>
-				<div class="card col-12">
-					<div class="card-body text-center">
-						<p class="card-title" tabindex="6" accesskey="{ADDBUT_2_AC}" role="link">
+				<div class="card col-12 p-2">
+					<div class="card-body text-center d-flex p-0 m-0">
+						<p class="card-title d-flex align-self-center" tabindex="6" accesskey="{ADDBUT_2_AC}" role="link">
 							<v:condition.string.contains haystack="{ADDBUT_2_UID}" needle="{">
 								<f:then>
 								</f:then>
 								<f:else>
+									<svg class="align-self-center mr-2 fa-icon fa-icon-on-bright">
+										<use xlink:href="#icon-{ADDBUT_2_ICON}"></use>
+									</svg>
 									<f:link.page pageUid="{ADDBUT_2_UID}" tabindex="-1">
 										<f:format.raw value="{ADDBUT_2_TITLE}"/>
 									</f:link.page>
@@ -122,13 +140,16 @@
 					</div>
 				</div>
 				<div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
-				<div class="card col-12">
-					<div class="card-body text-center">
-						<p class="card-title" tabindex="7" accesskey="{ADDBUT_3_AC}" role="link">
+				<div class="card col-12 p-2">
+					<div class="card-body text-center d-flex p-0 m-0">
+						<p class="card-title d-flex align-self-center" tabindex="7" accesskey="{ADDBUT_3_AC}" role="link">
 							<v:condition.string.contains haystack="{ADDBUT_3_UID}" needle="{">
 								<f:then>
 								</f:then>
 								<f:else>
+									<svg class="align-self-center mr-2 fa-icon fa-icon-on-bright">
+										<use xlink:href="#icon-{ADDBUT_3_ICON}"></use>
+									</svg>
 									<f:link.page pageUid="{ADDBUT_3_UID}" tabindex="-1">
 										<f:format.raw value="{ADDBUT_3_TITLE}"/>
 									</f:link.page>
@@ -137,13 +158,16 @@
 						</p>
 					</div>
 				</div>
-				<div class="card col-12">
-					<div class="card-body text-center">
-						<p class="card-title" tabindex="8" accesskey="{ADDBUT_4_AC}" role="link">
+				<div class="card col-12 p-2">
+					<div class="card-body text-center d-flex p-0 m-0">
+						<p class="card-title d-flex align-self-center" tabindex="8" accesskey="{ADDBUT_4_AC}" role="link">
 							<v:condition.string.contains haystack="{ADDBUT_4_UID}" needle="{">
 								<f:then>
 								</f:then>
 								<f:else>
+									<svg class="align-self-center mr-2 fa-icon fa-icon-on-bright icon-{ADDBUT_4_ICON}">
+										<use xlink:href="#icon-{ADDBUT_4_ICON}"></use>
+									</svg>
 									<f:link.page pageUid="{ADDBUT_4_UID}" tabindex="-1">
 										<f:format.raw value="{ADDBUT_4_TITLE}"/>
 									</f:link.page>
@@ -163,85 +187,85 @@
 		The link title is set by default but can be changed by page typoscript.
 	</f:comment>
 	<footer role="contentinfo" class="start__footer">
-		<div class="start__footer-content">
-			<ul class="start__list">
-				<f:if condition="{UEBERUNS_UID}">
-					<f:then>
-						<li class="start__link">
-							<f:link.page pageUid="{UEBERUNS_UID}"
-										 title="{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}">
-								<svg class="fa-icon fa-icon-smile-o fa-icon--s fa-icon-on-bright">
-									<use xlink:href="#icon-smile-o"></use>
+		<div class="container">
+				<div class="row start__list">
+					<f:if condition="{UEBERUNS_UID}">
+						<f:then>
+							<div class="col-2 start__link">
+								<f:link.page pageUid="{UEBERUNS_UID}"
+											 title="{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}">
+									<svg class="fa-icon fa-icon-smile-o fa-icon--s fa-icon-on-bright">
+										<use xlink:href="#icon-smile-o"></use>
+									</svg>
+									{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}
+								</f:link.page>
+							</div>
+						</f:then>
+					</f:if>
+					<f:if condition="{KONTAKT_UID}">
+						<f:then>
+							<div class="col-2 start__link">
+								<f:link.page pageUid="{KONTAKT_UID}"
+											 title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}">
+									<svg class="fa-icon fa-icon-envelope fa-icon--s fa-icon-on-bright">
+										<use xlink:href="#icon-envelope"></use>
+									</svg>
+									{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}
+								</f:link.page>
+							</div>
+						</f:then>
+					</f:if>
+					<f:if condition="{IMPRESSUM_UID}">
+						<f:then>
+							<div class="col-2 start__link">
+								<f:link.page pageUid="{IMPRESSUM_UID}"
+											 title="{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}">
+									<svg class="fa-icon fa-icon-gavel fa-icon--s fa-icon-on-bright">
+										<use xlink:href="#icon-gavel"></use>
+									</svg>
+									{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}
+								</f:link.page>
+							</div>
+						</f:then>
+					</f:if>
+					<f:if condition="{PRIVACY_UID}">
+						<f:then>
+							<div class="col-2 start__link">
+								<f:link.page pageUid="{PRIVACY_UID}"
+											 title="{f:translate(key:'privacy', extensionName: 'tmpl_ipoa')}">
+									<svg class="fa-icon fa-icon-info fa-icon--s fa-icon-on-bright">
+										<use xlink:href="#icon-info"></use>
+									</svg>
+									{f:translate(key:'privacy', extensionName: 'tmpl_ipoa')}
+								</f:link.page>
+							</div>
+						</f:then>
+					</f:if>
+					<v:page.languageMenu
+						defaultLanguageLabel="Deutsch"
+						defaultIsoFlag="de"
+						hideNotTranslated="1"
+						linkCurrent="0">
+						<f:for each="{languageMenu}" as="lang">
+							<div class="col-2 start__link head__link-language {f:if(condition: '{lang.current}', then: 'head__link-active',  else:'')}">
+								<svg class="fa-icon fa-icon-global fa-icon--s">
+									<use xlink:href="#icon-globe"></use>
 								</svg>
-								{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}
-							</f:link.page>
-						</li>
-					</f:then>
-				</f:if>
-				<f:if condition="{KONTAKT_UID}">
-					<f:then>
-						<li class="start__link">
-							<f:link.page pageUid="{KONTAKT_UID}"
-										 title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}">
-								<svg class="fa-icon fa-icon-envelope fa-icon--s fa-icon-on-bright">
-									<use xlink:href="#icon-envelope"></use>
-								</svg>
-								{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}
-							</f:link.page>
-						</li>
-					</f:then>
-				</f:if>
-				<f:if condition="{IMPRESSUM_UID}">
-					<f:then>
-						<li class="start__link">
-							<f:link.page pageUid="{IMPRESSUM_UID}"
-										 title="{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}">
-								<svg class="fa-icon fa-icon-gavel fa-icon--s fa-icon-on-bright">
-									<use xlink:href="#icon-gavel"></use>
-								</svg>
-								{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}
-							</f:link.page>
-						</li>
-					</f:then>
-				</f:if>
-				<f:if condition="{PRIVACY_UID}">
-					<f:then>
-						<li class="start__link">
-							<f:link.page pageUid="{PRIVACY_UID}"
-										 title="{f:translate(key:'privacy', extensionName: 'tmpl_ipoa')}">
-								<svg class="fa-icon fa-icon-info fa-icon--s fa-icon-on-bright">
-									<use xlink:href="#icon-info"></use>
-								</svg>
-								{f:translate(key:'privacy', extensionName: 'tmpl_ipoa')}
-							</f:link.page>
-						</li>
-					</f:then>
-				</f:if>
-				<v:page.languageMenu
-					defaultLanguageLabel="Deutsch"
-					defaultIsoFlag="de"
-					hideNotTranslated="1"
-					linkCurrent="0">
-					<f:for each="{languageMenu}" as="lang">
-						<li class="start__link head__link-language {f:if(condition: '{lang.current}', then: 'head__link-active',  else:'')}">
-							<svg class="fa-icon fa-icon-global fa-icon--s">
-								<use xlink:href="#icon-globe"></use>
-							</svg>
-							<f:if condition="{lang.current}">
-								<f:then>
-									{lang.label}
-								</f:then>
-								<f:else>
-									<a class="start__link" href="{lang.url}">
+								<f:if condition="{lang.current}">
+									<f:then>
 										{lang.label}
-									</a>
-								</f:else>
-							</f:if>
-						</li>
-					</f:for>
-				</v:page.languageMenu>
-			</ul>
-		</div>
+									</f:then>
+									<f:else>
+										<a class="start__link" href="{lang.url}">
+											{lang.label}
+										</a>
+									</f:else>
+								</f:if>
+							</div>
+						</f:for>
+					</v:page.languageMenu>
+				</div>
+			</div>
 	</footer>
 </div>
 </html>
