@@ -14,14 +14,14 @@ lib.ids {
 	HEADER_BACKGROUND = TEXT
 	HEADER_BACKGROUND.value = {$ids.header_background}
 
-	INFO_UID = TEXT
-	INFO_UID.value = {$ids.start}
-
 	KONTAKT_UID = TEXT
 	KONTAKT_UID.value = {$ids.kontakt}
 
 	SITEMAP_UID = TEXT
 	SITEMAP_UID.value = {$ids.sitemap}
+
+	START_UID = TEXT
+	START_UID.value = {$ids.start}
 
 	IMPRESSUM_UID = TEXT
 	IMPRESSUM_UID.value = {$ids.impressum}
