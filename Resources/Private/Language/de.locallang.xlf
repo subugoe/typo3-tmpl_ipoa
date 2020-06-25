@@ -59,6 +59,10 @@
 	    <source>Privacy Policy</source>
 	    <target>Datenschutzerklärung</target>
       </trans-unit>
+      <trans-unit id="privacy-s" approved="yes" xml:space="preserve">
+	    <source>Privacy Policy</source>
+	    <target>Datenschutz</target>
+      </trans-unit>
       <trans-unit id="toTop" approved="yes" xml:space="preserve">
 	    <source>Back to top</source>
 	    <target>Zurück zum Seitenanfang</target>
