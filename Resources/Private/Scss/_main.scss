@@ -5,21 +5,26 @@ a {
     color: $color--brightest;
   }
 }
+
 .main {
   @extend .ic-pt;
 
   @include responsive-content-padding();
   display: flex !important;
   flex-direction: column;
+}
 
-  a {
+.container .main {
+  padding: 0;
+}
+.main a {
     @extend %link--default;
     @extend %link--on-bright;
     @extend %link--underline;
     @extend %link--underline-on-bright;
   }
 
-  ul {
+.main ul {
     @extend %list-bare;
     @extend %m--default;
     padding-left: $inuit-base-line-height;
@@ -49,7 +54,7 @@ a {
     }
   }
 
-  > h2 {
+.main > h2 {
     @extend %ic-layout__item;
     @extend .ic-desk-and-up-three-twelfths;
     @extend %heading;
@@ -65,7 +70,7 @@ a {
     }
   }
 
-  h2 + div {
+.main h2 + div {
     @extend %ic-layout__item;
     @extend .ic-desk-and-up-nine-twelfths;
     @extend %paragraph;
@@ -75,7 +80,7 @@ a {
     }
   }
 
-  table {
+.main table {
     @extend %m--default;
     width: 100%;
 
@@ -120,18 +125,17 @@ a {
     }
   }
 
-  > ul {
+.main > ul {
     @extend %m--default;
   }
 
-  h2 + div h3:first-child {
+.main h2 + div h3:first-child {
     margin-top: 8px;
   }
 
-  .results-highlight {
+.main .results-highlight {
     background-color: $color-block-background--on-bright;
   }
-}
 
 @include media-query("desk-and-up") {
   main h2 + div p:first-child {
