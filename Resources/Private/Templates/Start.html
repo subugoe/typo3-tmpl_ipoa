@@ -29,7 +29,14 @@
 	</div>
 
 	<div class="container">
-		<header class="start__header" role="banner">
+		<v:condition.string.contains haystack="{BREAKINGBUT_UID}" needle="{">
+			<f:then>
+				<header class="start__header pt-2" role="banner">
+			</f:then>
+			<f:else>
+				<header class="start__header pt-5" role="banner">
+			</f:else>
+		</v:condition.string.contains>
 			<div class="row">
 				<div class="start__logo col-12 col-md-5">
 					<f:if condition="{HEADER_IMAGE}">
@@ -37,7 +44,7 @@
 					</f:if>
 				</div>
 				<div class="start__title col-7 d-none d-md-block">
-					<h1>
+					<h1 class="mt-0">
 						<f:format.raw value="{HEADER_TITLE}"/>
 					</h1>
 					<div class="">

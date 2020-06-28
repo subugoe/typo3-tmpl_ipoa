@@ -16,7 +16,6 @@
   }
 }
 
-
 .start__logo {
   display: inline-block;
   padding-left: $inuit-layout-gutter;
@@ -25,11 +24,10 @@
 
   @include media-sup-m {
     text-align: right;
-    margin: 20vh 0 0;
+    margin: 0;
   }
   @include media-sub-l {
     text-align: center;
-    margin: 20vh 0 0;
   }
 
   .image {
@@ -38,7 +36,8 @@
 }
 
 .start__title {
-  padding: 23vh 0 0 3vh;
+  // padding: 23vh 0 0 3vh;
+  padding: $inuit-base-font-size*2 0 0 3vh;
   vertical-align: top;
   font-size: 1.8em;
 
