@@ -147,17 +147,12 @@
   margin-bottom: 0;
 }
 
-.start .w-100 {
-  padding-bottom: 24px;
-}
-
-.start .card svg {
-  width: 2em;
-  height: 2em;
-}
-
 .start a {
   border: 0;
+}
+
+.start .card {
+  min-width: 200px;
 }
 
 .start .card-body i {
