@@ -8,6 +8,23 @@
 
 <div class="start">
 
+	<div class="start__breaking row">
+		<div class="card start__navigation-breaking p-2 text-center justify-content-center">
+			<v:condition.string.contains haystack="{BREAKINGBUT_UID}" needle="{">
+				<f:else>
+					<f:link.page pageUid="{BREAKINGBUT_UID}" tabindex="-1">
+						<div class="card-body d-flex p-0 m-0 align-items-center"
+							 accesskey="{BREAKINGBUT_AC}"
+							 role="link">
+							<i class="icon-{BREAKINGBUT_ICON} m-2 "></i>
+							<f:format.raw value="{BREAKINGBUT_TITLE}"/>
+						</div>
+					</f:link.page>
+				</f:else>
+			</v:condition.string.contains>
+		</div>
+	</div>
+
 	<div class="container">
 		<header class="start__header" role="banner">
 			<div class="row">
@@ -29,60 +46,55 @@
 
 		<main role="start__main" class="main">
 
-
-			<div class="card-deck start__navigation-infos">
-				<div class="card col-12 col-lg-4 p-2">
-					<div class="card-body d-flex p-0 m-0"
-						 tabindex="2"
-						 accesskey="{INFOBUT_1_AC}"
-						 role="link">
-						<f:if condition="{INFOBUT_1_UID}">
-							<f:then>
-								<i class="icon-{INFOBUT_1_ICON} mr-2 align-self-center"></i>
-								<f:link.page pageUid="{INFOBUT_1_UID}" tabindex="-1" class="align-self-center pl-2">
+			<div class="row start__navigation-infos">
+				<div class="card col-sm p-2 m-2 justify-content-center">
+					<v:condition.string.contains haystack="{INFOBUT_1_UID}" needle="{">
+						<f:else>
+							<f:link.page pageUid="{INFOBUT_1_UID}" tabindex="2">
+								<div class="card-body d-flex m-0 p-0 align-items-center"
+									 accesskey="{INFOBUT_1_AC}"
+									 role="link">
+									<i class="icon-{INFOBUT_1_ICON} m-2 p-2"></i>
 									<f:format.raw value="{INFOBUT_1_TITLE}"/>
-								</f:link.page>
-							</f:then>
-						</f:if>
-					</div>
+								</div>
+							</f:link.page>
+						</f:else>
+					</v:condition.string.contains>
 				</div>
-				<div class="card col-12 col-lg-4 p-2">
-					<div class="card-body d-flex p-0 m-0"
-						 tabindex="2"
-						 accesskey="{INFOBUT_2_AC}"
-						 role="link">
-						<f:if condition="{INFOBUT_2_UID}">
-							<f:then>
-								<i class="icon-{INFOBUT_2_ICON} mr-2 align-self-center"></i>
-								<f:link.page pageUid="{INFOBUT_2_UID}" tabindex="-1" class="align-self-center pl-2">
+				<div class="card col-sm p-2 m-2 justify-content-center">
+					<v:condition.string.contains haystack="{INFOBUT_2_UID}" needle="{">
+						<f:else>
+							<f:link.page pageUid="{INFOBUT_2_UID}" tabindex="3">
+								<div class="card-body d-flex m-0 p-0 align-items-center"
+									 accesskey="{INFOBUT_2_AC}"
+									 role="link">
+									<i class="icon-{INFOBUT_2_ICON} m-2 p-2"></i>
 									<f:format.raw value="{INFOBUT_2_TITLE}"/>
-								</f:link.page>
-							</f:then>
-						</f:if>
-					</div>
+								</div>
+							</f:link.page>
+						</f:else>
+					</v:condition.string.contains>
 				</div>
-				<div class="card col-12 col-lg-4 p-2">
-					<div class="card-body d-flex m-0 p-0"
-						 tabindex="3"
-						 accesskey="{INFOBUT_3_AC}"
-						 role="link">
-						<v:condition.string.contains haystack="{INFOBUT_3_UID}" needle="{">
-							<f:else>
-								<i class="icon-{INFOBUT_3_ICON} mr-2 align-self-center"></i>
-								<f:link.page pageUid="{INFOBUT_3_UID}" tabindex="-1" class="align-self-center pl-2">
+				<div class="card col-sm p-2 m-2 justify-content-center">
+					<v:condition.string.contains haystack="{INFOBUT_3_UID}" needle="{">
+						<f:else>
+							<f:link.page pageUid="{INFOBUT_3_UID}" tabindex="4">
+								<div class="card-body d-flex m-0 p-0 align-items-center"
+									 accesskey="{INFOBUT_3_AC}"
+									 role="link">
+									<i class="icon-{INFOBUT_3_ICON} m-2 p-2"></i>
 									<f:format.raw value="{INFOBUT_3_TITLE}"/>
-								</f:link.page>
-							</f:else>
-						</v:condition.string.contains>
-					</div>
+								</div>
+							</f:link.page>
+						</f:else>
+					</v:condition.string.contains>
 				</div>
 			</div>
-
-			<div class="card-deck start__navigation-additional">
-				<div class="card col-12 p-2">
-					<div class="card-body align-middle p-0 m-0">
-						<div class="card-title d-flex align-self-center" tabindex="4" accesskey="News">
-							<i class="icon-bullhorn mr-2 align-self-center pl-2"></i>
+			<div class="row">
+				<div class=" card col p-2 m-2">
+					<div class="card-body align-middle p-0">
+						<div class="card-title d-flex align-self-center" tabindex="5" accesskey="News">
+							<i class="icon-bullhorn m-2 align-self-center pl-2"></i>
 							<span class="align-self-center">News</span>
 						</div>
 						<div class="card-text">
@@ -91,69 +103,62 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="card-deck start__navigation-additional">
-				<div class="card col-12 p-2">
-					<div class="card-body d-flex p-0 m-0"
-						 tabindex="5"
-						 accesskey="{ADDBUT_1_AC}"
-						 role="link">
-						<v:condition.string.contains haystack="{ADDBUT_1_UID}" needle="{">
-							<f:else>
-								<i class="icon-{ADDBUT_1_ICON} mr-2 align-self-center"></i>
-								<f:link.page pageUid="{ADDBUT_1_UID}" tabindex="-1" class="align-self-center pl-2">
+			<div class="row start__navigation-additional">
+				<div class="card col-sm p-2 m-2 justify-content-center">
+					<v:condition.string.contains haystack="{ADDBUT_1_UID}" needle="{">
+						<f:else>
+							<f:link.page pageUid="{ADDBUT_1_UID}" tabindex="6">
+								<div class="card-body d-flex p-0 m-0 align-items-center"
+									 accesskey="{ADDBUT_1_AC}"
+									 role="link">
+									<i class="icon-{ADDBUT_1_ICON} m-2 p-2"></i>
 									<f:format.raw value="{ADDBUT_1_TITLE}"/>
-								</f:link.page>
-							</f:else>
-						</v:condition.string.contains>
-					</div>
+								</div>
+							</f:link.page>
+						</f:else>
+					</v:condition.string.contains>
 				</div>
-				<div class="card col-12 p-2">
-					<div class="card-body d-flex p-0 m-0"
-						 tabindex="6" accesskey="{ADDBUT_2_AC}"
-						 role="link">
-						<v:condition.string.contains haystack="{ADDBUT_2_UID}" needle="{">
-							<f:else>
-								<i class="icon-{ADDBUT_2_ICON} mr-2 align-self-center"></i>
-								<f:link.page pageUid="{ADDBUT_2_UID}" tabindex="-1" class="align-self-center pl-2">
+				<div class="card col-sm p-2 m-2 justify-content-center">
+					<v:condition.string.contains haystack="{ADDBUT_2_UID}" needle="{">
+						<f:else>
+							<f:link.page pageUid="{ADDBUT_2_UID}" tabindex="7">
+								<div class="card-body d-flex p-0 m-0 align-items-center"
+									 accesskey="{ADDBUT_2_AC}"
+									 role="link">
+									<i class="icon-{ADDBUT_2_ICON} m-2 p-2"></i>
 									<f:format.raw value="{ADDBUT_2_TITLE}"/>
-								</f:link.page>
-							</f:else>
-						</v:condition.string.contains>
-					</div>
+								</div>
+							</f:link.page>
+						</f:else>
+					</v:condition.string.contains>
 				</div>
-				<div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
-				<div class="card col-12 p-2">
-					<div class="card-body d-flex p-0 m-0"
-						 tabindex="7" accesskey="{ADDBUT_3_AC}"
-						 role="link">
-						<v:condition.string.contains haystack="{ADDBUT_3_UID}" needle="{">
-							<f:then>
-							</f:then>
-							<f:else>
-								<i class="icon-{ADDBUT_3_ICON} mr-2 align-self-center"></i>
-								<f:link.page pageUid="{ADDBUT_3_UID}" tabindex="-1" class="align-self-center pl-2">
+				<div class="card col-sm p-2 m-2 justify-content-center">
+					<v:condition.string.contains haystack="{ADDBUT_3_UID}" needle="{">
+						<f:else>
+							<f:link.page pageUid="{ADDBUT_3_UID}" tabindex="8">
+								<div class="card-body d-flex p-0 m-0 align-items-center"
+									 accesskey="{ADDBUT_3_AC}"
+									 role="link">
+									<i class="icon-{ADDBUT_3_ICON} m-2 p-2"></i>
 									<f:format.raw value="{ADDBUT_3_TITLE}"/>
-								</f:link.page>
-							</f:else>
-						</v:condition.string.contains>
-					</div>
+								</div>
+							</f:link.page>
+						</f:else>
+					</v:condition.string.contains>
 				</div>
-				<div class="card col-12 p-2">
-					<div class="card-body d-flex p-0 m-0"
-						 tabindex="8" accesskey="{ADDBUT_4_AC}"
-						 role="link">
-						<v:condition.string.contains haystack="{ADDBUT_4_UID}" needle="{">
-							<f:then>
-							</f:then>
-							<f:else>
-								<i class="icon-{ADDBUT_4_ICON} mr-2 align-self-center"></i>
-								<f:link.page pageUid="{ADDBUT_4_UID}" tabindex="-1" class="align-self-center pl-2">
+				<div class="card col-sm p-2 m-2 justify-content-center">
+					<v:condition.string.contains haystack="{ADDBUT_4_UID}" needle="{">
+						<f:else>
+							<f:link.page pageUid="{ADDBUT_4_UID}" tabindex="9">
+								<div class="card-body d-flex p-0 m-0 align-items-center"
+									 accesskey="{ADDBUT_4_AC}"
+									 role="link">
+									<i class="icon-{ADDBUT_4_ICON} m-2 p-2"></i>
 									<f:format.raw value="{ADDBUT_4_TITLE}"/>
-								</f:link.page>
-							</f:else>
-						</v:condition.string.contains>
-					</div>
+								</div>
+							</f:link.page>
+						</f:else>
+					</v:condition.string.contains>
 				</div>
 			</div>
 
@@ -164,14 +169,14 @@
 			If they are not defined in the page typoscript they are not shown.
 			The link title is set by default but can be changed by page typoscript.
 		</f:comment>
-		<footer role="contentinfo" class="start__footer">
+		<footer role="contentinfo" class="start__footer mt-3 mb-3">
 			<ul class="row start__list">
 				<f:if condition="{UEBERUNS_UID}">
 					<f:then>
-						<li class="col-sm-6 col-xl start__link">
+						<li class="col-6 col-md start__link">
 							<f:link.page pageUid="{UEBERUNS_UID}"
 										 title="{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}">
-								<i class="icon-smile mr-2"></i>
+								<i class="icon-smile m-2"></i>
 								{f:translate(key:'aboutUs', extensionName: 'tmpl_ipoa')}
 							</f:link.page>
 						</li>
@@ -179,10 +184,10 @@
 				</f:if>
 				<f:if condition="{KONTAKT_UID}">
 					<f:then>
-						<li class="col-sm-6 col-xl start__link">
+						<li class="col-6 col-md start__link">
 							<f:link.page pageUid="{KONTAKT_UID}"
 										 title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}">
-								<i class="icon-envelope"></i>
+								<i class="icon-envelope m-2"></i>
 								{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}
 							</f:link.page>
 						</li>
@@ -190,10 +195,10 @@
 				</f:if>
 				<f:if condition="{IMPRESSUM_UID}">
 					<f:then>
-						<li class="col-sm-6 col-xl start__link">
+						<li class="col-6 col-md start__link">
 							<f:link.page pageUid="{IMPRESSUM_UID}"
 										 title="{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}">
-								<i class="icon-hammer2"></i>
+								<i class="icon-hammer2 m-2"></i>
 								{f:translate(key:'impressum', extensionName: 'tmpl_ipoa')}
 							</f:link.page>
 						</li>
@@ -201,10 +206,10 @@
 				</f:if>
 				<f:if condition="{PRIVACY_UID}">
 					<f:then>
-						<li class="col-sm-6 col-xl start__link">
+						<li class="col-6 col-md start__link">
 							<f:link.page pageUid="{PRIVACY_UID}"
 										 title="{f:translate(key:'privacy', extensionName: 'tmpl_ipoa')}">
-								<i class="icon-info1"></i>
+								<i class="icon-info1 m-2"></i>
 								{f:translate(key:'privacy-s', extensionName: 'tmpl_ipoa')}
 							</f:link.page>
 						</li>
@@ -216,8 +221,8 @@
 					hideNotTranslated="1"
 					linkCurrent="0">
 					<f:for each="{languageMenu}" as="lang">
-						<li class="col-sm-6 col-xl start__link head__link-language {f:if(condition: '{lang.current}', then: 'head__link-active',  else:'')}">
-							<i class="icon-earth mr-2"></i>
+						<li class="col-6 col-md start__link head__link-language {f:if(condition: '{lang.current}', then: 'head__link-active',  else:'')}">
+							<i class="icon-earth m-2"></i>
 							<f:if condition="{lang.current}">
 								<f:then>
 									{lang.label}

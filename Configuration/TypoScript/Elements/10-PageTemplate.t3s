@@ -46,10 +46,21 @@ lib.ids {
 	SEARCH_PROJECT = TEXT
 	SEARCH_PROJECT.data = getIndpEnv:HTTP_HOST
 
-	INFOBUT_1_UID = TEXT
-	INFOBUT_1_UID {
-		value = {$ids.infobutton_1}
+	BREAKINGBUT_UID = TEXT
+	BREAKINGBUT_UID.value = {$ids.breakingbutton}
+	BREAKINGBUT_TITLE = TEXT
+	BREAKINGBUT_TITLE.value = {$ids.breakingbutton.title}
+	BREAKINGBUT_ICON = TEXT
+	BREAKINGBUT_ICON.value = {$ids.breakingbutton.icon}
+	BREAKINGBUT_AC = TEXT
+	BREAKINGBUT_AC {
+		data = DB:pages:{$ids.breakingbutton}:title
+		crop = 1
+		case = lower
 	}
+
+	INFOBUT_1_UID = TEXT
+	INFOBUT_1_UID.value = {$ids.infobutton_1}
 	INFOBUT_1_TITLE = TEXT
 	INFOBUT_1_TITLE.value = {$ids.infobutton_1.title}
 	INFOBUT_1_ICON = TEXT
@@ -62,9 +73,7 @@ lib.ids {
 	}
 
 	INFOBUT_2_UID = TEXT
-	INFOBUT_2_UID {
-		value = {$ids.infobutton_2}
-	}
+	INFOBUT_2_UID.value = {$ids.infobutton_2}
 	INFOBUT_2_TITLE = TEXT
 	INFOBUT_2_TITLE.value = {$ids.infobutton_2.title}
 	INFOBUT_2_ICON = TEXT
@@ -77,9 +86,7 @@ lib.ids {
 	}
 
 	INFOBUT_3_UID = TEXT
-	INFOBUT_3_UID {
-		value = {$ids.infobutton_3}
-	}
+	INFOBUT_3_UID.value = {$ids.infobutton_3}
 	INFOBUT_3_TITLE = TEXT
 	INFOBUT_3_TITLE.value = {$ids.infobutton_3.title}
 	INFOBUT_3_ICON = TEXT
@@ -92,9 +99,7 @@ lib.ids {
 	}
 
 	ADDBUT_1_UID = TEXT
-	ADDBUT_1_UID {
-		value = {$ids.addbutton_1}
-	}
+	ADDBUT_1_UID.value = {$ids.addbutton_1}
 	ADDBUT_1_TITLE = TEXT
 	ADDBUT_1_TITLE.value = {$ids.addbutton_1.title}
 	ADDBUT_1_ICON = TEXT
@@ -107,9 +112,7 @@ lib.ids {
 	}
 
 	ADDBUT_2_UID = TEXT
-	ADDBUT_2_UID {
-		value = {$ids.addbutton_2}
-	}
+	ADDBUT_2_UID.value = {$ids.addbutton_2}
 	ADDBUT_2_TITLE = TEXT
 	ADDBUT_2_TITLE.value = {$ids.addbutton_2.title}
 	ADDBUT_2_ICON = TEXT
@@ -122,9 +125,7 @@ lib.ids {
 	}
 
 	ADDBUT_3_UID = TEXT
-	ADDBUT_3_UID {
-		value = {$ids.addbutton_3}
-	}
+	ADDBUT_3_UID.value = {$ids.addbutton_3}
 	ADDBUT_3_TITLE = TEXT
 	ADDBUT_3_TITLE.value = {$ids.addbutton_3.title}
 	ADDBUT_3_ICON = TEXT
@@ -137,9 +138,7 @@ lib.ids {
 	}
 
 	ADDBUT_4_UID = TEXT
-	ADDBUT_4_UID {
-		value = {$ids.addbutton_4}
-	}
+	ADDBUT_4_UID.value = {$ids.addbutton_4}
 	ADDBUT_4_TITLE = TEXT
 	ADDBUT_4_TITLE.value = {$ids.addbutton_4.title}
 	ADDBUT_4_ICON = TEXT

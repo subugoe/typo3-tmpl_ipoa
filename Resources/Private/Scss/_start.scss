@@ -48,6 +48,29 @@
   }
 }
 
+.start__breaking {
+  position: fixed;
+  width: 75%;
+  left: 12.5%;
+  z-index: 10;
+}
+
+.start__navigation-breaking {
+  @extend %text--large;
+  background-color: $color-ipoa-yellow;
+  border-color: $color-ipoa-yellow;
+  color: $color--darkest;
+  margin: 10px auto;
+  opacity: 80%;
+  z-index: 10;
+
+  a {
+    background-color: unset;
+    @extend %link--default;
+    @extend %head__link--on-bright;
+  }
+}
+
 .start__main {
   display: inline-block;
   vertical-align: top;
@@ -56,12 +79,11 @@
 }
 
 .start__navigation-infos,
-.start__navigation-additional {
+.start__navigation-additional{
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-bottom: $inuit-base-line-height;
 }
 
 .start__link {
@@ -138,6 +160,6 @@
   border: 0;
 }
 
-.start .card-deck i {
+.start .card-body i {
   font-size: ($inuit-base-font-size / 16px) * $factor-text--large * 1.5;
 }
