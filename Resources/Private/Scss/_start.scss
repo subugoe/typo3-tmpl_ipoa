@@ -47,29 +47,6 @@
   }
 }
 
-.start__breaking {
-  position: fixed;
-  width: 75%;
-  left: 12.5%;
-  z-index: 10;
-}
-
-.start__navigation-breaking {
-  @extend %text--large;
-  background-color: $color-ipoa-yellow;
-  border-color: $color-ipoa-yellow;
-  color: $color--darkest;
-  margin: 10px auto;
-  opacity: 80%;
-  z-index: 10;
-
-  a {
-    background-color: unset;
-    @extend %link--default;
-    @extend %head__link--on-bright;
-  }
-}
-
 .start__main {
   display: inline-block;
   vertical-align: top;
@@ -156,4 +133,8 @@
 
 .start .card-body i {
   font-size: ($inuit-base-font-size / 16px) * $factor-text--large * 1.5;
+}
+
+.start .card.card-breaking {
+  background-color: $color-ipoa-yellow !important;
 }
