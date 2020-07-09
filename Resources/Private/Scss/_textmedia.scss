@@ -125,6 +125,7 @@
 
 .ce-textpic  {
   display:flex;
+  flex-wrap: wrap;
   padding-top: 4px;
 }
 
@@ -155,6 +156,7 @@
 
   img {
     padding-top: 7px;
+    max-width: 100%;
   }
 }
 
