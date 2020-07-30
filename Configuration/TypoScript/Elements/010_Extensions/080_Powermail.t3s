@@ -1,0 +1,44 @@
+plugin.tx_powermail {
+    view {
+        templateRootPaths {
+            100 = EXT:tmpl_ipoa/Resources/Private/Powermail/Templates/
+        }
+
+        partialRootPaths {
+            100 = EXT:tmpl_ipoa/Resources/Private/Powermail/Partials/
+        }
+
+
+        layoutRootPaths {
+            100 = EXT:tmpl_ipoa/Resources/Private/Powermail/Layouts/
+        }
+
+
+
+        BasicCss = EXT:powermail/Resources/Public/Css/Basic.css
+
+        styles {
+            bootstrap {
+                # cat=powermail_styles//0000; type=boolean; label= Enable loading of bootstrap.min.css from powermail
+                addBootstrap = 1
+
+                # cat=powermail_styles//0010; type=text; label= Define path Bootsrap.css
+                bootstrapPath = EXT:powermail/Resources/Public/Css/Bootstrap.css
+
+            }
+        framework.numberOfColumns = 12
+        }
+    }
+}
+
+plugin.tx_powermail.settings.setup {
+    styles {
+        numberOfColumns = 12
+        framework {
+            rowClasses = row
+            fieldAndLabelWrappingClasses = form-group col-md-12
+            labelClasses = control-label col-sm-12
+            fieldWrappingClasses = col-sm-12
+        }
+    }
+}

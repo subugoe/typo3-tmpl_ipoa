@@ -8,3 +8,8 @@
 .tx-powermail input[type="radio"] {
   width: auto;
 }
+
+.frame form fieldset .form-group {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
