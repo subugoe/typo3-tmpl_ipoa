@@ -1,15 +1,31 @@
 .tx-powermail form fieldset .form-group {
   margin: 12px 12px 0 12px;
 }
+
 .tx-powermail input {
   width: 100%;
 }
+
 .tx-powermail input[type="checkbox"],
 .tx-powermail input[type="radio"] {
   width: auto;
 }
 
-.frame form fieldset .form-group {
+.tx-powermail form fieldset .form-group {
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.tx-powermail .btn-group {
+  padding-top: 16px;
+}
+
+.tx-powermail .btn {
+  background-color: $color-block-background--on-bright;
+  color: $color--darkest;
+}
+
+.tx-powermail .btn-primary {
+  background-color: $color-ipoa-yellow;
+  color: $color--darkest;
 }
