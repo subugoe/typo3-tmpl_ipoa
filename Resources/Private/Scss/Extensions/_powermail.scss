@@ -29,3 +29,21 @@
   background-color: $color-ipoa-yellow;
   color: $color--darkest;
 }
+
+.tx-powermail .row {
+  justify-content: space-around;
+}
+
+.tx-powermail .row .half1 {
+  margin: 12px 0 !important;
+  // hack, to override md-12
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.tx-powermail .row .half2 {
+  margin: 12px 0 !important;
+  // hack, to override md-12
+  flex: 0 0 50%;
+  max-width: 50%;
+}

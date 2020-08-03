@@ -1,0 +1,10 @@
+TCEFORM.tx_powermail_domain_model_field {
+    css {
+        removeItems = layout1, layout2, layout3
+        addItems {
+            default = Default
+            half1 = Half left
+            half2 = Half right
+        }
+    }
+}
