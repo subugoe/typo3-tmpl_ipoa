@@ -6,6 +6,7 @@
   background-color: $color-block-background--on-bright;
   border-color: transparent;
   margin-bottom: 6px;
+  padding: 0 6px;
 
   // as that are no links, just make them grey instead of green
   &:hover,
@@ -33,4 +34,8 @@
   max-height: 0;
   opacity: 0;
   visibility: hidden;
+
+  :last-of-type {
+    margin-bottom: 12px;
+  }
 }
