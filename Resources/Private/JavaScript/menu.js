@@ -85,14 +85,6 @@ jQuery(() => {
     jQuery('.head__link-language:not(.head__link-active)').toggleClass('-shown');
   });
 
-  /**
-   * handle on demand content on pages like those for the oa days
-   */
-  jQuery('.on-demand__content').addClass('').hide();
-  jQuery('.on-demand__link').click(function () {
-    jQuery(this).parent('p').nextUntil(':not(".on-demand__content")').toggle('slow');
-  });
-
 
   jQuery(window).resize(() => {
     hideMenu();

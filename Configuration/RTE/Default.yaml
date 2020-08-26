@@ -12,13 +12,10 @@ imports:
 # For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
 editor:
   config:
-    format_tags: 'p;h3;h4'
-    # can be "default", but a custom stylesSet can be defined here, which fits TYPO3 best
-    stylesSet:
-      # block level styles
-      - { name: "Link zu versteckten Inhalten", element: "span", attributes: { class: "on-demand__link" } }
-      - { name: "Versteckter Inhalt", element: "div", attributes: { class: "on-demand__content" } }
-
+    contentsCss: "EXT:tmpl_ipoa/Resources/Public/Css/rte.css"
+    format_tags: 'p;h3;h4;ondemandlink;ondemandcontent'
+    format_ondemandlink: { name: "On demand link", element: "div", attributes: { class: "on-demand__link" } }
+    format_ondemandcontent: { name: "On demand content", element: "div", attributes: { class: "on-demand__content" } }
     toolbarGroups:
       - { name: clipboard, groups: [clipboard, undo] }
       - { name: editing,   groups: [find, selection, spellchecker] }

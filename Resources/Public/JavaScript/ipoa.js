@@ -2,8 +2,39 @@
 
 jQuery(() => {
   /**
+   * handle on demand content on pages like those for the oa days
+   */
+  // new version to hide and show on-demand__content
+  const onDemandLinks = document.getElementsByClassName('on-demand__link');
+
+  for (let link = 0; link < onDemandLinks.length; link++) {
+    onDemandLinks[link].addEventListener('click', event => {
+      let content = event.target.parentNode.nextSibling;
+      console.log(content.classList);
+
+      if (content.classList.contains('-opened')) {
+        // use loop to catch all paragraphs
+        while (content.classList.contains('on-demand__content')) {
+          content.classList.remove('-opened');
+          content = content.nextSibling;
+        }
+      } else {
+        while (content.classList.contains('on-demand__content')) {
+          content.classList.add('-opened');
+          content = content.nextSibling;
+        }
+      }
+    });
+  } // old version, mainly used in ojs
+
+
+  jQuery('.on-demand__link').click(function () {
+    jQuery(this).parent('p').nextUntil(':not(".on-demand__content")').toggle('slow');
+  });
+  /**
    * scroll to top when page is loaded
    */
+
   jQuery('html,body').animate({
     'scrollTop': 0
   }, 500);
@@ -128,14 +159,6 @@ jQuery(() => {
 
   jQuery('.head__link-language').on('click', () => {
     jQuery('.head__link-language:not(.head__link-active)').toggleClass('-shown');
-  });
-  /**
-   * handle on demand content on pages like those for the oa days
-   */
-
-  jQuery('.on-demand__content').addClass('').hide();
-  jQuery('.on-demand__link').click(function () {
-    jQuery(this).parent('p').nextUntil(':not(".on-demand__content")').toggle('slow');
   });
   jQuery(window).resize(() => {
     hideMenu();

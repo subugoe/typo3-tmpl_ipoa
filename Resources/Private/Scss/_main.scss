@@ -160,11 +160,3 @@ a {
     @extend %picture;
   }
 }
-
-.main .on-demand__link {
-  @extend %link--default;
-  @extend %link--on-bright;
-  @extend %link--underline;
-  @extend %link--underline-on-bright;
-  cursor: pointer;
-}

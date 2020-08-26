@@ -1,0 +1,36 @@
+.ce-bodytext .on-demand__link {
+  @extend %link--default;
+  @extend %link--underline;
+  @extend %link--underline-on-bright;
+  cursor: pointer;
+  background-color: $color-block-background--on-bright;
+  border-color: transparent;
+  margin-bottom: 6px;
+
+  // as that are no links, just make them grey instead of green
+  &:hover,
+  &:focus {
+    background-color: $link-background-color--default;
+    border-color: $link-background-color--default;
+    color: $color--brightest;
+  }
+
+  &:active {
+    background-color: $color-block-background--on-bright;
+    border-color: $color-block-background--on-bright;
+    color: $color--darkest;
+  }
+}
+
+.ce-bodytext .on-demand__link p,
+.ce-bodytext .on-demand__content p {
+  margin: 6px 0;
+}
+
+.ce-bodytext .on-demand__content {
+  margin-bottom: 6px;
+  height: 0;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+}

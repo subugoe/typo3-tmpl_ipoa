@@ -93,3 +93,10 @@ ul {
 .-hidden {
   display: none !important;
 }
+
+.-opened {
+  opacity: 1 !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  visibility: visible !important;
+}
