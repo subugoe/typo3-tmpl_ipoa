@@ -29,11 +29,11 @@
 }
 
 .ce-bodytext .on-demand__content {
-  margin-bottom: 6px;
   height: 0;
   max-height: 0;
   opacity: 0;
   visibility: hidden;
+  display: none;
 
   :last-of-type {
     margin-bottom: 12px;

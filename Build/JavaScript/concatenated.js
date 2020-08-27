@@ -26,11 +26,6 @@ jQuery(() => {
     });
   }
 
-  // old version, mainly used in ojs
-  jQuery('.on-demand__link').click(function () {
-    jQuery(this).parent('p').nextUntil(':not(".on-demand__content")').toggle('slow');
-  });
-
   /**
    * scroll to top when page is loaded
    */

@@ -99,4 +99,6 @@ ul {
   height: 100% !important;
   max-height: 100% !important;
   visibility: visible !important;
+  display: flex !important;
+  flex-direction: column;
 }
