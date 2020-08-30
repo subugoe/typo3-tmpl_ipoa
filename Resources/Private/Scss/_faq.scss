@@ -29,11 +29,8 @@
 }
 
 .js .ce-bodytext .on-demand__content {
-  height: 0;
   max-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  display: none;
+  overflow: hidden;
 
   :last-of-type {
     margin-bottom: 12px;

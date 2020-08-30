@@ -95,10 +95,8 @@ ul {
 }
 
 .-opened {
-  opacity: 1 !important;
-  height: 100% !important;
-  max-height: 100% !important;
-  visibility: visible !important;
-  display: flex !important;
-  flex-direction: column;
+  overflow: hidden !important;
+  transition: max-height 0.9s ease-in-out !important;
+  height: auto !important;
+  max-height: 1000px !important;
 }
