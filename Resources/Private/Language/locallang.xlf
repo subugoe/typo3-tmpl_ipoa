@@ -4,121 +4,124 @@
     <header/>
     <body>
       <trans-unit id="back-link" approved="yes" xml:space="preserve">
-	<source>Back</source>
+	    <source>Back</source>
       </trans-unit>
       <trans-unit id="entry" approved="yes" xml:space="preserve">
-	<source>entry</source>
+	    <source>entry</source>
       </trans-unit>
       <trans-unit id="entries" approved="yes" xml:space="preserve">
-	<source>entries</source>
+	    <source>entries</source>
       </trans-unit>
       <trans-unit id="readLatest" approved="yes" xml:space="preserve">
-	<source>Read here the latest  %1$s News</source>
+	    <source>Read here the latest  %1$s News</source>
       </trans-unit>
       <trans-unit id="commentContent" approved="yes" xml:space="preserve">
-	<source>Comment on this content</source>
+	    <source>Comment on this content</source>
       </trans-unit>
       <trans-unit id="sendEmail" approved="yes" xml:space="preserve">
-	<source>Send Email</source>
+	    <source>Send Email</source>
       </trans-unit>
       <trans-unit id="menu" approved="yes" xml:space="preserve">
-	<source>Menu</source>
+	    <source>Menu</source>
       </trans-unit>
       <trans-unit id="startpage" approved="yes" xml:space="preserve">
-	<source>Start</source>
+	    <source>Start</source>
       </trans-unit>
       <trans-unit id="contact" approved="yes" xml:space="preserve">
-	<source>Contact</source>
+	    <source>Contact</source>
       </trans-unit>
       <trans-unit id="sitemap" approved="yes" xml:space="preserve">
-	<source>Sitemap</source>
+	    <source>Sitemap</source>
       </trans-unit>
       <trans-unit id="search" approved="yes" xml:space="preserve">
-	<source>Search</source>
+	    <source>Search</source>
       </trans-unit>
       <trans-unit id="impressum" approved="yes" xml:space="preserve">
-	<source>Legal Notice</source>
+	    <source>Legal Notice</source>
       </trans-unit>
       <trans-unit id="privacy" approved="yes" xml:space="preserve">
 	    <source>Privacy Policy</source>
       </trans-unit>
+      <trans-unit id="privacy-s" approved="yes" xml:space="preserve">
+	    <source>Privacy Policy</source>
+      </trans-unit>
       <trans-unit id="aboutUs" approved="yes" xml:space="preserve">
-	<source>About</source>
+	    <source>About</source>
       </trans-unit>
       <trans-unit id="toTop" approved="yes" xml:space="preserve">
-	<source>Back to top</source>
+	    <source>Back to top</source>
       </trans-unit>
       <trans-unit id="news" approved="yes" xml:space="preserve">
-	<source>News</source>
+	    <source>News</source>
       </trans-unit>
       <trans-unit id="freeAccess" approved="yes" xml:space="preserve">
-	<source>Open Access to  %1$s Scientific Information %2$s</source>
+	    <source>Open Access to  %1$s Scientific Information %2$s</source>
       </trans-unit>
       <trans-unit id="optOutWithLink" approved="yes" xml:space="preserve">
-	<source>This website collects anonymous data. You can opt out for the duration of your visit by clicking this link:</source>
+	    <source>This website collects anonymous data. You can opt out for the duration of your visit by clicking this link:</source>
       </trans-unit>
       <trans-unit id="optOut" approved="yes" xml:space="preserve">
-	<source>Remove collection of data (Opt-Out)</source>
+	    <source>Remove collection of data (Opt-Out)</source>
       </trans-unit>
       <trans-unit id="solrSearch" approved="yes" xml:space="preserve">
-	<source>Search</source>
+	    <source>Search</source>
       </trans-unit>
       <trans-unit id="usePageWideSearch" approved="yes" xml:space="preserve">
-	<source>Use the search box to find other interesting content on %1$s.</source>
+	    <source>Use the search box to find other interesting content on %1$s.</source>
       </trans-unit>
       <trans-unit id="oaAtTwitter" approved="yes" xml:space="preserve">
-	<source>#openaccess at Twitter</source>
+	    <source>#openaccess at Twitter</source>
       </trans-unit>
       <trans-unit id="month.01" approved="yes" xml:space="preserve">
-	<source>January</source>
+	    <source>January</source>
       </trans-unit>
       <trans-unit id="month.02" approved="yes" xml:space="preserve">
-	<source>February</source>
+	    <source>February</source>
       </trans-unit>
       <trans-unit id="month.03" approved="yes" xml:space="preserve">
-	<source>March</source>
+	    <source>March</source>
       </trans-unit>
       <trans-unit id="month.04" approved="yes" xml:space="preserve">
-	<source>April</source>
+	    <source>April</source>
       </trans-unit>
       <trans-unit id="month.05" approved="yes" xml:space="preserve">
-	<source>May</source>
+	    <source>May</source>
       </trans-unit>
       <trans-unit id="month.06" approved="yes" xml:space="preserve">
-	<source>June</source>
+	    <source>June</source>
       </trans-unit>
       <trans-unit id="month.07" approved="yes" xml:space="preserve">
-	<source>July</source>
+	    <source>July</source>
       </trans-unit>
       <trans-unit id="month.08" approved="yes" xml:space="preserve">
-	<source>August</source>
+	    <source>August</source>
       </trans-unit>
       <trans-unit id="month.09" approved="yes" xml:space="preserve">
-	<source>September</source>
+	    <source>September</source>
       </trans-unit>
       <trans-unit id="month.10" approved="yes" xml:space="preserve">
-	<source>October</source>
+	    <source>October</source>
       </trans-unit>
       <trans-unit id="month.11" approved="yes" xml:space="preserve">
-	<source>November</source>
+	    <source>November</source>
       </trans-unit>
       <trans-unit id="month.12" approved="yes" xml:space="preserve">
-	<source>December</source>
+	    <source>December</source>
       </trans-unit>
       <trans-unit id="close" approved="yes" xml:space="preserve">
-	<source>Close</source>
+	    <source>Close</source>
       </trans-unit>
       <trans-unit id="clickToOpen" approved="yes" xml:space="preserve">
-	<source>Click this to see a list of available languages</source>
+	    <source>Click this to see a list of available languages</source>
       </trans-unit>
       <trans-unit id="closeMenu" approved="yes" xml:space="preserve">
-	<source>Close menu</source>
+	    <source>Close menu</source>
       </trans-unit>
       <trans-unit id="newsArchive" approved="yes" xml:space="preserve">
-	<source>News Archive</source>
+	    <source>News Archive</source>
       </trans-unit>
       <trans-unit id="dateFormat" approved="yes" xml:space="preserve">
-	<source>%m/%d/%Y</source>
+	    <source>%m/%d/%Y</source>
       </trans-unit>
       <trans-unit id="info" approved="yes" xml:space="preserve">
 	    <source>Information</source>
