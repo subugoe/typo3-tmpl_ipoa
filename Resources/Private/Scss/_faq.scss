@@ -1,4 +1,4 @@
-.ce-bodytext .on-demand__link {
+.on-demand__link {
   @extend %link--default;
   @extend %link--underline;
   @extend %link--underline-on-bright;
@@ -23,12 +23,12 @@
   }
 }
 
-.ce-bodytext .on-demand__link p,
-.ce-bodytext .on-demand__content p {
+.on-demand__link p,
+.on-demand__content p {
   margin: 6px 0;
 }
 
-.js .ce-bodytext .on-demand__content {
+.js .on-demand__content {
   max-height: 0;
   overflow: hidden;
 
