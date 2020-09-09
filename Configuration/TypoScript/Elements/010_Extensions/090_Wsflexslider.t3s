@@ -1,0 +1,15 @@
+plugin.tx_wsflexslider {
+    view {
+        templateRootPaths {
+            20 = EXT:tmpl_ipoa/Resources/Private/WsFlexslider/Templates
+        }
+
+        partialRootPaths {
+            20 = EXT:tmpl_ipoa/Resources/Private/WsFlexslider/Partials
+        }
+
+        layoutRootPaths {
+            20 = EXT:tmpl_ipoa/Resources/Private/WsFlexslider/Layouts
+        }
+    }
+}
