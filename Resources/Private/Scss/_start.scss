@@ -140,5 +140,12 @@
 }
 
 .start .card-text ul {
-  margin-left: $inuit-base-font-size;
+}
+
+.card-text .frame:first-of-type {
+  background-color: $color-block-background--on-bright;
+}
+
+.card-text .frame:last-of-type {
+  background-color: transparent !important;
 }
