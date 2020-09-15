@@ -215,11 +215,14 @@ options.folderTree.uploadFieldsInLinkBrowser = 3
         html
     )
 
+
     // OAT also have a smaller header type
     TCEFORM.tt_content {
         header_layout.removeItems = 0,3,4,5
         header_layout.altLabels.2 = OA-Tage Untertitel
     }
+
+    TCEFORM.pages.TSconfig.disabled = 1
 [end]
 
 
@@ -230,6 +233,8 @@ options.folderTree.uploadFieldsInLinkBrowser = 3
 [usergroup = 8]
     TCEFORM {
         pages.doktype.removeItems := addToList(1,3,4,6,7,254,255,199)
+        pages.TSconfig.disabled = 1
+
         tt_content {
             # general
             colPos.disabled = 1
