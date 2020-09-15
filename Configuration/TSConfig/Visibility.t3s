@@ -134,7 +134,7 @@ TCEFORM {
          // Resources
          media.disabled = 1
          storage_pid.disabled = 1
-         TSconfig.disabled = 1
+         TSconfig.disabled = 0
          tsconfig_includes.disabled = 1
          // Notes
          rowDescription.disabled = 1
