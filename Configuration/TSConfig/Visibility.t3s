@@ -10,9 +10,6 @@ TCEMAIN {
         everybody = 31
     }
 }
-
-//////////////////////////////////////////////////////
-// remove content types for all
 TCEFORM.tt_content.CType.removeItems (
     ####standardelements,
     header,
@@ -41,6 +38,9 @@ TCEFORM.tt_content.CType.removeItems (
     #form_formframework,
     login
 )
+
+//////////////////////////////////////////////////////
+// remove content types for all
 
 
 // ########################################################
