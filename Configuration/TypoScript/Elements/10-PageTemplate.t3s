@@ -151,6 +151,21 @@ lib.ids {
 	ADDBUT_4_SPECIAL = TEXT
 	ADDBUT_4_SPECIAL.value = {$ids.addbutton_4.special}
 
+	ADDBUT_5_UID = TEXT
+	ADDBUT_5_UID.value = {$ids.addbutton_5}
+	ADDBUT_5_TITLE = TEXT
+	ADDBUT_5_TITLE.value = {$ids.addbutton_5.title}
+	ADDBUT_5_ICON = TEXT
+	ADDBUT_5_ICON.value = {$ids.addbutton_5.icon}
+	ADDBUT_5_AC = TEXT
+	ADDBUT_5_AC {
+		data = DB:pages:{$ids.addbutton_5}:title
+		crop = 1
+		case = lower
+	}
+	ADDBUT_5_SPECIAL = TEXT
+	ADDBUT_5_SPECIAL.value = {$ids.addbutton_5.special}
+
 	LANGMENU = TEXT
 	LANGMENU.value = {$ids.langMenu}
 }

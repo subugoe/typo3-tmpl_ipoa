@@ -179,6 +179,14 @@
 	    <source>Previous</source>
 	    <target>Vorherige</target>
       </trans-unit>
+      <trans-unit id="projectNews" approved="yes"  xml:space="preserve">
+	    <source>Project News</source>
+	    <target>Projekt-News</target>
+      </trans-unit>
+      <trans-unit id="openAccessNews" approved="yes"  xml:space="preserve">
+	    <source>Open Access News</source>
+	    <target>Open-Access-News</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

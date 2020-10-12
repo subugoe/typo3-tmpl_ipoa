@@ -138,6 +138,12 @@
       <trans-unit id="paginate_previous" approved="yes" xml:space="preserve">
 	    <source>Previous</source>
       </trans-unit>
+      <trans-unit id="projectNews" approved="yes" xml:space="preserve">
+	    <source>Project News</source>
+      </trans-unit>
+      <trans-unit id="openAccessNews" approved="yes" xml:space="preserve">
+	    <source>Open Access News</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>
