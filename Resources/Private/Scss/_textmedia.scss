@@ -41,6 +41,7 @@
   }
 }
 
+// default elements
 .main .frame > div {
   display: block;
 
@@ -69,6 +70,20 @@
   &:only-child {
     justify-self: flex-start;
   }
+}
+
+// elements with 100% width layout
+.main .frame.frame-layout-1 > div,
+.main .frame.frame-layout-1 > table,
+.main .frame.frame-layout-1 > ul
+{
+  @include media-xl {
+    width: 100% !important;
+  }
+}
+
+.frame.frame-layout-1 header h2 {
+    display: none !important;
 }
 
 .frame p {

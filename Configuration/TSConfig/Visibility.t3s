@@ -39,6 +39,20 @@ TCEFORM.tt_content.CType.removeItems (
     login
 )
 
+///////
+// remove content element layouts and rename
+TCEFORM {
+    tt_content {
+        layout {
+            altLabels {
+                0 = Default mit Titel
+                1 = 100% breit ohne Titel
+            }
+            removeItems = 2,3
+        }
+    }
+}
+
 //////////////////////////////////////////////////////
 // remove content types for all
 
@@ -153,7 +167,7 @@ TCEFORM {
         linkToTop.disabled = 1
         fe_group.disabled = 1
         section_frame.disabled = 1
-        layout.disabled = 1
+        layout.disabled = 0
         margin_top.disabled = 1
         sectionIndex.disabled = 0
         spaceAfter.disabled = 1
