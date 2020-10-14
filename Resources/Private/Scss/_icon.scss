@@ -17,123 +17,59 @@
   fill: currentColor;
 }
 
-.fa-icon-search,
-.fa-icon-home,
-.fa-icon-twitter,
-.fa-icon-chain {
-  width: .9287109375em;
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
 
-.fa-icon-close,
-.fa-icon-phone,
-.fa-icon-rss {
-  width: .7861328125em;
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-oat {
+  width: 3em;
 }
 
-
-.fa-icon-camera,
-.fa-icon-image {
-  width: 1.0712890625em;
+.icon-oa {
+  width: 2em;
 }
 
-.fa-icon-map-marker,
-.fa-icon-facebook,
-.fa-icon-angle-double-left,
-.fa-icon-angle-double-right {
-  width: .5712890625em;
-}
-
-.fa-icon-chevron-left,
-.fa-icon-chevron-right {
-  width: .7138671875em;
-}
-
-.fa-icon-bolt {
-  width: .5em;
-}
-
-.fa-icon-coffee {
-  width: .0712890625em;
-}
-
-.fa-icon-angle-double-up,
-.fa-icon-angle-double-down,
-.fa-icon-angle-up,
-.fa-icon-angle-down {
-  width: .642578125em;
-}
-
-.fa-icon-angle-left,
-.fa-icon-angle-right {
-  width: .357421875em;
-}
-
-.fa-icon-quote-left,
-.fa-icon-quote-right {
-  width: .9287109375em;
-}
-
-.fa-icon-question {
-  width: .5712890625em;
-}
-
-.fa-icon-info {
-  width: .357421875em;
-}
-
-.fa-icon-ellipsis-h,
-.fa-icon-trash {
-  width: .7861328125em;
-}
-
-.fa-icon-ellipsis-v {
-  width: .2138671875em;
-}
-
-.fa-icon-toggle-off,
-.fa-icon-toggle-on {
+.icon-toggle-on {
   width: 1.142578125em;
+}
+
+.icon-toggle-off {
+  width: 1.142578125em;
+}
+
+.icon-info {
+  width: 0.357421875em;
+}
+
+.icon-angle-right {
+  width: 0.3388671875em;
+}
+
+.icon-angle-double-down {
+  width: 0.642578125em;
+}
+
+.icon-angle-double-right {
+  width: 0.5537109375em;
 }
 
 .icon-library {
   width: 1.0625em;
 }
 
-.fa-spinner {
-  width: 2em;
-  margin-left: 50%;
-}
-
-.fa-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
-  animation: fa-spin 2s infinite linear;
-}
-
-.fa-pulse {
-  -webkit-animation: fa-spin 1s infinite steps(8);
-  animation: fa-spin 1s infinite steps(8);
-}
-
-@-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-
-@keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
+.icon-users {
+  width: 1.75em;
 }

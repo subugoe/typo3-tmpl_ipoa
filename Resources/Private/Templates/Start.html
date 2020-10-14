@@ -143,51 +143,51 @@
 							<f:format.raw value="{ADDBUT_2_TITLE}"/>
 						</div>
 					</f:link.page>
-				</div>
-			</f:else>
-		</v:condition.string.contains>
-		<v:condition.string.contains haystack="{ADDBUT_3_UID}" needle="{">
-			<f:else>
-				<v:condition.string.contains haystack="{ADDBUT_3_SPECIAL}" needle="{">
-					<f:then>
-						<div class="card col-sm p-2 m-2 justify-content-center">
-					</f:then>
-					<f:else>
-						<div class="card col-sm p-2 m-2 justify-content-center card-breaking">
-					</f:else>
-				</v:condition.string.contains>
-				<f:link.page pageUid="{ADDBUT_3_UID}" tabindex="8">
-					<div class="card-body d-flex p-0 m-0 align-items-center"
-						 accesskey="{ADDBUT_3_AC}"
-						 role="link">
-						<i class="icon-{ADDBUT_3_ICON} m-2 p-2"></i>
-						<f:format.raw value="{ADDBUT_3_TITLE}"/>
-					</div>
-				</f:link.page>
-			</div>
-		</f:else>
+	</div>
+	</f:else>
 	</v:condition.string.contains>
-	<v:condition.string.contains haystack="{ADDBUT_4_UID}" needle="{">
+	<v:condition.string.contains haystack="{ADDBUT_3_UID}" needle="{">
 		<f:else>
-			<v:condition.string.contains haystack="{ADDBUT_4_SPECIAL}" needle="{">
+			<v:condition.string.contains haystack="{ADDBUT_3_SPECIAL}" needle="{">
 				<f:then>
 					<div class="card col-sm p-2 m-2 justify-content-center">
-					</f:then>
-					<f:else>
-						<div class="card col-sm p-2 m-2 justify-content-center card-breaking">
-					</f:else>
-				</v:condition.string.contains>
-				<f:link.page pageUid="{ADDBUT_4_UID}" tabindex="9">
-					<div class="card-body d-flex p-0 m-0 align-items-center"
-						 accesskey="{ADDBUT_4_AC}"
-						 role="link">
-						<i class="icon-{ADDBUT_4_ICON} m-2 p-2"></i>
-						<f:format.raw value="{ADDBUT_4_TITLE}"/>
-					</div>
-				</f:link.page>
+				</f:then>
+				<f:else>
+					<div class="card col-sm p-2 m-2 justify-content-center card-breaking">
+				</f:else>
+			</v:condition.string.contains>
+			<f:link.page pageUid="{ADDBUT_3_UID}" tabindex="8">
+				<div class="card-body d-flex p-0 m-0 align-items-center"
+					 accesskey="{ADDBUT_3_AC}"
+					 role="link">
+					<i class="icon-{ADDBUT_3_ICON} m-2 p-2"></i>
+					<f:format.raw value="{ADDBUT_3_TITLE}"/>
+				</div>
+			</f:link.page>
+</div>
+</f:else>
+</v:condition.string.contains>
+<v:condition.string.contains haystack="{ADDBUT_4_UID}" needle="{">
+	<f:else>
+		<v:condition.string.contains haystack="{ADDBUT_4_SPECIAL}" needle="{">
+			<f:then>
+				<div class="card col-sm p-2 m-2 justify-content-center">
+			</f:then>
+			<f:else>
+				<div class="card col-sm p-2 m-2 justify-content-center card-breaking">
+			</f:else>
+		</v:condition.string.contains>
+		<f:link.page pageUid="{ADDBUT_4_UID}" tabindex="9">
+			<div class="card-body d-flex p-0 m-0 align-items-center"
+				 accesskey="{ADDBUT_4_AC}"
+				 role="link">
+				<i class="icon-{ADDBUT_4_ICON} m-2 p-2"></i>
+				<f:format.raw value="{ADDBUT_4_TITLE}"/>
 			</div>
-		</f:else>
-	</v:condition.string.contains>
+		</f:link.page>
+		</div>
+	</f:else>
+</v:condition.string.contains>
 <v:condition.string.contains haystack="{ADDBUT_5_UID}" needle="{">
 	<f:else>
 		<v:condition.string.contains haystack="{ADDBUT_5_SPECIAL}" needle="{">

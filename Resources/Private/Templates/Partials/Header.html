@@ -6,13 +6,10 @@
 	<div class="head__menubutton">
 		<f:if condition="{MENU} == 1">
 			<a class="menu__button js-menu-toggle-button js-alt-menu-toggle-button" href="#menu" tabindex="1">
-				<svg class="fa-icon fa-icon-bars fa-icon--s">
-					<use xlink:href="#icon-bars"></use>
-				</svg>
-				<span
-					class="hidden-sub-l">
-			{f:translate(key:'menu', extensionName: 'tmpl_ipoa')}
-			</span>
+				<i class="icon-menu p-1"></i>
+				<span class="hidden-sub-l">
+					{f:translate(key:'menu', extensionName: 'tmpl_ipoa')}
+				</span>
 			</a>
 		</f:if>
 	</div>
@@ -22,9 +19,7 @@
 			<li class="head__link">
 				<f:link.page pageUid="{START_UID}" title="{f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}"
 							 class="head__link" tabindex="2">
-					<svg class="fa-icon fa-icon-home fa-icon--s">
-						<use xlink:href="#icon-home"></use>
-					</svg>
+					<i class="icon-home3 p-1"></i>
 					<span class="hidden-sub-l">{f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}</span>
 				</f:link.page>
 			</li>
@@ -34,9 +29,7 @@
 						<f:link.page pageUid="{KONTAKT_UID}"
 									 title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}" class="head__link"
 									 tabindex="2">
-							<svg class="fa-icon fa-icon-envelope fa-icon--s">
-								<use xlink:href="#icon-envelope"></use>
-							</svg>
+							<i class="icon-envelope p-1"></i>
 							<span
 								class="hidden-sub-l">{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}</span>
 						</f:link.page>
@@ -48,9 +41,7 @@
 					<li class="head__link">
 						<f:link.page pageUid="{NEWS_UID}" title="{f:translate(key:'news', extensionName: 'tmpl_ipoa')}"
 									 class="head__link" tabindex="2">
-							<svg class="fa-icon fa-icon-bolt fa-icon--s">
-								<use xlink:href="#icon-bolt"></use>
-							</svg>
+							<i class="icon-power p-1"></i>
 							<span
 								class="hidden-sub-l">{f:translate(key:'news', extensionName: 'tmpl_ipoa')}</span>
 						</f:link.page>
@@ -63,9 +54,7 @@
 						<f:link.page pageUid="{SITEMAP_UID}"
 									 title="{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}" class="head__link"
 									 tabindex="2">
-							<svg class="fa-icon fa-icon-sitemap fa-icon--s">
-								<use xlink:href="#icon-sitemap"></use>
-							</svg>
+							<i class="icon-sitemap p-1"></i>
 							<span
 								class="hidden-sub-l">{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}</span>
 						</f:link.page>
@@ -79,18 +68,14 @@
 									 title="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}"
 									 class="head__link"
 									 tabindex="2">
-							<svg class="fa-icon fa-icon-search fa-icon--s">
-								<use xlink:href="#icon-search"></use>
-							</svg>
+							<i class="icon-search p-1"></i>
 							<span
 								class="hidden-sub-l">{f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
 						</f:link.page>
 						<f:comment>
 							<a href="#search" title="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}"
 							   class="head__link" tabindex="2">
-								<svg class="fa-icon fa-icon-search fa-icon--s">
-									<use xlink:href="#icon-search"></use>
-								</svg>
+								<i class="icon-search p-1"></i>
 								<span
 									class="hidden-sub-l">{f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
 							</a>
@@ -105,14 +90,12 @@
 				linkCurrent="0">
 				<f:for each="{languageMenu}" as="lang">
 					<li class="head__link head__link-language {f:if(condition: '{lang.current}', then: 'head__link-active',  else:'')}">
-						<svg class="fa-icon fa-icon-global fa-icon--s">
-							<use xlink:href="#icon-globe"></use>
-						</svg>
+						<i class="icon-earth p-1"></i>
 						<f:if condition="{lang.current}">
 							<f:then>
-									<span class="head__language-label">
-										{lang.label}
-									</span>
+								<span class="head__language-label">
+									{lang.label}
+								</span>
 							</f:then>
 							<f:else>
 								<a href="{lang.url}">

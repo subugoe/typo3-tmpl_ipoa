@@ -7,45 +7,35 @@
 		<li class="head__link">
 			<f:link.page pageUid="{START_UID}" title="{f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}"
 						 class="head__link" tabindex="2">
-				<svg class="fa-icon fa-icon-home fa-icon--s">
-					<use xlink:href="#icon-home"></use>
-				</svg>
+				<i class="icon-home3 p-2"></i>
 				<span class="hidden-sub-l"> {f:translate(key:'startpage', extensionName: 'tmpl_ipoa')}</span>
 			</f:link.page>
 		</li>
 		<li class="head__link">
 			<f:link.page pageUid="{KONTAKT_UID}" title="{f:translate(key:'contact', extensionName: 'tmpl_ipoa')}"
 						 class="head__link" tabindex="2">
-				<svg class="fa-icon fa-icon-envelope fa-icon--s">
-					<use xlink:href="#icon-envelope"></use>
-				</svg>
+				<i class="icon-envelope p-2"></i>
 				<span class="hidden-sub-l"> {f:translate(key:'contact', extensionName: 'tmpl_ipoa')}</span>
 			</f:link.page>
 		</li>
 		<li class="head__link">
 			<f:link.page pageUid="{NEWS_UID}" title="{f:translate(key:'news', extensionName: 'tmpl_ipoa')}"
 						 class="head__link" tabindex="2">
-				<svg class="fa-icon fa-icon-bolt fa-icon--s">
-					<use xlink:href="#icon-bolt"></use>
-				</svg>
+				<i class="icon-power p-2"></i>
 				<span class="hidden-sub-l"> {f:translate(key:'news', extensionName: 'tmpl_ipoa')}</span>
 			</f:link.page>
 		</li>
 		<li class="head__link">
 			<f:link.page pageUid="{SITEMAP_UID}" title="{f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}"
 						 class="head__link" tabindex="2">
-				<svg class="fa-icon fa-icon-sitemap fa-icon--s">
-					<use xlink:href="#icon-sitemap"></use>
-				</svg>
+				<i class="icon-sitemap p-2"></i>
 				<span class="hidden-sub-l"> {f:translate(key:'sitemap', extensionName: 'tmpl_ipoa')}</span>
 			</f:link.page>
 		</li>
 		<li class="head__link">
 			<a href="#search" title="{f:translate(key:'search', extensionName: 'tmpl_ipoa')}"
 			   class="head__link js-nav-search-button" tabindex="2">
-				<svg class="fa-icon fa-icon-search fa-icon--s">
-					<use xlink:href="#icon-search"></use>
-				</svg>
+				<i class="icon-search p-2"></i>
 				<span class="hidden-sub-l"> {f:translate(key:'search', extensionName: 'tmpl_ipoa')}</span>
 			</a>
 		</li>
@@ -57,9 +47,7 @@
 			linkCurrent="0">
 			<f:for each="{languageMenu}" as="lang">
 				<li class="head__link head__link-language {f:if(condition: '{lang.current}', then: 'head__link-active',  else:'')}">
-					<svg class="fa-icon fa-icon-global fa-icon--s">
-						<use xlink:href="#icon-globe"></use>
-					</svg>
+					<i class="icon-earth p-2"></i>
 					<f:if condition="{lang.current}">
 						<f:then>
 							{lang.label}
@@ -78,9 +66,7 @@
 		<div class="alt-menu__close-button-wrap">
 			<a href="#" title="{f:translate(key:'closeMenu', extensionName: 'tmpl_ipoa')}"
 			   class="alt-menu__close-button">
-				<svg class="fa-icon fa-icon-close fa-icon-on-bright">
-					<use xlink:href="#icon-close"/>
-				</svg>
+				<i class="icon-cross p-2"></i>
 				{f:translate(key:'close', extensionName: 'tmpl_ipoa')}
 			</a>
 		</div>
