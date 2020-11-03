@@ -248,6 +248,10 @@ li.head__link-language {
   }
 }
 
+.head__logo a:hover {
+  background: transparent;
+}
+
 .head__text {
   flex-direction: column;
   justify-content: flex-end;
