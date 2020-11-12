@@ -198,12 +198,33 @@
 				<div class="card col-sm p-2 m-2 justify-content-center card-breaking">
 			</f:else>
 		</v:condition.string.contains>
-		<f:link.page pageUid="{ADDBUT_5_UID}" tabindex="8">
+		<f:link.page pageUid="{ADDBUT_5_UID}" tabindex="10">
 			<div class="card-body d-flex p-0 m-0 align-items-center"
 				 accesskey="{ADDBUT_5_AC}"
 				 role="link">
 				<i class="icon-{ADDBUT_5_ICON} m-2 p-2"></i>
 				<f:format.raw value="{ADDBUT_5_TITLE}"/>
+			</div>
+		</f:link.page>
+		</div>
+	</f:else>
+</v:condition.string.contains>
+<v:condition.string.contains haystack="{ADDBUT_6_UID}" needle="{">
+	<f:else>
+		<v:condition.string.contains haystack="{ADDBUT_6_SPECIAL}" needle="{">
+			<f:then>
+				<div class="card col-sm p-2 m-2 justify-content-center">
+			</f:then>
+			<f:else>
+				<div class="card col-sm p-2 m-2 justify-content-center card-breaking">
+			</f:else>
+		</v:condition.string.contains>
+		<f:link.page pageUid="{ADDBUT_6_UID}" tabindex="11">
+			<div class="card-body d-flex p-0 m-0 align-items-center"
+				 accesskey="{ADDBUT_6_AC}"
+				 role="link">
+				<i class="icon-{ADDBUT_6_ICON} m-2 p-2"></i>
+				<f:format.raw value="{ADDBUT_6_TITLE}"/>
 			</div>
 		</f:link.page>
 		</div>

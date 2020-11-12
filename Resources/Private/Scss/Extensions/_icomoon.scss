@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?eglufw');
-  src:  url('../fonts/icomoon.eot?eglufw#iefix') format('embedded-opentype'),
-  url('../fonts/icomoon.ttf?eglufw') format('truetype'),
-  url('../fonts/icomoon.woff?eglufw') format('woff'),
-  url('../fonts/icomoon.svg?eglufw#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?r6p6p7');
+  src:  url('../fonts/icomoon.eot?r6p6p7#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?r6p6p7') format('truetype'),
+    url('../fonts/icomoon.woff?r6p6p7') format('woff'),
+    url('../fonts/icomoon.svg?r6p6p7#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-helpdesk:before {
+  content: "\e906";
+}
 .icon-oat:before {
   content: "\e900";
 }
@@ -34,8 +37,9 @@
 .icon-virus:before {
   content: "\e90e";
 }
-.icon-helpdesk:before {
-  content: "\e90f";
+.icon-orcid:before {
+  content: "\e904";
+  color: #a6ce39;
 }
 .icon-facebook:before {
   content: "\e910";
@@ -90,6 +94,9 @@
 .icon-drawer:before {
   content: "\e95c";
 }
+.icon-bubbles4:before {
+  content: "\e970";
+}
 .icon-users:before {
   content: "\e972";
 }
@@ -125,4 +132,64 @@
 }
 .icon-rss:before {
   content: "\ea9b";
+}
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-oat {
+  width: 2.6337890625em;
+}
+
+.icon-oa {
+  width: 1.4208984375em;
+}
+
+.icon-toggle-on {
+  width: 1.142578125em;
+}
+
+.icon-toggle-off {
+  width: 1.142578125em;
+}
+
+.icon-info {
+  width: 0.357421875em;
+}
+
+.icon-angle-right {
+  width: 0.3388671875em;
+}
+
+.icon-angle-double-down {
+  width: 0.642578125em;
+}
+
+.icon-angle-double-right {
+  width: 0.5537109375em;
+}
+
+.icon-library {
+  width: 1.0625em;
+}
+
+.icon-bubbles4 {
+  width: 1.625em;
+}
+
+.icon-users {
+  width: 1.125em;
 }
