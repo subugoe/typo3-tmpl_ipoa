@@ -110,7 +110,7 @@ TCEFORM {
          twitter_description.disabled = 1
          twitter_image.disabled = 1
          // Metadata
-         keywords.disabled = 1
+         keywords.disabled = 0
          description.disabled = 1
          // Language
          l18n_cfg.disabled = 1
