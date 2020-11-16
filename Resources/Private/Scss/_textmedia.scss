@@ -18,6 +18,15 @@
   }
 }
 
+.frame a[title="orcidid"] {
+  &:before {
+    font-family: 'icomoon';
+    content: "\e904";
+    color: #a6ce39;
+    padding-right: 6px;
+  }
+}
+
 // empty element with element id
 .frame > a {
   border: 0;

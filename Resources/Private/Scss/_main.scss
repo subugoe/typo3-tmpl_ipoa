@@ -17,6 +17,7 @@ a {
 .container .main {
   padding: 0;
 }
+
 .main a {
     @extend %link--default;
     @extend %link--on-bright;
