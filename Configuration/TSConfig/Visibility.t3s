@@ -98,10 +98,10 @@ TCEFORM {
          target.disabled = 1
          slug.disabled = 0
          // SEO
-         seo_title.disabled = 1
+         seo_title.disabled = 0
          no_index.disabled = 0
          no_follow.disabled = 1
-         canonical_link.disabled = 1
+         canonical_link.disabled = 0
          // Social media
          og_title.disabled = 1
          og_description.disabled = 1
@@ -111,7 +111,7 @@ TCEFORM {
          twitter_image.disabled = 1
          // Metadata
          keywords.disabled = 0
-         description.disabled = 1
+         description.disabled = 0
          // Language
          l18n_cfg.disabled = 1
          // Access
