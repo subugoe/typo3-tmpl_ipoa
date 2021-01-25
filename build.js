@@ -4,7 +4,8 @@ buildify()
   .concat([
     'Resources/Private/JavaScript/ipoa.js',
     'Resources/Private/JavaScript/menu.js',
-    'Resources/Private/JavaScript/frontend-editing.js'
+    'Resources/Private/JavaScript/frontend-editing.js',
+    'Resources/Private/JavaScript/gender.js',
   ])
   .save('Build/JavaScript/concatenated.js');
 
