@@ -8,8 +8,8 @@ jQuery(() => {
   const stringIn = '<span class="genderstar" aria-hidden="true">*</span><span aria-hidden="true">in</span><span visually-hidden="true">In</span>';
   const stringInnen = '<span class="genderstar" aria-hidden="true">*</span><span aria-hidden="true">innen</span><span visually-hidden="true">Innen</span>';
 
-  const replaced = jQuery('main').html().replaceAll('*innen', stringInnen).replace('*in', stringIn);
+  const replaced = jQuery('body').html().replaceAll('*innen', stringInnen).replace('*in', stringIn);
 
-  jQuery('main').html(replaced);
+  jQuery('body').html(replaced);
 
 });
